@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useLocale } from "@/lib/locale-context";
 
 const links = [
@@ -17,19 +18,42 @@ const links = [
 export default function Navbar() {
   const { locale, toggleLocale, t } = useLocale();
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const isHome = pathname === "/";
+
+  function goBack() {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl gradient-navy flex items-center justify-center">
-              <span className="text-gold font-serif font-bold text-base">Y</span>
-            </div>
-            <span className="font-serif text-xl font-bold text-navy tracking-tight">
-              YEG <span className="text-gold">Date</span>
-            </span>
-          </Link>
+          <div className="flex items-center gap-2 sm:gap-3">
+            {!isHome && (
+              <button
+                onClick={goBack}
+                aria-label={t("common.backTo")}
+                className="flex items-center gap-1.5 text-navy/70 hover:text-navy bg-surface/70 hover:bg-surface border border-black/5 rounded-full pl-2.5 pr-3 py-1.5 transition-colors"
+              >
+                <ArrowLeftIcon className="w-4 h-4" />
+                <span className="text-sm font-medium hidden sm:inline">{t("common.backTo")}</span>
+              </button>
+            )}
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-9 h-9 rounded-xl gradient-navy flex items-center justify-center">
+                <span className="text-gold font-serif font-bold text-base">Y</span>
+              </div>
+              <span className="font-serif text-xl font-bold text-navy tracking-tight">
+                YEG <span className="text-gold">Date</span>
+              </span>
+            </Link>
+          </div>
 
           <div className="hidden md:flex items-center gap-7">
             {links.map((link) => (
