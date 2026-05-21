@@ -1,0 +1,362 @@
+[
+  {
+    "id": "streetcar-prive-high-level",
+    "segment": "couples",
+    "title": { "fr": "Streetcar Privatisé sur le High Level Bridge", "en": "Private Streetcar on the High Level Bridge" },
+    "location": "High Level Bridge Streetcar",
+    "address": "10330 84 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Privatisez le tramway historique pour une traversée du High Level Bridge à 50m au-dessus de la rivière, au coucher du soleil.",
+      "en": "Charter the historic streetcar for a crossing of the High Level Bridge 50m above the river, at sunset."
+    },
+    "longDescription": {
+      "fr": "Imaginez-vous seuls à bord d'un tramway de 1912, glissant lentement sur le pont le plus haut d'Amérique du Nord pour un tramway. La rivière North Saskatchewan coule 50 mètres plus bas, et la skyline d'Edmonton s'illumine à mesure que le soleil descend.\n\nNotre forfait privatisé vous réserve une voiture entière. Décoration florale, champagne mousseux sans alcool ou vrai bulleux selon votre choix, et une playlist romantique personnalisée vous accompagnent pendant la traversée aller-retour de 45 minutes.\n\nL'expérience démarre au Strathcona Barn, où un membre de notre équipe vous accueille et immortalise quelques clichés avant le départ. C'est l'une des seules expériences véritablement uniques à Edmonton — impossible à reproduire ailleurs.\n\nIdéal pour une demande en mariage, un anniversaire de couple ou simplement une soirée hors du commun.",
+      "en": "Picture the two of you alone aboard a 1912 streetcar, gliding slowly across the highest streetcar bridge in North America. The North Saskatchewan River flows 50 metres below, and Edmonton's skyline lights up as the sun goes down.\n\nOur private package reserves an entire car for you. Floral decoration, sparkling wine (alcohol-free or real bubbly, your choice) and a personalized romantic playlist accompany you during the 45-minute round trip.\n\nThe experience starts at the Strathcona Barn, where a member of our team welcomes you and captures a few shots before departure. It's one of the only truly unique experiences in Edmonton — impossible to replicate elsewhere.\n\nPerfect for a proposal, a couple's anniversary or simply an evening out of the ordinary."
+    },
+    "image": "https://images.unsplash.com/photo-1495556650867-99590cea3657?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80",
+      "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+    ],
+    "priceRange": { "fr": "180$ - 280$ / couple", "en": "$180 - $280 / couple" },
+    "priceFrom": 180,
+    "budgetTier": 250,
+    "duration": { "fr": "45 min - 1h", "en": "45 min - 1h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Voiture entière privatisée", "Décoration florale", "Champagne ou mousseux", "Playlist personnalisée", "Quelques photos souvenir"],
+      "en": ["Entire car chartered", "Floral decoration", "Champagne or sparkling", "Personalized playlist", "A few souvenir photos"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.9,
+    "mapsQuery": "High Level Bridge Streetcar Edmonton"
+  },
+  {
+    "id": "diner-rge-rd",
+    "segment": "couples",
+    "title": { "fr": "Dîner Gastronomique chez RGE RD", "en": "Fine Dining at RGE RD" },
+    "location": "RGE RD",
+    "address": "10643 123 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Un dîner farm-to-table dans l'un des restaurants les plus primés d'Edmonton, avec menu dégustation et accord mets-vins.",
+      "en": "A farm-to-table dinner at one of Edmonton's most awarded restaurants, with tasting menu and wine pairing."
+    },
+    "longDescription": {
+      "fr": "RGE RD (prononcé « Range Road ») est une institution de la scène gastronomique d'Edmonton. Le chef Blair Lebsack travaille exclusivement avec des fermes albertaines, et la carte change selon les saisons et les arrivages.\n\nNotre forfait couple réserve la meilleure table du restaurant et inclut le menu dégustation signature en plusieurs services, accompagné d'un accord mets-vins sélectionné par le sommelier.\n\nL'ambiance intime, l'éclairage tamisé et le service impeccable en font l'un des meilleurs choix d'Edmonton pour célébrer un anniversaire ou marquer une occasion spéciale.\n\nNous nous occupons de la réservation, des restrictions alimentaires et pouvons ajouter un bouquet ou un dessert personnalisé sur demande.",
+      "en": "RGE RD (pronounced \"Range Road\") is an institution of Edmonton's culinary scene. Chef Blair Lebsack works exclusively with Alberta farms, and the menu changes with the seasons and what's available.\n\nOur couple's package reserves the best table in the house and includes the signature multi-course tasting menu, paired with wines selected by the sommelier.\n\nThe intimate atmosphere, dimmed lighting and impeccable service make it one of Edmonton's top choices to celebrate an anniversary or mark a special occasion.\n\nWe handle the reservation, dietary restrictions and can add a bouquet or personalized dessert on request."
+    },
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80"
+    ],
+    "priceRange": { "fr": "160$ - 240$ / couple", "en": "$160 - $240 / couple" },
+    "priceFrom": 160,
+    "budgetTier": 250,
+    "duration": { "fr": "2h - 2h30", "en": "2h - 2.5h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "calme"],
+    "includes": {
+      "fr": ["Réservation meilleure table", "Menu dégustation signature", "Accord mets-vins", "Gestion des allergies"],
+      "en": ["Best table reservation", "Signature tasting menu", "Wine pairing", "Allergy management"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "RGE RD restaurant Edmonton"
+  },
+  {
+    "id": "diner-corso-32",
+    "segment": "couples",
+    "title": { "fr": "Dîner Romantique chez Corso 32", "en": "Romantic Dinner at Corso 32" },
+    "location": "Corso 32",
+    "address": "10345 Jasper Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Le restaurant italien le plus réputé d'Edmonton : pâtes fraîches faites maison et ambiance feutrée sur Jasper Avenue.",
+      "en": "Edmonton's most acclaimed Italian restaurant: fresh house-made pasta and an intimate atmosphere on Jasper Avenue."
+    },
+    "longDescription": {
+      "fr": "Corso 32 est régulièrement classé parmi les meilleurs restaurants du Canada. La salle, petite et intime, ne compte qu'une poignée de tables, ce qui en fait un cadre parfait pour une soirée à deux.\n\nLes pâtes sont fabriquées à la main chaque jour, et le menu met en valeur des produits simples sublimés par une technique irréprochable. La carte des vins italiens est l'une des plus pointues de la ville.\n\nNotre forfait inclut la réservation (souvent complète des semaines à l'avance), un menu en plusieurs services et un accord vins optionnel.\n\nUn classique indémodable pour un premier rendez-vous marquant ou pour célébrer une étape importante de votre relation.",
+      "en": "Corso 32 is regularly ranked among Canada's best restaurants. The small, intimate room seats only a handful of tables, making it a perfect setting for an evening for two.\n\nThe pasta is hand-made daily, and the menu showcases simple ingredients elevated by flawless technique. The Italian wine list is one of the most refined in the city.\n\nOur package includes the reservation (often booked weeks in advance), a multi-course menu and an optional wine pairing.\n\nA timeless classic for a memorable first date or to celebrate an important milestone in your relationship."
+    },
+    "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+      "https://images.unsplash.com/photo-1481931715705-36f5f79f1f3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=800&q=80"
+    ],
+    "priceRange": { "fr": "140$ - 200$ / couple", "en": "$140 - $200 / couple" },
+    "priceFrom": 140,
+    "budgetTier": 120,
+    "duration": { "fr": "2h", "en": "2h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "calme"],
+    "includes": {
+      "fr": ["Réservation garantie", "Menu plusieurs services", "Accord vins optionnel"],
+      "en": ["Guaranteed reservation", "Multi-course menu", "Optional wine pairing"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "Corso 32 Edmonton"
+  },
+  {
+    "id": "pique-nique-river-valley",
+    "segment": "couples",
+    "title": { "fr": "Pique-nique Chic à Louise McKinney Park", "en": "Luxury Picnic at Louise McKinney Park" },
+    "location": "Louise McKinney Riverfront Park",
+    "address": "9999 Grierson Hill NW, Edmonton, AB",
+    "description": {
+      "fr": "Un pique-nique de luxe installé pour vous au bord de la rivière, avec vue sur la skyline et le jardin chinois.",
+      "en": "A luxury picnic set up for you by the river, with views of the skyline and the Chinese garden."
+    },
+    "longDescription": {
+      "fr": "Louise McKinney Riverfront Park offre l'un des plus beaux panoramas d'Edmonton : la vallée de la rivière, le pont Tawatinâ et sa fresque autochtone, et le jardin chinois Edmonton.\n\nNous installons pour vous une mise en scène complète : nappe basse, coussins moelleux, vaisselle en porcelaine, bouquet de saison et panier gourmet préparé par un traiteur local. Vous n'avez qu'à arriver et profiter.\n\nL'installation et le démontage sont entièrement gérés par notre équipe. Vous pouvez ajouter un photographe pour capturer le moment, ou prolonger avec une bouteille de mousseux.\n\nDisponible de mai à septembre, idéal en fin d'après-midi pour profiter de la lumière dorée sur la rivière.",
+      "en": "Louise McKinney Riverfront Park offers one of Edmonton's most beautiful panoramas: the river valley, the Tawatinâ Bridge with its Indigenous mural, and the Edmonton Chinese Garden.\n\nWe set up a complete scene for you: low table, plush cushions, porcelain tableware, a seasonal bouquet and a gourmet basket prepared by a local caterer. All you have to do is arrive and enjoy.\n\nSetup and teardown are fully handled by our team. You can add a photographer to capture the moment, or extend with a bottle of sparkling wine.\n\nAvailable May to September, ideal in late afternoon to enjoy the golden light on the river."
+    },
+    "image": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80",
+      "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=800&q=80",
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
+    ],
+    "priceRange": { "fr": "120$ - 220$ / couple", "en": "$120 - $220 / couple" },
+    "priceFrom": 120,
+    "budgetTier": 120,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer"],
+    "mood": ["calme", "gourmand"],
+    "includes": {
+      "fr": ["Installation & démontage", "Décoration premium", "Panier gourmet pour 2", "Bouquet de saison"],
+      "en": ["Setup & teardown", "Premium decoration", "Gourmet basket for 2", "Seasonal bouquet"]
+    },
+    "services": ["photographer", "picnic"],
+    "cta": "book",
+    "rating": 4.9,
+    "mapsQuery": "Louise McKinney Riverfront Park Edmonton"
+  },
+  {
+    "id": "patinage-victoria-iceway",
+    "segment": "couples",
+    "title": { "fr": "Patinage Romantique au Victoria Park IceWay", "en": "Romantic Skating at Victoria Park IceWay" },
+    "location": "Victoria Park IceWay",
+    "address": "12130 River Valley Rd NW, Edmonton, AB",
+    "description": {
+      "fr": "Patinez main dans la main sur le plus long sentier de glace d'Edmonton, suivi d'un chocolat chaud au coucher du soleil.",
+      "en": "Skate hand in hand on Edmonton's longest ice trail, followed by hot chocolate at sunset."
+    },
+    "longDescription": {
+      "fr": "Le Victoria Park IceWay est un sentier de glace en plein air aménagé chaque hiver dans la vallée de la rivière. C'est gratuit, magnifiquement éclairé en soirée, et bordé d'arbres givrés — un décor de carte postale.\n\nNotre forfait inclut la location des patins (15$ par personne sur place), un thermos de chocolat chaud artisanal et une couverture chaude pour la pause. Nous réservons aussi le créneau de fin de journée, le plus romantique, quand le soleil descend derrière le pont.\n\nC'est l'alternative parfaite à l'ancienne activité « Châteaux de Glace » : un vrai lieu d'Edmonton, accessible et inoubliable.\n\nDisponible de décembre à mars selon les conditions de glace. Habillez-vous chaudement !",
+      "en": "The Victoria Park IceWay is an outdoor ice trail set up each winter in the river valley. It's free, beautifully lit in the evening, and lined with frosted trees — a postcard setting.\n\nOur package includes skate rental ($15 per person on site), a thermos of artisan hot chocolate and a warm blanket for the break. We also time it for the late-day slot, the most romantic, when the sun drops behind the bridge.\n\nIt's the perfect alternative to the old \"Ice Castles\" activity: a real Edmonton spot, accessible and unforgettable.\n\nAvailable December to March depending on ice conditions. Dress warmly!"
+    },
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=800&q=80",
+      "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80",
+      "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?w=800&q=80"
+    ],
+    "priceRange": { "fr": "Gratuit - 60$ / couple", "en": "Free - $60 / couple" },
+    "priceFrom": 0,
+    "budgetTier": 60,
+    "duration": { "fr": "1h - 2h", "en": "1h - 2h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["winter"],
+    "mood": ["dynamique", "calme"],
+    "includes": {
+      "fr": ["Location de patins (15$/pers)", "Chocolat chaud artisanal", "Couverture chaude"],
+      "en": ["Skate rental ($15/pers)", "Artisan hot chocolate", "Warm blanket"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "Victoria Park IceWay Edmonton"
+  },
+  {
+    "id": "observation-etoiles-elk-island",
+    "segment": "couples",
+    "title": { "fr": "Observation des Étoiles à Elk Island", "en": "Stargazing at Elk Island" },
+    "location": "Elk Island National Park (Dark Sky Preserve)",
+    "address": "Hwy 16 E, Fort Saskatchewan, AB",
+    "description": {
+      "fr": "Une soirée magique sous le ciel le plus étoilé près d'Edmonton, dans une réserve de ciel étoilé officielle.",
+      "en": "A magical evening under the starriest sky near Edmonton, in an official Dark Sky Preserve."
+    },
+    "longDescription": {
+      "fr": "À seulement 40 minutes d'Edmonton, le parc national Elk Island est une réserve de ciel étoilé reconnue. Loin des lumières de la ville, la Voie lactée y est visible à l'œil nu par nuit claire, et les aurores boréales y apparaissent régulièrement en hiver.\n\nNotre forfait inclut une couverture chauffante, un thermos de boisson chaude, une carte du ciel et — selon disponibilité — l'accès à un télescope guidé lors des soirées d'observation organisées par le parc.\n\nC'est l'une des expériences les plus romantiques et les moins coûteuses de la région. Emmitouflés ensemble sous les étoiles, loin de tout, le temps semble s'arrêter.\n\nPrévoyez des vêtements chauds toute l'année — les nuits sont fraîches même en été.",
+      "en": "Just 40 minutes from Edmonton, Elk Island National Park is a recognized Dark Sky Preserve. Far from city lights, the Milky Way is visible to the naked eye on clear nights, and the northern lights appear regularly in winter.\n\nOur package includes a heated blanket, a thermos of hot drink, a star map and — subject to availability — access to a guided telescope during the park's organized observation evenings.\n\nIt's one of the most romantic and most affordable experiences in the region. Bundled together under the stars, far from everything, time seems to stop.\n\nBring warm clothes year-round — the nights are cool even in summer."
+    },
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80"
+    ],
+    "priceRange": { "fr": "20$ - 80$ / couple", "en": "$20 - $80 / couple" },
+    "priceFrom": 20,
+    "budgetTier": 60,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["summer", "fall", "winter"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Couverture chauffante", "Boisson chaude", "Carte du ciel", "Frais de parc"],
+      "en": ["Heated blanket", "Hot drink", "Star map", "Park fees"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.9,
+    "mapsQuery": "Elk Island National Park Edmonton"
+  },
+  {
+    "id": "soiree-romance-fairmont",
+    "segment": "couples",
+    "title": { "fr": "Soirée Romance au Fairmont Hotel Macdonald", "en": "Romance Evening at Fairmont Hotel Macdonald" },
+    "location": "Fairmont Hotel Macdonald",
+    "address": "10065 100 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Une suite décorée surplombant la vallée, pétales de roses, champagne et dîner gastronomique servi en chambre.",
+      "en": "A decorated suite overlooking the valley, rose petals, champagne and a gourmet dinner served in-room."
+    },
+    "longDescription": {
+      "fr": "Le Fairmont Hotel Macdonald, surnommé « le Château sur la rivière », est l'hôtel le plus prestigieux d'Edmonton depuis 1915. Ses suites offrent une vue imprenable sur la vallée de la rivière North Saskatchewan.\n\nNotre forfait transforme votre chambre en cocon romantique : pétales de roses, bougies LED, ballons élégants et une bouteille de champagne fraîche à votre arrivée. Un dîner gastronomique peut être servi directement en chambre.\n\nNous coordonnons tout avec l'hôtel en amont pour que la mise en scène soit prête quand vous franchissez la porte. Idéal pour un anniversaire de mariage, une lune de miel ou une demande en mariage.\n\nDes options de spa et de petit-déjeuner au lit peuvent être ajoutées.",
+      "en": "The Fairmont Hotel Macdonald, nicknamed \"the Chateau on the river,\" has been Edmonton's most prestigious hotel since 1915. Its suites offer stunning views of the North Saskatchewan River valley.\n\nOur package turns your room into a romantic cocoon: rose petals, LED candles, elegant balloons and a chilled bottle of champagne on arrival. A gourmet dinner can be served directly in-room.\n\nWe coordinate everything with the hotel in advance so the setup is ready when you walk through the door. Ideal for a wedding anniversary, a honeymoon or a proposal.\n\nSpa and breakfast-in-bed options can be added."
+    },
+    "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      "https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80",
+      "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&q=80"
+    ],
+    "priceRange": { "fr": "300$ - 550$ / couple", "en": "$300 - $550 / couple" },
+    "priceFrom": 300,
+    "budgetTier": 400,
+    "duration": { "fr": "Soirée + nuitée", "en": "Evening + overnight" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["calme", "gourmand"],
+    "includes": {
+      "fr": ["Décoration romantique chambre", "Pétales & bougies LED", "Champagne à l'arrivée", "Dîner en chambre optionnel"],
+      "en": ["Romantic room decoration", "Petals & LED candles", "Champagne on arrival", "Optional in-room dinner"]
+    },
+    "services": ["photographer", "roomDecor"],
+    "cta": "quote",
+    "rating": 5.0,
+    "mapsQuery": "Fairmont Hotel Macdonald Edmonton"
+  },
+  {
+    "id": "brunch-balade-the-marc",
+    "segment": "couples",
+    "title": { "fr": "Brunch & Balade — The Marc + Legislature", "en": "Brunch & Stroll — The Marc + Legislature" },
+    "location": "The Marc Restaurant",
+    "address": "9940 106 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Un brunch français raffiné suivi d'une promenade romantique dans les jardins de l'Assemblée législative.",
+      "en": "A refined French brunch followed by a romantic stroll through the Legislature gardens."
+    },
+    "longDescription": {
+      "fr": "The Marc est un bistro français chaleureux au cœur du centre-ville, réputé pour sa cuisine soignée et son ambiance parisienne. C'est le point de départ parfait d'une matinée à deux.\n\nAprès le brunch, vous flânez dans les magnifiques jardins de l'Alberta Legislature, à quelques minutes à pied : fontaines, allées fleuries en été, patinoire et lumières en hiver.\n\nNotre forfait inclut la réservation au Marc, un brunch deux services et une carte de la balade avec les plus beaux points de vue pour vos photos.\n\nUne option douce et lumineuse pour les couples qui préfèrent le jour à la nuit.",
+      "en": "The Marc is a warm French bistro in the heart of downtown, known for its refined cuisine and Parisian atmosphere. It's the perfect starting point for a morning for two.\n\nAfter brunch, you wander through the beautiful Alberta Legislature gardens, a few minutes' walk away: fountains, flower-lined paths in summer, a skating rink and lights in winter.\n\nOur package includes the reservation at The Marc, a two-course brunch and a map of the walk with the best viewpoints for your photos.\n\nA soft, bright option for couples who prefer day to night."
+    },
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&q=80",
+      "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
+    ],
+    "priceRange": { "fr": "70$ - 120$ / couple", "en": "$70 - $120 / couple" },
+    "priceFrom": 70,
+    "budgetTier": 120,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["gourmand", "calme"],
+    "includes": {
+      "fr": ["Réservation The Marc", "Brunch 2 services", "Carte de balade"],
+      "en": ["The Marc reservation", "Two-course brunch", "Stroll map"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "The Marc Restaurant Edmonton"
+  },
+  {
+    "id": "spa-duo-eveline-charles",
+    "segment": "couples",
+    "title": { "fr": "Spa en Duo chez Eveline Charles", "en": "Couples Spa at Eveline Charles" },
+    "location": "Eveline Charles Salon & Spa",
+    "address": "10180 101 St NW (Manulife Place), Edmonton, AB",
+    "description": {
+      "fr": "Une demi-journée de détente à deux : massages en duo, soins du visage et accès aux installations.",
+      "en": "A half-day of relaxation for two: couples massage, facials and access to the facilities."
+    },
+    "longDescription": {
+      "fr": "Eveline Charles est l'une des adresses spa les plus établies d'Edmonton, située dans l'élégant Manulife Place au centre-ville. L'endroit est pensé pour la détente et le luxe accessible.\n\nNotre forfait duo comprend un massage côte à côte en cabine double, un soin du visage personnalisé pour chacun, et l'accès aux espaces de relaxation. Une coupe de mousseux et des collations santé vous sont servies.\n\nC'est l'option idéale pour décompresser ensemble, célébrer une occasion ou simplement s'offrir une parenthèse hors du quotidien.\n\nDisponible toute l'année. Réservation recommandée 1 à 2 semaines à l'avance, surtout le week-end.",
+      "en": "Eveline Charles is one of Edmonton's most established spa addresses, located in the elegant Manulife Place downtown. The space is designed for relaxation and accessible luxury.\n\nOur duo package includes a side-by-side massage in a double room, a personalized facial for each of you, and access to the relaxation areas. A glass of sparkling wine and healthy snacks are served.\n\nIt's the ideal option to unwind together, celebrate an occasion or simply treat yourselves to a break from the everyday.\n\nAvailable year-round. Booking recommended 1-2 weeks in advance, especially on weekends."
+    },
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80",
+      "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
+    ],
+    "priceRange": { "fr": "260$ - 420$ / couple", "en": "$260 - $420 / couple" },
+    "priceFrom": 260,
+    "budgetTier": 400,
+    "duration": { "fr": "Demi-journée", "en": "Half-day" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["calme"],
+    "includes": {
+      "fr": ["Massage en duo", "Soin du visage x2", "Accès relaxation", "Mousseux & collations"],
+      "en": ["Couples massage", "Facial x2", "Relaxation access", "Sparkling & snacks"]
+    },
+    "services": ["roomDecor"],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "Eveline Charles Salon Spa Manulife Place Edmonton"
+  },
+  {
+    "id": "croisiere-edmonton-riverboat",
+    "segment": "couples",
+    "title": { "fr": "Croisière au Coucher du Soleil — Edmonton Riverboat", "en": "Sunset Cruise — Edmonton Riverboat" },
+    "location": "Edmonton Riverboat",
+    "address": "9734 98 Ave NW (Rafters Landing), Edmonton, AB",
+    "description": {
+      "fr": "Une croisière sur la rivière North Saskatchewan au coucher du soleil, avec vue sur la vallée et la skyline.",
+      "en": "A cruise on the North Saskatchewan River at sunset, with views of the valley and skyline."
+    },
+    "longDescription": {
+      "fr": "L'Edmonton Riverboat est le seul bateau de croisière de la ville. Au départ de Rafters Landing, il glisse sur la rivière North Saskatchewan pendant que la vallée défile sous vos yeux.\n\nNotre forfait couple réserve une place sur le pont supérieur lors d'une croisière au coucher du soleil, avec une consommation de bienvenue. Certaines dates proposent dîner-croisière ou soirée musicale.\n\nLa lumière dorée sur l'eau, la brise et la skyline qui s'illumine créent une atmosphère unique, impossible à recréer depuis la berge.\n\nDisponible de juin à septembre. Vérifiez le calendrier pour les croisières à thème.",
+      "en": "The Edmonton Riverboat is the city's only cruise boat. Departing from Rafters Landing, it glides along the North Saskatchewan River while the valley drifts past.\n\nOur couple's package reserves a spot on the upper deck during a sunset cruise, with a welcome drink. Some dates offer dinner cruises or music evenings.\n\nThe golden light on the water, the breeze and the skyline lighting up create a unique atmosphere, impossible to recreate from the shore.\n\nAvailable June to September. Check the calendar for themed cruises."
+    },
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&q=80",
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=800&q=80",
+      "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=800&q=80"
+    ],
+    "priceRange": { "fr": "80$ - 160$ / couple", "en": "$80 - $160 / couple" },
+    "priceFrom": 80,
+    "budgetTier": 120,
+    "duration": { "fr": "1h30 - 2h", "en": "1.5h - 2h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["summer"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Place pont supérieur", "Consommation de bienvenue", "Croisière coucher du soleil"],
+      "en": ["Upper deck spot", "Welcome drink", "Sunset cruise"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.6,
+    "mapsQuery": "Edmonton Riverboat Rafters Landing"
+  }
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "id": "cp-patinage-chocolat",
+    "segment": "couples",
+    "title": { "fr": "Patinage & Chocolat Chaud", "en": "Skating & Hot Chocolate" },
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 60,
+    "season": ["winter"],
+    "steps": [
+      { "time": "16:30", "title": { "fr": "Patinage au coucher du soleil", "en": "Sunset skating" }, "place": "Victoria Park IceWay", "address": "12130 River Valley Rd NW", "price": 30 },
+      { "time": "18:00", "title": { "fr": "Chocolat chaud au coin du feu", "en": "Hot chocolate fireside" }, "place": "District Café", "address": "10011 109 St NW", "price": 18 }
+    ],
+    "total": 48
+  },
+  {
+    "id": "cp-brunch-jardins",
+    "segment": "couples",
+    "title": { "fr": "Brunch Français & Jardins", "en": "French Brunch & Gardens" },
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&q=80",
+    "ambiance": "gourmand",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall"],
+    "steps": [
+      { "time": "10:30", "title": { "fr": "Brunch deux services", "en": "Two-course brunch" }, "place": "The Marc", "address": "9940 106 St NW", "price": 90 },
+      { "time": "12:30", "title": { "fr": "Balade aux jardins de la Legislature", "en": "Stroll the Legislature gardens" }, "place": "Alberta Legislature", "address": "10800 97 Ave NW", "price": 0 }
+    ],
+    "total": 90
+  },
+  {
+    "id": "cp-diner-exception",
+    "segment": "couples",
+    "title": { "fr": "Dîner d'Exception Farm-to-Table", "en": "Farm-to-Table Fine Dining" },
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80",
+    "ambiance": "gourmand",
+    "budgetTier": 250,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "18:30", "title": { "fr": "Menu dégustation & accord vins", "en": "Tasting menu & wine pairing" }, "place": "RGE RD", "address": "10643 123 St NW", "price": 200 },
+      { "time": "21:00", "title": { "fr": "Digestif cocktail", "en": "Cocktail nightcap" }, "place": "Bar Bricks", "address": "10004 Jasper Ave", "price": 40 }
+    ],
+    "total": 240
+  },
+  {
+    "id": "cp-croisiere-coucher",
+    "segment": "couples",
+    "title": { "fr": "Coucher de Soleil sur la Rivière", "en": "Sunset on the River" },
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80",
+    "ambiance": "decouverte",
+    "budgetTier": 120,
+    "season": ["summer"],
+    "steps": [
+      { "time": "19:00", "title": { "fr": "Croisière coucher de soleil", "en": "Sunset cruise" }, "place": "Edmonton Riverboat", "address": "9734 98 Ave NW", "price": 80 },
+      { "time": "21:00", "title": { "fr": "Crème glacée artisanale", "en": "Artisan ice cream" }, "place": "Made By Marcus", "address": "10328 82 Ave NW", "price": 18 }
+    ],
+    "total": 98
+  },
+  {
+    "id": "cp-sous-les-etoiles",
+    "segment": "couples",
+    "title": { "fr": "Sous les Étoiles", "en": "Under the Stars" },
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=900&q=80",
+    "ambiance": "decouverte",
+    "budgetTier": 60,
+    "season": ["summer", "fall", "winter"],
+    "steps": [
+      { "time": "20:00", "title": { "fr": "Observation des étoiles (ciel étoilé)", "en": "Stargazing (dark sky)" }, "place": "Elk Island National Park", "address": "Hwy 16 E, Fort Saskatchewan", "price": 40 }
+    ],
+    "total": 40
+  },
+  {
+    "id": "cp-escapade-fairmont",
+    "segment": "couples",
+    "title": { "fr": "Escapade Romantique au Château", "en": "Romantic Chateau Getaway" },
+    "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 400,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "17:00", "title": { "fr": "Check-in suite décorée", "en": "Decorated suite check-in" }, "place": "Fairmont Hotel Macdonald", "address": "10065 100 St NW", "price": 300 },
+      { "time": "19:30", "title": { "fr": "Dîner romantique en chambre", "en": "Romantic in-room dinner" }, "place": "Fairmont — room service", "address": "10065 100 St NW", "price": 120 }
+    ],
+    "total": 420
+  },
+  {
+    "id": "cp-spa-diner",
+    "segment": "couples",
+    "title": { "fr": "Spa en Duo & Dîner", "en": "Couples Spa & Dinner" },
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 400,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "14:00", "title": { "fr": "Massage en duo & soins", "en": "Couples massage & facials" }, "place": "Eveline Charles Spa", "address": "10180 101 St NW", "price": 260 },
+      { "time": "18:30", "title": { "fr": "Dîner bistro français", "en": "French bistro dinner" }, "place": "The Marc", "address": "9940 106 St NW", "price": 120 }
+    ],
+    "total": 380
+  },
+  {
+    "id": "cp-aventure-hivernale",
+    "segment": "couples",
+    "title": { "fr": "Aventure Hivernale", "en": "Winter Adventure" },
+    "image": "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=900&q=80",
+    "ambiance": "dynamique",
+    "budgetTier": 120,
+    "season": ["winter"],
+    "steps": [
+      { "time": "11:00", "title": { "fr": "Patinage sur le sentier de glace", "en": "Skate the ice trail" }, "place": "Victoria Park IceWay", "address": "12130 River Valley Rd NW", "price": 30 },
+      { "time": "13:00", "title": { "fr": "Brunch réconfortant", "en": "Cozy brunch" }, "place": "The Marc", "address": "9940 106 St NW", "price": 90 }
+    ],
+    "total": 120
+  },
+  {
+    "id": "cp-tramway-diner",
+    "segment": "couples",
+    "title": { "fr": "Tramway Privatisé & Dîner", "en": "Private Streetcar & Dinner" },
+    "image": "https://images.unsplash.com/photo-1495556650867-99590cea3657?w=900&q=80",
+    "ambiance": "decouverte",
+    "budgetTier": 250,
+    "season": ["spring", "summer", "fall"],
+    "steps": [
+      { "time": "18:00", "title": { "fr": "Traversée du High Level Bridge", "en": "High Level Bridge crossing" }, "place": "High Level Bridge Streetcar", "address": "10330 84 Ave NW", "price": 180 },
+      { "time": "19:30", "title": { "fr": "Dîner sur Whyte Avenue", "en": "Dinner on Whyte Avenue" }, "place": "Bistro Praha", "address": "10116 83 Ave NW", "price": 70 }
+    ],
+    "total": 250
+  },
+  {
+    "id": "cp-pique-nique-riviere",
+    "segment": "couples",
+    "title": { "fr": "Pique-nique Chic au Bord de l'Eau", "en": "Luxury Riverside Picnic" },
+    "image": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 250,
+    "season": ["spring", "summer"],
+    "steps": [
+      { "time": "16:00", "title": { "fr": "Pique-nique chic installé pour vous", "en": "Luxury picnic set up for you" }, "place": "Louise McKinney Park", "address": "9999 Grierson Hill NW", "price": 180 },
+      { "time": "18:30", "title": { "fr": "Balade au jardin chinois", "en": "Chinese garden stroll" }, "place": "Edmonton Chinese Garden", "address": "9999 Grierson Hill NW", "price": 0 }
+    ],
+    "total": 180
+  },
+
+  {
+    "id": "fm-science-lunch",
+    "segment": "famille",
+    "title": { "fr": "Sciences & Déjeuner en Famille", "en": "Science & Family Lunch" },
+    "image": "https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?w=900&q=80",
+    "ambiance": "decouverte",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "10:00", "title": { "fr": "Galeries & planétarium", "en": "Galleries & planetarium" }, "place": "TELUS World of Science", "address": "11211 142 St NW", "price": 80 },
+      { "time": "13:00", "title": { "fr": "Déjeuner familial", "en": "Family lunch" }, "place": "MEAT Whyte Ave", "address": "12624 118 Ave NW", "price": 40 }
+    ],
+    "total": 120
+  },
+  {
+    "id": "fm-fort-edmonton-journee",
+    "segment": "famille",
+    "title": { "fr": "Voyage dans le Temps", "en": "Journey Through Time" },
+    "image": "https://images.unsplash.com/photo-1533230408708-8f9f91d1235a?w=900&q=80",
+    "ambiance": "decouverte",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall"],
+    "steps": [
+      { "time": "10:00", "title": { "fr": "Fort Edmonton Park & train à vapeur", "en": "Fort Edmonton Park & steam train" }, "place": "Fort Edmonton Park", "address": "7000 143 St NW", "price": 90 },
+      { "time": "14:00", "title": { "fr": "Goûter à l'ancienne", "en": "Old-fashioned treats" }, "place": "Johnson's Café (1920 St)", "address": "7000 143 St NW", "price": 25 }
+    ],
+    "total": 115
+  },
+  {
+    "id": "fm-galaxyland-waterpark",
+    "segment": "famille",
+    "title": { "fr": "Manèges & Toboggans", "en": "Rides & Slides" },
+    "image": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=900&q=80",
+    "ambiance": "dynamique",
+    "budgetTier": 250,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "10:30", "title": { "fr": "Galaxyland (manèges illimités)", "en": "Galaxyland (unlimited rides)" }, "place": "West Edmonton Mall", "address": "8882 170 St NW", "price": 110 },
+      { "time": "14:00", "title": { "fr": "World Waterpark", "en": "World Waterpark" }, "place": "West Edmonton Mall", "address": "8882 170 St NW", "price": 110 }
+    ],
+    "total": 220
+  },
+  {
+    "id": "fm-elk-island-nature",
+    "segment": "famille",
+    "title": { "fr": "Bisons & Nature", "en": "Bison & Nature" },
+    "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 60,
+    "season": ["spring", "summer", "fall"],
+    "steps": [
+      { "time": "10:00", "title": { "fr": "Observation des bisons & sentier facile", "en": "Bison viewing & easy trail" }, "place": "Elk Island National Park", "address": "Hwy 16 E", "price": 30 },
+      { "time": "12:30", "title": { "fr": "Pique-nique au lac Astotin", "en": "Picnic at Astotin Lake" }, "place": "Astotin Lake", "address": "Elk Island NP", "price": 20 }
+    ],
+    "total": 50
+  },
+
+  {
+    "id": "am-axe-burgers",
+    "segment": "amis",
+    "title": { "fr": "Hache & Burgers", "en": "Axes & Burgers" },
+    "image": "https://images.unsplash.com/photo-1593510987185-1ec2256148a3?w=900&q=80",
+    "ambiance": "dynamique",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "18:00", "title": { "fr": "Tournoi de lancer de hache", "en": "Axe throwing tournament" }, "place": "Bad Axe Throwing", "address": "10018 105 St NW", "price": 45 },
+      { "time": "20:00", "title": { "fr": "Burgers & bières", "en": "Burgers & beers" }, "place": "MKT Beer Market", "address": "8101 Gateway Blvd NW", "price": 45 }
+    ],
+    "total": 90
+  },
+  {
+    "id": "am-escape-cocktails",
+    "segment": "amis",
+    "title": { "fr": "Escape Room & Cocktails", "en": "Escape Room & Cocktails" },
+    "image": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=900&q=80",
+    "ambiance": "dynamique",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "19:00", "title": { "fr": "Évasion en équipe (60 min)", "en": "Team escape (60 min)" }, "place": "Locked Up Escape", "address": "10575 115 St NW", "price": 35 },
+      { "time": "20:30", "title": { "fr": "Cocktails du Sud", "en": "Southern cocktails" }, "place": "Have Mercy", "address": "10550 115 St NW", "price": 50 }
+    ],
+    "total": 85
+  },
+  {
+    "id": "am-brewery-creatif",
+    "segment": "amis",
+    "title": { "fr": "Brasserie & Atelier Créatif", "en": "Brewery & Creative Workshop" },
+    "image": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=900&q=80",
+    "ambiance": "gourmand",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "14:00", "title": { "fr": "Atelier peinture (Sip & Color)", "en": "Paint workshop (Sip & Color)" }, "place": "Sip & Color Studio", "address": "10442 82 Ave NW", "price": 45 },
+      { "time": "16:30", "title": { "fr": "Dégustation à la brasserie", "en": "Brewery tasting" }, "place": "Sea Change Brewing", "address": "9850 62 Ave NW", "price": 35 }
+    ],
+    "total": 80
+  },
+
+  {
+    "id": "bz-team-day",
+    "segment": "business",
+    "title": { "fr": "Journée Team-Building", "en": "Team-Building Day" },
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900&q=80",
+    "ambiance": "dynamique",
+    "budgetTier": 250,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "10:00", "title": { "fr": "Escape room corporate + débrief", "en": "Corporate escape room + debrief" }, "place": "Quest Edmonton", "address": "10575 115 St NW", "price": 90 },
+      { "time": "12:30", "title": { "fr": "Cours de cuisine en équipe", "en": "Team cooking class" }, "place": "Get Cooking", "address": "10923 101 St NW", "price": 130 }
+    ],
+    "total": 220
+  },
+  {
+    "id": "bz-afterwork",
+    "segment": "business",
+    "title": { "fr": "Afterwork Networking", "en": "Networking Afterwork" },
+    "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80",
+    "ambiance": "gourmand",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "17:30", "title": { "fr": "Cocktails & bouchées réservés", "en": "Reserved cocktails & bites" }, "place": "The Common", "address": "9910 109 St NW", "price": 95 }
+    ],
+    "total": 95
+  },
+  {
+    "id": "bz-soiree-corporate",
+    "segment": "business",
+    "title": { "fr": "Soirée Corporate Prestige", "en": "Prestige Corporate Evening" },
+    "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 400,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "18:00", "title": { "fr": "Réception privatisée", "en": "Private reception" }, "place": "Fairmont Hotel Macdonald", "address": "10065 100 St NW", "price": 250 },
+      { "time": "20:00", "title": { "fr": "Soirée privée au centre des sciences", "en": "Private science centre evening" }, "place": "TELUS World of Science", "address": "11211 142 St NW", "price": 150 }
+    ],
+    "total": 400
+  }
+]

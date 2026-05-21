@@ -4,37 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLocale } from "@/lib/locale-context";
-import { t } from "@/lib/i18n";
 import WeatherWidget from "@/components/WeatherWidget";
-import PlanCard from "@/components/PlanCard";
+import ActivityCard from "@/components/ActivityCard";
 import QuoteBuilder from "@/components/QuoteBuilder";
+import Testimonials from "@/components/Testimonials";
 import plansData from "@/data/plans.json";
+import { allActivities } from "@/lib/activities";
 
 const categories = [
-  {
-    key: "couples",
-    href: "/couples",
-    image: "https://images.unsplash.com/photo-1522264373430-3c41337d38d0?w=800&q=80",
-    icon: "💑",
-  },
-  {
-    key: "famille",
-    href: "/famille",
-    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80",
-    icon: "👨‍👩‍👧‍👦",
-  },
-  {
-    key: "amis",
-    href: "/amis",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
-    icon: "🎉",
-  },
-  {
-    key: "business",
-    href: "/business",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-    icon: "💼",
-  },
+  { key: "couples", href: "/couples", image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80", icon: "💑" },
+  { key: "famille", href: "/famille", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80", icon: "👨‍👩‍👧‍👦" },
+  { key: "amis", href: "/amis", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80", icon: "🎉" },
+  { key: "business", href: "/business", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", icon: "💼" },
 ];
 
 const fadeUp = {
@@ -44,22 +25,23 @@ const fadeUp = {
 };
 
 export default function Home() {
-  const { locale } = useLocale();
-  const featured = plansData.plans.slice(0, 6);
+  const { locale, t } = useLocale();
+  // Curated top picks: highest-rated across segments
+  const featured = [...allActivities].sort((a, b) => b.rating - a.rating).slice(0, 6);
 
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80"
-            alt="Edmonton skyline"
+            alt="Edmonton River Valley"
             fill
-            className="object-cover"
+            className="object-cover saturate-[0.9] contrast-[1.1]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/55 to-navy/20" />
         </div>
 
         <div className="absolute top-20 right-4 sm:right-8 z-10">
@@ -67,90 +49,59 @@ export default function Home() {
         </div>
 
         <motion.div
-          animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-gold/20 rounded-2xl hidden lg:block"
+          animate={{ y: [0, -15, 0], rotate: [0, 6, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/4 right-[22%] w-20 h-20 border border-gold/25 rounded-3xl hidden lg:block backdrop-blur-sm"
         />
         <motion.div
-          animate={{ y: [0, 10, 0], rotate: [0, -3, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/3 right-1/3 w-12 h-12 bg-gold/10 rounded-full hidden lg:block"
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-[28%] right-[32%] w-12 h-12 bg-gold/15 rounded-full hidden lg:block"
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl"
-          >
-            <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {t("hero", "title", locale)}
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-2xl">
+            <span className="inline-block w-14 h-1 gradient-gold rounded-full mb-6" />
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-cream leading-[1.05] mb-6">
+              {t("hero.title")}
             </h1>
-            <p className="text-cream/80 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl">
-              {t("hero", "subtitle", locale)}
-            </p>
+            <p className="text-cream/80 text-lg sm:text-xl leading-relaxed mb-9 max-w-xl">{t("hero.subtitle")}</p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href="/weekend-match"
-                className="gradient-gold text-navy font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-sm sm:text-base"
-              >
-                {t("hero", "cta", locale)}
+              <Link href="/weekend-match" className="gradient-gold text-navy font-bold px-8 py-4 rounded-full hover:opacity-90 transition-opacity text-sm sm:text-base">
+                {t("hero.cta")}
               </Link>
-              <Link
-                href="/services"
-                className="border-2 border-cream/30 text-cream font-semibold px-8 py-3.5 rounded-full hover:bg-cream/10 transition-colors text-sm sm:text-base"
-              >
-                {t("hero", "ctaServices", locale)}
+              <Link href="/services" className="border-2 border-cream/30 text-cream font-semibold px-8 py-4 rounded-full hover:bg-cream/10 transition-colors text-sm sm:text-base">
+                {t("hero.ctaServices")}
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Categories Bento */}
+      {/* Categories */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-12">
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-navy mb-3"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {t("categories", "title", locale)}
-            </h2>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">{t("categories.title")}</h2>
             <div className="w-16 h-1 gradient-gold rounded-full mx-auto" />
           </motion.div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((cat, i) => (
-              <motion.div
-                key={cat.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
+              <motion.div key={cat.key} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
                 <Link href={cat.href} className="group block">
-                  <div className="relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                  <div className="relative h-80 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
                     <Image
                       src={cat.image}
-                      alt={t("categories", cat.key, locale)}
+                      alt={t(`nav.${cat.key}`)}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover saturate-[0.92] group-hover:scale-105 transition-transform duration-700"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
                       <span className="text-3xl mb-2 block">{cat.icon}</span>
-                      <h3
-                        className="text-cream text-xl font-bold"
-                        style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                      >
-                        {t("categories", cat.key, locale)}
-                      </h3>
+                      <h3 className="font-serif text-cream text-2xl font-bold">{t(`nav.${cat.key}`)}</h3>
+                      <p className="text-cream/70 text-sm mt-1">{t(`categories.${cat.key}Desc`)}</p>
                     </div>
                   </div>
                 </Link>
@@ -160,52 +111,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Plans */}
-      <section className="py-20 px-4 bg-white/50">
+      {/* Featured (curated) */}
+      <section className="py-20 px-4 bg-surface/50">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-12">
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-navy mb-3"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {locale === "fr" ? "Activités Populaires" : "Popular Activities"}
-            </h2>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">{t("sections.popular")}</h2>
             <div className="w-16 h-1 gradient-gold rounded-full mx-auto" />
           </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.map((plan, i) => (
-              <PlanCard key={plan.id} plan={plan} index={i} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featured.map((activity, i) => (
+              <ActivityCard key={activity.id} activity={activity} index={i} />
             ))}
           </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/decouvrir"
-              className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors"
-            >
-              {locale === "fr" ? "Voir toutes les activités" : "View all activities"}
+          <div className="text-center mt-12">
+            <Link href="/decouvrir" className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
+              {t("common.allActivities")}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* Services preview */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-12">
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-navy mb-3"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {t("services", "title", locale)}
-            </h2>
-            <p className="text-navy/60 text-lg max-w-2xl mx-auto">
-              {t("services", "subtitle", locale)}
-            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">{t("sections.servicesTitle")}</h2>
+            <p className="text-navy/60 text-lg max-w-2xl mx-auto">{t("sections.servicesSubtitle")}</p>
             <div className="w-16 h-1 gradient-gold rounded-full mx-auto mt-4" />
           </motion.div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {plansData.services.map((service, i) => (
               <motion.div
@@ -214,37 +147,29 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden group"
+                whileHover={{ y: -6 }}
+                className="bg-surface rounded-3xl shadow-sm hover:shadow-xl border border-black/5 overflow-hidden group"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={service.image}
-                    alt={service.title[locale]}
+                    alt={(service.title as Record<string, string>)[locale]}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover saturate-[0.92] group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, 25vw"
                   />
                 </div>
                 <div className="p-5">
-                  <h3
-                    className="text-lg font-bold text-navy mb-2"
-                    style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                  >
-                    {service.title[locale]}
+                  <h3 className="font-serif text-lg font-bold text-navy mb-2">
+                    {(service.title as Record<string, string>)[locale]}
                   </h3>
                   <p className="text-navy/60 text-sm leading-relaxed mb-3 line-clamp-2">
-                    {service.description[locale]}
+                    {(service.description as Record<string, string>)[locale]}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-gold font-bold">
-                      {t("services", "from", locale)} {service.price}$
-                    </span>
-                    <Link
-                      href="/services"
-                      className="text-navy text-xs font-semibold hover:text-gold transition-colors"
-                    >
-                      {t("services", "bookNow", locale)} →
+                    <span className="text-gold font-bold">{t("common.from")} ${service.price}</span>
+                    <Link href="/services" className="text-navy text-xs font-semibold hover:text-gold transition-colors">
+                      {t("common.book")} →
                     </Link>
                   </div>
                 </div>
@@ -254,22 +179,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Instagram Gallery */}
-      <section className="py-20 px-4 bg-white/50">
+      {/* Gallery */}
+      <section className="py-20 px-4 bg-surface/50">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-12">
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-navy mb-3"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {t("gallery", "title", locale)}
-            </h2>
-            <p className="text-navy/60 text-lg">
-              {t("gallery", "subtitle", locale)}
-            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">{t("sections.galleryTitle")}</h2>
+            <p className="text-navy/60 text-lg">{t("sections.gallerySubtitle")}</p>
             <div className="w-16 h-1 gradient-gold rounded-full mx-auto mt-4" />
           </motion.div>
-
           <div className="columns-2 sm:columns-3 lg:columns-4 gap-4">
             {plansData.places.map((place, i) => (
               <motion.div
@@ -278,28 +195,19 @@ export default function Home() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="mb-4 break-inside-avoid group relative overflow-hidden rounded-2xl"
+                className="mb-4 break-inside-avoid group relative overflow-hidden rounded-3xl"
               >
-                <div
-                  className={`relative ${
-                    i % 3 === 0 ? "h-72" : i % 3 === 1 ? "h-56" : "h-64"
-                  }`}
-                >
+                <div className={`relative ${i % 3 === 0 ? "h-72" : i % 3 === 1 ? "h-56" : "h-64"}`}>
                   <Image
                     src={place.image}
-                    alt={place.name[locale]}
+                    alt={(place.name as Record<string, string>)[locale]}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover saturate-[0.92] group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 640px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p
-                      className="text-cream font-bold text-sm"
-                      style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                    >
-                      {place.name[locale]}
-                    </p>
+                    <p className="font-serif text-cream font-bold text-sm">{(place.name as Record<string, string>)[locale]}</p>
                   </div>
                 </div>
               </motion.div>
@@ -308,7 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote Builder */}
+      <Testimonials />
       <QuoteBuilder />
     </>
   );

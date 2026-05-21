@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "discover": "Découvrir",
+    "weekendMatch": "Weekend Match",
+    "couples": "Couples",
+    "famille": "Famille",
+    "amis": "Amis",
+    "business": "Affaires",
+    "buffets": "Buffets",
+    "services": "Services",
+    "packages": "Forfaits"
+  },
+  "hero": {
+    "title": "Edmonton, sublimé par vous.",
+    "subtitle": "Découvrez les plus beaux endroits, planifiez des expériences inoubliables et transformez chaque sortie en souvenir.",
+    "cta": "Trouver mon plan",
+    "ctaServices": "Nos services"
+  },
+  "weather": {
+    "edmonton": "Edmonton",
+    "cold": "Habillez-vous chaudement aujourd'hui !",
+    "indoor": "Idéal pour une sortie en intérieur",
+    "mild": "Temps doux, profitez-en !",
+    "outdoor": "Parfait pour profiter de l'extérieur"
+  },
+  "common": {
+    "viewMore": "Voir plus",
+    "from": "À partir de",
+    "perPerson": "/ personne",
+    "duration": "Durée",
+    "groupSize": "Groupe",
+    "location": "Lieu",
+    "season": "Saison",
+    "includes": "Ce qui est inclus",
+    "book": "Réserver",
+    "quote": "Demander un devis",
+    "customize": "Customiser mon expérience",
+    "allActivities": "Voir toutes les activités",
+    "viewAll": "Tout voir",
+    "similar": "Activités similaires",
+    "backTo": "Retour",
+    "loading": "Chargement…"
+  },
+  "categories": {
+    "title": "Explorez par catégorie",
+    "couplesDesc": "Dates romantiques et expériences à deux",
+    "familleDesc": "Activités pour toute la famille",
+    "amisDesc": "Sorties inoubliables entre amis",
+    "businessDesc": "Team-building et événements pro"
+  },
+  "sections": {
+    "popular": "Activités Populaires",
+    "servicesTitle": "Services Premium",
+    "servicesSubtitle": "Transformez vos sorties en expériences extraordinaires",
+    "galleryTitle": "Lieux Instagrammables",
+    "gallerySubtitle": "Les plus beaux endroits d'Edmonton à photographier",
+    "testimonialsTitle": "Ils ont vécu l'expérience",
+    "testimonialsSubtitle": "Ce que disent nos premiers clients à Edmonton"
+  },
+  "weekendMatch": {
+    "title": "Weekend Match",
+    "subtitle": "Répondez à 4 questions, on vous propose le plan parfait",
+    "q1": "Avec qui sortez-vous ?",
+    "q2": "Quel budget ?",
+    "q3": "Quelle ambiance ?",
+    "q4": "Quand ?",
+    "results": "Vos plans recommandés",
+    "noResults": "Aucun plan ne correspond exactement. Voici nos meilleures suggestions :",
+    "restart": "Recommencer",
+    "reserve": "Réserver ce plan",
+    "total": "Total estimé",
+    "perStep": "Étapes du plan"
+  },
+  "segments": {
+    "couple": "Couple",
+    "famille": "Famille",
+    "amis": "Amis",
+    "business": "Affaires"
+  },
+  "budgets": {
+    "b60": "60 $",
+    "b120": "120 $",
+    "b250": "250 $",
+    "b400": "400 $ +"
+  },
+  "ambiance": {
+    "calme": "Calme",
+    "dynamique": "Dynamique",
+    "gourmand": "Gourmand",
+    "decouverte": "Découverte"
+  },
+  "timing": {
+    "weekend": "Ce week-end",
+    "twoweeks": "Dans 2 semaines",
+    "month": "Ce mois",
+    "later": "Plus tard"
+  },
+  "seasons": {
+    "spring": "Printemps",
+    "summer": "Été",
+    "fall": "Automne",
+    "winter": "Hiver",
+    "all": "Toute saison"
+  },
+  "quote": {
+    "title": "Créez votre expérience sur-mesure",
+    "activity": "Choisissez une activité",
+    "guests": "Nombre de personnes",
+    "addons": "Options supplémentaires",
+    "summary": "Récapitulatif",
+    "total": "Total estimé",
+    "name": "Votre nom",
+    "email": "Votre courriel",
+    "phone": "Téléphone (optionnel)",
+    "message": "Message (optionnel)",
+    "submit": "Demander un devis",
+    "sending": "Envoi en cours…",
+    "success": "Merci ! On revient vers vous sous 24h.",
+    "error": "Une erreur est survenue. Réessayez ou écrivez-nous directement."
+  },
+  "ai": {
+    "title": "Concierge YEG",
+    "subtitle": "Assistant IA",
+    "placeholder": "Décrivez ce que vous cherchez…",
+    "send": "Envoyer"
+  },
+  "services": {
+    "photographer": "Photographe",
+    "picnic": "Pique-nique Chic",
+    "roomDecor": "Décoration Romantique",
+    "eventPlanner": "Planification d'Événement"
+  },
+  "loveRooms": {
+    "title": "Envie de prolonger la soirée ?",
+    "text": "Découvrez nos Love Rooms privées : des espaces intimes et raffinés pour terminer votre soirée en beauté.",
+    "cta": "Découvrir les Love Rooms"
+  },
+  "buffets": {
+    "title": "Les Meilleurs Buffets d'Edmonton",
+    "subtitle": "À volonté, du sushi au BBQ coréen — notre sélection curée par quartier et par budget",
+    "asian": "Buffets Asiatiques",
+    "korean": "Korean BBQ à Volonté",
+    "sushi": "Sushi à Volonté",
+    "hotpot": "Hot Pot",
+    "western": "Buffets Occidentaux",
+    "international": "Cuisines du Monde"
+  },
+  "packages": {
+    "title": "Nos Forfaits",
+    "subtitle": "Des expériences clé en main pour chaque occasion",
+    "includes": "Inclus",
+    "bookThis": "Réserver ce forfait"
+  },
+  "discover": {
+    "title": "Découvrir Edmonton",
+    "subtitle": "Le meilleur de la ville, curé pour vous — selon la saison et votre budget"
+  },
+  "footer": {
+    "tagline": "Edmonton, sublimé par vous.",
+    "rights": "Tous droits réservés.",
+    "explore": "Explorer",
+    "follow": "Suivez-nous",
+    "disclaimer": "YEGdate.ca — plateforme indépendante de planification d'expériences à Edmonton."
+  }
+}

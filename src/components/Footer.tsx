@@ -2,47 +2,41 @@
 
 import Link from "next/link";
 import { useLocale } from "@/lib/locale-context";
-import { t } from "@/lib/i18n";
 
 export default function Footer() {
-  const { locale } = useLocale();
+  const { t } = useLocale();
 
   return (
     <footer className="gradient-navy text-cream mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="md:col-span-1">
+          <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center">
-                <span className="text-gold font-serif font-bold text-sm">Y</span>
+              <div className="w-9 h-9 rounded-xl bg-gold/20 flex items-center justify-center">
+                <span className="text-gold font-serif font-bold text-base">Y</span>
               </div>
               <span className="font-serif text-xl font-bold">
                 YEG <span className="text-gold">Date</span>
               </span>
             </div>
-            <p className="text-cream/60 text-sm font-serif italic">
-              {t("footer", "tagline", locale)}
-            </p>
+            <p className="text-cream/60 text-sm font-serif italic">{t("footer.tagline")}</p>
           </div>
 
           <div>
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">
-              {t("footer", "explore", locale)}
+              {t("footer.explore")}
             </h4>
             <div className="space-y-2">
               {[
-                { href: "/decouvrir", label: t("nav", "discover", locale) },
-                { href: "/weekend-match", label: t("nav", "weekendMatch", locale) },
-                { href: "/couples", label: t("nav", "couples", locale) },
-                { href: "/famille", label: t("nav", "famille", locale) },
-                { href: "/amis", label: t("nav", "amis", locale) },
+                { href: "/decouvrir", key: "nav.discover" },
+                { href: "/weekend-match", key: "nav.weekendMatch" },
+                { href: "/couples", key: "nav.couples" },
+                { href: "/famille", key: "nav.famille" },
+                { href: "/amis", key: "nav.amis" },
+                { href: "/buffets", key: "nav.buffets" },
               ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block text-cream/60 hover:text-gold text-sm transition-colors"
-                >
-                  {link.label}
+                <Link key={link.href} href={link.href} className="block text-cream/60 hover:text-gold text-sm transition-colors">
+                  {t(link.key)}
                 </Link>
               ))}
             </div>
@@ -50,20 +44,16 @@ export default function Footer() {
 
           <div>
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">
-              Services
+              {t("nav.services")}
             </h4>
             <div className="space-y-2">
               {[
-                { href: "/services", label: t("nav", "services", locale) },
-                { href: "/packages", label: t("nav", "packages", locale) },
-                { href: "/business", label: t("nav", "business", locale) },
+                { href: "/services", key: "nav.services" },
+                { href: "/packages", key: "nav.packages" },
+                { href: "/business", key: "nav.business" },
               ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block text-cream/60 hover:text-gold text-sm transition-colors"
-                >
-                  {link.label}
+                <Link key={link.href} href={link.href} className="block text-cream/60 hover:text-gold text-sm transition-colors">
+                  {t(link.key)}
                 </Link>
               ))}
             </div>
@@ -71,7 +61,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">
-              {t("footer", "follow", locale)}
+              {t("footer.follow")}
             </h4>
             <div className="flex gap-3">
               {["Instagram", "Facebook", "TikTok"].map((social) => (
@@ -86,9 +76,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream/10 mt-12 pt-8 text-center">
+        <div className="border-t border-cream/10 mt-12 pt-8 text-center space-y-1">
+          <p className="text-cream/40 text-xs">{t("footer.disclaimer")}</p>
           <p className="text-cream/40 text-sm">
-            &copy; {new Date().getFullYear()} YEG Date. {t("footer", "rights", locale)}
+            &copy; {new Date().getFullYear()} YEG Date. {t("footer.rights")}
           </p>
         </div>
       </div>

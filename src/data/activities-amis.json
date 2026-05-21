@@ -1,0 +1,362 @@
+[
+  {
+    "id": "bad-axe-throwing-amis",
+    "segment": "amis",
+    "title": { "fr": "Lancer de Hache chez Bad Axe Throwing", "en": "Axe Throwing at Bad Axe Throwing" },
+    "location": "Bad Axe Throwing",
+    "address": "10018 105 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Une activité de groupe défoulante : apprenez à lancer la hache avec un coach, puis affrontez-vous en tournoi.",
+      "en": "A high-energy group activity: learn to throw axes with a coach, then face off in a tournament."
+    },
+    "longDescription": {
+      "fr": "Le lancer de hache est devenu LA sortie de groupe à Edmonton. Chez Bad Axe Throwing, un coach certifié vous apprend la technique en quelques minutes, puis organise un tournoi entre amis.\n\nL'ambiance est décontractée et compétitive à la fois : musique, fous rires et un brin d'adrénaline quand la hache se plante dans la cible. C'est parfait pour un anniversaire, un EVG/EVJF ou simplement une soirée différente.\n\nLes box privatives accueillent les groupes, et vous pouvez apporter de quoi grignoter. Réservez à l'avance pour les groupes de plus de 6.",
+      "en": "Axe throwing has become THE group outing in Edmonton. At Bad Axe Throwing, a certified coach teaches you the technique in minutes, then runs a tournament among friends.\n\nThe vibe is both laid-back and competitive: music, laughter and a hit of adrenaline when the axe sticks in the target. It's perfect for a birthday, a stag/bachelorette or just a different night out.\n\nPrivate lanes host groups, and you can bring snacks. Book ahead for groups over 6."
+    },
+    "image": "https://images.unsplash.com/photo-1593510987185-1ec2256148a3?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80",
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80",
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80"
+    ],
+    "priceRange": { "fr": "40$ - 55$ / personne", "en": "$40 - $55 / person" },
+    "priceFrom": 40,
+    "budgetTier": 60,
+    "duration": { "fr": "2h", "en": "2h" },
+    "groupSize": { "fr": "4-20 personnes", "en": "4-20 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Coach certifié", "Box privative", "Tournoi organisé", "Équipement fourni"],
+      "en": ["Certified coach", "Private lane", "Organized tournament", "Equipment provided"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "Bad Axe Throwing Edmonton"
+  },
+  {
+    "id": "locked-up-escape",
+    "segment": "amis",
+    "title": { "fr": "Escape Room chez Locked Up", "en": "Escape Room at Locked Up" },
+    "location": "Locked Up Escape Rooms",
+    "address": "10575 115 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Résolvez des énigmes en équipe et évadez-vous avant la fin du chrono dans des décors immersifs.",
+      "en": "Solve puzzles as a team and escape before the clock runs out in immersive rooms."
+    },
+    "longDescription": {
+      "fr": "Les escape rooms sont l'activité parfaite pour souder un groupe d'amis. Chez Locked Up, plusieurs salles à thème vous enferment 60 minutes : il faut fouiller, déduire et collaborer pour trouver la sortie.\n\nChaque salle a son propre univers et son niveau de difficulté. Le compte à rebours, les indices et la pression collective créent une montée d'adrénaline et beaucoup de rires.\n\nIdéal pour 4 à 8 joueurs par salle. Pour les grands groupes, on réserve plusieurs salles en parallèle pour une compétition amicale. Réservation obligatoire.",
+      "en": "Escape rooms are the perfect activity to bond a group of friends. At Locked Up, several themed rooms lock you in for 60 minutes: you search, deduce and collaborate to find the way out.\n\nEach room has its own world and difficulty level. The countdown, the clues and the collective pressure create an adrenaline rush and plenty of laughs.\n\nIdeal for 4 to 8 players per room. For large groups, we book several rooms in parallel for a friendly competition. Reservation required."
+    },
+    "image": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=800&q=80",
+      "https://images.unsplash.com/photo-1614107151491-6876eecbff89?w=800&q=80",
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"
+    ],
+    "priceRange": { "fr": "30$ - 45$ / personne", "en": "$30 - $45 / person" },
+    "priceFrom": 30,
+    "budgetTier": 60,
+    "duration": { "fr": "1h - 1h30", "en": "1h - 1.5h" },
+    "groupSize": { "fr": "4-8 par salle", "en": "4-8 per room" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique", "decouverte"],
+    "includes": {
+      "fr": ["1 salle thématique 60 min", "Game master", "Indices inclus", "Photo d'équipe"],
+      "en": ["1 themed room 60 min", "Game master", "Hints included", "Team photo"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "Locked Up Escape Rooms Edmonton"
+  },
+  {
+    "id": "activate-edmonton",
+    "segment": "amis",
+    "title": { "fr": "Jeux Interactifs chez Activate", "en": "Interactive Gaming at Activate" },
+    "location": "Activate Edmonton",
+    "address": "1755 102 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Un parcours de salles de jeux interactives high-tech : laser, mémoire, agilité — score en équipe.",
+      "en": "A circuit of high-tech interactive game rooms: laser, memory, agility — team scoring."
+    },
+    "longDescription": {
+      "fr": "Activate est une expérience de jeux interactifs nouvelle génération. Vous passez de salle en salle pour relever des défis physiques et mentaux : murs de boutons lumineux, parcours laser, jeux de mémoire et d'agilité, le tout chronométré et noté.\n\nVotre groupe accumule des points et tente de battre les meilleurs scores. C'est ludique, actif et accessible à tous les niveaux de forme physique.\n\nParfait pour un groupe d'amis qui veut bouger et rigoler. Bracelets connectés fournis. Réservez vos créneaux à l'avance, surtout en soirée et le week-end.",
+      "en": "Activate is a next-generation interactive gaming experience. You move from room to room tackling physical and mental challenges: lit button walls, laser courses, memory and agility games, all timed and scored.\n\nYour group racks up points and tries to beat the top scores. It's playful, active and accessible to all fitness levels.\n\nPerfect for a group of friends who want to move and laugh. Connected wristbands provided. Book your slots ahead, especially evenings and weekends."
+    },
+    "image": "https://images.unsplash.com/photo-1511882150382-421056c89033?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+      "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
+      "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&q=80"
+    ],
+    "priceRange": { "fr": "30$ - 40$ / personne", "en": "$30 - $40 / person" },
+    "priceFrom": 30,
+    "budgetTier": 60,
+    "duration": { "fr": "1h15", "en": "1h15" },
+    "groupSize": { "fr": "4-16 personnes", "en": "4-16 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Accès à toutes les salles", "Bracelet connecté", "Classement des scores", "Briefing inclus"],
+      "en": ["Access to all rooms", "Connected wristband", "Score leaderboard", "Briefing included"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.6,
+    "mapsQuery": "Activate Games Edmonton"
+  },
+  {
+    "id": "bowling-stones",
+    "segment": "amis",
+    "title": { "fr": "Bowling & Bar chez The Bowling Stones", "en": "Bowling & Bar at The Bowling Stones" },
+    "location": "The Bowling Stones",
+    "address": "50 Brentwood Blvd, Sherwood Park, AB",
+    "description": {
+      "fr": "Bowling moderne avec bar, cocktails et ambiance lounge — parfait pour une soirée de groupe décontractée.",
+      "en": "Modern bowling with a bar, cocktails and lounge vibe — perfect for a relaxed group night."
+    },
+    "longDescription": {
+      "fr": "The Bowling Stones réinvente le bowling à Edmonton : pistes modernes, éclairage tamisé, bar complet et menu de partage. C'est l'option idéale pour une soirée de groupe sans prise de tête.\n\nVous réservez une ou plusieurs pistes, commandez cocktails et bouchées, et enchaînez les parties dans une ambiance lounge animée. Aucune compétence requise — l'important est de s'amuser.\n\nGroupes de toutes tailles bienvenus. Pour les grands groupes, des forfaits avec pistes réservées et plateaux à partager sont disponibles. Réservez le week-end à l'avance.",
+      "en": "The Bowling Stones reinvents bowling near Edmonton: modern lanes, dim lighting, a full bar and a sharing menu. It's the ideal option for a no-fuss group night.\n\nYou book one or more lanes, order cocktails and bites, and play game after game in a lively lounge atmosphere. No skill required — the point is to have fun.\n\nGroups of all sizes welcome. For large groups, packages with reserved lanes and sharing platters are available. Book weekends ahead."
+    },
+    "image": "https://images.unsplash.com/photo-1545056453-f0359c3df6db?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545056453-f0359c3df6db?w=800&q=80",
+      "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=800&q=80",
+      "https://images.unsplash.com/photo-1622599511051-16f55a1234d0?w=800&q=80"
+    ],
+    "priceRange": { "fr": "35$ - 60$ / personne", "en": "$35 - $60 / person" },
+    "priceFrom": 35,
+    "budgetTier": 60,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "4-20 personnes", "en": "4-20 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique", "gourmand"],
+    "includes": {
+      "fr": ["Piste(s) réservée(s)", "Location chaussures", "Accès bar & menu partage", "Ambiance lounge"],
+      "en": ["Reserved lane(s)", "Shoe rental", "Bar & sharing menu", "Lounge vibe"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.5,
+    "mapsQuery": "The Bowling Stones Sherwood Park"
+  },
+  {
+    "id": "edmonton-karting",
+    "segment": "amis",
+    "title": { "fr": "Karting de Vitesse à Edmonton", "en": "Go-Kart Racing in Edmonton" },
+    "location": "Edmonton Karting Centre",
+    "address": "Castrol Raceway, 26106 127 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Course de karting palpitante : qualifs, course et podium pour désigner le champion du groupe.",
+      "en": "Thrilling go-kart racing: qualifying, race and podium to crown the group champion."
+    },
+    "longDescription": {
+      "fr": "Rien de tel qu'une course de karting pour réveiller l'esprit de compétition d'un groupe d'amis. Sur la piste, casque vissé, vous enchaînez tour de qualification puis course officielle avec chronométrage électronique.\n\nLe classement final et le podium garantissent rivalités amicales et fous rires. Les karts conviennent aux débutants comme aux pilotes aguerris.\n\nIdéal pour un EVG, un anniversaire ou une journée entre amis. Combinaisons et casques fournis. Réservation conseillée pour les groupes.",
+      "en": "Nothing sparks a group's competitive spirit like go-kart racing. On the track, helmet on, you run a qualifying lap then an official race with electronic timing.\n\nThe final ranking and podium guarantee friendly rivalries and big laughs. The karts suit beginners and seasoned drivers alike.\n\nIdeal for a stag, a birthday or a day with friends. Suits and helmets provided. Booking recommended for groups."
+    },
+    "image": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80"
+    ],
+    "priceRange": { "fr": "45$ - 75$ / personne", "en": "$45 - $75 / person" },
+    "priceFrom": 45,
+    "budgetTier": 120,
+    "duration": { "fr": "1h30 - 2h", "en": "1.5h - 2h" },
+    "groupSize": { "fr": "4-20 personnes", "en": "4-20 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Qualifs + course", "Chronométrage électronique", "Casque & combinaison", "Podium final"],
+      "en": ["Qualifying + race", "Electronic timing", "Helmet & suit", "Final podium"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.6,
+    "mapsQuery": "Castrol Raceway karting Edmonton"
+  },
+  {
+    "id": "sea-change-brewing-tour",
+    "segment": "amis",
+    "title": { "fr": "Tour de Brasserie chez Sea Change", "en": "Brewery Tour at Sea Change" },
+    "location": "Sea Change Brewing Co.",
+    "address": "9850 62 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Visite guidée d'une brasserie artisanale d'Edmonton avec dégustation de plusieurs bières.",
+      "en": "Guided tour of an Edmonton craft brewery with a tasting flight of several beers."
+    },
+    "longDescription": {
+      "fr": "Sea Change est l'une des brasseries artisanales les plus appréciées d'Edmonton. Notre tour vous emmène dans les coulisses : du brassage à la mise en canette, en passant par les secrets des recettes.\n\nLa visite se termine par une dégustation guidée (flight) de plusieurs bières, commentée par un membre de l'équipe. La taproom lumineuse et conviviale est parfaite pour prolonger la soirée.\n\nUne sortie idéale pour les amateurs de bière et les groupes qui veulent découvrir la scène locale. Possibilité d'ajouter une planche de partage. Réservez pour les groupes.",
+      "en": "Sea Change is one of Edmonton's most-loved craft breweries. Our tour takes you behind the scenes: from brewing to canning, including the secrets of the recipes.\n\nThe visit ends with a guided tasting flight of several beers, hosted by a team member. The bright, friendly taproom is perfect to extend the evening.\n\nAn ideal outing for beer lovers and groups wanting to discover the local scene. Option to add a sharing board. Book for groups."
+    },
+    "image": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80",
+      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80",
+      "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80"
+    ],
+    "priceRange": { "fr": "30$ - 50$ / personne", "en": "$30 - $50 / person" },
+    "priceFrom": 30,
+    "budgetTier": 60,
+    "duration": { "fr": "1h30 - 2h", "en": "1.5h - 2h" },
+    "groupSize": { "fr": "6-20 personnes", "en": "6-20 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "decouverte"],
+    "includes": {
+      "fr": ["Visite guidée coulisses", "Dégustation (flight)", "Accès taproom", "Verre souvenir"],
+      "en": ["Guided behind-scenes tour", "Tasting flight", "Taproom access", "Souvenir glass"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "Sea Change Brewing Edmonton"
+  },
+  {
+    "id": "sip-and-color",
+    "segment": "amis",
+    "title": { "fr": "Soirée Peinture chez Sip & Color", "en": "Paint Night at Sip & Color" },
+    "location": "Sip & Color Studio",
+    "address": "10442 82 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Peignez une toile guidée par un artiste, un verre à la main, dans une ambiance détendue et créative.",
+      "en": "Paint a guided canvas with a drink in hand, in a relaxed and creative atmosphere."
+    },
+    "longDescription": {
+      "fr": "Sip & Color propose des soirées peinture où aucun talent n'est requis. Un artiste vous guide étape par étape pour reproduire une œuvre, pendant que vous sirotez un verre entre amis.\n\nC'est créatif, relaxant et étonnamment amusant. Chacun repart avec sa propre toile — un souvenir concret de la soirée. Le studio fournit tout le matériel (toile, peinture, tabliers).\n\nParfait pour un EVJF, un anniversaire ou une sortie originale entre amis. Les groupes peuvent privatiser le studio. Apportez vos boissons selon la formule choisie.",
+      "en": "Sip & Color hosts paint nights where no talent is required. An artist guides you step by step to recreate a piece while you sip a drink with friends.\n\nIt's creative, relaxing and surprisingly fun. Everyone leaves with their own canvas — a tangible souvenir of the evening. The studio provides all materials (canvas, paint, aprons).\n\nPerfect for a bachelorette, a birthday or an original outing with friends. Groups can book out the studio. Bring your drinks depending on the chosen package."
+    },
+    "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80",
+      "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800&q=80",
+      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80"
+    ],
+    "priceRange": { "fr": "40$ - 55$ / personne", "en": "$40 - $55 / person" },
+    "priceFrom": 40,
+    "budgetTier": 60,
+    "duration": { "fr": "2h", "en": "2h" },
+    "groupSize": { "fr": "4-20 personnes", "en": "4-20 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Cours guidé par un artiste", "Toile & matériel fournis", "Tablier", "Votre œuvre à emporter"],
+      "en": ["Artist-guided class", "Canvas & materials", "Apron", "Your artwork to take home"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "paint night studio Whyte Avenue Edmonton"
+  },
+  {
+    "id": "tuft-time-studio",
+    "segment": "amis",
+    "title": { "fr": "Atelier Tufting chez Tuft Time", "en": "Rug Tufting Workshop at Tuft Time" },
+    "location": "Tuft Time Studio",
+    "address": "10575 114 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Créez votre propre tapis en tufting lors d'un atelier guidé — une activité tendance et originale.",
+      "en": "Make your own tufted rug in a guided workshop — a trendy, original activity."
+    },
+    "longDescription": {
+      "fr": "Le tufting (fabrication de tapis au pistolet) est l'une des activités créatives les plus en vogue. Chez Tuft Time, vous concevez votre motif, puis apprenez à manier le pistolet à toucher pour créer un tapis unique.\n\nL'atelier est entièrement guidé : aucun savoir-faire préalable nécessaire. Vous repartez avec votre création faite main, un objet déco original et personnel.\n\nIdéal pour un groupe d'amis qui cherche une expérience hors des sentiers battus. Toutes les fournitures sont incluses. Réservez à l'avance, les places sont limitées par session.",
+      "en": "Tufting (gun-made rug making) is one of the trendiest creative activities around. At Tuft Time, you design your pattern, then learn to handle the tufting gun to create a unique rug.\n\nThe workshop is fully guided: no prior skill needed. You leave with your handmade creation, an original and personal décor piece.\n\nIdeal for a group of friends looking for an off-the-beaten-path experience. All supplies included. Book ahead — spots are limited per session."
+    },
+    "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1528458965990-428de4b1cb0d?w=800&q=80",
+      "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80",
+      "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&q=80"
+    ],
+    "priceRange": { "fr": "75$ - 110$ / personne", "en": "$75 - $110 / person" },
+    "priceFrom": 75,
+    "budgetTier": 120,
+    "duration": { "fr": "3h", "en": "3h" },
+    "groupSize": { "fr": "4-12 personnes", "en": "4-12 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Atelier guidé 3h", "Toutes fournitures", "Pistolet à tufter", "Votre tapis à emporter"],
+      "en": ["Guided 3h workshop", "All supplies", "Tufting gun", "Your rug to take home"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "rug tufting studio Edmonton"
+  },
+  {
+    "id": "mkt-food-market",
+    "segment": "amis",
+    "title": { "fr": "Soirée au MKT Beer Market", "en": "Night Out at MKT Beer Market" },
+    "location": "MKT Fresh Food · Beer Market",
+    "address": "8101 Gateway Blvd NW, Edmonton, AB",
+    "description": {
+      "fr": "Un grand marché-bar avec cuisine ouverte, 100+ bières et longues tables conviviales pour les groupes.",
+      "en": "A large market-bar with open kitchen, 100+ beers and long communal tables for groups."
+    },
+    "longDescription": {
+      "fr": "MKT (prononcé « Market ») est un vaste pub-marché sur Gateway Boulevard, pensé pour les groupes. Cuisine ouverte, plats faits maison, et une carte de plus de 100 bières dont de nombreuses locales.\n\nLes grandes tables communautaires, le patio chauffé et l'ambiance animée en font un repaire idéal pour une soirée entre amis. On y mange bien, on trinque, et l'atmosphère monte au fil de la soirée.\n\nParfait pour un grand groupe, un anniversaire ou un afterwork prolongé. Réservez une section pour les groupes de 8 et plus.",
+      "en": "MKT (pronounced \"Market\") is a vast pub-market on Gateway Boulevard, built for groups. Open kitchen, house-made dishes, and a list of over 100 beers including many local ones.\n\nThe large communal tables, heated patio and lively atmosphere make it an ideal hangout for a night with friends. You eat well, you toast, and the energy builds through the evening.\n\nPerfect for a large group, a birthday or an extended afterwork. Book a section for groups of 8+."
+    },
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1538488881038-e252a119ace7?w=800&q=80",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800&q=80",
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&q=80"
+    ],
+    "priceRange": { "fr": "35$ - 65$ / personne", "en": "$35 - $65 / person" },
+    "priceFrom": 35,
+    "budgetTier": 60,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "6-30 personnes", "en": "6-30 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "dynamique"],
+    "includes": {
+      "fr": ["Section réservée groupe", "100+ bières au choix", "Menu à partager", "Patio chauffé"],
+      "en": ["Reserved group section", "100+ beers", "Sharing menu", "Heated patio"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.5,
+    "mapsQuery": "MKT Beer Market Gateway Edmonton"
+  },
+  {
+    "id": "have-mercy-cocktails",
+    "segment": "amis",
+    "title": { "fr": "Cocktails & Sud chez Have Mercy", "en": "Cocktails & Southern at Have Mercy" },
+    "location": "Have Mercy",
+    "address": "10550 115 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Cuisine du Sud américain et cocktails inventifs dans un décor chaleureux — idéal pour finir la soirée en groupe.",
+      "en": "Southern American food and inventive cocktails in a warm setting — ideal to cap a group night."
+    },
+    "longDescription": {
+      "fr": "Have Mercy apporte une touche du Sud des États-Unis à Edmonton : poulet frit, mac & cheese, et une carte de cocktails créatifs servis dans un décor chaleureux et tendance.\n\nC'est l'adresse parfaite pour démarrer ou conclure une soirée entre amis. Le bar prépare des cocktails signature, et les plats à partager invitent à la convivialité.\n\nL'ambiance monte en soirée, surtout le week-end. Réservez pour les groupes afin de garantir une grande table. Patio agréable en été.",
+      "en": "Have Mercy brings a taste of the American South to Edmonton: fried chicken, mac & cheese, and a list of creative cocktails served in a warm, on-trend setting.\n\nIt's the perfect spot to start or cap off a night with friends. The bar mixes signature cocktails, and the sharing plates invite conviviality.\n\nThe energy rises in the evening, especially on weekends. Book for groups to secure a big table. Pleasant patio in summer."
+    },
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
+      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80",
+      "https://images.unsplash.com/photo-1574096079513-d8259312b785?w=800&q=80"
+    ],
+    "priceRange": { "fr": "40$ - 70$ / personne", "en": "$40 - $70 / person" },
+    "priceFrom": 40,
+    "budgetTier": 60,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "4-16 personnes", "en": "4-16 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "dynamique"],
+    "includes": {
+      "fr": ["Grande table réservée", "Cocktails signature", "Plats à partager", "Patio (été)"],
+      "en": ["Reserved big table", "Signature cocktails", "Sharing plates", "Patio (summer)"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.6,
+    "mapsQuery": "Have Mercy restaurant Edmonton"
+  }
+]

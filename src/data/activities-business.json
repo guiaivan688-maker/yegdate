@@ -1,0 +1,362 @@
+[
+  {
+    "id": "bad-axe-team-building",
+    "segment": "business",
+    "title": { "fr": "Team-Building Lancer de Hache — Bad Axe", "en": "Axe Throwing Team-Building — Bad Axe" },
+    "location": "Bad Axe Throwing (privatisé)",
+    "address": "10018 105 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Privatisez Bad Axe Throwing pour un team-building défoulant : coaching, tournoi inter-équipes et trophée corporate.",
+      "en": "Charter Bad Axe Throwing for a high-energy team-building: coaching, inter-team tournament and corporate trophy."
+    },
+    "longDescription": {
+      "fr": "Le lancer de hache est devenu un classique du team-building à Edmonton, et pour cause : il brise la glace en quelques minutes et fédère les équipes autour d'une compétition saine.\n\nLa privatisation vous réserve l'ensemble des box. Des coachs certifiés encadrent vos collaborateurs, organisent un tournoi inter-équipes et couronnent l'équipe gagnante. Un format idéal pour renforcer la cohésion après une réorganisation ou pour célébrer un objectif atteint.\n\nNous gérons la logistique complète : créneau privatisé, restauration optionnelle (traiteur ou food trucks), et personnalisation aux couleurs de votre entreprise. Facturation et reçu corporate fournis.",
+      "en": "Axe throwing has become a Edmonton team-building classic, and for good reason: it breaks the ice within minutes and rallies teams around healthy competition.\n\nPrivatizing reserves all the lanes. Certified coaches guide your staff, run an inter-team tournament and crown the winning team. An ideal format to strengthen cohesion after a reorg or to celebrate a goal achieved.\n\nWe handle full logistics: private slot, optional catering (caterer or food trucks), and branding in your company colours. Corporate invoice and receipt provided."
+    },
+    "image": "https://images.unsplash.com/photo-1593510987185-1ec2256148a3?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80",
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+    ],
+    "priceRange": { "fr": "75$ - 120$ / personne", "en": "$75 - $120 / person" },
+    "priceFrom": 75,
+    "budgetTier": 120,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "8-40 personnes", "en": "8-40 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Salle privatisée", "Coachs certifiés", "Tournoi inter-équipes", "Restauration optionnelle", "Facture corporate"],
+      "en": ["Private venue", "Certified coaches", "Inter-team tournament", "Optional catering", "Corporate invoice"]
+    },
+    "services": ["eventPlanner", "photographer"],
+    "cta": "quote",
+    "rating": 4.8,
+    "mapsQuery": "Bad Axe Throwing Edmonton"
+  },
+  {
+    "id": "escape-room-quest-corporate",
+    "segment": "business",
+    "title": { "fr": "Escape Room Corporate — Quest Edmonton", "en": "Corporate Escape Room — Quest Edmonton" },
+    "location": "Quest Edmonton (privatisé)",
+    "address": "10575 115 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Un escape room privatisé qui révèle les leaders et la dynamique d'équipe — débrief facilitateur inclus.",
+      "en": "A private escape room that reveals leaders and team dynamics — facilitator debrief included."
+    },
+    "longDescription": {
+      "fr": "L'escape room est l'un des outils de team-building les plus efficaces : en 60 minutes, on observe en conditions réelles la communication, le leadership et la répartition des rôles dans une équipe.\n\nChez Quest Edmonton, nous privatisons plusieurs salles pour faire jouer vos équipes en parallèle, suivies d'un débrief animé par un facilitateur qui relie l'expérience à vos enjeux professionnels.\n\nFormat idéal pour 4 à 8 personnes par salle, modulable jusqu'à plusieurs équipes. Nous fournissons le classement, les photos de groupe et un compte rendu des observations. Restauration possible avant ou après.",
+      "en": "The escape room is one of the most effective team-building tools: in 60 minutes, you observe communication, leadership and role distribution under real conditions.\n\nAt Quest Edmonton, we privatize several rooms to run your teams in parallel, followed by a debrief led by a facilitator who ties the experience back to your professional challenges.\n\nIdeal format for 4-8 people per room, scalable to several teams. We provide the ranking, group photos and a summary of observations. Catering possible before or after."
+    },
+    "image": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=800&q=80",
+      "https://images.unsplash.com/photo-1614107151491-6876eecbff89?w=800&q=80",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+    ],
+    "priceRange": { "fr": "75$ - 110$ / personne", "en": "$75 - $110 / person" },
+    "priceFrom": 75,
+    "budgetTier": 120,
+    "duration": { "fr": "1h30 - 2h", "en": "1.5h - 2h" },
+    "groupSize": { "fr": "4-24 personnes", "en": "4-24 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique", "decouverte"],
+    "includes": {
+      "fr": ["Salles privatisées", "Débrief facilitateur", "Classement & photos", "Compte rendu d'équipe"],
+      "en": ["Private rooms", "Facilitator debrief", "Ranking & photos", "Team report"]
+    },
+    "services": ["eventPlanner", "photographer"],
+    "cta": "quote",
+    "rating": 4.7,
+    "mapsQuery": "Quest Edmonton escape room"
+  },
+  {
+    "id": "cours-cuisine-get-cooking",
+    "segment": "business",
+    "title": { "fr": "Cours de Cuisine Corporate — Get Cooking", "en": "Corporate Cooking Class — Get Cooking" },
+    "location": "Get Cooking",
+    "address": "10923 101 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Un atelier culinaire en équipe : cuisinez puis dégustez ensemble un repas complet, encadrés par un chef.",
+      "en": "A team cooking workshop: cook then enjoy a full meal together, led by a chef."
+    },
+    "longDescription": {
+      "fr": "Cuisiner ensemble est l'un des meilleurs moyens de souder une équipe. Chez Get Cooking, un chef professionnel guide vos collaborateurs à travers la préparation d'un repas complet, réparti en stations de travail collaboratives.\n\nL'expérience favorise la coopération, la communication et le plaisir partagé, le tout couronné par une dégustation conviviale autour de la table. Menus adaptables (végétarien, international, festif Q4).\n\nIdéal pour 10 à 30 personnes. Nous gérons les restrictions alimentaires, les boissons et la facturation corporate. Une activité parfaite pour un dîner d'équipe ou une fête de fin d'année originale.",
+      "en": "Cooking together is one of the best ways to bond a team. At Get Cooking, a professional chef guides your staff through preparing a full meal, split across collaborative work stations.\n\nThe experience encourages cooperation, communication and shared enjoyment, capped by a convivial tasting around the table. Adaptable menus (vegetarian, international, festive Q4).\n\nIdeal for 10-30 people. We handle dietary restrictions, drinks and corporate invoicing. A perfect activity for a team dinner or an original year-end party."
+    },
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=800&q=80",
+      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80",
+      "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"
+    ],
+    "priceRange": { "fr": "110$ - 180$ / personne", "en": "$110 - $180 / person" },
+    "priceFrom": 110,
+    "budgetTier": 250,
+    "duration": { "fr": "3h", "en": "3h" },
+    "groupSize": { "fr": "10-30 personnes", "en": "10-30 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "dynamique"],
+    "includes": {
+      "fr": ["Chef professionnel", "Repas complet cuisiné", "Stations collaboratives", "Gestion allergies", "Facture corporate"],
+      "en": ["Professional chef", "Full cooked meal", "Collaborative stations", "Allergy management", "Corporate invoice"]
+    },
+    "services": ["eventPlanner"],
+    "cta": "quote",
+    "rating": 4.8,
+    "mapsQuery": "Get Cooking Edmonton"
+  },
+  {
+    "id": "curling-granite-club",
+    "segment": "business",
+    "title": { "fr": "Initiation Curling — Granite Curling Club", "en": "Curling Intro — Granite Curling Club" },
+    "location": "Granite Curling Club",
+    "address": "8620 107 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Une initiation au curling encadrée pour les équipes : sport canadien par excellence, fous rires garantis.",
+      "en": "A guided curling intro for teams: the quintessential Canadian sport, laughs guaranteed."
+    },
+    "longDescription": {
+      "fr": "Quoi de plus canadien qu'une partie de curling pour souder une équipe ? Au Granite Curling Club, l'un des clubs historiques d'Edmonton, des instructeurs initient vos collaborateurs aux bases : balayage, lancer de pierre et stratégie.\n\nAucune expérience requise — l'activité met tout le monde sur un pied d'égalité et déclenche immanquablement les fous rires. S'ensuit un mini-tournoi entre équipes sur la glace.\n\nIdéal en automne et en hiver pour 8 à 40 personnes. Le club dispose d'un lounge pour prolonger autour d'un verre et de bouchées. Parfait pour une activité d'équipe saisonnière mémorable.",
+      "en": "What's more Canadian than a game of curling to bond a team? At the Granite Curling Club, one of Edmonton's historic clubs, instructors teach your staff the basics: sweeping, stone delivery and strategy.\n\nNo experience required — the activity levels the playing field and unfailingly triggers laughter. A mini-tournament between teams on the ice follows.\n\nIdeal in fall and winter for 8-40 people. The club has a lounge to extend the evening over drinks and bites. Perfect for a memorable seasonal team activity."
+    },
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80",
+      "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&q=80",
+      "https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=800&q=80"
+    ],
+    "priceRange": { "fr": "75$ - 130$ / personne", "en": "$75 - $130 / person" },
+    "priceFrom": 75,
+    "budgetTier": 120,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "8-40 personnes", "en": "8-40 people" },
+    "season": ["fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Instructeurs certifiés", "Équipement fourni", "Mini-tournoi", "Accès lounge", "Facture corporate"],
+      "en": ["Certified instructors", "Equipment provided", "Mini-tournament", "Lounge access", "Corporate invoice"]
+    },
+    "services": ["eventPlanner"],
+    "cta": "quote",
+    "rating": 4.7,
+    "mapsQuery": "Granite Curling Club Edmonton"
+  },
+  {
+    "id": "brewery-tour-corporate",
+    "segment": "business",
+    "title": { "fr": "Tour des Brasseries Corporate", "en": "Corporate Brewery Tour" },
+    "location": "Sea Change · Polyrhythm · Yellowhead",
+    "address": "Quartier des brasseries, Edmonton, AB",
+    "description": {
+      "fr": "Un circuit guidé de trois brasseries artisanales d'Edmonton avec transport, dégustations et bouchées.",
+      "en": "A guided circuit of three Edmonton craft breweries with transport, tastings and bites."
+    },
+    "longDescription": {
+      "fr": "Edmonton possède une scène de brasseries artisanales en plein essor. Ce circuit corporate emmène votre équipe dans trois établissements emblématiques — Sea Change, Polyrhythm et Yellowhead — avec transport privé entre chaque arrêt.\n\nÀ chaque brasserie, une dégustation guidée et un aperçu des coulisses, accompagnés de planches de bouchées. C'est une activité conviviale, détendue, parfaite pour un afterwork prolongé ou récompenser une équipe.\n\nIdéal pour 8 à 30 personnes. Le transport sécurisé est inclus (personne ne conduit). Nous adaptons le parcours et pouvons ajouter un dîner en fin de tour. Facturation corporate fournie.",
+      "en": "Edmonton has a booming craft brewery scene. This corporate circuit takes your team to three flagship spots — Sea Change, Polyrhythm and Yellowhead — with private transport between each stop.\n\nAt each brewery, a guided tasting and a behind-the-scenes look, paired with snack boards. It's a relaxed, convivial activity, perfect for an extended afterwork or to reward a team.\n\nIdeal for 8-30 people. Safe transport included (nobody drives). We adapt the route and can add a dinner at the end. Corporate invoice provided."
+    },
+    "image": "https://images.unsplash.com/photo-1518176258769-f227c798150e?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80",
+      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80",
+      "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80"
+    ],
+    "priceRange": { "fr": "120$ - 200$ / personne", "en": "$120 - $200 / person" },
+    "priceFrom": 120,
+    "budgetTier": 250,
+    "duration": { "fr": "4h", "en": "4h" },
+    "groupSize": { "fr": "8-30 personnes", "en": "8-30 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "decouverte"],
+    "includes": {
+      "fr": ["3 brasseries guidées", "Transport privé inclus", "Dégustations & bouchées", "Facture corporate"],
+      "en": ["3 guided breweries", "Private transport", "Tastings & bites", "Corporate invoice"]
+    },
+    "services": ["eventPlanner"],
+    "cta": "quote",
+    "rating": 4.7,
+    "mapsQuery": "Sea Change Brewing Edmonton"
+  },
+  {
+    "id": "segway-river-valley-corporate",
+    "segment": "business",
+    "title": { "fr": "Tour Segway River Valley Corporate", "en": "Corporate Segway River Valley Tour" },
+    "location": "River Valley Adventure Co.",
+    "address": "9939 Grierson Hill NW, Edmonton, AB",
+    "description": {
+      "fr": "Une sortie Segway guidée dans la vallée de la rivière : team-building actif et grand air en plein cœur d'Edmonton.",
+      "en": "A guided Segway outing in the river valley: active team-building and fresh air in the heart of Edmonton."
+    },
+    "longDescription": {
+      "fr": "La vallée de la rivière North Saskatchewan est le plus grand parc urbain d'Amérique du Nord. River Valley Adventure Co. y propose des tours guidés en Segway, une façon ludique et originale de découvrir la ville en équipe.\n\nAprès une courte initiation, votre groupe parcourt les sentiers panoramiques accompagné d'un guide. L'activité conjugue plein air, légèreté et découverte — une bouffée d'oxygène loin de la salle de réunion.\n\nIdéal de mai à octobre pour 4 à 24 personnes. Casques et équipement fournis. Parfait comme pause énergisante lors d'un séminaire ou d'une journée d'équipe. Facturation corporate.",
+      "en": "The North Saskatchewan River valley is North America's largest urban park. River Valley Adventure Co. offers guided Segway tours there, a fun and original way to discover the city as a team.\n\nAfter a short intro, your group rides the scenic trails with a guide. The activity blends fresh air, lightness and discovery — a breath of oxygen away from the meeting room.\n\nIdeal May to October for 4-24 people. Helmets and equipment provided. Perfect as an energizing break during a seminar or team day. Corporate invoicing."
+    },
+    "image": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=800&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+    ],
+    "priceRange": { "fr": "85$ - 140$ / personne", "en": "$85 - $140 / person" },
+    "priceFrom": 85,
+    "budgetTier": 120,
+    "duration": { "fr": "2h", "en": "2h" },
+    "groupSize": { "fr": "4-24 personnes", "en": "4-24 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique", "decouverte"],
+    "includes": {
+      "fr": ["Initiation Segway", "Guide dédié", "Casques & équipement", "Facture corporate"],
+      "en": ["Segway intro", "Dedicated guide", "Helmets & equipment", "Corporate invoice"]
+    },
+    "services": ["eventPlanner", "photographer"],
+    "cta": "quote",
+    "rating": 4.6,
+    "mapsQuery": "River Valley Adventure Co Edmonton"
+  },
+  {
+    "id": "soiree-corporate-fairmont",
+    "segment": "business",
+    "title": { "fr": "Soirée Corporate au Fairmont Hotel Macdonald", "en": "Corporate Evening at Fairmont Hotel Macdonald" },
+    "location": "Fairmont Hotel Macdonald",
+    "address": "10065 100 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Une fête d'entreprise haut de gamme dans le plus prestigieux hôtel d'Edmonton : salle, traiteur et coordination.",
+      "en": "A high-end company party in Edmonton's most prestigious hotel: venue, catering and coordination."
+    },
+    "longDescription": {
+      "fr": "Pour une fête de fin d'année, un gala ou un événement client prestigieux, le Fairmont Hotel Macdonald offre un cadre incomparable : salles élégantes, vue sur la vallée et service cinq étoiles.\n\nNous coordonnons l'ensemble : réservation de salle, traiteur, plan de table, décoration, animation et audiovisuel. Votre équipe profite d'une soirée clé en main, sans aucune logistique à gérer.\n\nFormat modulable de 20 à 150+ convives. Idéal pour les soirées corporate Q4 (réservez tôt, le calendrier se remplit vite). Devis détaillé fourni selon vos besoins et votre budget.",
+      "en": "For a year-end party, a gala or a prestigious client event, the Fairmont Hotel Macdonald offers an unmatched setting: elegant ballrooms, valley views and five-star service.\n\nWe coordinate everything: room booking, catering, seating plan, decoration, entertainment and AV. Your team enjoys a turnkey evening, with no logistics to manage.\n\nScalable format from 20 to 150+ guests. Ideal for Q4 corporate parties (book early, the calendar fills fast). Detailed quote provided based on your needs and budget."
+    },
+    "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+    ],
+    "priceRange": { "fr": "150$ - 350$ / personne", "en": "$150 - $350 / person" },
+    "priceFrom": 150,
+    "budgetTier": 400,
+    "duration": { "fr": "Soirée", "en": "Evening" },
+    "groupSize": { "fr": "20-150 personnes", "en": "20-150 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "calme"],
+    "includes": {
+      "fr": ["Salle réservée", "Traiteur 5 étoiles", "Décoration & AV", "Coordination complète", "Facture corporate"],
+      "en": ["Reserved ballroom", "5-star catering", "Decoration & AV", "Full coordination", "Corporate invoice"]
+    },
+    "services": ["eventPlanner", "photographer"],
+    "cta": "quote",
+    "rating": 4.9,
+    "mapsQuery": "Fairmont Hotel Macdonald Edmonton"
+  },
+  {
+    "id": "power-lunch-hardware-grill",
+    "segment": "business",
+    "title": { "fr": "Power Lunch au Hardware Grill", "en": "Power Lunch at Hardware Grill" },
+    "location": "Hardware Grill",
+    "address": "9698 Jasper Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Un déjeuner d'affaires raffiné dans une institution d'Edmonton : table privée, menu express et cadre impeccable.",
+      "en": "A refined business lunch at an Edmonton institution: private table, express menu and impeccable setting."
+    },
+    "longDescription": {
+      "fr": "Le Hardware Grill est une institution de la gastronomie d'Edmonton, idéale pour impressionner un client ou conclure une affaire. Le cadre élégant et la cuisine canadienne raffinée posent le ton parfait pour un déjeuner professionnel.\n\nNotre forfait power lunch réserve une table privée ou un salon, avec un menu express en deux ou trois services pour respecter votre agenda. Le service efficace et discret permet de garder le focus sur la conversation.\n\nIdéal pour 4 à 12 personnes. Nous gérons la réservation, les préférences alimentaires et la facturation corporate. Parfait pour la prospection, les négociations ou les réunions de direction.",
+      "en": "The Hardware Grill is an institution of Edmonton dining, ideal to impress a client or close a deal. The elegant setting and refined Canadian cuisine set the perfect tone for a business lunch.\n\nOur power lunch package reserves a private table or room, with an express two- or three-course menu to respect your schedule. The efficient, discreet service keeps the focus on the conversation.\n\nIdeal for 4-12 people. We handle the reservation, dietary preferences and corporate invoicing. Perfect for prospecting, negotiations or executive meetings."
+    },
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+      "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80",
+      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&q=80"
+    ],
+    "priceRange": { "fr": "85$ - 150$ / personne", "en": "$85 - $150 / person" },
+    "priceFrom": 85,
+    "budgetTier": 120,
+    "duration": { "fr": "1h30", "en": "1.5h" },
+    "groupSize": { "fr": "4-12 personnes", "en": "4-12 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "calme"],
+    "includes": {
+      "fr": ["Table ou salon privé", "Menu express 2-3 services", "Service discret", "Facture corporate"],
+      "en": ["Private table or room", "Express 2-3 course menu", "Discreet service", "Corporate invoice"]
+    },
+    "services": ["eventPlanner"],
+    "cta": "quote",
+    "rating": 4.8,
+    "mapsQuery": "Hardware Grill Edmonton"
+  },
+  {
+    "id": "afterwork-the-common",
+    "segment": "business",
+    "title": { "fr": "Afterwork Networking au The Common", "en": "Networking Afterwork at The Common" },
+    "location": "The Common",
+    "address": "9910 109 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Un afterwork networking dans un bar branché du centre-ville : espace réservé, cocktails et bouchées.",
+      "en": "A networking afterwork at a trendy downtown bar: reserved space, cocktails and bites."
+    },
+    "longDescription": {
+      "fr": "The Common est un bar-restaurant branché du centre-ville, réputé pour ses cocktails créatifs et son ambiance décontractée — le cadre parfait pour un afterwork networking.\n\nNous réservons un espace dédié pour votre groupe, avec un forfait cocktails et bouchées. C'est l'occasion idéale de créer du lien entre collègues, accueillir de nouvelles recrues ou réseauter avec des partenaires dans une atmosphère détendue.\n\nFormat modulable de 10 à 50 personnes. Nous pouvons ajouter un animateur, un photographe ou un badge networking. Facturation corporate fournie. Réservez à l'avance, surtout en fin de semaine.",
+      "en": "The Common is a trendy downtown bar-restaurant, known for its creative cocktails and laid-back vibe — the perfect setting for a networking afterwork.\n\nWe reserve a dedicated space for your group, with a cocktails and bites package. It's the ideal occasion to build bonds between colleagues, welcome new hires or network with partners in a relaxed atmosphere.\n\nScalable format from 10 to 50 people. We can add a host, a photographer or networking badges. Corporate invoice provided. Book ahead, especially late in the week."
+    },
+    "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800&q=80",
+      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80"
+    ],
+    "priceRange": { "fr": "75$ - 130$ / personne", "en": "$75 - $130 / person" },
+    "priceFrom": 75,
+    "budgetTier": 120,
+    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
+    "groupSize": { "fr": "10-50 personnes", "en": "10-50 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["gourmand", "dynamique"],
+    "includes": {
+      "fr": ["Espace réservé", "Forfait cocktails & bouchées", "Options networking", "Facture corporate"],
+      "en": ["Reserved space", "Cocktails & bites package", "Networking options", "Corporate invoice"]
+    },
+    "services": ["eventPlanner", "photographer"],
+    "cta": "quote",
+    "rating": 4.6,
+    "mapsQuery": "The Common Edmonton 109 Street"
+  },
+  {
+    "id": "privatisation-telus-science",
+    "segment": "business",
+    "title": { "fr": "Soirée Privée au TELUS World of Science", "en": "Private Evening at TELUS World of Science" },
+    "location": "TELUS World of Science (privatisé)",
+    "address": "11211 142 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Privatisez le centre des sciences pour une soirée corporate originale : galeries, planétarium et réception.",
+      "en": "Charter the science centre for an original corporate evening: galleries, planetarium and reception."
+    },
+    "longDescription": {
+      "fr": "Pour une soirée corporate vraiment différente, la privatisation du TELUS World of Science offre un cadre spectaculaire et mémorable. Vos invités ont les galeries interactives, le planétarium et l'IMAX rien que pour eux.\n\nNous coordonnons une réception complète : traiteur, bar, accès aux expositions et séances privées au planétarium. C'est une option idéale pour un lancement de produit, une soirée client ou une fête d'entreprise qui sort de l'ordinaire.\n\nFormat de 50 à plusieurs centaines d'invités. L'expérience marque les esprits et reflète une image innovante de votre organisation. Devis détaillé selon le format et le budget.",
+      "en": "For a truly different corporate evening, chartering TELUS World of Science offers a spectacular, memorable setting. Your guests have the interactive galleries, planetarium and IMAX all to themselves.\n\nWe coordinate a full reception: catering, bar, exhibition access and private planetarium shows. It's an ideal option for a product launch, a client evening or a company party that breaks the mould.\n\nFormat from 50 to several hundred guests. The experience leaves a strong impression and reflects an innovative image of your organization. Detailed quote based on format and budget."
+    },
+    "image": "https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1564325724739-bae0bd08762c?w=800&q=80",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80"
+    ],
+    "priceRange": { "fr": "150$ - 350$ / personne", "en": "$150 - $350 / person" },
+    "priceFrom": 150,
+    "budgetTier": 400,
+    "duration": { "fr": "Soirée", "en": "Evening" },
+    "groupSize": { "fr": "50-300 personnes", "en": "50-300 people" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["decouverte", "gourmand"],
+    "includes": {
+      "fr": ["Centre privatisé", "Galeries + planétarium", "Traiteur & bar", "Coordination complète", "Facture corporate"],
+      "en": ["Private centre", "Galleries + planetarium", "Catering & bar", "Full coordination", "Corporate invoice"]
+    },
+    "services": ["eventPlanner", "photographer"],
+    "cta": "quote",
+    "rating": 4.9,
+    "mapsQuery": "TELUS World of Science Edmonton"
+  }
+]

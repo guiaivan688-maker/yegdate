@@ -1,0 +1,372 @@
+[
+  {
+    "id": "telus-world-science",
+    "segment": "famille",
+    "title": { "fr": "TELUS World of Science", "en": "TELUS World of Science" },
+    "location": "TELUS World of Science Edmonton",
+    "address": "11211 142 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Le centre des sciences d'Edmonton : expositions interactives, planétarium et cinéma IMAX pour toute la famille.",
+      "en": "Edmonton's science centre: interactive exhibits, planetarium and IMAX theatre for the whole family."
+    },
+    "longDescription": {
+      "fr": "TELUS World of Science est l'une des sorties familiales incontournables d'Edmonton. Sur plusieurs étages, les enfants explorent des galeries interactives sur le corps humain, l'espace, la nature et la technologie.\n\nLe planétarium Zeidler Dome et le cinéma IMAX offrent des expériences immersives spectaculaires. Des expositions temporaires renouvelées régulièrement donnent une bonne raison de revenir.\n\nLe site est entièrement accessible aux poussettes, dispose de tables à langer et d'un café. Comptez une demi-journée à une journée complète selon l'âge des enfants.",
+      "en": "TELUS World of Science is one of Edmonton's must-do family outings. Across several floors, kids explore interactive galleries on the human body, space, nature and technology.\n\nThe Zeidler Dome planetarium and IMAX theatre offer spectacular immersive experiences. Regularly refreshed temporary exhibitions give a good reason to come back.\n\nThe site is fully stroller-accessible, has change tables and a café. Plan for a half to full day depending on the children's ages."
+    },
+    "image": "https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1564325724739-bae0bd08762c?w=800&q=80",
+      "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
+    ],
+    "priceRange": { "fr": "60$ - 110$ / famille", "en": "$60 - $110 / family" },
+    "priceFrom": 60,
+    "budgetTier": 120,
+    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["decouverte", "dynamique"],
+    "includes": {
+      "fr": ["Accès aux galeries", "Planétarium", "Accessible poussette", "Café sur place"],
+      "en": ["Gallery access", "Planetarium", "Stroller accessible", "On-site café"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "TELUS World of Science Edmonton"
+  },
+  {
+    "id": "royal-alberta-museum",
+    "segment": "famille",
+    "title": { "fr": "Royal Alberta Museum", "en": "Royal Alberta Museum" },
+    "location": "Royal Alberta Museum",
+    "address": "9810 103a Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Le plus grand musée de l'Ouest canadien : histoire naturelle, cultures autochtones et galerie des insectes vivants.",
+      "en": "Western Canada's largest museum: natural history, Indigenous cultures and a living bug gallery."
+    },
+    "longDescription": {
+      "fr": "Le Royal Alberta Museum, au centre-ville, est le plus grand musée de l'Ouest canadien. Ses galeries couvrent l'histoire naturelle de l'Alberta, les cultures des Premières Nations, et une fascinante salle des insectes vivants qui captive les enfants.\n\nUn espace de découverte pour les tout-petits permet aux plus jeunes de manipuler et d'explorer librement. Les expositions itinérantes apportent régulièrement de nouveaux thèmes.\n\nLe musée est moderne, lumineux, entièrement accessible et doté d'un café. C'est une sortie idéale par temps froid ou pluvieux.",
+      "en": "The Royal Alberta Museum, downtown, is Western Canada's largest museum. Its galleries cover Alberta's natural history, First Nations cultures, and a fascinating living bug gallery that captivates kids.\n\nA discovery space for toddlers lets the youngest handle and explore freely. Travelling exhibitions regularly bring new themes.\n\nThe museum is modern, bright, fully accessible and has a café. It's an ideal outing in cold or rainy weather."
+    },
+    "image": "https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&q=80",
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80",
+      "https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=800&q=80"
+    ],
+    "priceRange": { "fr": "45$ - 90$ / famille", "en": "$45 - $90 / family" },
+    "priceFrom": 45,
+    "budgetTier": 60,
+    "duration": { "fr": "2h - 4h", "en": "2h - 4h" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "0-15 ans", "en": "0-15 yrs" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["decouverte", "calme"],
+    "includes": {
+      "fr": ["Accès toutes galeries", "Espace tout-petits", "Accessible poussette", "Vestiaire"],
+      "en": ["All galleries access", "Toddler space", "Stroller accessible", "Coat check"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "Royal Alberta Museum Edmonton"
+  },
+  {
+    "id": "fort-edmonton-park",
+    "segment": "famille",
+    "title": { "fr": "Fort Edmonton Park", "en": "Fort Edmonton Park" },
+    "location": "Fort Edmonton Park",
+    "address": "7000 143 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Le plus grand musée vivant d'histoire du Canada : époques 1846 à 1929, train à vapeur et manège ancien.",
+      "en": "Canada's largest living history museum: eras 1846 to 1929, steam train and vintage midway."
+    },
+    "longDescription": {
+      "fr": "Fort Edmonton Park fait voyager toute la famille dans le temps. On y traverse quatre époques d'Edmonton, des comptoirs de traite de 1846 jusqu'aux années 1920, avec des acteurs en costume, des boutiques d'époque et un train à vapeur.\n\nLes enfants adorent le manège ancien, les bonbons à l'ancienne et les démonstrations d'artisans. Le nouveau Indigenous Peoples Experience ajoute une dimension culturelle riche.\n\nVaste et en plein air, le site se découvre surtout de mai à septembre, plus pendant les événements spéciaux d'Halloween et de Noël. Prévoyez de bonnes chaussures.",
+      "en": "Fort Edmonton Park takes the whole family back in time. You walk through four eras of Edmonton, from the 1846 trading posts to the 1920s, with costumed actors, period shops and a steam train.\n\nKids love the vintage midway, the old-fashioned candy and the artisan demonstrations. The new Indigenous Peoples Experience adds a rich cultural dimension.\n\nLarge and outdoors, the site is best explored May to September, plus during special Halloween and Christmas events. Bring good shoes."
+    },
+    "image": "https://images.unsplash.com/photo-1533230408708-8f9f91d1235a?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80",
+      "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80",
+      "https://images.unsplash.com/photo-1551801841-ecad875a5142?w=800&q=80"
+    ],
+    "priceRange": { "fr": "70$ - 130$ / famille", "en": "$70 - $130 / family" },
+    "priceFrom": 70,
+    "budgetTier": 120,
+    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["decouverte", "dynamique"],
+    "includes": {
+      "fr": ["Accès toutes les époques", "Train à vapeur", "Manège ancien", "Indigenous Experience"],
+      "en": ["All eras access", "Steam train", "Vintage midway", "Indigenous Experience"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.8,
+    "mapsQuery": "Fort Edmonton Park"
+  },
+  {
+    "id": "muttart-conservatory-famille",
+    "segment": "famille",
+    "title": { "fr": "Muttart Conservatory", "en": "Muttart Conservatory" },
+    "location": "Muttart Conservatory",
+    "address": "9626 96a St NW, Edmonton, AB",
+    "description": {
+      "fr": "Les célèbres pyramides de verre : trois biomes (tropical, tempéré, aride) et une expo florale qui change selon les saisons.",
+      "en": "The famous glass pyramids: three biomes (tropical, temperate, arid) and a seasonal floral show."
+    },
+    "longDescription": {
+      "fr": "Les pyramides du Muttart Conservatory sont l'un des symboles d'Edmonton. À l'intérieur, trois biomes recréent des climats du monde entier, et une quatrième pyramide accueille une exposition florale qui change à chaque saison.\n\nC'est une bulle de verdure parfaite en hiver, quand la ville est sous la neige. Les enfants suivent un parcours de découverte, observent papillons et plantes carnivores, et profitent de l'air chaud et humide du biome tropical.\n\nLe site est accessible, doté d'un café réputé, et la balade dure environ 1h à 2h. Idéal à combiner avec une promenade dans la vallée juste à côté.",
+      "en": "The Muttart Conservatory pyramids are one of Edmonton's symbols. Inside, three biomes recreate climates from around the world, and a fourth pyramid hosts a floral show that changes each season.\n\nIt's a perfect bubble of greenery in winter, when the city is under snow. Kids follow a discovery trail, watch butterflies and carnivorous plants, and enjoy the warm humid air of the tropical biome.\n\nThe site is accessible, has a well-regarded café, and the visit lasts about 1-2h. Ideal to combine with a walk in the valley right next door."
+    },
+    "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&q=80",
+      "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=800&q=80",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+    ],
+    "priceRange": { "fr": "40$ - 80$ / famille", "en": "$40 - $80 / family" },
+    "priceFrom": 40,
+    "budgetTier": 60,
+    "duration": { "fr": "1h - 2h", "en": "1h - 2h" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "0-15 ans", "en": "0-15 yrs" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Accès aux 4 pyramides", "Expo florale saisonnière", "Accessible poussette", "Café"],
+      "en": ["Access to 4 pyramids", "Seasonal floral show", "Stroller accessible", "Café"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "Muttart Conservatory Edmonton"
+  },
+  {
+    "id": "galaxyland-wem",
+    "segment": "famille",
+    "title": { "fr": "Galaxyland — West Edmonton Mall", "en": "Galaxyland — West Edmonton Mall" },
+    "location": "Galaxyland, West Edmonton Mall",
+    "address": "8882 170 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Le plus grand parc d'attractions intérieur d'Amérique du Nord : montagnes russes et manèges pour tous les âges.",
+      "en": "North America's largest indoor amusement park: roller coasters and rides for all ages."
+    },
+    "longDescription": {
+      "fr": "Galaxyland, au cœur du West Edmonton Mall, est le plus grand parc d'attractions intérieur d'Amérique du Nord. Plus de 25 manèges, des montagnes russes intenses aux attractions douces pour les tout-petits.\n\nÉtant entièrement couvert, le parc fonctionne toute l'année, peu importe la météo — un atout majeur à Edmonton. Les bracelets journée permettent un accès illimité.\n\nÀ combiner facilement avec le World Waterpark, la patinoire ou le mini-golf du même centre commercial pour une journée famille bien remplie.",
+      "en": "Galaxyland, inside West Edmonton Mall, is North America's largest indoor amusement park. Over 25 rides, from intense roller coasters to gentle attractions for toddlers.\n\nBeing fully covered, the park runs year-round regardless of weather — a major plus in Edmonton. Day wristbands give unlimited access.\n\nEasily combined with the World Waterpark, the ice rink or mini-golf in the same mall for a full family day."
+    },
+    "image": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    ],
+    "priceRange": { "fr": "90$ - 170$ / famille", "en": "$90 - $170 / family" },
+    "priceFrom": 90,
+    "budgetTier": 120,
+    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Bracelet journée illimité", "25+ manèges", "Intérieur chauffé", "Casiers disponibles"],
+      "en": ["Unlimited day wristband", "25+ rides", "Heated indoors", "Lockers available"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.5,
+    "mapsQuery": "Galaxyland West Edmonton Mall"
+  },
+  {
+    "id": "world-waterpark-wem",
+    "segment": "famille",
+    "title": { "fr": "World Waterpark — West Edmonton Mall", "en": "World Waterpark — West Edmonton Mall" },
+    "location": "World Waterpark, West Edmonton Mall",
+    "address": "8882 170 St NW, Edmonton, AB",
+    "description": {
+      "fr": "Le plus grand parc aquatique intérieur d'Amérique du Nord : toboggans, vagues et plage intérieure à 31°C.",
+      "en": "North America's largest indoor waterpark: slides, wave pool and indoor beach at 31°C."
+    },
+    "longDescription": {
+      "fr": "Le World Waterpark offre une plage tropicale en plein cœur d'Edmonton, été comme hiver. L'eau et l'air y sont maintenus à une température estivale, et la piscine à vagues recrée l'océan.\n\nLes plus aventureux dévalent des toboggans vertigineux, tandis que les tout-petits profitent d'une zone de jeu sécurisée et peu profonde. Des chaises longues permettent aux parents de se détendre.\n\nC'est l'évasion idéale lors des longs mois d'hiver. Location de cabanas et de serviettes sur place. À combiner avec Galaxyland pour une journée complète.",
+      "en": "World Waterpark offers a tropical beach in the heart of Edmonton, summer and winter alike. The water and air are kept at a summer temperature, and the wave pool recreates the ocean.\n\nThrill-seekers fly down towering slides, while toddlers enjoy a safe, shallow play zone. Loungers let parents relax.\n\nIt's the perfect escape during the long winter months. Cabana and towel rentals on site. Combine with Galaxyland for a full day."
+    },
+    "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560090995-01632a28895b?w=800&q=80",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
+      "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80"
+    ],
+    "priceRange": { "fr": "90$ - 180$ / famille", "en": "$90 - $180 / family" },
+    "priceFrom": 90,
+    "budgetTier": 120,
+    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Accès toboggans & vagues", "Zone tout-petits", "Intérieur 31°C", "Chaises longues"],
+      "en": ["Slides & wave pool access", "Toddler zone", "31°C indoors", "Loungers"]
+    },
+    "services": [],
+    "cta": "book",
+    "rating": 4.5,
+    "mapsQuery": "World Waterpark West Edmonton Mall"
+  },
+  {
+    "id": "elk-island-bisons-famille",
+    "segment": "famille",
+    "title": { "fr": "Bisons & Sentiers à Elk Island", "en": "Bison & Trails at Elk Island" },
+    "location": "Elk Island National Park",
+    "address": "Hwy 16 E, Fort Saskatchewan, AB",
+    "description": {
+      "fr": "Observez bisons et wapitis en liberté, randonnée facile et plage à seulement 40 minutes d'Edmonton.",
+      "en": "Watch free-roaming bison and elk, easy hikes and a beach just 40 minutes from Edmonton."
+    },
+    "longDescription": {
+      "fr": "Elk Island est un parc national à seulement 40 minutes d'Edmonton, où les enfants peuvent observer des bisons des plaines et des bois en liberté, ainsi que des wapitis, orignaux et castors.\n\nLes sentiers faciles conviennent aux familles, et le lac Astotin offre une plage et des aires de pique-nique l'été. En hiver, on y fait de la raquette et du ski de fond.\n\nC'est aussi une réserve de ciel étoilé, parfaite pour une soirée d'observation. Restez à distance des bisons (sauvages et imposants) et apportez de l'eau et un pique-nique.",
+      "en": "Elk Island is a national park just 40 minutes from Edmonton, where kids can watch free-roaming plains and wood bison, as well as elk, moose and beavers.\n\nThe easy trails suit families, and Astotin Lake offers a beach and picnic areas in summer. In winter, you can snowshoe and cross-country ski.\n\nIt's also a Dark Sky Preserve, perfect for a stargazing evening. Keep your distance from the bison (wild and massive) and bring water and a picnic."
+    },
+    "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&q=80"
+    ],
+    "priceRange": { "fr": "15$ - 50$ / famille", "en": "$15 - $50 / family" },
+    "priceFrom": 15,
+    "budgetTier": 60,
+    "duration": { "fr": "Demi-journée", "en": "Half day" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["decouverte", "dynamique"],
+    "includes": {
+      "fr": ["Frais d'entrée parc", "Sentiers familiaux", "Plage Astotin (été)", "Aires de pique-nique"],
+      "en": ["Park entry fees", "Family trails", "Astotin beach (summer)", "Picnic areas"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.9,
+    "mapsQuery": "Elk Island National Park"
+  },
+  {
+    "id": "prairie-gardens-adventure-farm",
+    "segment": "famille",
+    "title": { "fr": "Prairie Gardens Adventure Farm", "en": "Prairie Gardens Adventure Farm" },
+    "location": "Prairie Gardens Adventure Farm",
+    "address": "56311 Lily Lake Rd, Bon Accord, AB",
+    "description": {
+      "fr": "Une ferme d'aventure familiale : labyrinthe de maïs, animaux, jeux et festivals saisonniers (citrouilles, Noël).",
+      "en": "A family adventure farm: corn maze, animals, games and seasonal festivals (pumpkins, Christmas)."
+    },
+    "longDescription": {
+      "fr": "À une trentaine de minutes au nord d'Edmonton, Prairie Gardens est une ferme d'aventure pensée pour les familles. Au programme : labyrinthe de maïs, glissades, animaux de ferme, tyroliennes et dizaines de jeux en plein air.\n\nLa ferme est surtout connue pour ses festivals saisonniers : le Pumpkin Festival d'automne avec ses citrouilles géantes et maisons hantées, et le festival de Noël illuminé en décembre.\n\nC'est une sortie idéale pour les 3-12 ans, en plein air et active. Les billets varient selon la saison et l'événement. Aire de restauration sur place.",
+      "en": "About 30 minutes north of Edmonton, Prairie Gardens is an adventure farm built for families. On offer: corn maze, slides, farm animals, ziplines and dozens of outdoor games.\n\nThe farm is best known for its seasonal festivals: the autumn Pumpkin Festival with giant pumpkins and haunted houses, and the illuminated Christmas festival in December.\n\nIt's an ideal outing for ages 3-12, outdoors and active. Tickets vary by season and event. Food area on site."
+    },
+    "image": "https://images.unsplash.com/photo-1572715376701-98568319fd0b?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1445964047600-cdbdb873673d?w=800&q=80",
+      "https://images.unsplash.com/photo-1445964047600-cdbdb873673d?w=800&q=80",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80"
+    ],
+    "priceRange": { "fr": "60$ - 120$ / famille", "en": "$60 - $120 / family" },
+    "priceFrom": 60,
+    "budgetTier": 120,
+    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "3-12 ans", "en": "3-12 yrs" },
+    "season": ["summer", "fall", "winter"],
+    "mood": ["dynamique", "decouverte"],
+    "includes": {
+      "fr": ["Accès ferme & jeux", "Labyrinthe de maïs", "Animaux de ferme", "Festival saisonnier"],
+      "en": ["Farm & games access", "Corn maze", "Farm animals", "Seasonal festival"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.6,
+    "mapsQuery": "Prairie Gardens Adventure Farm Bon Accord"
+  },
+  {
+    "id": "devonian-botanic-garden",
+    "segment": "famille",
+    "title": { "fr": "Devonian Botanic Garden", "en": "Devonian Botanic Garden" },
+    "location": "University of Alberta Botanic Garden",
+    "address": "51227 AB-60, Parkland County, AB",
+    "description": {
+      "fr": "240 hectares de jardins, dont un magnifique jardin japonais Kurimoto et un pavillon de papillons.",
+      "en": "240 hectares of gardens, including a beautiful Kurimoto Japanese garden and a butterfly pavilion."
+    },
+    "longDescription": {
+      "fr": "Le jardin botanique de l'Université de l'Alberta, à l'ouest d'Edmonton, déploie 240 hectares de jardins thématiques. Le jardin japonais Kurimoto, l'un des plus beaux du Canada, est un incontournable.\n\nLes familles adorent le pavillon de papillons tropicaux, les sentiers boisés et les aires de jeu nature. Des événements saisonniers (lanternes, citrouilles) animent le calendrier.\n\nVaste et paisible, c'est une sortie idéale au printemps et en été. Prévoyez de bonnes chaussures et de l'eau. Café et boutique sur place.",
+      "en": "The University of Alberta Botanic Garden, west of Edmonton, spreads across 240 hectares of themed gardens. The Kurimoto Japanese garden, one of Canada's finest, is a must-see.\n\nFamilies love the tropical butterfly pavilion, the wooded trails and the nature play areas. Seasonal events (lanterns, pumpkins) fill the calendar.\n\nLarge and peaceful, it's an ideal outing in spring and summer. Bring good shoes and water. Café and shop on site."
+    },
+    "image": "https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80",
+      "https://images.unsplash.com/photo-1462143338528-eca9936a4d09?w=800&q=80",
+      "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=800&q=80"
+    ],
+    "priceRange": { "fr": "40$ - 80$ / famille", "en": "$40 - $80 / family" },
+    "priceFrom": 40,
+    "budgetTier": 60,
+    "duration": { "fr": "2h - 4h", "en": "2h - 4h" },
+    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
+    "ageRange": { "fr": "0-15 ans", "en": "0-15 yrs" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["calme", "decouverte"],
+    "includes": {
+      "fr": ["Accès tous les jardins", "Jardin japonais Kurimoto", "Pavillon papillons", "Sentiers nature"],
+      "en": ["All gardens access", "Kurimoto Japanese garden", "Butterfly pavilion", "Nature trails"]
+    },
+    "services": ["photographer"],
+    "cta": "book",
+    "rating": 4.7,
+    "mapsQuery": "University of Alberta Botanic Garden"
+  },
+  {
+    "id": "jump-360-anniversaire",
+    "segment": "famille",
+    "title": { "fr": "Anniversaire au Jump 360 Trampoline Park", "en": "Birthday at Jump 360 Trampoline Park" },
+    "location": "Jump 360 Trampoline Park",
+    "address": "14219 137 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Un anniversaire clé en main dans un immense parc de trampolines : sauts, dodgeball, mousse et salle privée.",
+      "en": "A turnkey birthday at a huge trampoline park: jumping, dodgeball, foam pit and a private room."
+    },
+    "longDescription": {
+      "fr": "Jump 360 est un immense parc de trampolines couvert, parfait pour brûler l'énergie des enfants et organiser un anniversaire mémorable. Trampolines interconnectés, terrains de dodgeball, fosses de mousse et parcours ninja.\n\nNotre forfait anniversaire inclut l'accès au parc pour le groupe, une salle privée pour le gâteau, les chaussettes antidérapantes et un animateur dédié. Vous n'avez qu'à apporter le gâteau (ou nous le commandons pour vous).\n\nIdéal pour les 6-15 ans, toute l'année puisque c'est intérieur. Réservez 2 à 3 semaines à l'avance, surtout le week-end.",
+      "en": "Jump 360 is a huge indoor trampoline park, perfect for burning kids' energy and hosting a memorable birthday. Interconnected trampolines, dodgeball courts, foam pits and a ninja course.\n\nOur birthday package includes group park access, a private room for cake, grip socks and a dedicated host. Just bring the cake (or we order it for you).\n\nIdeal for ages 6-15, year-round since it's indoors. Book 2-3 weeks ahead, especially on weekends."
+    },
+    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80",
+      "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&q=80",
+      "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80"
+    ],
+    "priceRange": { "fr": "150$ - 350$ / groupe", "en": "$150 - $350 / group" },
+    "priceFrom": 150,
+    "budgetTier": 250,
+    "duration": { "fr": "2h", "en": "2h" },
+    "groupSize": { "fr": "Groupe (6-15)", "en": "Group (6-15)" },
+    "ageRange": { "fr": "6-15 ans", "en": "6-15 yrs" },
+    "season": ["spring", "summer", "fall", "winter"],
+    "mood": ["dynamique"],
+    "includes": {
+      "fr": ["Accès parc pour le groupe", "Salle privée gâteau", "Chaussettes antidérapantes", "Animateur dédié"],
+      "en": ["Group park access", "Private cake room", "Grip socks", "Dedicated host"]
+    },
+    "services": ["photographer", "eventPlanner"],
+    "cta": "quote",
+    "rating": 4.6,
+    "mapsQuery": "Jump 360 Trampoline Park Edmonton"
+  }
+]

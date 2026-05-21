@@ -1,0 +1,59 @@
+[
+  {
+    "category": "asian",
+    "icon": "🥢",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=80",
+    "restaurants": [
+      { "name": "Yang Ming Restaurant", "address": "10712 100 Ave NW, Edmonton", "note": { "fr": "Buffet chinois copieux, dim sum le week-end", "en": "Hearty Chinese buffet, weekend dim sum" }, "price": { "fr": "20$ - 28$", "en": "$20 - $28" } },
+      { "name": "Lingnan Restaurant", "address": "10582 104 St NW, Edmonton", "note": { "fr": "Institution chinoise historique d'Edmonton", "en": "Historic Edmonton Chinese institution" }, "price": { "fr": "22$ - 30$", "en": "$22 - $30" } },
+      { "name": "Beijing House", "address": "11045 156 St NW, Edmonton", "note": { "fr": "Buffet généreux, bon rapport qualité-prix", "en": "Generous buffet, great value" }, "price": { "fr": "18$ - 26$", "en": "$18 - $26" } }
+    ]
+  },
+  {
+    "category": "korean",
+    "icon": "🥩",
+    "image": "https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=900&q=80",
+    "restaurants": [
+      { "name": "BB2 Korean BBQ", "address": "8882 170 St NW (WEM), Edmonton", "note": { "fr": "BBQ coréen à volonté, viandes marinées", "en": "AYCE Korean BBQ, marinated meats" }, "price": { "fr": "30$ - 40$", "en": "$30 - $40" } },
+      { "name": "Korean Village BBQ", "address": "10336 Jasper Ave NW, Edmonton", "note": { "fr": "Grillades à table, banchan illimités", "en": "Tableside grilling, unlimited banchan" }, "price": { "fr": "28$ - 38$", "en": "$28 - $38" } }
+    ]
+  },
+  {
+    "category": "sushi",
+    "icon": "🍣",
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=900&q=80",
+    "restaurants": [
+      { "name": "Tatsu Sushi & Korean", "address": "11704 104 Ave NW, Edmonton", "note": { "fr": "Sushi à volonté, menu varié", "en": "AYCE sushi, varied menu" }, "price": { "fr": "26$ - 36$", "en": "$26 - $36" } },
+      { "name": "Zen Sushi", "address": "10920 178 St NW, Edmonton", "note": { "fr": "Sushi frais à volonté, ambiance moderne", "en": "Fresh AYCE sushi, modern vibe" }, "price": { "fr": "25$ - 35$", "en": "$25 - $35" } },
+      { "name": "Sushi Toshi", "address": "10713 124 St NW, Edmonton", "note": { "fr": "Grand choix de rouleaux et nigiris", "en": "Wide choice of rolls and nigiri" }, "price": { "fr": "27$ - 37$", "en": "$27 - $37" } }
+    ]
+  },
+  {
+    "category": "hotpot",
+    "icon": "🍲",
+    "image": "https://images.unsplash.com/photo-1623341214825-9f4f963727da?w=900&q=80",
+    "restaurants": [
+      { "name": "Chili Hot Pot", "address": "10548 82 Ave NW, Edmonton", "note": { "fr": "Hot pot à volonté, bouillons au choix", "en": "AYCE hot pot, choice of broths" }, "price": { "fr": "28$ - 38$", "en": "$28 - $38" } }
+    ]
+  },
+  {
+    "category": "western",
+    "icon": "🍖",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&q=80",
+    "restaurants": [
+      { "name": "The Buffet at West Edmonton Mall", "address": "8882 170 St NW, Edmonton", "note": { "fr": "Immense buffet international, idéal familles", "en": "Huge international buffet, great for families" }, "price": { "fr": "25$ - 35$", "en": "$25 - $35" } },
+      { "name": "Buffet Royale Carvery", "address": "4211 106 St NW, Edmonton", "note": { "fr": "Rôtis découpés, desserts maison", "en": "Carved roasts, house desserts" }, "price": { "fr": "22$ - 32$", "en": "$22 - $32" } },
+      { "name": "Chateau Louis Buffet", "address": "11727 Kingsway NW, Edmonton", "note": { "fr": "Brunch du dimanche réputé", "en": "Renowned Sunday brunch" }, "price": { "fr": "24$ - 34$", "en": "$24 - $34" } }
+    ]
+  },
+  {
+    "category": "international",
+    "icon": "🌍",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80",
+    "restaurants": [
+      { "name": "Pampa Brazilian Steakhouse", "address": "9929 109 St NW, Edmonton", "note": { "fr": "Churrascaria à volonté, viandes à la broche", "en": "AYCE churrascaria, skewered meats" }, "price": { "fr": "45$ - 60$", "en": "$45 - $60" } },
+      { "name": "Fumaça Brazilian Steakhouse", "address": "10328 81 Ave NW, Edmonton", "note": { "fr": "Rodízio brésilien, salad bar généreux", "en": "Brazilian rodízio, generous salad bar" }, "price": { "fr": "45$ - 58$", "en": "$45 - $58" } },
+      { "name": "Narayanni's", "address": "10131 78 Ave NW, Edmonton", "note": { "fr": "Buffet indien & fidjien, midi en semaine", "en": "Indian & Fijian buffet, weekday lunch" }, "price": { "fr": "18$ - 26$", "en": "$18 - $26" } }
+    ]
+  }
+]

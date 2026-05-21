@@ -1,291 +1,163 @@
 {
-  "plans": [
-    {
-      "id": "river-valley-picnic",
-      "title": { "fr": "Pique-nique dans la Vallée de la Rivière", "en": "River Valley Picnic" },
-      "description": {
-        "fr": "Profitez d'un pique-nique chic au bord de la rivière North Saskatchewan avec une vue spectaculaire sur la skyline d'Edmonton.",
-        "en": "Enjoy a luxurious picnic along the North Saskatchewan River with spectacular views of Edmonton's skyline."
-      },
-      "image": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80",
-      "segments": ["couple", "famille", "amis"],
-      "budget": "medium",
-      "moods": ["romantic", "relaxation"],
-      "seasons": ["spring", "summer"],
-      "location": "River Valley / Louise McKinney Park",
-      "price": { "fr": "75$ - 120$", "en": "$75 - $120" },
-      "services": ["photographer", "picnic"],
-      "rating": 4.9
-    },
-    {
-      "id": "ice-castles",
-      "title": { "fr": "Châteaux de Glace & Chocolat Chaud", "en": "Ice Castles & Hot Chocolate" },
-      "description": {
-        "fr": "Explorez les sculptures de glace féeriques suivies d'un chocolat chaud dans un café cosy du centre-ville.",
-        "en": "Explore magical ice sculptures followed by hot chocolate in a cozy downtown café."
-      },
-      "image": "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=800&q=80",
-      "segments": ["couple", "famille"],
-      "budget": "low",
-      "moods": ["romantic", "adventure"],
-      "seasons": ["winter"],
-      "location": "Hawrelak Park",
-      "price": { "fr": "30$ - 50$", "en": "$30 - $50" },
-      "services": ["photographer"],
-      "rating": 4.8
-    },
-    {
-      "id": "whyte-avenue-crawl",
-      "title": { "fr": "Tournée Gastronomique Whyte Avenue", "en": "Whyte Avenue Food Crawl" },
-      "description": {
-        "fr": "Découvrez les meilleurs restaurants et bars de Whyte Avenue, le quartier le plus vibrant d'Edmonton.",
-        "en": "Discover the best restaurants and bars on Whyte Avenue, Edmonton's most vibrant neighborhood."
-      },
-      "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80",
-      "segments": ["amis", "couple", "business"],
-      "budget": "medium",
-      "moods": ["festive", "culture"],
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "location": "Whyte Avenue (82 Ave)",
-      "price": { "fr": "60$ - 100$", "en": "$60 - $100" },
-      "services": ["photographer"],
-      "rating": 4.7
-    },
-    {
-      "id": "elk-island",
-      "title": { "fr": "Safari Nature à Elk Island", "en": "Elk Island Nature Safari" },
-      "description": {
-        "fr": "Observez des bisons et wapitis dans leur habitat naturel au parc national Elk Island, à seulement 40 min d'Edmonton.",
-        "en": "Watch bison and elk in their natural habitat at Elk Island National Park, just 40 min from Edmonton."
-      },
-      "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80",
-      "segments": ["famille", "amis", "couple"],
-      "budget": "low",
-      "moods": ["adventure", "relaxation"],
-      "seasons": ["spring", "summer", "fall"],
-      "location": "Elk Island National Park",
-      "price": { "fr": "15$ - 40$", "en": "$15 - $40" },
-      "services": ["photographer"],
-      "rating": 4.9
-    },
-    {
-      "id": "art-gallery-alberta",
-      "title": { "fr": "Journée Culturelle AGA", "en": "AGA Culture Day" },
-      "description": {
-        "fr": "Explorez l'Art Gallery of Alberta et ses expositions contemporaines, suivies d'un dîner raffiné au centre-ville.",
-        "en": "Explore the Art Gallery of Alberta and its contemporary exhibitions, followed by a refined downtown dinner."
-      },
-      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80",
-      "segments": ["couple", "business", "amis"],
-      "budget": "medium",
-      "moods": ["culture", "romantic"],
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "location": "Art Gallery of Alberta",
-      "price": { "fr": "50$ - 90$", "en": "$50 - $90" },
-      "services": ["photographer"],
-      "rating": 4.6
-    },
-    {
-      "id": "spa-day-luxury",
-      "title": { "fr": "Journée Spa Luxe", "en": "Luxury Spa Day" },
-      "description": {
-        "fr": "Détendez-vous dans l'un des meilleurs spas d'Edmonton avec massages, soins du visage et accès au bain nordique.",
-        "en": "Relax in one of Edmonton's top spas with massages, facials and Nordic bath access."
-      },
-      "image": "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800&q=80",
-      "segments": ["couple", "amis"],
-      "budget": "high",
-      "moods": ["relaxation", "romantic"],
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "location": "Kensington Spa / Ritchie",
-      "price": { "fr": "180$ - 350$", "en": "$180 - $350" },
-      "services": ["photographer", "roomDecor"],
-      "rating": 4.8
-    },
-    {
-      "id": "wem-adventure",
-      "title": { "fr": "Aventure au West Edmonton Mall", "en": "West Edmonton Mall Adventure" },
-      "description": {
-        "fr": "Parc aquatique, patinoire, mini-golf et shopping — une journée épique au plus grand mall d'Amérique du Nord.",
-        "en": "Water park, ice rink, mini-golf and shopping — an epic day at North America's largest mall."
-      },
-      "image": "https://images.unsplash.com/photo-1519567770579-c2fc5436bcf9?w=800&q=80",
-      "segments": ["famille", "amis"],
-      "budget": "medium",
-      "moods": ["adventure", "festive"],
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "location": "West Edmonton Mall",
-      "price": { "fr": "60$ - 150$", "en": "$60 - $150" },
-      "services": ["photographer"],
-      "rating": 4.5
-    },
-    {
-      "id": "stargazing-jasper",
-      "title": { "fr": "Observation des Étoiles", "en": "Stargazing Experience" },
-      "description": {
-        "fr": "Quittez la ville pour une nuit magique d'observation des étoiles dans le Dark Sky Preserve d'Elk Island.",
-        "en": "Leave the city for a magical night of stargazing in Elk Island's Dark Sky Preserve."
-      },
-      "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80",
-      "segments": ["couple", "amis", "famille"],
-      "budget": "low",
-      "moods": ["romantic", "adventure"],
-      "seasons": ["summer", "fall", "winter"],
-      "location": "Elk Island Dark Sky Preserve",
-      "price": { "fr": "10$ - 30$", "en": "$10 - $30" },
-      "services": ["photographer"],
-      "rating": 4.9
-    },
-    {
-      "id": "farmers-market",
-      "title": { "fr": "Marché Fermier & Brunch", "en": "Farmers' Market & Brunch" },
-      "description": {
-        "fr": "Explorez le Old Strathcona Farmers' Market pour des produits locaux, suivis d'un brunch dans un café artisanal.",
-        "en": "Explore Old Strathcona Farmers' Market for local produce, followed by brunch at an artisan café."
-      },
-      "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
-      "segments": ["couple", "famille", "amis"],
-      "budget": "low",
-      "moods": ["relaxation", "culture"],
-      "seasons": ["spring", "summer", "fall"],
-      "location": "Old Strathcona",
-      "price": { "fr": "25$ - 50$", "en": "$25 - $50" },
-      "services": [],
-      "rating": 4.7
-    },
-    {
-      "id": "rooftop-networking",
-      "title": { "fr": "Networking Rooftop", "en": "Rooftop Networking" },
-      "description": {
-        "fr": "Événement networking exclusif sur un rooftop du centre-ville avec cocktails artisanaux et vue panoramique.",
-        "en": "Exclusive rooftop networking event downtown with craft cocktails and panoramic views."
-      },
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
-      "segments": ["business", "amis"],
-      "budget": "high",
-      "moods": ["festive", "culture"],
-      "seasons": ["summer"],
-      "location": "Downtown Edmonton",
-      "price": { "fr": "150$ - 250$", "en": "$150 - $250" },
-      "services": ["photographer", "eventPlanner"],
-      "rating": 4.6
-    },
-    {
-      "id": "fall-foliage",
-      "title": { "fr": "Randonnée aux Couleurs d'Automne", "en": "Fall Foliage Hike" },
-      "description": {
-        "fr": "Randonnée dans les sentiers de la vallée de la rivière pour admirer les couleurs spectaculaires de l'automne.",
-        "en": "Hike through river valley trails to admire the spectacular fall colors."
-      },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-      "segments": ["couple", "famille", "amis"],
-      "budget": "low",
-      "moods": ["adventure", "relaxation"],
-      "seasons": ["fall"],
-      "location": "River Valley Trails",
-      "price": { "fr": "Gratuit - 20$", "en": "Free - $20" },
-      "services": ["photographer"],
-      "rating": 4.8
-    },
-    {
-      "id": "hotel-romance",
-      "title": { "fr": "Soirée Romance à l'Hôtel", "en": "Hotel Romance Evening" },
-      "description": {
-        "fr": "Suite décorée avec pétales de roses, champagne et dîner gastronomique livré dans votre chambre.",
-        "en": "Suite decorated with rose petals, champagne and gourmet dinner delivered to your room."
-      },
-      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80",
-      "segments": ["couple"],
-      "budget": "high",
-      "moods": ["romantic"],
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "location": "Fairmont Hotel Macdonald / JW Marriott",
-      "price": { "fr": "300$ - 500$", "en": "$300 - $500" },
-      "services": ["photographer", "roomDecor"],
-      "rating": 5.0
-    }
-  ],
   "services": [
     {
       "id": "photographer",
-      "title": { "fr": "Photographe Professionnel", "en": "Professional Photographer" },
+      "title": {
+        "fr": "Photographe Professionnel",
+        "en": "Professional Photographer"
+      },
       "description": {
         "fr": "Nos photographes professionnels capturent vos plus beaux moments avec un œil artistique. Séance de 1 à 3 heures, retouches incluses, galerie en ligne privée.",
         "en": "Our professional photographers capture your most beautiful moments with an artistic eye. 1 to 3 hour sessions, retouching included, private online gallery."
       },
       "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800&q=80",
       "price": 150,
-      "unit": { "fr": "/ séance", "en": "/ session" },
+      "unit": {
+        "fr": "/ séance",
+        "en": "/ session"
+      },
       "features": {
-        "fr": ["1-3 heures de couverture", "50+ photos retouchées", "Galerie en ligne privée", "Livraison sous 7 jours"],
-        "en": ["1-3 hours of coverage", "50+ retouched photos", "Private online gallery", "Delivery within 7 days"]
+        "fr": [
+          "1-3 heures de couverture",
+          "50+ photos retouchées",
+          "Galerie en ligne privée",
+          "Livraison sous 7 jours"
+        ],
+        "en": [
+          "1-3 hours of coverage",
+          "50+ retouched photos",
+          "Private online gallery",
+          "Delivery within 7 days"
+        ]
       }
     },
     {
       "id": "picnic",
-      "title": { "fr": "Pique-nique Chic", "en": "Luxury Picnic" },
+      "title": {
+        "fr": "Pique-nique Chic",
+        "en": "Luxury Picnic"
+      },
       "description": {
         "fr": "Installation complète d'un pique-nique élégant avec nappe, coussins, bouquet de fleurs, vaisselle en porcelaine et panier gourmet.",
         "en": "Complete setup of an elegant picnic with tablecloth, cushions, flower bouquet, porcelain tableware and gourmet basket."
       },
       "image": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?w=800&q=80",
       "price": 200,
-      "unit": { "fr": "/ événement", "en": "/ event" },
+      "unit": {
+        "fr": "/ événement",
+        "en": "/ event"
+      },
       "features": {
-        "fr": ["Installation & démontage inclus", "Décoration premium", "Panier gourmet pour 2-6 pers.", "Couvertures et coussins"],
-        "en": ["Setup & teardown included", "Premium decoration", "Gourmet basket for 2-6 people", "Blankets and cushions"]
+        "fr": [
+          "Installation & démontage inclus",
+          "Décoration premium",
+          "Panier gourmet pour 2-6 pers.",
+          "Couvertures et coussins"
+        ],
+        "en": [
+          "Setup & teardown included",
+          "Premium decoration",
+          "Gourmet basket for 2-6 people",
+          "Blankets and cushions"
+        ]
       }
     },
     {
       "id": "roomDecor",
-      "title": { "fr": "Décoration Romantique", "en": "Romantic Room Decoration" },
+      "title": {
+        "fr": "Décoration Romantique",
+        "en": "Romantic Room Decoration"
+      },
       "description": {
         "fr": "Transformation de votre chambre d'hôtel, Airbnb ou maison en nid romantique avec pétales, bougies, ballons et touches dorées.",
         "en": "Transform your hotel room, Airbnb or home into a romantic nest with petals, candles, balloons and golden touches."
       },
       "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80",
       "price": 250,
-      "unit": { "fr": "/ installation", "en": "/ setup" },
+      "unit": {
+        "fr": "/ installation",
+        "en": "/ setup"
+      },
       "features": {
-        "fr": ["Pétales de roses", "100+ bougies LED", "Ballons personnalisés", "Installation discrète"],
-        "en": ["Rose petals", "100+ LED candles", "Custom balloons", "Discreet setup"]
+        "fr": [
+          "Pétales de roses",
+          "100+ bougies LED",
+          "Ballons personnalisés",
+          "Installation discrète"
+        ],
+        "en": [
+          "Rose petals",
+          "100+ LED candles",
+          "Custom balloons",
+          "Discreet setup"
+        ]
       }
     },
     {
       "id": "eventPlanner",
-      "title": { "fr": "Planificateur d'Événement", "en": "Event Planner" },
+      "title": {
+        "fr": "Planificateur d'Événement",
+        "en": "Event Planner"
+      },
       "description": {
         "fr": "Organisation complète de votre événement : lieu, traiteur, décoration, divertissement et coordination le jour J.",
         "en": "Complete event organization: venue, catering, decoration, entertainment and day-of coordination."
       },
       "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
       "price": 500,
-      "unit": { "fr": "/ événement", "en": "/ event" },
+      "unit": {
+        "fr": "/ événement",
+        "en": "/ event"
+      },
       "features": {
-        "fr": ["Consultation personnalisée", "Sélection du lieu", "Coordination des fournisseurs", "Gestion le jour J"],
-        "en": ["Personalized consultation", "Venue selection", "Vendor coordination", "Day-of management"]
+        "fr": [
+          "Consultation personnalisée",
+          "Sélection du lieu",
+          "Coordination des fournisseurs",
+          "Gestion le jour J"
+        ],
+        "en": [
+          "Personalized consultation",
+          "Venue selection",
+          "Vendor coordination",
+          "Day-of management"
+        ]
       }
     }
   ],
   "packages": [
     {
       "id": "date-night-classique",
-      "title": { "fr": "Date Night Classique", "en": "Classic Date Night" },
+      "title": {
+        "fr": "Date Night Classique",
+        "en": "Classic Date Night"
+      },
       "description": {
         "fr": "Le forfait parfait pour une soirée romantique mémorable à Edmonton.",
         "en": "The perfect package for a memorable romantic evening in Edmonton."
       },
-      "image": "https://images.unsplash.com/photo-1522264373430-3c41337d38d0?w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80",
       "price": 299,
       "includes": {
-        "fr": ["Dîner pour 2 dans un restaurant sélectionné", "Photographe (1h)", "Transport aller-retour"],
-        "en": ["Dinner for 2 at a selected restaurant", "Photographer (1h)", "Round-trip transportation"]
+        "fr": [
+          "Dîner pour 2 dans un restaurant sélectionné",
+          "Photographe (1h)",
+          "Transport aller-retour"
+        ],
+        "en": [
+          "Dinner for 2 at a selected restaurant",
+          "Photographer (1h)",
+          "Round-trip transportation"
+        ]
       },
       "segment": "couple"
     },
     {
       "id": "pique-nique-premium",
-      "title": { "fr": "Pique-nique Premium", "en": "Premium Picnic" },
+      "title": {
+        "fr": "Pique-nique Premium",
+        "en": "Premium Picnic"
+      },
       "description": {
         "fr": "Un pique-nique digne d'un magazine avec photographe et décoration complète.",
         "en": "A magazine-worthy picnic with photographer and full decoration."
@@ -293,14 +165,27 @@
       "image": "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=800&q=80",
       "price": 449,
       "includes": {
-        "fr": ["Installation pique-nique chic", "Panier gourmet pour 2", "Photographe (2h)", "Bouquet de fleurs"],
-        "en": ["Luxury picnic setup", "Gourmet basket for 2", "Photographer (2h)", "Flower bouquet"]
+        "fr": [
+          "Installation pique-nique chic",
+          "Panier gourmet pour 2",
+          "Photographe (2h)",
+          "Bouquet de fleurs"
+        ],
+        "en": [
+          "Luxury picnic setup",
+          "Gourmet basket for 2",
+          "Photographer (2h)",
+          "Flower bouquet"
+        ]
       },
       "segment": "couple"
     },
     {
       "id": "family-fun-day",
-      "title": { "fr": "Journée Fun en Famille", "en": "Family Fun Day" },
+      "title": {
+        "fr": "Journée Fun en Famille",
+        "en": "Family Fun Day"
+      },
       "description": {
         "fr": "Une journée complète d'activités familiales à Edmonton.",
         "en": "A full day of family activities in Edmonton."
@@ -308,14 +193,27 @@
       "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80",
       "price": 199,
       "includes": {
-        "fr": ["Activité en plein air guidée", "Déjeuner familial", "Photographe (1h)", "Surprise pour les enfants"],
-        "en": ["Guided outdoor activity", "Family lunch", "Photographer (1h)", "Surprise for the kids"]
+        "fr": [
+          "Activité en plein air guidée",
+          "Déjeuner familial",
+          "Photographe (1h)",
+          "Surprise pour les enfants"
+        ],
+        "en": [
+          "Guided outdoor activity",
+          "Family lunch",
+          "Photographer (1h)",
+          "Surprise for the kids"
+        ]
       },
       "segment": "famille"
     },
     {
       "id": "corporate-elite",
-      "title": { "fr": "Corporate Élite", "en": "Corporate Elite" },
+      "title": {
+        "fr": "Corporate Élite",
+        "en": "Corporate Elite"
+      },
       "description": {
         "fr": "Organisation complète de votre événement d'entreprise avec un cadre exceptionnel.",
         "en": "Complete organization of your corporate event with an exceptional setting."
@@ -323,14 +221,27 @@
       "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
       "price": 1299,
       "includes": {
-        "fr": ["Lieu exclusif réservé", "Traiteur haut de gamme", "Photographe événementiel", "Coordination complète"],
-        "en": ["Exclusive venue reserved", "High-end catering", "Event photographer", "Full coordination"]
+        "fr": [
+          "Lieu exclusif réservé",
+          "Traiteur haut de gamme",
+          "Photographe événementiel",
+          "Coordination complète"
+        ],
+        "en": [
+          "Exclusive venue reserved",
+          "High-end catering",
+          "Event photographer",
+          "Full coordination"
+        ]
       },
       "segment": "business"
     },
     {
       "id": "friends-night-out",
-      "title": { "fr": "Soirée Entre Amis", "en": "Friends Night Out" },
+      "title": {
+        "fr": "Soirée Entre Amis",
+        "en": "Friends Night Out"
+      },
       "description": {
         "fr": "Le forfait ultime pour une soirée inoubliable entre amis.",
         "en": "The ultimate package for an unforgettable night with friends."
@@ -338,14 +249,27 @@
       "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
       "price": 349,
       "includes": {
-        "fr": ["Réservation VIP dans un bar/club", "Photographe de soirée (2h)", "Cocktails de bienvenue", "Transport organisé"],
-        "en": ["VIP reservation at a bar/club", "Party photographer (2h)", "Welcome cocktails", "Organized transportation"]
+        "fr": [
+          "Réservation VIP dans un bar/club",
+          "Photographe de soirée (2h)",
+          "Cocktails de bienvenue",
+          "Transport organisé"
+        ],
+        "en": [
+          "VIP reservation at a bar/club",
+          "Party photographer (2h)",
+          "Welcome cocktails",
+          "Organized transportation"
+        ]
       },
       "segment": "amis"
     },
     {
       "id": "proposal-package",
-      "title": { "fr": "Demande en Mariage", "en": "Proposal Package" },
+      "title": {
+        "fr": "Demande en Mariage",
+        "en": "Proposal Package"
+      },
       "description": {
         "fr": "Le moment le plus important de votre vie mérite une planification parfaite.",
         "en": "The most important moment of your life deserves perfect planning."
@@ -353,8 +277,20 @@
       "image": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80",
       "price": 899,
       "includes": {
-        "fr": ["Lieu décoré sur-mesure", "Photographe caché", "Vidéographe", "Décoration complète", "Champagne & pétales"],
-        "en": ["Custom-decorated venue", "Hidden photographer", "Videographer", "Full decoration", "Champagne & petals"]
+        "fr": [
+          "Lieu décoré sur-mesure",
+          "Photographe caché",
+          "Vidéographe",
+          "Décoration complète",
+          "Champagne & pétales"
+        ],
+        "en": [
+          "Custom-decorated venue",
+          "Hidden photographer",
+          "Videographer",
+          "Full decoration",
+          "Champagne & petals"
+        ]
       },
       "segment": "couple"
     }
@@ -362,37 +298,55 @@
   "places": [
     {
       "id": "river-valley",
-      "name": { "fr": "Vallée de la Rivière", "en": "River Valley" },
+      "name": {
+        "fr": "Vallée de la Rivière",
+        "en": "River Valley"
+      },
       "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
       "category": "parks"
     },
     {
       "id": "muttart",
-      "name": { "fr": "Muttart Conservatory", "en": "Muttart Conservatory" },
+      "name": {
+        "fr": "Muttart Conservatory",
+        "en": "Muttart Conservatory"
+      },
       "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80",
       "category": "culture"
     },
     {
       "id": "high-level-bridge",
-      "name": { "fr": "High Level Bridge", "en": "High Level Bridge" },
+      "name": {
+        "fr": "High Level Bridge",
+        "en": "High Level Bridge"
+      },
       "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
       "category": "parks"
     },
     {
       "id": "legislature",
-      "name": { "fr": "Legislature Grounds", "en": "Legislature Grounds" },
+      "name": {
+        "fr": "Legislature Grounds",
+        "en": "Legislature Grounds"
+      },
       "image": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80",
       "category": "culture"
     },
     {
       "id": "neon-sign-museum",
-      "name": { "fr": "Musée des Néons", "en": "Neon Sign Museum" },
-      "image": "https://images.unsplash.com/photo-1563256159-42d42d750362?w=800&q=80",
+      "name": {
+        "fr": "Musée des Néons",
+        "en": "Neon Sign Museum"
+      },
+      "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
       "category": "culture"
     },
     {
       "id": "whyte-avenue",
-      "name": { "fr": "Whyte Avenue", "en": "Whyte Avenue" },
+      "name": {
+        "fr": "Whyte Avenue",
+        "en": "Whyte Avenue"
+      },
       "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
       "category": "restaurants"
     }

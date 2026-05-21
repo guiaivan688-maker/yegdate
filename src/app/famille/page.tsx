@@ -7,8 +7,8 @@ export default function FamillePage() {
       segment="famille"
       title={{ fr: "Sorties en Famille", en: "Family Outings" }}
       subtitle={{
-        fr: "Des activités pour toute la famille à Edmonton",
-        en: "Activities for the whole family in Edmonton",
+        fr: "Les vraies institutions familiales d'Edmonton, pour petits et grands",
+        en: "Edmonton's real family institutions, for kids and grown-ups",
       }}
       heroImage="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1920&q=80"
     />

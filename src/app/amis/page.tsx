@@ -7,8 +7,8 @@ export default function AmisPage() {
       segment="amis"
       title={{ fr: "Sorties Entre Amis", en: "Outings with Friends" }}
       subtitle={{
-        fr: "Des moments inoubliables entre amis à Edmonton",
-        en: "Unforgettable moments with friends in Edmonton",
+        fr: "Lancer de hache, escape rooms, EVJF et soirées de groupe à Edmonton",
+        en: "Axe throwing, escape rooms, bachelorettes and group nights in Edmonton",
       }}
       heroImage="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80"
     />
