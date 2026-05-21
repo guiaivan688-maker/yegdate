@@ -13,6 +13,7 @@ const links = [
   { href: "/buffets", key: "nav.buffets" },
   { href: "/services", key: "nav.services" },
   { href: "/packages", key: "nav.packages" },
+  { href: "/contact", key: "nav.contact" },
 ];
 
 export default function Navbar() {

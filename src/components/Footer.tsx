@@ -55,6 +55,8 @@ export default function Footer() {
                 { href: "/services", key: "nav.services" },
                 { href: "/packages", key: "nav.packages" },
                 { href: "/business", key: "nav.business" },
+                { href: "/about", key: "nav.about" },
+                { href: "/contact", key: "nav.contact" },
               ].map((link) => (
                 <Link key={link.href} href={link.href} className="block text-cream/60 hover:text-gold text-sm transition-colors">
                   {t(link.key)}

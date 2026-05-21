@@ -9,7 +9,9 @@
     "business": "Affaires",
     "buffets": "Buffets",
     "services": "Services",
-    "packages": "Forfaits"
+    "packages": "Forfaits",
+    "about": "À propos",
+    "contact": "Contact"
   },
   "hero": {
     "title": "Edmonton, sublimé par vous.",

@@ -9,7 +9,9 @@
     "business": "Business",
     "buffets": "Buffets",
     "services": "Services",
-    "packages": "Packages"
+    "packages": "Packages",
+    "about": "About",
+    "contact": "Contact"
   },
   "hero": {
     "title": "Edmonton, elevated by you.",
