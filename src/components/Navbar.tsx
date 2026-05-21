@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bars3Icon, XMarkIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { Menu, X, ArrowLeft } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 
 const links = [
@@ -41,16 +41,18 @@ export default function Navbar() {
                 aria-label={t("common.backTo")}
                 className="flex items-center gap-1.5 text-navy/70 hover:text-navy bg-surface/70 hover:bg-surface border border-black/5 rounded-full pl-2.5 pr-3 py-1.5 transition-colors"
               >
-                <ArrowLeftIcon className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4" strokeWidth={1.5} />
                 <span className="text-sm font-medium hidden sm:inline">{t("common.backTo")}</span>
               </button>
             )}
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-xl gradient-navy flex items-center justify-center">
-                <span className="text-gold font-serif font-bold text-base">Y</span>
-              </div>
-              <span className="font-serif text-xl font-bold text-navy tracking-tight">
-                YEG <span className="text-gold">Date</span>
+            <Link href="/" className="flex flex-col leading-none">
+              <span className="text-xl sm:text-2xl tracking-tight">
+                <span className="font-serif font-bold text-navy">YEG</span>
+                <span className="text-gold font-bold">·</span>
+                <span className="font-light text-navy">Date</span>
+              </span>
+              <span className="hidden sm:block text-[10px] text-navy/45 tracking-wide mt-0.5">
+                {t("hero.tagline")}
               </span>
             </Link>
           </div>
@@ -83,7 +85,7 @@ export default function Navbar() {
               {locale === "fr" ? "EN" : "FR"}
             </button>
             <button onClick={() => setOpen(!open)} aria-label="Menu" className="text-navy">
-              {open ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+              {open ? <X className="w-6 h-6" strokeWidth={1.5} /> : <Menu className="w-6 h-6" strokeWidth={1.5} />}
             </button>
           </div>
         </div>

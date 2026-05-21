@@ -11,13 +11,16 @@
 
 @theme inline {
   --color-navy: #1a365d;
-  --color-navy-light: #2a4b7d;
+  --color-navy-light: #2a4a7f;
+  --color-navy-dark: #0f2341;
   --color-gold: #c4a456;
-  --color-gold-light: #d4b875;
-  --color-cream: #fcfaf6;
+  --color-gold-light: #d4b976;
+  --color-gold-dark: #a68b3c;
+  --color-cream: #fff8f0;
+  --color-warm-grey: #f5f0eb;
   --color-surface: #ffffff;
   --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
 }
 
 body {

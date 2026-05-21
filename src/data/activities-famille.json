@@ -241,8 +241,8 @@
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
       "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&q=80"
     ],
-    "priceRange": { "fr": "15$ - 50$ / famille", "en": "$15 - $50 / family" },
-    "priceFrom": 15,
+    "priceRange": { "fr": "22$ / adulte (pass Parcs Canada)", "en": "$22 / adult (Parks Canada pass)" },
+    "priceFrom": 22,
     "budgetTier": 60,
     "duration": { "fr": "Demi-journée", "en": "Half day" },
     "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
@@ -250,8 +250,8 @@
     "season": ["spring", "summer", "fall"],
     "mood": ["decouverte", "dynamique"],
     "includes": {
-      "fr": ["Frais d'entrée parc", "Sentiers familiaux", "Plage Astotin (été)", "Aires de pique-nique"],
-      "en": ["Park entry fees", "Family trails", "Astotin beach (summer)", "Picnic areas"]
+      "fr": ["Entrée 22$/adulte (pass Découverte)", "Sentiers familiaux", "Plage Astotin (été)", "Aires de pique-nique"],
+      "en": ["Entry $22/adult (Discovery pass)", "Family trails", "Astotin beach (summer)", "Picnic areas"]
     },
     "services": ["photographer"],
     "cta": "book",

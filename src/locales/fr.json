@@ -14,6 +14,7 @@
   "hero": {
     "title": "Edmonton, sublimé par vous.",
     "subtitle": "Découvrez les plus beaux endroits, planifiez des expériences inoubliables et transformez chaque sortie en souvenir.",
+    "tagline": "L'agenda intelligent d'Edmonton",
     "cta": "Trouver mon plan",
     "ctaServices": "Nos services"
   },
@@ -40,7 +41,8 @@
     "viewAll": "Tout voir",
     "similar": "Activités similaires",
     "backTo": "Retour",
-    "loading": "Chargement…"
+    "loading": "Chargement…",
+    "verified": "Vérifié par YEG Date"
   },
   "categories": {
     "title": "Explorez par catégorie",
@@ -161,6 +163,8 @@
     "rights": "Tous droits réservés.",
     "explore": "Explorer",
     "follow": "Suivez-nous",
+    "privateHaven": "YEG Date est un projet de",
+    "madeWith": "Fait avec amour à Edmonton, Alberta —",
     "disclaimer": "YEGdate.ca — plateforme indépendante de planification d'expériences à Edmonton."
   }
 }

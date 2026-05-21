@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import ClientShell from "@/components/ClientShell";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -18,9 +18,28 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "YEG Date — Edmonton, sublimé par vous",
+  metadataBase: new URL("https://yegdate.vercel.app"),
+  title: "YEG Date — L'agenda intelligent d'Edmonton | Activités, sorties, réservations",
   description:
-    "Découvrez les plus beaux endroits d'Edmonton, planifiez des expériences inoubliables et transformez chaque sortie en souvenir. Services de photographie, décoration et conciergerie.",
+    "Trouvez quoi faire à Edmonton ce week-end. Couples, famille, amis, business — planifiez votre sortie en 3 minutes et réservez en 1 clic.",
+  keywords: ["Edmonton", "activités Edmonton", "date ideas Edmonton", "sorties Edmonton", "team building Edmonton", "weekend Edmonton"],
+  openGraph: {
+    title: "YEG Date — L'agenda intelligent d'Edmonton",
+    description: "Trouvez quoi faire à Edmonton ce week-end. Planifiez en 3 minutes, réservez en 1 clic.",
+    locale: "fr_CA",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "YEG Date",
+  description: "L'agenda intelligent d'Edmonton — activités, sorties et réservations pour couples, familles, amis et entreprises.",
+  address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "AB", addressCountry: "CA" },
+  email: "hello@yegdate.ca",
+  areaServed: "Edmonton, Alberta",
+  url: "https://yegdate.vercel.app",
 };
 
 export default function RootLayout({
@@ -31,12 +50,13 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${montserrat.variable} ${playfair.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body
         className="min-h-full flex flex-col"
-        style={{ fontFamily: "var(--font-montserrat), system-ui, sans-serif" }}
+        style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
       >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <ClientShell>{children}</ClientShell>
       </body>
     </html>

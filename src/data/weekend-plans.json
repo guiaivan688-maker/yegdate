@@ -64,9 +64,9 @@
     "budgetTier": 60,
     "season": ["summer", "fall", "winter"],
     "steps": [
-      { "time": "20:00", "title": { "fr": "Observation des étoiles (ciel étoilé)", "en": "Stargazing (dark sky)" }, "place": "Elk Island National Park", "address": "Hwy 16 E, Fort Saskatchewan", "price": 40 }
+      { "time": "20:00", "title": { "fr": "Observation des étoiles (ciel étoilé)", "en": "Stargazing (dark sky)" }, "place": "Elk Island National Park", "address": "Hwy 16 E, Fort Saskatchewan", "price": 44 }
     ],
-    "total": 40
+    "total": 44
   },
   {
     "id": "cp-escapade-fairmont",
@@ -190,10 +190,10 @@
     "budgetTier": 60,
     "season": ["spring", "summer", "fall"],
     "steps": [
-      { "time": "10:00", "title": { "fr": "Observation des bisons & sentier facile", "en": "Bison viewing & easy trail" }, "place": "Elk Island National Park", "address": "Hwy 16 E", "price": 30 },
+      { "time": "10:00", "title": { "fr": "Observation des bisons & sentier facile", "en": "Bison viewing & easy trail" }, "place": "Elk Island National Park", "address": "Hwy 16 E", "price": 22 },
       { "time": "12:30", "title": { "fr": "Pique-nique au lac Astotin", "en": "Picnic at Astotin Lake" }, "place": "Astotin Lake", "address": "Elk Island NP", "price": 20 }
     ],
-    "total": 50
+    "total": 42
   },
 
   {

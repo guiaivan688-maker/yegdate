@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Heart, Users, PartyPopper, Briefcase } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import WeatherWidget from "@/components/WeatherWidget";
 import ActivityCard from "@/components/ActivityCard";
@@ -12,10 +13,10 @@ import plansData from "@/data/plans.json";
 import { allActivities } from "@/lib/activities";
 
 const categories = [
-  { key: "couples", href: "/couples", image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80", icon: "💑" },
-  { key: "famille", href: "/famille", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80", icon: "👨‍👩‍👧‍👦" },
-  { key: "amis", href: "/amis", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80", icon: "🎉" },
-  { key: "business", href: "/business", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", icon: "💼" },
+  { key: "couples", href: "/couples", image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80", Icon: Heart },
+  { key: "famille", href: "/famille", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80", Icon: Users },
+  { key: "amis", href: "/amis", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80", Icon: PartyPopper },
+  { key: "business", href: "/business", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", Icon: Briefcase },
 ];
 
 const fadeUp = {
@@ -99,7 +100,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="text-3xl mb-2 block">{cat.icon}</span>
+                      <cat.Icon className="w-8 h-8 text-gold mb-2" strokeWidth={1.5} />
                       <h3 className="font-serif text-cream text-2xl font-bold">{t(`nav.${cat.key}`)}</h3>
                       <p className="text-cream/70 text-sm mt-1">{t(`categories.${cat.key}Desc`)}</p>
                     </div>

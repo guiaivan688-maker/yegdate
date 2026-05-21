@@ -3,15 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { StarIcon, MapPinIcon, ClockIcon, UserGroupIcon } from "@heroicons/react/24/solid";
+import { Star, MapPin, Clock, Users, BadgeCheck, Camera, UtensilsCrossed, Flower2, Calendar } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import type { Activity } from "@/lib/activities";
 
-const serviceBadges: Record<string, { fr: string; en: string; icon: string }> = {
-  photographer: { fr: "Photographe", en: "Photographer", icon: "📷" },
-  picnic: { fr: "Pique-nique", en: "Picnic", icon: "🧺" },
-  roomDecor: { fr: "Décoration", en: "Decor", icon: "🌹" },
-  eventPlanner: { fr: "Événement", en: "Event", icon: "🎪" },
+const serviceBadges: Record<string, { fr: string; en: string; Icon: typeof Camera }> = {
+  photographer: { fr: "Photographe", en: "Photographer", Icon: Camera },
+  picnic: { fr: "Pique-nique", en: "Picnic", Icon: UtensilsCrossed },
+  roomDecor: { fr: "Décoration", en: "Decor", Icon: Flower2 },
+  eventPlanner: { fr: "Événement", en: "Event", Icon: Calendar },
 };
 
 export default function ActivityCard({ activity, index = 0 }: { activity: Activity; index?: number }) {
@@ -40,11 +40,14 @@ export default function ActivityCard({ activity, index = 0 }: { activity: Activi
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
           <div className="absolute top-3 right-3 glass rounded-full px-3 py-1 flex items-center gap-1">
-            <StarIcon className="w-3.5 h-3.5 text-gold" />
+            <Star className="w-3.5 h-3.5 text-gold fill-gold" strokeWidth={1.5} />
             <span className="text-navy text-xs font-bold">{activity.rating.toFixed(1)}</span>
           </div>
+          <span className="absolute top-3 left-3 glass text-navy text-[10px] font-semibold rounded-full pl-1.5 pr-2.5 py-1 flex items-center gap-1">
+            <BadgeCheck className="w-3.5 h-3.5 text-gold" strokeWidth={2} /> {t("common.verified")}
+          </span>
           {activity.cta === "quote" && (
-            <span className="absolute top-3 left-3 bg-navy/90 text-cream text-[10px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1">
+            <span className="absolute bottom-3 left-3 bg-navy/90 text-cream text-[10px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1">
               B2B
             </span>
           )}
@@ -55,7 +58,7 @@ export default function ActivityCard({ activity, index = 0 }: { activity: Activi
             {activity.title[locale]}
           </h3>
           <div className="flex items-center gap-1 text-navy/45 text-xs mb-3">
-            <MapPinIcon className="w-3.5 h-3.5 shrink-0" />
+            <MapPin className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} />
             <span className="truncate">{activity.location}</span>
           </div>
           <p className="text-navy/60 text-sm leading-relaxed mb-4 line-clamp-2">
@@ -64,10 +67,10 @@ export default function ActivityCard({ activity, index = 0 }: { activity: Activi
 
           <div className="flex items-center gap-3 text-navy/50 text-xs mb-4">
             <span className="flex items-center gap-1">
-              <ClockIcon className="w-3.5 h-3.5" /> {activity.duration[locale]}
+              <Clock className="w-3.5 h-3.5" strokeWidth={1.5} /> {activity.duration[locale]}
             </span>
             <span className="flex items-center gap-1">
-              <UserGroupIcon className="w-3.5 h-3.5" /> {activity.groupSize[locale]}
+              <Users className="w-3.5 h-3.5" strokeWidth={1.5} /> {activity.groupSize[locale]}
             </span>
           </div>
 
@@ -76,12 +79,13 @@ export default function ActivityCard({ activity, index = 0 }: { activity: Activi
               {activity.services.slice(0, 2).map((s) => {
                 const badge = serviceBadges[s];
                 if (!badge) return null;
+                const BadgeIcon = badge.Icon;
                 return (
                   <span
                     key={s}
-                    className="text-[11px] bg-gold/10 text-[#9a7e34] border border-gold/25 rounded-full px-2.5 py-0.5 font-medium"
+                    className="text-[11px] bg-gold/10 text-[#9a7e34] border border-gold/25 rounded-full px-2.5 py-0.5 font-medium flex items-center gap-1"
                   >
-                    {badge.icon} {badge[locale]}
+                    <BadgeIcon className="w-3 h-3" strokeWidth={1.5} /> {badge[locale]}
                   </span>
                 );
               })}

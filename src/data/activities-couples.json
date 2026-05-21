@@ -199,16 +199,16 @@
       "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
       "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80"
     ],
-    "priceRange": { "fr": "20$ - 80$ / couple", "en": "$20 - $80 / couple" },
-    "priceFrom": 20,
+    "priceRange": { "fr": "44$ - 90$ / couple", "en": "$44 - $90 / couple" },
+    "priceFrom": 44,
     "budgetTier": 60,
     "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
     "groupSize": { "fr": "2 personnes", "en": "2 people" },
     "season": ["summer", "fall", "winter"],
     "mood": ["calme", "decouverte"],
     "includes": {
-      "fr": ["Couverture chauffante", "Boisson chaude", "Carte du ciel", "Frais de parc"],
-      "en": ["Heated blanket", "Hot drink", "Star map", "Park fees"]
+      "fr": ["Couverture chauffante", "Boisson chaude", "Carte du ciel", "Entrée 22$/adulte (Parcs Canada)"],
+      "en": ["Heated blanket", "Hot drink", "Star map", "Entry $22/adult (Parks Canada)"]
     },
     "services": ["photographer"],
     "cta": "book",

@@ -2,6 +2,13 @@
 
 import Link from "next/link";
 import { useLocale } from "@/lib/locale-context";
+import { InstagramIcon, FacebookIcon, TikTokIcon } from "./SocialIcons";
+
+const socials = [
+  { label: "Instagram", href: "https://instagram.com/yegdate", Icon: InstagramIcon },
+  { label: "Facebook", href: "https://facebook.com/yegdate", Icon: FacebookIcon },
+  { label: "TikTok", href: "https://tiktok.com/@yegdate", Icon: TikTokIcon },
+];
 
 export default function Footer() {
   const { t } = useLocale();
@@ -11,14 +18,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gold/20 flex items-center justify-center">
-                <span className="text-gold font-serif font-bold text-base">Y</span>
-              </div>
-              <span className="font-serif text-xl font-bold">
-                YEG <span className="text-gold">Date</span>
-              </span>
-            </div>
+            <span className="text-2xl tracking-tight mb-3 block">
+              <span className="font-serif font-bold text-cream">YEG</span>
+              <span className="text-gold font-bold">·</span>
+              <span className="font-light text-cream">Date</span>
+            </span>
             <p className="text-cream/60 text-sm font-serif italic">{t("footer.tagline")}</p>
           </div>
 
@@ -63,23 +67,36 @@ export default function Footer() {
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">
               {t("footer.follow")}
             </h4>
-            <div className="flex gap-3">
-              {["Instagram", "Facebook", "TikTok"].map((social) => (
-                <span
-                  key={social}
-                  className="w-10 h-10 rounded-full bg-cream/10 hover:bg-gold/20 flex items-center justify-center text-cream/60 hover:text-gold text-xs font-semibold transition-colors cursor-pointer"
+            <div className="flex gap-3 mb-4">
+              {socials.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full bg-cream/10 hover:bg-gold/20 flex items-center justify-center text-cream/70 hover:text-gold transition-colors"
                 >
-                  {social[0]}
-                </span>
+                  <Icon className="w-5 h-5" />
+                </a>
               ))}
             </div>
+            <a href="mailto:hello@yegdate.ca" className="text-cream/60 hover:text-gold text-sm transition-colors">
+              hello@yegdate.ca
+            </a>
           </div>
         </div>
 
-        <div className="border-t border-cream/10 mt-12 pt-8 text-center space-y-1">
+        <div className="border-t border-cream/10 mt-12 pt-8 text-center space-y-2">
+          <p className="text-cream/50 text-sm">
+            {t("footer.privateHaven")}{" "}
+            <a href="#" title="Bientôt disponible" className="text-gold italic hover:underline">
+              Private Haven
+            </a>
+          </p>
           <p className="text-cream/40 text-xs">{t("footer.disclaimer")}</p>
           <p className="text-cream/40 text-sm">
-            &copy; {new Date().getFullYear()} YEG Date. {t("footer.rights")}
+            {t("footer.madeWith")} &copy; {new Date().getFullYear()} YEG Date — Edmonton, AB, Canada
           </p>
         </div>
       </div>
