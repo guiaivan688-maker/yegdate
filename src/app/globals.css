@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQZNLo_U2r.woff2")
+    format("woff2");
+}
+
+@theme inline {
+  --color-navy: #1a365d;
+  --color-navy-light: #2a4b7d;
+  --color-gold: #c4a456;
+  --color-gold-light: #d4b875;
+  --color-cream: #fcfaf6;
+  --color-surface: #ffffff;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.gradient-navy {
+  background: linear-gradient(135deg, #1a365d 0%, #2a4b7d 100%);
+}
+
+.gradient-gold {
+  background: radial-gradient(ellipse at center, #d4b875 0%, #c4a456 100%);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
