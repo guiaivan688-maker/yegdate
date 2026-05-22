@@ -18,7 +18,26 @@
     "subtitle": "Découvrez les plus beaux endroits, planifiez des expériences inoubliables et transformez chaque sortie en souvenir.",
     "tagline": "L'agenda intelligent d'Edmonton",
     "cta": "Trouver mon plan",
-    "ctaServices": "Nos services"
+    "ctaServices": "Nos services",
+    "bigTitle": "Plus jamais « j'sais pas quoi faire ce week-end »",
+    "bigSubtitle": "L'agenda intelligent d'Edmonton. Budget, humeur, groupe — on planifie tout.",
+    "bigCta": "Trouve ton plan →"
+  },
+  "home": {
+    "quickAccess": "Pour qui planifiez-vous ?",
+    "weekendTitle": "Ce week-end à Edmonton",
+    "weekendSubtitle": "Les événements à ne pas manquer dans la ville",
+    "allEvents": "Voir tous les événements →",
+    "customTitle": "Créez votre expérience sur-mesure",
+    "customText": "Bientôt : composez votre journée bloc par bloc et obtenez un devis instantané.",
+    "customCta": "Demander un devis sur-mesure"
+  },
+  "newsletter": {
+    "title": "3 idées de sortie chaque semaine, directement dans ta boîte.",
+    "placeholder": "ton@email.com",
+    "cta": "Je m'inscris",
+    "social": "Rejoint 2 300+ Edmontoniens",
+    "thanks": "Merci ! Vérifie ta boîte mail."
   },
   "weather": {
     "edmonton": "Edmonton",

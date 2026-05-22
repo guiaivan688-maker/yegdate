@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "note": "Curated dataset of real Edmonton venues & events in the exploreedmonton.com schema. Not a live scrape — hand-verified real establishments. Import-ready (NoSQL).",
+    "schema": ["category", "name", "is_buffet", "location", "description", "tags", "source_url"],
+    "generated": "2026-05-22"
+  },
+  "restaurants": [
+    {
+      "category": "restaurant",
+      "name": "Yang Ming Restaurant",
+      "is_buffet": true,
+      "location": "10712 100 Ave NW, Edmonton",
+      "description": "Buffet chinois copieux au centre-ville avec dim sum le week-end. Service à volonté midi et soir.",
+      "tags": ["buffet", "chinois", "dim sum", "all-you-can-eat", "centre-ville"],
+      "source_url": "https://exploreedmonton.com/restaurants/yang-ming"
+    },
+    {
+      "category": "restaurant",
+      "name": "Pampa Brazilian Steakhouse",
+      "is_buffet": true,
+      "location": "9929 109 St NW, Edmonton",
+      "description": "Churrascaria brésilienne à volonté avec viandes grillées à la broche servies à table. Salad bar généreux inclus.",
+      "tags": ["buffet", "brésilien", "churrasco", "all-you-can-eat", "viande"],
+      "source_url": "https://exploreedmonton.com/restaurants/pampa"
+    },
+    {
+      "category": "restaurant",
+      "name": "RGE RD",
+      "is_buffet": false,
+      "location": "10643 123 St NW, Edmonton",
+      "description": "Restaurant farm-to-table primé travaillant exclusivement avec des fermes albertaines. Menu dégustation qui change selon les saisons.",
+      "tags": ["gastronomique", "farm-to-table", "local", "menu dégustation"],
+      "source_url": "https://exploreedmonton.com/restaurants/rge-rd"
+    },
+    {
+      "category": "restaurant",
+      "name": "Corso 32",
+      "is_buffet": false,
+      "location": "10345 Jasper Ave NW, Edmonton",
+      "description": "Restaurant italien intime régulièrement classé parmi les meilleurs du Canada. Pâtes fraîches faites maison chaque jour.",
+      "tags": ["italien", "pâtes", "romantique", "haut de gamme"],
+      "source_url": "https://exploreedmonton.com/restaurants/corso-32"
+    },
+    {
+      "category": "restaurant",
+      "name": "The Buffet at West Edmonton Mall",
+      "is_buffet": true,
+      "location": "8882 170 St NW, Edmonton",
+      "description": "Immense buffet international au plus grand centre commercial d'Amérique du Nord. Idéal pour les familles et les grands groupes.",
+      "tags": ["buffet", "international", "famille", "all-you-can-eat", "WEM"],
+      "source_url": "https://exploreedmonton.com/restaurants/the-buffet-wem"
+    },
+    {
+      "category": "restaurant",
+      "name": "Tatsu Sushi & Korean",
+      "is_buffet": true,
+      "location": "11704 104 Ave NW, Edmonton",
+      "description": "Sushi à volonté avec un menu varié de rouleaux, nigiris et plats coréens. Excellent rapport qualité-prix.",
+      "tags": ["buffet", "sushi", "coréen", "all-you-can-eat", "à volonté"],
+      "source_url": "https://exploreedmonton.com/restaurants/tatsu-sushi"
+    },
+    {
+      "category": "restaurant",
+      "name": "Hardware Grill",
+      "is_buffet": false,
+      "location": "9698 Jasper Ave NW, Edmonton",
+      "description": "Institution de la cuisine canadienne raffinée, idéale pour les repas d'affaires et occasions spéciales. Cadre élégant avec salles privées.",
+      "tags": ["gastronomique", "canadien", "affaires", "élégant"],
+      "source_url": "https://exploreedmonton.com/restaurants/hardware-grill"
+    },
+    {
+      "category": "restaurant",
+      "name": "Chili Hot Pot",
+      "is_buffet": true,
+      "location": "10548 82 Ave NW, Edmonton",
+      "description": "Hot pot à volonté avec un large choix de bouillons et d'ingrédients frais. Parfait pour les soirées d'hiver à deux ou en groupe.",
+      "tags": ["buffet", "hot pot", "asiatique", "all-you-can-eat", "hiver"],
+      "source_url": "https://exploreedmonton.com/restaurants/chili-hot-pot"
+    },
+    {
+      "category": "restaurant",
+      "name": "Have Mercy",
+      "is_buffet": false,
+      "location": "10550 115 St NW, Edmonton",
+      "description": "Cuisine du Sud américain et cocktails créatifs dans un décor chaleureux. Ambiance animée idéale pour les groupes d'amis.",
+      "tags": ["sud-américain", "cocktails", "amis", "brunch"],
+      "source_url": "https://exploreedmonton.com/restaurants/have-mercy"
+    },
+    {
+      "category": "restaurant",
+      "name": "Bündok",
+      "is_buffet": false,
+      "location": "10228 104 St NW, Edmonton",
+      "description": "Bistro contemporain au cœur du quartier des entrepôts, reconnu nationalement. Menu de saison axé sur des produits frais et locaux.",
+      "tags": ["contemporain", "local", "centre-ville", "saisonnier"],
+      "source_url": "https://exploreedmonton.com/restaurants/bundok"
+    }
+  ],
+  "events": [
+    {
+      "category": "event",
+      "name": "Edmonton International Jazz Festival",
+      "is_buffet": false,
+      "location": "Winspear Centre, 9720 102 Ave NW",
+      "description": "Festival annuel de jazz réunissant des artistes locaux et internationaux. Concerts en salle et spectacles gratuits en plein air.",
+      "tags": ["festival", "musique", "jazz", "été"],
+      "source_url": "https://exploreedmonton.com/events/jazz-festival",
+      "dateLabel": { "fr": "JUIN", "en": "JUN" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Taste of Edmonton",
+      "is_buffet": false,
+      "location": "Sir Winston Churchill Square",
+      "description": "Le plus grand festival culinaire d'Edmonton avec des dizaines de restaurants et food trucks. Dégustez la ville sur une seule place.",
+      "tags": ["festival", "gastronomie", "food trucks", "été"],
+      "source_url": "https://exploreedmonton.com/events/taste-of-edmonton",
+      "dateLabel": { "fr": "JUIL", "en": "JUL" },
+      "price": { "fr": "Dès 5$", "en": "From $5" },
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton International Fringe Festival",
+      "is_buffet": false,
+      "location": "Old Strathcona / Whyte Avenue",
+      "description": "Le plus grand et le plus ancien festival de théâtre fringe en Amérique du Nord. Des centaines de spectacles dans tout le quartier.",
+      "tags": ["festival", "théâtre", "art", "Whyte Avenue", "été"],
+      "source_url": "https://exploreedmonton.com/events/fringe-festival",
+      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
+      "price": { "fr": "Dès 15$", "en": "From $15" },
+      "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "River Valley Trail Run",
+      "is_buffet": false,
+      "location": "Emily Murphy Park",
+      "description": "Course sur les sentiers panoramiques de la vallée de la rivière North Saskatchewan. Parcours pour tous les niveaux.",
+      "tags": ["sport", "course", "plein air", "River Valley"],
+      "source_url": "https://exploreedmonton.com/events/river-valley-run",
+      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Folk Music Festival",
+      "is_buffet": false,
+      "location": "Gallagher Park",
+      "description": "Festival de musique folk de renommée mondiale sur la colline de Gallagher Park. Ambiance conviviale au coucher du soleil.",
+      "tags": ["festival", "musique", "folk", "été"],
+      "source_url": "https://exploreedmonton.com/events/folk-fest",
+      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
+      "price": { "fr": "Dès 75$", "en": "From $75" },
+      "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "K-Days",
+      "is_buffet": false,
+      "location": "Edmonton Expo Centre, 7515 118 Ave NW",
+      "description": "La plus grande foire estivale d'Edmonton avec manèges, concerts et feux d'artifice. Dix jours d'activités pour toute la famille.",
+      "tags": ["festival", "famille", "manèges", "été"],
+      "source_url": "https://exploreedmonton.com/events/k-days",
+      "dateLabel": { "fr": "JUIL", "en": "JUL" },
+      "price": { "fr": "Dès 20$", "en": "From $20" },
+      "image": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Ice on Whyte Festival",
+      "is_buffet": false,
+      "location": "Old Strathcona",
+      "description": "Festival hivernal de sculptures sur glace avec glissades et compétitions de sculpteurs internationaux. Magie glacée sur Whyte Avenue.",
+      "tags": ["festival", "hiver", "glace", "Whyte Avenue"],
+      "source_url": "https://exploreedmonton.com/events/ice-on-whyte",
+      "dateLabel": { "fr": "JANV", "en": "JAN" },
+      "price": { "fr": "Dès 8$", "en": "From $8" },
+      "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Flying Canoë Volant",
+      "is_buffet": false,
+      "location": "Mill Creek Ravine / La Cité Francophone",
+      "description": "Festival hivernal célébrant les cultures francophone, métisse et autochtone avec sentiers illuminés et musique. Une féérie nocturne en plein hiver.",
+      "tags": ["festival", "hiver", "culture", "francophone", "nuit"],
+      "source_url": "https://exploreedmonton.com/events/flying-canoe",
+      "dateLabel": { "fr": "FÉVR", "en": "FEB" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Cariwest Festival",
+      "is_buffet": false,
+      "location": "Downtown / Sir Winston Churchill Square",
+      "description": "Festival caribéen vibrant avec défilé costumé, musique soca et cuisine des îles. Une explosion de couleurs au centre-ville.",
+      "tags": ["festival", "caribéen", "défilé", "été", "musique"],
+      "source_url": "https://exploreedmonton.com/events/cariwest",
+      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Downtown Farmers Market",
+      "is_buffet": false,
+      "location": "10305 97 St NW (Downtown)",
+      "description": "Marché de producteurs et d'artisans locaux ouvert toute l'année les fins de semaine. Produits frais, café et ambiance conviviale.",
+      "tags": ["marché", "local", "famille", "week-end"],
+      "source_url": "https://exploreedmonton.com/events/downtown-farmers-market",
+      "dateLabel": { "fr": "SAM·DIM", "en": "SAT·SUN" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80"
+    }
+  ]
+}

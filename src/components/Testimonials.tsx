@@ -6,31 +6,31 @@ import { useLocale } from "@/lib/locale-context";
 
 const testimonials = [
   {
-    name: "Sarah & Marc",
-    tag: { fr: "Couple · Anniversaire", en: "Couple · Anniversary" },
+    name: "Sarah",
+    tag: { fr: "Strathcona", en: "Strathcona" },
     text: {
-      fr: "Le pique-nique chic à Louise McKinney était magique. Tout était prêt, on n'a eu qu'à profiter. Les photos sont superbes !",
-      en: "The luxury picnic at Louise McKinney was magical. Everything was ready, we just had to enjoy. The photos are gorgeous!",
+      fr: "On ne savait jamais quoi faire le samedi. Weekend Match nous a redonné envie de sortir.",
+      en: "We never knew what to do on Saturdays. Weekend Match made us want to go out again.",
     },
-    initials: "SM",
+    initials: "S",
   },
   {
-    name: "Jessica L.",
-    tag: { fr: "EVJF · 12 amies", en: "Bachelorette · 12 friends" },
+    name: "Marc & Julie",
+    tag: { fr: "St. Albert", en: "St. Albert" },
     text: {
-      fr: "Lancer de hache + tufting pour mon EVJF, organisé en un message. Le groupe a adoré, zéro stress côté logistique.",
-      en: "Axe throwing + tufting for my bachelorette, booked in one message. The group loved it, zero logistics stress.",
+      fr: "Notre anniversaire de mariage organisé en 3 clics. Le Streetcar était magique.",
+      en: "Our wedding anniversary planned in 3 clicks. The Streetcar was magical.",
     },
-    initials: "JL",
+    initials: "MJ",
   },
   {
-    name: "Northgate Tech Inc.",
-    tag: { fr: "Affaires · Team-building", en: "Business · Team-building" },
+    name: "Fatima",
+    tag: { fr: "Oliver", en: "Oliver" },
     text: {
-      fr: "Soirée corporate au TELUS World of Science pour 80 employés. Coordination impeccable, nos équipes en parlent encore.",
-      en: "Corporate evening at TELUS World of Science for 80 staff. Flawless coordination — our teams still talk about it.",
+      fr: "J'ai organisé l'EVJF de ma meilleure amie sans stress. Tout était parfait.",
+      en: "I organized my best friend's bachelorette stress-free. Everything was perfect.",
     },
-    initials: "NT",
+    initials: "F",
   },
 ];
 

@@ -18,7 +18,26 @@
     "subtitle": "Discover the most beautiful places, plan unforgettable experiences and turn every outing into a memory.",
     "tagline": "Edmonton's smart outing planner",
     "cta": "Find my plan",
-    "ctaServices": "Our services"
+    "ctaServices": "Our services",
+    "bigTitle": "Never \"I don't know what to do this weekend\" again",
+    "bigSubtitle": "Edmonton's smart outing planner. Budget, mood, group — we plan it all.",
+    "bigCta": "Find your plan →"
+  },
+  "home": {
+    "quickAccess": "Who are you planning for?",
+    "weekendTitle": "This weekend in Edmonton",
+    "weekendSubtitle": "The can't-miss events around the city",
+    "allEvents": "See all events →",
+    "customTitle": "Create your custom experience",
+    "customText": "Coming soon: build your day block by block and get an instant quote.",
+    "customCta": "Request a custom quote"
+  },
+  "newsletter": {
+    "title": "3 outing ideas every week, straight to your inbox.",
+    "placeholder": "your@email.com",
+    "cta": "Sign me up",
+    "social": "Join 2,300+ Edmontonians",
+    "thanks": "Thanks! Check your inbox."
   },
   "weather": {
     "edmonton": "Edmonton",
