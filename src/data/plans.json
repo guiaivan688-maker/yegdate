@@ -2,353 +2,194 @@
   "services": [
     {
       "id": "photographer",
-      "title": {
-        "fr": "Photographe Professionnel",
-        "en": "Professional Photographer"
-      },
-      "description": {
-        "fr": "Nos photographes professionnels capturent vos plus beaux moments avec un œil artistique. Séance de 1 à 3 heures, retouches incluses, galerie en ligne privée.",
-        "en": "Our professional photographers capture your most beautiful moments with an artistic eye. 1 to 3 hour sessions, retouching included, private online gallery."
-      },
+      "icon": "Camera",
+      "title": { "fr": "Photographe professionnel", "en": "Professional photographer" },
+      "description": { "fr": "Séance 1-3h, retouches incluses, galerie en ligne privée.", "en": "1-3h session, retouching included, private online gallery." },
       "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800&q=80",
       "price": 150,
-      "unit": {
-        "fr": "/ séance",
-        "en": "/ session"
-      },
+      "unit": { "fr": "/ séance", "en": "/ session" },
       "features": {
-        "fr": [
-          "1-3 heures de couverture",
-          "50+ photos retouchées",
-          "Galerie en ligne privée",
-          "Livraison sous 7 jours"
-        ],
-        "en": [
-          "1-3 hours of coverage",
-          "50+ retouched photos",
-          "Private online gallery",
-          "Delivery within 7 days"
-        ]
-      }
-    },
-    {
-      "id": "picnic",
-      "title": {
-        "fr": "Pique-nique Chic",
-        "en": "Luxury Picnic"
-      },
-      "description": {
-        "fr": "Installation complète d'un pique-nique élégant avec nappe, coussins, bouquet de fleurs, vaisselle en porcelaine et panier gourmet.",
-        "en": "Complete setup of an elegant picnic with tablecloth, cushions, flower bouquet, porcelain tableware and gourmet basket."
-      },
-      "image": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?w=800&q=80",
-      "price": 200,
-      "unit": {
-        "fr": "/ événement",
-        "en": "/ event"
-      },
-      "features": {
-        "fr": [
-          "Installation & démontage inclus",
-          "Décoration premium",
-          "Panier gourmet pour 2-6 pers.",
-          "Couvertures et coussins"
-        ],
-        "en": [
-          "Setup & teardown included",
-          "Premium decoration",
-          "Gourmet basket for 2-6 people",
-          "Blankets and cushions"
-        ]
+        "fr": ["1-3 heures de couverture", "50+ photos retouchées", "Galerie privée", "Livraison 7 jours"],
+        "en": ["1-3 hours coverage", "50+ retouched photos", "Private gallery", "7-day delivery"]
       }
     },
     {
       "id": "roomDecor",
-      "title": {
-        "fr": "Décoration Romantique",
-        "en": "Romantic Room Decoration"
-      },
-      "description": {
-        "fr": "Transformation de votre chambre d'hôtel, Airbnb ou maison en nid romantique avec pétales, bougies, ballons et touches dorées.",
-        "en": "Transform your hotel room, Airbnb or home into a romantic nest with petals, candles, balloons and golden touches."
-      },
+      "icon": "Flower2",
+      "title": { "fr": "Décoration romantique chambre", "en": "Romantic room decoration" },
+      "description": { "fr": "Pétales, bougies, ballons. Installation et démontage inclus.", "en": "Petals, candles, balloons. Setup and teardown included." },
       "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80",
-      "price": 250,
-      "unit": {
-        "fr": "/ installation",
-        "en": "/ setup"
-      },
+      "price": 149,
+      "unit": { "fr": "/ installation", "en": "/ setup" },
       "features": {
-        "fr": [
-          "Pétales de roses",
-          "100+ bougies LED",
-          "Ballons personnalisés",
-          "Installation discrète"
-        ],
-        "en": [
-          "Rose petals",
-          "100+ LED candles",
-          "Custom balloons",
-          "Discreet setup"
-        ]
+        "fr": ["Pétales de roses", "100+ bougies LED", "Ballons personnalisés", "Installation discrète"],
+        "en": ["Rose petals", "100+ LED candles", "Custom balloons", "Discreet setup"]
       }
     },
     {
-      "id": "eventPlanner",
-      "title": {
-        "fr": "Planificateur d'Événement",
-        "en": "Event Planner"
-      },
-      "description": {
-        "fr": "Organisation complète de votre événement : lieu, traiteur, décoration, divertissement et coordination le jour J.",
-        "en": "Complete event organization: venue, catering, decoration, entertainment and day-of coordination."
-      },
-      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
-      "price": 500,
-      "unit": {
-        "fr": "/ événement",
-        "en": "/ event"
-      },
+      "id": "picnic",
+      "icon": "UtensilsCrossed",
+      "title": { "fr": "Pique-nique chic installé", "en": "Luxury picnic setup" },
+      "description": { "fr": "Nappe, coussins, vaisselle, panier gourmet. Installé pour vous.", "en": "Tablecloth, cushions, tableware, gourmet basket. Set up for you." },
+      "image": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?w=800&q=80",
+      "price": 99,
+      "unit": { "fr": "/ événement", "en": "/ event" },
       "features": {
-        "fr": [
-          "Consultation personnalisée",
-          "Sélection du lieu",
-          "Coordination des fournisseurs",
-          "Gestion le jour J"
-        ],
-        "en": [
-          "Personalized consultation",
-          "Venue selection",
-          "Vendor coordination",
-          "Day-of management"
-        ]
+        "fr": ["Installation & démontage", "Vaisselle premium", "Panier gourmet 2-6 pers.", "Décoration florale"],
+        "en": ["Setup & teardown", "Premium tableware", "Gourmet basket 2-6 ppl", "Floral decoration"]
+      }
+    },
+    {
+      "id": "chef",
+      "icon": "ChefHat",
+      "title": { "fr": "Chef privé à domicile", "en": "Private chef at home" },
+      "description": { "fr": "Menu 3 services, installation et nettoyage inclus.", "en": "3-course menu, setup and cleanup included." },
+      "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+      "price": 299,
+      "unit": { "fr": "/ soirée", "en": "/ evening" },
+      "features": {
+        "fr": ["Menu 3 services sur-mesure", "Produits frais locaux", "Service à table", "Nettoyage inclus"],
+        "en": ["Custom 3-course menu", "Fresh local produce", "Table service", "Cleanup included"]
+      }
+    },
+    {
+      "id": "driver",
+      "icon": "Car",
+      "title": { "fr": "Chauffeur privé soirée", "en": "Private evening driver" },
+      "description": { "fr": "4h, véhicule premium, chauffeur dédié pour votre soirée.", "en": "4h, premium vehicle, dedicated driver for your evening." },
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
+      "price": 120,
+      "unit": { "fr": "/ 4h", "en": "/ 4h" },
+      "features": {
+        "fr": ["Véhicule premium", "Chauffeur dédié 4h", "Eau & rafraîchissements", "Trajets illimités"],
+        "en": ["Premium vehicle", "Dedicated driver 4h", "Water & refreshments", "Unlimited trips"]
+      }
+    },
+    {
+      "id": "videographer",
+      "icon": "Video",
+      "title": { "fr": "Vidéaste / Reel Instagram", "en": "Videographer / Instagram Reel" },
+      "description": { "fr": "Captation + montage Reel 60 sec prêt à publier.", "en": "Filming + edited 60-sec Reel ready to post." },
+      "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80",
+      "price": 200,
+      "unit": { "fr": "/ séance", "en": "/ session" },
+      "features": {
+        "fr": ["Captation 1-2h", "Montage Reel 60 sec", "Musique licenciée", "Livraison 5 jours"],
+        "en": ["1-2h filming", "60-sec Reel edit", "Licensed music", "5-day delivery"]
       }
     }
   ],
   "packages": [
     {
-      "id": "date-night-classique",
-      "title": {
-        "fr": "Date Night Classique",
-        "en": "Classic Date Night"
-      },
-      "description": {
-        "fr": "Le forfait parfait pour une soirée romantique mémorable à Edmonton.",
-        "en": "The perfect package for a memorable romantic evening in Edmonton."
-      },
-      "image": "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80",
-      "price": 299,
+      "id": "picnic-essentiel",
+      "title": { "fr": "Picnic Essentiel", "en": "Essential Picnic" },
+      "description": { "fr": "Setup pique-nique pour 2, River Valley.", "en": "Picnic setup for 2, River Valley." },
+      "image": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?w=800&q=80",
+      "price": 99,
+      "segment": "couple",
+      "cta": "book",
       "includes": {
-        "fr": [
-          "Dîner pour 2 dans un restaurant sélectionné",
-          "Photographe (1h)",
-          "Transport aller-retour"
-        ],
-        "en": [
-          "Dinner for 2 at a selected restaurant",
-          "Photographer (1h)",
-          "Round-trip transportation"
-        ]
-      },
-      "segment": "couple"
+        "fr": ["Installation pour 2", "Nappe & coussins", "Vaisselle réutilisable", "Spot River Valley"],
+        "en": ["Setup for 2", "Tablecloth & cushions", "Reusable tableware", "River Valley spot"]
+      }
     },
     {
-      "id": "pique-nique-premium",
-      "title": {
-        "fr": "Pique-nique Premium",
-        "en": "Premium Picnic"
-      },
-      "description": {
-        "fr": "Un pique-nique digne d'un magazine avec photographe et décoration complète.",
-        "en": "A magazine-worthy picnic with photographer and full decoration."
-      },
+      "id": "picnic-premium",
+      "title": { "fr": "Picnic Premium", "en": "Premium Picnic" },
+      "description": { "fr": "Setup luxe, champagne, photographe 30 min.", "en": "Luxury setup, champagne, photographer 30 min." },
       "image": "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=800&q=80",
-      "price": 449,
-      "includes": {
-        "fr": [
-          "Installation pique-nique chic",
-          "Panier gourmet pour 2",
-          "Photographe (2h)",
-          "Bouquet de fleurs"
-        ],
-        "en": [
-          "Luxury picnic setup",
-          "Gourmet basket for 2",
-          "Photographer (2h)",
-          "Flower bouquet"
-        ]
-      },
-      "segment": "couple"
-    },
-    {
-      "id": "family-fun-day",
-      "title": {
-        "fr": "Journée Fun en Famille",
-        "en": "Family Fun Day"
-      },
-      "description": {
-        "fr": "Une journée complète d'activités familiales à Edmonton.",
-        "en": "A full day of family activities in Edmonton."
-      },
-      "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80",
       "price": 199,
+      "segment": "couple",
+      "cta": "book",
       "includes": {
-        "fr": [
-          "Activité en plein air guidée",
-          "Déjeuner familial",
-          "Photographe (1h)",
-          "Surprise pour les enfants"
-        ],
-        "en": [
-          "Guided outdoor activity",
-          "Family lunch",
-          "Photographer (1h)",
-          "Surprise for the kids"
-        ]
-      },
-      "segment": "famille"
+        "fr": ["Setup luxe pour 2", "Champagne / mousseux", "Photographe 30 min", "Panier gourmet"],
+        "en": ["Luxury setup for 2", "Champagne / sparkling", "Photographer 30 min", "Gourmet basket"]
+      }
     },
     {
-      "id": "corporate-elite",
-      "title": {
-        "fr": "Corporate Élite",
-        "en": "Corporate Elite"
-      },
-      "description": {
-        "fr": "Organisation complète de votre événement d'entreprise avec un cadre exceptionnel.",
-        "en": "Complete organization of your corporate event with an exceptional setting."
-      },
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      "price": 1299,
+      "id": "date-surprise-box",
+      "title": { "fr": "Date Surprise Box", "en": "Date Surprise Box" },
+      "description": { "fr": "Boîte livrée chez vous avec mini-aventure.", "en": "Box delivered to your door with a mini-adventure." },
+      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&q=80",
+      "price": 49,
+      "segment": "couple",
+      "cta": "book",
       "includes": {
-        "fr": [
-          "Lieu exclusif réservé",
-          "Traiteur haut de gamme",
-          "Photographe événementiel",
-          "Coordination complète"
-        ],
-        "en": [
-          "Exclusive venue reserved",
-          "High-end catering",
-          "Event photographer",
-          "Full coordination"
-        ]
-      },
-      "segment": "business"
+        "fr": ["Boîte surprise livrée", "Mini-aventure guidée", "Gourmandises locales", "Instructions ludiques"],
+        "en": ["Surprise box delivered", "Guided mini-adventure", "Local treats", "Playful instructions"]
+      }
     },
     {
-      "id": "friends-night-out",
-      "title": {
-        "fr": "Soirée Entre Amis",
-        "en": "Friends Night Out"
-      },
-      "description": {
-        "fr": "Le forfait ultime pour une soirée inoubliable entre amis.",
-        "en": "The ultimate package for an unforgettable night with friends."
-      },
-      "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+      "id": "deco-diner",
+      "title": { "fr": "Décoration + Dîner", "en": "Decoration + Dinner" },
+      "description": { "fr": "Chambre décorée + dîner livré par chef.", "en": "Decorated room + chef-delivered dinner." },
+      "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80",
       "price": 349,
+      "segment": "couple",
+      "cta": "book",
       "includes": {
-        "fr": [
-          "Réservation VIP dans un bar/club",
-          "Photographe de soirée (2h)",
-          "Cocktails de bienvenue",
-          "Transport organisé"
-        ],
-        "en": [
-          "VIP reservation at a bar/club",
-          "Party photographer (2h)",
-          "Welcome cocktails",
-          "Organized transportation"
-        ]
-      },
-      "segment": "amis"
+        "fr": ["Décoration romantique", "Dîner 3 services livré", "Pétales & bougies", "Mise en place incluse"],
+        "en": ["Romantic decoration", "3-course dinner delivered", "Petals & candles", "Setup included"]
+      }
     },
     {
-      "id": "proposal-package",
-      "title": {
-        "fr": "Demande en Mariage",
-        "en": "Proposal Package"
-      },
-      "description": {
-        "fr": "Le moment le plus important de votre vie mérite une planification parfaite.",
-        "en": "The most important moment of your life deserves perfect planning."
-      },
-      "image": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80",
-      "price": 899,
+      "id": "journee-parfaite",
+      "title": { "fr": "Journée Parfaite", "en": "Perfect Day" },
+      "description": { "fr": "Brunch + activité + spa + dîner, journée complète.", "en": "Brunch + activity + spa + dinner, full day." },
+      "image": "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800&q=80",
+      "price": 549,
+      "segment": "couple",
+      "cta": "book",
       "includes": {
-        "fr": [
-          "Lieu décoré sur-mesure",
-          "Photographe caché",
-          "Vidéographe",
-          "Décoration complète",
-          "Champagne & pétales"
-        ],
-        "en": [
-          "Custom-decorated venue",
-          "Hidden photographer",
-          "Videographer",
-          "Full decoration",
-          "Champagne & petals"
-        ]
-      },
-      "segment": "couple"
+        "fr": ["Brunch pour 2", "Activité au choix", "Spa en duo", "Dîner gastronomique"],
+        "en": ["Brunch for 2", "Activity of choice", "Couples spa", "Gourmet dinner"]
+      }
+    },
+    {
+      "id": "grande-romance",
+      "title": { "fr": "Grande Romance", "en": "Grand Romance" },
+      "description": { "fr": "Streetcar privatisé + photographe + dîner + suite Fairmont.", "en": "Private streetcar + photographer + dinner + Fairmont suite." },
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80",
+      "price": 1199,
+      "segment": "couple",
+      "cta": "book",
+      "includes": {
+        "fr": ["Streetcar privatisé", "Photographe 2h", "Dîner gastronomique", "Suite au Fairmont"],
+        "en": ["Private streetcar", "Photographer 2h", "Gourmet dinner", "Fairmont suite"]
+      }
+    },
+    {
+      "id": "evjf-premium",
+      "title": { "fr": "EVJF Premium", "en": "Premium Bachelorette" },
+      "description": { "fr": "Brunch + atelier + spa + dîner + soirée, pour 8.", "en": "Brunch + workshop + spa + dinner + party, for 8." },
+      "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+      "price": 1999,
+      "segment": "amis",
+      "cta": "book",
+      "includes": {
+        "fr": ["Pour 8 personnes", "Brunch + atelier créatif", "Spa & dîner", "Soirée VIP organisée"],
+        "en": ["For 8 people", "Brunch + creative workshop", "Spa & dinner", "Organized VIP night"]
+      }
+    },
+    {
+      "id": "corporate-soiree",
+      "title": { "fr": "Corporate Soirée", "en": "Corporate Evening" },
+      "description": { "fr": "Fête d'entreprise complète, clé en main.", "en": "Complete turnkey company party." },
+      "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "price": 0,
+      "quoteOnly": true,
+      "segment": "business",
+      "cta": "quote",
+      "includes": {
+        "fr": ["Lieu & traiteur", "Décoration & AV", "Animation", "Coordination complète"],
+        "en": ["Venue & catering", "Decoration & AV", "Entertainment", "Full coordination"]
+      }
     }
   ],
   "places": [
-    {
-      "id": "river-valley",
-      "name": {
-        "fr": "Vallée de la Rivière",
-        "en": "River Valley"
-      },
-      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
-      "category": "parks"
-    },
-    {
-      "id": "muttart",
-      "name": {
-        "fr": "Muttart Conservatory",
-        "en": "Muttart Conservatory"
-      },
-      "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80",
-      "category": "culture"
-    },
-    {
-      "id": "high-level-bridge",
-      "name": {
-        "fr": "High Level Bridge",
-        "en": "High Level Bridge"
-      },
-      "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
-      "category": "parks"
-    },
-    {
-      "id": "legislature",
-      "name": {
-        "fr": "Legislature Grounds",
-        "en": "Legislature Grounds"
-      },
-      "image": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80",
-      "category": "culture"
-    },
-    {
-      "id": "neon-sign-museum",
-      "name": {
-        "fr": "Musée des Néons",
-        "en": "Neon Sign Museum"
-      },
-      "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
-      "category": "culture"
-    },
-    {
-      "id": "whyte-avenue",
-      "name": {
-        "fr": "Whyte Avenue",
-        "en": "Whyte Avenue"
-      },
-      "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
-      "category": "restaurants"
-    }
+    { "id": "river-valley", "name": { "fr": "Vallée de la Rivière", "en": "River Valley" }, "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80", "category": "parks" },
+    { "id": "muttart", "name": { "fr": "Muttart Conservatory", "en": "Muttart Conservatory" }, "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80", "category": "culture" },
+    { "id": "legislature", "name": { "fr": "Legislature Grounds", "en": "Legislature Grounds" }, "image": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80", "category": "culture" },
+    { "id": "whyte-avenue", "name": { "fr": "Whyte Avenue", "en": "Whyte Avenue" }, "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80", "category": "restaurants" }
   ]
 }

@@ -7,9 +7,9 @@ import plansData from "@/data/plans.json";
 
 const addonDefs = [
   { id: "photographer", price: 150 },
-  { id: "picnic", price: 200 },
-  { id: "roomDecor", price: 250 },
-  { id: "eventPlanner", price: 500 },
+  { id: "picnic", price: 99 },
+  { id: "roomDecor", price: 149 },
+  { id: "chef", price: 299 },
 ];
 
 import QuoteForm from "./QuoteForm";

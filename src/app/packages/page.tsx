@@ -33,9 +33,15 @@ export default function PackagesPage() {
 
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
+          <a href="/weekend-match" className="block mb-10 rounded-2xl bg-navy text-cream px-6 py-4 text-center hover:bg-navy-light transition-colors">
+            {locale === "fr"
+              ? "Pas sûr de ton choix ? Essaie Weekend Match — on te recommande le forfait parfait en 4 questions →"
+              : "Not sure? Try Weekend Match — we recommend the perfect package in 4 questions →"}
+          </a>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plansData.packages.map((pkg, i) => {
               const includes = (pkg.includes as Record<string, string[]>)[locale];
+              const quoteOnly = (pkg as { quoteOnly?: boolean }).quoteOnly === true;
               return (
                 <motion.div
                   key={pkg.id}
@@ -55,7 +61,7 @@ export default function PackagesPage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <div className="absolute top-4 right-4 gradient-navy text-cream rounded-full px-4 py-2 text-sm font-bold">
-                      ${pkg.price}
+                      {quoteOnly ? (locale === "fr" ? "Sur devis" : "On quote") : `$${pkg.price}`}
                     </div>
                   </div>
                   <div className="p-6">
@@ -77,7 +83,7 @@ export default function PackagesPage() {
                       ))}
                     </ul>
                     <a href="/services#devis" className="block text-center w-full gradient-gold text-navy font-bold py-3 rounded-xl hover:opacity-90 transition-opacity">
-                      {t("packages.bookThis")}
+                      {quoteOnly ? t("common.quote") : t("packages.bookThis")}
                     </a>
                   </div>
                 </motion.div>
