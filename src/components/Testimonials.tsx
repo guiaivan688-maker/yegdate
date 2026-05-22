@@ -53,7 +53,7 @@ export default function Testimonials() {
           <div className="w-16 h-1 gradient-gold rounded-full mx-auto mt-4" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible -mx-4 px-4 md:mx-0 md:px-0 snap-x">
           {testimonials.map((item, i) => (
             <motion.div
               key={item.name}
@@ -61,7 +61,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-surface rounded-3xl border border-black/5 shadow-sm p-7"
+              className="snap-start shrink-0 w-[85vw] sm:w-[60vw] md:w-auto bg-surface rounded-3xl border border-black/5 shadow-sm p-7"
             >
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: 5 }).map((_, j) => (

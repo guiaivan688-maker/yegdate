@@ -14,7 +14,7 @@ const serviceBadges: Record<string, { fr: string; en: string; Icon: typeof Camer
   eventPlanner: { fr: "Événement", en: "Event", Icon: Calendar },
 };
 
-export default function ActivityCard({ activity, index = 0 }: { activity: Activity; index?: number }) {
+export default function ActivityCard({ activity, index = 0, featured = false }: { activity: Activity; index?: number; featured?: boolean }) {
   const { locale, t } = useLocale();
 
   return (
@@ -24,13 +24,13 @@ export default function ActivityCard({ activity, index = 0 }: { activity: Activi
       viewport={{ once: true }}
       transition={{ delay: Math.min(index * 0.06, 0.4) }}
       whileHover={{ y: -6, transition: { duration: 0.2 } }}
-      className="group"
+      className={`group ${featured ? "sm:col-span-2" : ""}`}
     >
       <Link
         href={`/activite/${activity.id}`}
         className="block bg-surface rounded-3xl shadow-sm hover:shadow-xl border border-black/5 overflow-hidden transition-shadow duration-300 h-full"
       >
-        <div className="relative h-64 overflow-hidden">
+        <div className={`relative overflow-hidden ${featured ? "h-72 sm:h-80" : "h-64"}`}>
           <Image
             src={activity.image}
             alt={activity.title[locale]}

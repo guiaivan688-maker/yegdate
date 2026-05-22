@@ -8,7 +8,32 @@ import { useLocale } from "@/lib/locale-context";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
+import SplitSection from "@/components/SplitSection";
 import edmonton from "@/data/edmonton-data.json";
+
+const howItWorks = [
+  {
+    eyebrow: { fr: "Étape 1", en: "Step 1" },
+    title: { fr: "Dis-nous ce que tu veux", en: "Tell us what you want" },
+    text: { fr: "Budget, humeur, groupe, saison. En 4 questions, on cerne exactement ton envie du moment.", en: "Budget, mood, group, season. In 4 questions, we pinpoint exactly what you're after." },
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+    reverse: false,
+  },
+  {
+    eyebrow: { fr: "Étape 2", en: "Step 2" },
+    title: { fr: "On te propose un plan", en: "We suggest a plan" },
+    text: { fr: "Des plans complets avec horaires, adresses réelles et prix par étape. Que des lieux vérifiés à Edmonton.", en: "Complete plans with times, real addresses and price per step. Only verified Edmonton spots." },
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80",
+    reverse: true,
+  },
+  {
+    eyebrow: { fr: "Étape 3", en: "Step 3" },
+    title: { fr: "Tu réserves en 1 clic", en: "You book in 1 click" },
+    text: { fr: "Photographe, déco, transport — on s'occupe de toute la logistique du souvenir. Tu n'as qu'à profiter.", en: "Photographer, decor, transport — we handle all the logistics. You just enjoy." },
+    image: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=900&q=80",
+    reverse: false,
+  },
+];
 
 const quickAccess = [
   { key: "couples", href: "/couples", Icon: Heart },
@@ -107,6 +132,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div {...fadeUp} className="text-center mb-14">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">
+              {locale === "fr" ? "Comment ça marche" : "How it works"}
+            </h2>
+            <div className="w-16 h-1 gradient-gold rounded-full mx-auto" />
+          </motion.div>
+          <div className="space-y-16">
+            {howItWorks.map((s) => (
+              <SplitSection
+                key={s.title.en}
+                eyebrow={s.eyebrow[locale]}
+                title={s.title[locale]}
+                text={s.text[locale]}
+                imageSrc={s.image}
+                imageAlt={s.title[locale]}
+                reverse={s.reverse}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 4 — Custom experience teaser */}
       <section className="py-20 px-4 bg-warm-grey">
         <div className="max-w-4xl mx-auto text-center">
@@ -114,7 +164,7 @@ export default function Home() {
             <span className="inline-block w-14 h-1 gradient-gold rounded-full mb-6" />
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-4">{t("home.customTitle")}</h2>
             <p className="text-navy/60 text-lg mb-8 max-w-2xl mx-auto">{t("home.customText")}</p>
-            <Link href="/services#devis" className="inline-flex items-center gap-2 gradient-gold text-navy font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity">
+            <Link href="/sur-mesure" className="inline-flex items-center gap-2 gradient-gold text-navy font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity">
               {t("home.customCta")} <ArrowRight className="w-4 h-4" strokeWidth={2} />
             </Link>
           </motion.div>
