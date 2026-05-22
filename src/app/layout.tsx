@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import ClientShell from "@/components/ClientShell";
+import Analytics from "@/components/Analytics";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
       >
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <Analytics />
         <ClientShell>{children}</ClientShell>
       </body>
     </html>

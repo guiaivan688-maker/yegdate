@@ -12,7 +12,10 @@
     "packages": "Forfaits",
     "about": "À propos",
     "contact": "Contact",
-    "events": "Événements"
+    "events": "Événements",
+    "guides": "Guides",
+    "nightout": "Night Out",
+    "carte": "Carte"
   },
   "events": {
     "title": "Événements à Edmonton",
@@ -207,6 +210,8 @@
     "explore": "Explorer",
     "follow": "Suivez-nous",
     "privateHaven": "YEG Date est un projet de",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
     "madeWith": "Fait avec amour à Edmonton, Alberta —",
     "disclaimer": "YEGdate.ca — plateforme indépendante de planification d'expériences à Edmonton."
   }

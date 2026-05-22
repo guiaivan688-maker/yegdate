@@ -74,7 +74,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "TELUS World of Science Edmonton"
+    "mapsQuery": "TELUS World of Science Edmonton",
+    "coords": [
+      53.568,
+      -113.524
+    ]
   },
   {
     "id": "royal-alberta-museum",
@@ -151,7 +155,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "Royal Alberta Museum Edmonton"
+    "mapsQuery": "Royal Alberta Museum Edmonton",
+    "coords": [
+      53.5465,
+      -113.4975
+    ]
   },
   {
     "id": "fort-edmonton-park",
@@ -231,7 +239,11 @@
     ],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "Fort Edmonton Park"
+    "mapsQuery": "Fort Edmonton Park",
+    "coords": [
+      53.504,
+      -113.58
+    ]
   },
   {
     "id": "muttart-conservatory-famille",
@@ -311,7 +323,11 @@
     ],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "Muttart Conservatory Edmonton"
+    "mapsQuery": "Muttart Conservatory Edmonton",
+    "coords": [
+      53.53,
+      -113.473
+    ]
   },
   {
     "id": "galaxyland-wem",
@@ -386,7 +402,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.5,
-    "mapsQuery": "Galaxyland West Edmonton Mall"
+    "mapsQuery": "Galaxyland West Edmonton Mall",
+    "coords": [
+      53.5225,
+      -113.624
+    ]
   },
   {
     "id": "world-waterpark-wem",
@@ -461,7 +481,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.5,
-    "mapsQuery": "World Waterpark West Edmonton Mall"
+    "mapsQuery": "World Waterpark West Edmonton Mall",
+    "coords": [
+      53.5225,
+      -113.6245
+    ]
   },
   {
     "id": "elk-island-bisons-famille",
@@ -541,7 +565,11 @@
     ],
     "cta": "book",
     "rating": 4.9,
-    "mapsQuery": "Elk Island National Park"
+    "mapsQuery": "Elk Island National Park",
+    "coords": [
+      53.6,
+      -112.86
+    ]
   },
   {
     "id": "prairie-gardens-adventure-farm",
@@ -621,7 +649,11 @@
     ],
     "cta": "book",
     "rating": 4.6,
-    "mapsQuery": "Prairie Gardens Adventure Farm Bon Accord"
+    "mapsQuery": "Prairie Gardens Adventure Farm Bon Accord",
+    "coords": [
+      53.84,
+      -113.42
+    ]
   },
   {
     "id": "devonian-botanic-garden",
@@ -701,7 +733,11 @@
     ],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "University of Alberta Botanic Garden"
+    "mapsQuery": "University of Alberta Botanic Garden",
+    "coords": [
+      53.39,
+      -113.77
+    ]
   },
   {
     "id": "jump-360-anniversaire",
@@ -781,6 +817,10 @@
     ],
     "cta": "quote",
     "rating": 4.6,
-    "mapsQuery": "Jump 360 Trampoline Park Edmonton"
+    "mapsQuery": "Jump 360 Trampoline Park Edmonton",
+    "coords": [
+      53.61,
+      -113.52
+    ]
   }
 ]

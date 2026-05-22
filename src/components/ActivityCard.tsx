@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Star, MapPin, Clock, Users, BadgeCheck, Camera, UtensilsCrossed, Flower2, Calendar } from "lucide-react";
+import { Star, MapPin, Clock, Users, BadgeCheck, Camera, UtensilsCrossed, Flower2, Calendar, Heart } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
+import { useFavorites } from "@/lib/favorites-context";
 import { resolveImage } from "@/lib/local-images";
 import type { Activity } from "@/lib/activities";
 
@@ -17,6 +18,8 @@ const serviceBadges: Record<string, { fr: string; en: string; Icon: typeof Camer
 
 export default function ActivityCard({ activity, index = 0, featured = false }: { activity: Activity; index?: number; featured?: boolean }) {
   const { locale, t } = useLocale();
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const fav = isFavorite(activity.slug);
 
   return (
     <motion.div
@@ -40,7 +43,15 @@ export default function ActivityCard({ activity, index = 0, featured = false }: 
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
-          <div className="absolute top-3 right-3 glass rounded-full px-3 py-1 flex items-center gap-1">
+          <button
+            type="button"
+            aria-label={fav ? "Retirer des favoris" : "Ajouter aux favoris"}
+            onClick={(e) => { e.preventDefault(); toggleFavorite(activity.slug); }}
+            className="absolute top-3 right-3 w-9 h-9 glass rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+          >
+            <Heart className={`w-4 h-4 ${fav ? "text-red-500 fill-red-500" : "text-navy"}`} strokeWidth={2} />
+          </button>
+          <div className="absolute bottom-3 right-3 glass rounded-full px-3 py-1 flex items-center gap-1">
             <Star className="w-3.5 h-3.5 text-gold fill-gold" strokeWidth={1.5} />
             <span className="text-navy text-xs font-bold">{activity.rating.toFixed(1)}</span>
           </div>

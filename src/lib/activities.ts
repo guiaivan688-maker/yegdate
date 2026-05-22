@@ -30,6 +30,7 @@ export interface Activity {
   cta: "book" | "quote";
   rating: number;
   mapsQuery: string;
+  coords: [number, number];
 }
 
 export function getActivityBySlug(slug: string): Activity | undefined {

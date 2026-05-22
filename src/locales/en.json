@@ -12,7 +12,10 @@
     "packages": "Packages",
     "about": "About",
     "contact": "Contact",
-    "events": "Events"
+    "events": "Events",
+    "guides": "Guides",
+    "nightout": "Night Out",
+    "carte": "Map"
   },
   "events": {
     "title": "Events in Edmonton",
@@ -207,6 +210,8 @@
     "explore": "Explore",
     "follow": "Follow us",
     "privateHaven": "YEG Date is a project by",
+    "privacy": "Privacy",
+    "terms": "Terms",
     "madeWith": "Made with love in Edmonton, Alberta —",
     "disclaimer": "YEGdate.ca — an independent experience-planning platform in Edmonton."
   }

@@ -4,15 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowLeft } from "lucide-react";
+import { Menu, X, ArrowLeft, Search, Heart } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 
 const links = [
   { href: "/decouvrir", key: "nav.discover" },
   { href: "/weekend-match", key: "nav.weekendMatch" },
-  { href: "/buffets", key: "nav.buffets" },
-  { href: "/services", key: "nav.services" },
   { href: "/packages", key: "nav.packages" },
+  { href: "/night-out", key: "nav.nightout" },
+  { href: "/buffets", key: "nav.buffets" },
   { href: "/contact", key: "nav.contact" },
 ];
 
@@ -68,6 +68,12 @@ export default function Navbar() {
                 {t(link.key)}
               </Link>
             ))}
+            <Link href="/recherche" aria-label="Recherche" className="text-navy/70 hover:text-gold transition-colors">
+              <Search className="w-5 h-5" strokeWidth={1.5} />
+            </Link>
+            <Link href="/mes-favoris" aria-label="Mes favoris" className="text-navy/70 hover:text-gold transition-colors">
+              <Heart className="w-5 h-5" strokeWidth={1.5} />
+            </Link>
             <button
               onClick={toggleLocale}
               aria-label="Switch language"
@@ -78,6 +84,12 @@ export default function Navbar() {
           </div>
 
           <div className="md:hidden flex items-center gap-3">
+            <Link href="/recherche" aria-label="Recherche" className="text-navy/70 hover:text-gold transition-colors">
+              <Search className="w-5 h-5" strokeWidth={1.5} />
+            </Link>
+            <Link href="/mes-favoris" aria-label="Mes favoris" className="text-navy/70 hover:text-gold transition-colors">
+              <Heart className="w-5 h-5" strokeWidth={1.5} />
+            </Link>
             <button
               onClick={toggleLocale}
               aria-label="Switch language"

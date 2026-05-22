@@ -34,6 +34,9 @@ export default function Footer() {
               {[
                 { href: "/decouvrir", key: "nav.discover" },
                 { href: "/evenements", key: "nav.events" },
+                { href: "/guides", key: "nav.guides" },
+                { href: "/carte", key: "nav.carte" },
+                { href: "/night-out", key: "nav.nightout" },
                 { href: "/weekend-match", key: "nav.weekendMatch" },
                 { href: "/couples", key: "nav.couples" },
                 { href: "/famille", key: "nav.famille" },
@@ -98,6 +101,11 @@ export default function Footer() {
             </a>
           </p>
           <p className="text-cream/40 text-xs">{t("footer.disclaimer")}</p>
+          <div className="flex items-center justify-center gap-4 text-cream/50 text-xs">
+            <Link href="/confidentialite" className="hover:text-gold transition-colors">{t("footer.privacy")}</Link>
+            <span className="text-cream/20">·</span>
+            <Link href="/conditions" className="hover:text-gold transition-colors">{t("footer.terms")}</Link>
+          </div>
           <p className="text-cream/40 text-sm">
             {t("footer.madeWith")} &copy; {new Date().getFullYear()} YEG Date — Edmonton, AB, Canada
           </p>

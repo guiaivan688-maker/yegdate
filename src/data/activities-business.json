@@ -75,7 +75,11 @@
     ],
     "cta": "quote",
     "rating": 4.8,
-    "mapsQuery": "Bad Axe Throwing Edmonton"
+    "mapsQuery": "Bad Axe Throwing Edmonton",
+    "coords": [
+      53.546,
+      -113.503
+    ]
   },
   {
     "id": "escape-room-quest-corporate",
@@ -153,7 +157,11 @@
     ],
     "cta": "quote",
     "rating": 4.7,
-    "mapsQuery": "Quest Edmonton escape room"
+    "mapsQuery": "Quest Edmonton escape room",
+    "coords": [
+      53.556,
+      -113.518
+    ]
   },
   {
     "id": "cours-cuisine-get-cooking",
@@ -231,7 +239,11 @@
     ],
     "cta": "quote",
     "rating": 4.8,
-    "mapsQuery": "Get Cooking Edmonton"
+    "mapsQuery": "Get Cooking Edmonton",
+    "coords": [
+      53.547,
+      -113.498
+    ]
   },
   {
     "id": "curling-granite-club",
@@ -305,7 +317,11 @@
     ],
     "cta": "quote",
     "rating": 4.7,
-    "mapsQuery": "Granite Curling Club Edmonton"
+    "mapsQuery": "Granite Curling Club Edmonton",
+    "coords": [
+      53.508,
+      -113.506
+    ]
   },
   {
     "id": "brewery-tour-corporate",
@@ -381,7 +397,11 @@
     ],
     "cta": "quote",
     "rating": 4.7,
-    "mapsQuery": "Sea Change Brewing Edmonton"
+    "mapsQuery": "Sea Change Brewing Edmonton",
+    "coords": [
+      53.49,
+      -113.475
+    ]
   },
   {
     "id": "segway-river-valley-corporate",
@@ -459,7 +479,11 @@
     ],
     "cta": "quote",
     "rating": 4.6,
-    "mapsQuery": "River Valley Adventure Co Edmonton"
+    "mapsQuery": "River Valley Adventure Co Edmonton",
+    "coords": [
+      53.536,
+      -113.487
+    ]
   },
   {
     "id": "soiree-corporate-fairmont",
@@ -539,7 +563,11 @@
     ],
     "cta": "quote",
     "rating": 4.9,
-    "mapsQuery": "Fairmont Hotel Macdonald Edmonton"
+    "mapsQuery": "Fairmont Hotel Macdonald Edmonton",
+    "coords": [
+      53.5392,
+      -113.4895
+    ]
   },
   {
     "id": "power-lunch-hardware-grill",
@@ -615,7 +643,11 @@
     ],
     "cta": "quote",
     "rating": 4.8,
-    "mapsQuery": "Hardware Grill Edmonton"
+    "mapsQuery": "Hardware Grill Edmonton",
+    "coords": [
+      53.543,
+      -113.487
+    ]
   },
   {
     "id": "afterwork-the-common",
@@ -693,7 +725,11 @@
     ],
     "cta": "quote",
     "rating": 4.6,
-    "mapsQuery": "The Common Edmonton 109 Street"
+    "mapsQuery": "The Common Edmonton 109 Street",
+    "coords": [
+      53.538,
+      -113.503
+    ]
   },
   {
     "id": "privatisation-telus-science",
@@ -773,6 +809,10 @@
     ],
     "cta": "quote",
     "rating": 4.9,
-    "mapsQuery": "TELUS World of Science Edmonton"
+    "mapsQuery": "TELUS World of Science Edmonton",
+    "coords": [
+      53.568,
+      -113.524
+    ]
   }
 ]

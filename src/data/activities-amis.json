@@ -71,7 +71,11 @@
     ],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "Bad Axe Throwing Edmonton"
+    "mapsQuery": "Bad Axe Throwing Edmonton",
+    "coords": [
+      53.546,
+      -113.503
+    ]
   },
   {
     "id": "locked-up-escape",
@@ -147,7 +151,11 @@
     ],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "Locked Up Escape Rooms Edmonton"
+    "mapsQuery": "Locked Up Escape Rooms Edmonton",
+    "coords": [
+      53.556,
+      -113.518
+    ]
   },
   {
     "id": "activate-edmonton",
@@ -218,7 +226,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.6,
-    "mapsQuery": "Activate Games Edmonton"
+    "mapsQuery": "Activate Games Edmonton",
+    "coords": [
+      53.449,
+      -113.506
+    ]
   },
   {
     "id": "bowling-stones",
@@ -291,7 +303,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.5,
-    "mapsQuery": "The Bowling Stones Sherwood Park"
+    "mapsQuery": "The Bowling Stones Sherwood Park",
+    "coords": [
+      53.518,
+      -113.316
+    ]
   },
   {
     "id": "edmonton-karting",
@@ -365,7 +381,11 @@
     ],
     "cta": "book",
     "rating": 4.6,
-    "mapsQuery": "Castrol Raceway karting Edmonton"
+    "mapsQuery": "Castrol Raceway karting Edmonton",
+    "coords": [
+      53.37,
+      -113.67
+    ]
   },
   {
     "id": "sea-change-brewing-tour",
@@ -438,7 +458,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "Sea Change Brewing Edmonton"
+    "mapsQuery": "Sea Change Brewing Edmonton",
+    "coords": [
+      53.49,
+      -113.475
+    ]
   },
   {
     "id": "sip-and-color",
@@ -514,7 +538,11 @@
     ],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "paint night studio Whyte Avenue Edmonton"
+    "mapsQuery": "paint night studio Whyte Avenue Edmonton",
+    "coords": [
+      53.518,
+      -113.498
+    ]
   },
   {
     "id": "tuft-time-studio",
@@ -590,7 +618,11 @@
     ],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "rug tufting studio Edmonton"
+    "mapsQuery": "rug tufting studio Edmonton",
+    "coords": [
+      53.556,
+      -113.518
+    ]
   },
   {
     "id": "mkt-food-market",
@@ -663,7 +695,11 @@
     "services": [],
     "cta": "book",
     "rating": 4.5,
-    "mapsQuery": "MKT Beer Market Gateway Edmonton"
+    "mapsQuery": "MKT Beer Market Gateway Edmonton",
+    "coords": [
+      53.516,
+      -113.492
+    ]
   },
   {
     "id": "have-mercy-cocktails",
@@ -736,6 +772,10 @@
     "services": [],
     "cta": "book",
     "rating": 4.6,
-    "mapsQuery": "Have Mercy restaurant Edmonton"
+    "mapsQuery": "Have Mercy restaurant Edmonton",
+    "coords": [
+      53.555,
+      -113.518
+    ]
   }
 ]

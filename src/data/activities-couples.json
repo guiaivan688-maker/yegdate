@@ -75,7 +75,11 @@
     ],
     "cta": "book",
     "rating": 4.9,
-    "mapsQuery": "High Level Bridge Streetcar Edmonton"
+    "mapsQuery": "High Level Bridge Streetcar Edmonton",
+    "coords": [
+      53.5232,
+      -113.5076
+    ]
   },
   {
     "id": "diner-rge-rd",
@@ -151,7 +155,11 @@
     ],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "RGE RD restaurant Edmonton"
+    "mapsQuery": "RGE RD restaurant Edmonton",
+    "coords": [
+      53.5556,
+      -113.5215
+    ]
   },
   {
     "id": "diner-corso-32",
@@ -225,7 +233,11 @@
     ],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "Corso 32 Edmonton"
+    "mapsQuery": "Corso 32 Edmonton",
+    "coords": [
+      53.541,
+      -113.498
+    ]
   },
   {
     "id": "pique-nique-river-valley",
@@ -302,7 +314,11 @@
     ],
     "cta": "book",
     "rating": 4.9,
-    "mapsQuery": "Louise McKinney Riverfront Park Edmonton"
+    "mapsQuery": "Louise McKinney Riverfront Park Edmonton",
+    "coords": [
+      53.537,
+      -113.4875
+    ]
   },
   {
     "id": "patinage-victoria-iceway",
@@ -374,7 +390,11 @@
     ],
     "cta": "book",
     "rating": 4.8,
-    "mapsQuery": "Victoria Park IceWay Edmonton"
+    "mapsQuery": "Victoria Park IceWay Edmonton",
+    "coords": [
+      53.543,
+      -113.518
+    ]
   },
   {
     "id": "observation-etoiles-elk-island",
@@ -450,7 +470,11 @@
     ],
     "cta": "book",
     "rating": 4.9,
-    "mapsQuery": "Elk Island National Park Edmonton"
+    "mapsQuery": "Elk Island National Park Edmonton",
+    "coords": [
+      53.6,
+      -112.86
+    ]
   },
   {
     "id": "soiree-romance-fairmont",
@@ -528,7 +552,11 @@
     ],
     "cta": "quote",
     "rating": 5.0,
-    "mapsQuery": "Fairmont Hotel Macdonald Edmonton"
+    "mapsQuery": "Fairmont Hotel Macdonald Edmonton",
+    "coords": [
+      53.5392,
+      -113.4895
+    ]
   },
   {
     "id": "brunch-balade-the-marc",
@@ -602,7 +630,11 @@
     ],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "The Marc Restaurant Edmonton"
+    "mapsQuery": "The Marc Restaurant Edmonton",
+    "coords": [
+      53.5395,
+      -113.502
+    ]
   },
   {
     "id": "spa-duo-eveline-charles",
@@ -676,7 +708,11 @@
     ],
     "cta": "book",
     "rating": 4.7,
-    "mapsQuery": "Eveline Charles Salon Spa Manulife Place Edmonton"
+    "mapsQuery": "Eveline Charles Salon Spa Manulife Place Edmonton",
+    "coords": [
+      53.542,
+      -113.4905
+    ]
   },
   {
     "id": "croisiere-edmonton-riverboat",
@@ -748,6 +784,10 @@
     ],
     "cta": "book",
     "rating": 4.6,
-    "mapsQuery": "Edmonton Riverboat Rafters Landing"
+    "mapsQuery": "Edmonton Riverboat Rafters Landing",
+    "coords": [
+      53.53,
+      -113.476
+    ]
   }
 ]

@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "idees-date-romantique-edmonton",
+    "title": { "fr": "20 idées de date romantique à Edmonton", "en": "20 Romantic Date Ideas in Edmonton" },
+    "excerpt": {
+      "fr": "Du tramway privatisé au pique-nique dans la vallée : nos meilleures idées pour une sortie à deux mémorable, par budget et par saison.",
+      "en": "From a private streetcar to a river-valley picnic: our best ideas for a memorable date, by budget and season."
+    },
+    "image": "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1200&q=80",
+    "dateLabel": { "fr": "Mis à jour mai 2026", "en": "Updated May 2026" },
+    "intro": {
+      "fr": "Edmonton regorge de lieux romantiques, à condition de savoir où chercher. Voici nos coups de cœur testés, classés du plus abordable au plus luxueux — chacun réservable en quelques clics.",
+      "en": "Edmonton is full of romantic spots once you know where to look. Here are our tested favourites, from most affordable to most luxurious — each bookable in a few clicks."
+    },
+    "sections": [
+      { "h": { "fr": "Petit budget (moins de 60 $)", "en": "On a budget (under $60)" }, "p": { "fr": "Patinez main dans la main au Victoria Park IceWay puis réchauffez-vous avec un chocolat chaud, ou filez observer les étoiles à Elk Island, l'une des réserves de ciel étoilé les plus proches de la ville.", "en": "Skate hand in hand at the Victoria Park IceWay then warm up with a hot chocolate, or head out to stargaze at Elk Island, one of the closest dark-sky preserves to the city." } },
+      { "h": { "fr": "Soirée classique (60–150 $)", "en": "Classic evening ($60–$150)" }, "p": { "fr": "Un brunch français au The Marc suivi d'une balade dans les jardins de l'Assemblée législative, ou une croisière au coucher du soleil sur la rivière North Saskatchewan.", "en": "A French brunch at The Marc followed by a stroll through the Legislature gardens, or a sunset cruise on the North Saskatchewan River." } },
+      { "h": { "fr": "Grande occasion (250 $ et +)", "en": "Special occasion ($250+)" }, "p": { "fr": "Privatisez le tramway historique du High Level Bridge, offrez-vous un dîner dégustation chez RGE RD, ou réservez une suite décorée au Fairmont Hotel Macdonald.", "en": "Charter the historic High Level Bridge streetcar, treat yourselves to a tasting dinner at RGE RD, or book a decorated suite at the Fairmont Hotel Macdonald." } }
+    ],
+    "related": ["patinage-victoria-iceway", "observation-etoiles-elk-island", "croisiere-edmonton-riverboat", "streetcar-prive-high-level", "diner-rge-rd", "soiree-romance-fairmont"]
+  },
+  {
+    "slug": "quoi-faire-hiver-edmonton",
+    "title": { "fr": "Quoi faire en hiver à Edmonton", "en": "What to Do in Winter in Edmonton" },
+    "excerpt": {
+      "fr": "L'hiver edmontonien est long — autant en faire un atout. Patinage, festivals de glace et activités au chaud pour tous les goûts.",
+      "en": "Edmonton winters are long — so make the most of them. Skating, ice festivals and cozy indoor activities for everyone."
+    },
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&q=80",
+    "dateLabel": { "fr": "Mis à jour mai 2026", "en": "Updated May 2026" },
+    "intro": {
+      "fr": "Plutôt que de subir le froid, embrassez-le. Edmonton est une véritable ville d'hiver, avec des sentiers de glace, des festivals lumineux et des refuges chaleureux quand le mercure plonge.",
+      "en": "Rather than enduring the cold, embrace it. Edmonton is a true winter city, with ice trails, festivals of light and warm refuges when the temperature drops."
+    },
+    "sections": [
+      { "h": { "fr": "Dehors", "en": "Outdoors" }, "p": { "fr": "Le Victoria Park IceWay est le plus long sentier de glace de la ville. Côté festivals, Ice on Whyte, Flying Canoë Volant et Deep Freeze illuminent les quartiers tout l'hiver.", "en": "The Victoria Park IceWay is the city's longest ice trail. For festivals, Ice on Whyte, Flying Canoë Volant and Deep Freeze light up the neighbourhoods all winter." } },
+      { "h": { "fr": "Au chaud", "en": "Indoors" }, "p": { "fr": "Quand il fait trop froid, cap sur le World Waterpark du West Edmonton Mall (31 °C à l'année), les pyramides du Muttart Conservatory ou un hot pot à volonté chez Chili Hot Pot.", "en": "When it's too cold, head to West Edmonton Mall's World Waterpark (31°C year-round), the Muttart Conservatory pyramids, or all-you-can-eat hot pot at Chili Hot Pot." } }
+    ],
+    "related": ["patinage-victoria-iceway", "world-waterpark-wem", "muttart-conservatory-famille"]
+  },
+  {
+    "slug": "sorties-famille-edmonton",
+    "title": { "fr": "Sorties en famille à Edmonton : le guide", "en": "Family Outings in Edmonton: The Guide" },
+    "excerpt": {
+      "fr": "Sciences, histoire vivante, manèges et nature : les institutions familiales d'Edmonton qui plaisent aux petits comme aux grands.",
+      "en": "Science, living history, rides and nature: Edmonton's family institutions that delight kids and grown-ups alike."
+    },
+    "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80",
+    "dateLabel": { "fr": "Mis à jour mai 2026", "en": "Updated May 2026" },
+    "intro": {
+      "fr": "Avec des enfants, le bon plan dépend de l'âge et de la météo. Voici les valeurs sûres d'Edmonton, accessibles et testées par les familles.",
+      "en": "With kids, the right plan depends on age and weather. Here are Edmonton's safe bets — accessible and family-tested."
+    },
+    "sections": [
+      { "h": { "fr": "Par tous les temps", "en": "Any weather" }, "p": { "fr": "Le TELUS World of Science et le Royal Alberta Museum offrent des heures de découverte à l'intérieur, parfaits les jours de pluie ou de grand froid.", "en": "TELUS World of Science and the Royal Alberta Museum offer hours of indoor discovery, perfect on rainy or freezing days." } },
+      { "h": { "fr": "Quand il fait beau", "en": "When it's nice out" }, "p": { "fr": "Direction Fort Edmonton Park pour remonter le temps, Elk Island pour observer les bisons, ou Prairie Gardens pour le festival des citrouilles à l'automne.", "en": "Head to Fort Edmonton Park to travel back in time, Elk Island to watch bison, or Prairie Gardens for the autumn pumpkin festival." } }
+    ],
+    "related": ["telus-world-science", "royal-alberta-museum", "fort-edmonton-park", "elk-island-bisons-famille", "prairie-gardens-adventure-farm"]
+  },
+  {
+    "slug": "meilleurs-buffets-edmonton",
+    "title": { "fr": "Les meilleurs buffets à volonté d'Edmonton", "en": "Edmonton's Best All-You-Can-Eat Buffets" },
+    "excerpt": {
+      "fr": "Du sushi au BBQ coréen en passant par la churrascaria brésilienne : notre sélection de buffets à volonté, par cuisine et par budget.",
+      "en": "From sushi to Korean BBQ to Brazilian churrascaria: our pick of all-you-can-eat buffets, by cuisine and budget."
+    },
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80",
+    "dateLabel": { "fr": "Mis à jour mai 2026", "en": "Updated May 2026" },
+    "intro": {
+      "fr": "Le buffet à volonté reste imbattable pour un grand groupe ou un gros appétit. Voici nos adresses préférées à Edmonton, classées par type de cuisine.",
+      "en": "All-you-can-eat is unbeatable for a big group or a big appetite. Here are our favourite Edmonton spots, sorted by cuisine."
+    },
+    "sections": [
+      { "h": { "fr": "Asiatique & sushi", "en": "Asian & sushi" }, "p": { "fr": "Tatsu Sushi offre l'un des meilleurs rapports qualité-prix pour le sushi à volonté, tandis que les amateurs de viande grillée à table iront au BBQ coréen.", "en": "Tatsu Sushi offers some of the best value for all-you-can-eat sushi, while fans of tableside grilling should try Korean BBQ." } },
+      { "h": { "fr": "Carnivore & international", "en": "Carnivore & international" }, "p": { "fr": "Pour un festin, la churrascaria Pampa enchaîne les viandes à la broche. Le hot pot de Chili Hot Pot est parfait pour les soirées d'hiver à partager.", "en": "For a feast, Pampa's churrascaria keeps the skewered meats coming. Chili Hot Pot is perfect for shared winter evenings." } }
+    ],
+    "related": []
+  }
+]
