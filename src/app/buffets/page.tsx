@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPinIcon } from "@heroicons/react/24/solid";
+import { MapPin } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import buffets from "@/data/buffets.json";
 
@@ -83,10 +83,13 @@ export default function BuffetsPage() {
                       </div>
                     )}
                     <div className="p-5">
-                      <div className="flex items-start justify-between gap-2 mb-1">
+                      <div className="flex items-start justify-between gap-2 mb-1.5">
                         <h3 className="font-serif text-lg font-bold text-navy leading-snug">{r.name}</h3>
                         <span className="text-gold font-bold text-sm whitespace-nowrap">{r.price[locale]}</span>
                       </div>
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-navy/90 text-cream rounded-full px-2.5 py-0.5 mb-2">
+                        {cat.category === "western" && r.name.includes("Chateau") ? "Brunch" : "AYCE · À volonté"}
+                      </span>
                       <p className="text-navy/60 text-sm mb-3">{r.note[locale]}</p>
                       <a
                         href={`https://www.google.com/maps/search/${encodeURIComponent(r.name + " " + r.address)}`}
@@ -94,7 +97,7 @@ export default function BuffetsPage() {
                         rel="noopener noreferrer"
                         className="text-navy/50 hover:text-gold text-xs flex items-center gap-1 transition-colors"
                       >
-                        <MapPinIcon className="w-3.5 h-3.5" /> {r.address}
+                        <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} /> {r.address}
                       </a>
                     </div>
                   </motion.div>
@@ -102,6 +105,35 @@ export default function BuffetsPage() {
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Quel buffet pour quelle occasion */}
+      <section className="py-16 px-4 bg-warm-grey">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-navy text-center mb-3">
+            {locale === "fr" ? "Quel buffet pour quelle occasion ?" : "Which buffet for which occasion?"}
+          </h2>
+          <div className="w-16 h-1 gradient-gold rounded-full mx-auto mb-10" />
+          <div className="grid sm:grid-cols-2 gap-5">
+            {[
+              { occ: { fr: "🎂 Anniversaire enfant", en: "🎂 Kid's birthday" }, reco: "Yang Ming · Buffet Royale" },
+              { occ: { fr: "💑 Date night sushi", en: "💑 Sushi date night" }, reco: "Tatsu Sushi" },
+              { occ: { fr: "🍖 Groupe d'amis carnivore", en: "🍖 Carnivore friend group" }, reco: "Pampa Brazilian" },
+              { occ: { fr: "❄️ Hot Pot en hiver", en: "❄️ Hot Pot in winter" }, reco: "Chili Hot Pot" },
+            ].map((item) => (
+              <motion.div
+                key={item.reco}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-surface rounded-2xl border border-black/5 shadow-sm p-5 flex items-center justify-between gap-4"
+              >
+                <span className="font-semibold text-navy">{item.occ[locale]}</span>
+                <span className="text-gold font-bold text-sm text-right">{item.reco}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </>
