@@ -92,8 +92,17 @@
     "noResults": "No plan matches exactly. Here are our best suggestions:",
     "restart": "Start over",
     "reserve": "Book this plan",
+    "save": "Save by email",
+    "saved": "Plan saved! Check your inbox.",
+    "loading": "Preparing your perfect plan…",
     "total": "Estimated total",
     "perStep": "Plan steps"
+  },
+  "budgetLabels": {
+    "b60": "Chill",
+    "b120": "Classic",
+    "b250": "Premium",
+    "b400": "Luxe"
   },
   "segments": {
     "couple": "Couple",
