@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { StarIcon, MapPinIcon, ClockIcon, UserGroupIcon, CheckIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useLocale } from "@/lib/locale-context";
 import { getActivityBySlug, getSimilarActivities } from "@/lib/activities";
+import { resolveImage } from "@/lib/local-images";
 import ActivityCard from "./ActivityCard";
 import QuoteForm from "./QuoteForm";
 import LoveRooms from "./LoveRooms";
@@ -26,7 +27,7 @@ export default function ActivityDetail({ slug }: { slug: string }) {
     <>
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[380px] flex items-end overflow-hidden">
-        <Image src={activity.image} alt={activity.title[locale]} fill priority className="object-cover saturate-[0.9] contrast-[1.08]" />
+        <Image src={resolveImage(activity.slug, activity.segment, activity.image)} alt={activity.title[locale]} fill priority className="object-cover saturate-[0.9] contrast-[1.08]" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/10" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
           <Link href={`/${activity.segment}`} className="inline-flex items-center gap-1.5 text-cream/70 hover:text-cream text-sm mb-4 transition-colors">

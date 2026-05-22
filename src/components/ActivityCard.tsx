@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Star, MapPin, Clock, Users, BadgeCheck, Camera, UtensilsCrossed, Flower2, Calendar } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
+import { resolveImage } from "@/lib/local-images";
 import type { Activity } from "@/lib/activities";
 
 const serviceBadges: Record<string, { fr: string; en: string; Icon: typeof Camera }> = {
@@ -32,7 +33,7 @@ export default function ActivityCard({ activity, index = 0, featured = false }: 
       >
         <div className={`relative overflow-hidden ${featured ? "h-72 sm:h-80" : "h-64"}`}>
           <Image
-            src={activity.image}
+            src={resolveImage(activity.slug, activity.segment, activity.image)}
             alt={activity.title[locale]}
             fill
             className="object-cover saturate-[0.92] contrast-[1.05] group-hover:scale-[1.04] transition-transform duration-700"
