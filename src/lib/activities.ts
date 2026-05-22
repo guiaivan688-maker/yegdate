@@ -6,6 +6,7 @@ import type { Locale } from "./locale-context";
 
 export interface Activity {
   id: string;
+  slug: string;
   segment: "couples" | "famille" | "amis" | "business";
   title: Record<Locale, string>;
   location: string;
@@ -16,17 +17,23 @@ export interface Activity {
   gallery: string[];
   priceRange: Record<Locale, string>;
   priceFrom: number;
+  priceTo: number;
   budgetTier: number;
   duration: Record<Locale, string>;
   groupSize: Record<Locale, string>;
   ageRange?: Record<Locale, string>;
   season: string[];
   mood: string[];
+  tags: string[];
   includes: Record<Locale, string[]>;
   services: string[];
   cta: "book" | "quote";
   rating: number;
   mapsQuery: string;
+}
+
+export function getActivityBySlug(slug: string): Activity | undefined {
+  return allActivities.find((a) => a.id === slug || a.slug === slug);
 }
 
 const bySegment: Record<string, Activity[]> = {
@@ -45,10 +52,6 @@ export const allActivities: Activity[] = [
 
 export function getActivitiesBySegment(segment: string): Activity[] {
   return bySegment[segment] ?? [];
-}
-
-export function getActivityBySlug(slug: string): Activity | undefined {
-  return allActivities.find((a) => a.id === slug);
 }
 
 export function getSimilarActivities(activity: Activity, count = 3): Activity[] {

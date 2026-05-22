@@ -1,8 +1,12 @@
 [
   {
     "id": "streetcar-prive-high-level",
+    "slug": "streetcar-prive-high-level",
     "segment": "couples",
-    "title": { "fr": "Streetcar Privatisé sur le High Level Bridge", "en": "Private Streetcar on the High Level Bridge" },
+    "title": {
+      "fr": "Streetcar Privatisé sur le High Level Bridge",
+      "en": "Private Streetcar on the High Level Bridge"
+    },
     "location": "High Level Bridge Streetcar",
     "address": "10330 84 Ave NW, Edmonton, AB",
     "description": {
@@ -19,26 +23,68 @@
       "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800&q=80",
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
     ],
-    "priceRange": { "fr": "180$ - 280$ / couple", "en": "$180 - $280 / couple" },
-    "priceFrom": 180,
-    "budgetTier": 250,
-    "duration": { "fr": "45 min - 1h", "en": "45 min - 1h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer", "fall"],
-    "mood": ["calme", "decouverte"],
-    "includes": {
-      "fr": ["Voiture entière privatisée", "Décoration florale", "Champagne ou mousseux", "Playlist personnalisée", "Quelques photos souvenir"],
-      "en": ["Entire car chartered", "Floral decoration", "Champagne or sparkling", "Personalized playlist", "A few souvenir photos"]
+    "priceRange": {
+      "fr": "180$ - 280$ / couple",
+      "en": "$180 - $280 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 180,
+    "priceTo": 280,
+    "budgetTier": 250,
+    "duration": {
+      "fr": "45 min - 1h",
+      "en": "45 min - 1h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "mood": [
+      "calme",
+      "decouverte"
+    ],
+    "tags": [
+      "romantique",
+      "calme",
+      "découverte",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Voiture entière privatisée",
+        "Décoration florale",
+        "Champagne ou mousseux",
+        "Playlist personnalisée",
+        "Quelques photos souvenir"
+      ],
+      "en": [
+        "Entire car chartered",
+        "Floral decoration",
+        "Champagne or sparkling",
+        "Personalized playlist",
+        "A few souvenir photos"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.9,
     "mapsQuery": "High Level Bridge Streetcar Edmonton"
   },
   {
     "id": "diner-rge-rd",
+    "slug": "diner-rge-rd",
     "segment": "couples",
-    "title": { "fr": "Dîner Gastronomique chez RGE RD", "en": "Fine Dining at RGE RD" },
+    "title": {
+      "fr": "Dîner Gastronomique chez RGE RD",
+      "en": "Fine Dining at RGE RD"
+    },
     "location": "RGE RD",
     "address": "10643 123 St NW, Edmonton, AB",
     "description": {
@@ -55,26 +101,66 @@
       "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
       "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80"
     ],
-    "priceRange": { "fr": "160$ - 240$ / couple", "en": "$160 - $240 / couple" },
-    "priceFrom": 160,
-    "budgetTier": 250,
-    "duration": { "fr": "2h - 2h30", "en": "2h - 2.5h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "calme"],
-    "includes": {
-      "fr": ["Réservation meilleure table", "Menu dégustation signature", "Accord mets-vins", "Gestion des allergies"],
-      "en": ["Best table reservation", "Signature tasting menu", "Wine pairing", "Allergy management"]
+    "priceRange": {
+      "fr": "160$ - 240$ / couple",
+      "en": "$160 - $240 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 160,
+    "priceTo": 240,
+    "budgetTier": 250,
+    "duration": {
+      "fr": "2h - 2h30",
+      "en": "2h - 2.5h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "calme"
+    ],
+    "tags": [
+      "romantique",
+      "gourmand",
+      "calme",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Réservation meilleure table",
+        "Menu dégustation signature",
+        "Accord mets-vins",
+        "Gestion des allergies"
+      ],
+      "en": [
+        "Best table reservation",
+        "Signature tasting menu",
+        "Wine pairing",
+        "Allergy management"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.8,
     "mapsQuery": "RGE RD restaurant Edmonton"
   },
   {
     "id": "diner-corso-32",
+    "slug": "diner-corso-32",
     "segment": "couples",
-    "title": { "fr": "Dîner Romantique chez Corso 32", "en": "Romantic Dinner at Corso 32" },
+    "title": {
+      "fr": "Dîner Romantique chez Corso 32",
+      "en": "Romantic Dinner at Corso 32"
+    },
     "location": "Corso 32",
     "address": "10345 Jasper Ave NW, Edmonton, AB",
     "description": {
@@ -91,26 +177,64 @@
       "https://images.unsplash.com/photo-1481931715705-36f5f79f1f3d?w=800&q=80",
       "https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=800&q=80"
     ],
-    "priceRange": { "fr": "140$ - 200$ / couple", "en": "$140 - $200 / couple" },
-    "priceFrom": 140,
-    "budgetTier": 120,
-    "duration": { "fr": "2h", "en": "2h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "calme"],
-    "includes": {
-      "fr": ["Réservation garantie", "Menu plusieurs services", "Accord vins optionnel"],
-      "en": ["Guaranteed reservation", "Multi-course menu", "Optional wine pairing"]
+    "priceRange": {
+      "fr": "140$ - 200$ / couple",
+      "en": "$140 - $200 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 140,
+    "priceTo": 200,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h",
+      "en": "2h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "calme"
+    ],
+    "tags": [
+      "romantique",
+      "gourmand",
+      "calme",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Réservation garantie",
+        "Menu plusieurs services",
+        "Accord vins optionnel"
+      ],
+      "en": [
+        "Guaranteed reservation",
+        "Multi-course menu",
+        "Optional wine pairing"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.8,
     "mapsQuery": "Corso 32 Edmonton"
   },
   {
     "id": "pique-nique-river-valley",
+    "slug": "pique-nique-river-valley",
     "segment": "couples",
-    "title": { "fr": "Pique-nique Chic à Louise McKinney Park", "en": "Luxury Picnic at Louise McKinney Park" },
+    "title": {
+      "fr": "Pique-nique Chic à Louise McKinney Park",
+      "en": "Luxury Picnic at Louise McKinney Park"
+    },
     "location": "Louise McKinney Riverfront Park",
     "address": "9999 Grierson Hill NW, Edmonton, AB",
     "description": {
@@ -127,26 +251,67 @@
       "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=800&q=80",
       "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
     ],
-    "priceRange": { "fr": "120$ - 220$ / couple", "en": "$120 - $220 / couple" },
-    "priceFrom": 120,
-    "budgetTier": 120,
-    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer"],
-    "mood": ["calme", "gourmand"],
-    "includes": {
-      "fr": ["Installation & démontage", "Décoration premium", "Panier gourmet pour 2", "Bouquet de saison"],
-      "en": ["Setup & teardown", "Premium decoration", "Gourmet basket for 2", "Seasonal bouquet"]
+    "priceRange": {
+      "fr": "120$ - 220$ / couple",
+      "en": "$120 - $220 / couple"
     },
-    "services": ["photographer", "picnic"],
+    "priceFrom": 120,
+    "priceTo": 220,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h - 3h",
+      "en": "2h - 3h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer"
+    ],
+    "mood": [
+      "calme",
+      "gourmand"
+    ],
+    "tags": [
+      "romantique",
+      "calme",
+      "gourmand",
+      "photographe",
+      "pique-nique",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Installation & démontage",
+        "Décoration premium",
+        "Panier gourmet pour 2",
+        "Bouquet de saison"
+      ],
+      "en": [
+        "Setup & teardown",
+        "Premium decoration",
+        "Gourmet basket for 2",
+        "Seasonal bouquet"
+      ]
+    },
+    "services": [
+      "photographer",
+      "picnic"
+    ],
     "cta": "book",
     "rating": 4.9,
     "mapsQuery": "Louise McKinney Riverfront Park Edmonton"
   },
   {
     "id": "patinage-victoria-iceway",
+    "slug": "patinage-victoria-iceway",
     "segment": "couples",
-    "title": { "fr": "Patinage Romantique au Victoria Park IceWay", "en": "Romantic Skating at Victoria Park IceWay" },
+    "title": {
+      "fr": "Patinage Romantique au Victoria Park IceWay",
+      "en": "Romantic Skating at Victoria Park IceWay"
+    },
     "location": "Victoria Park IceWay",
     "address": "12130 River Valley Rd NW, Edmonton, AB",
     "description": {
@@ -163,26 +328,62 @@
       "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80",
       "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?w=800&q=80"
     ],
-    "priceRange": { "fr": "Gratuit - 60$ / couple", "en": "Free - $60 / couple" },
-    "priceFrom": 0,
-    "budgetTier": 60,
-    "duration": { "fr": "1h - 2h", "en": "1h - 2h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["winter"],
-    "mood": ["dynamique", "calme"],
-    "includes": {
-      "fr": ["Location de patins (15$/pers)", "Chocolat chaud artisanal", "Couverture chaude"],
-      "en": ["Skate rental ($15/pers)", "Artisan hot chocolate", "Warm blanket"]
+    "priceRange": {
+      "fr": "Gratuit - 60$ / couple",
+      "en": "Free - $60 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 0,
+    "priceTo": 60,
+    "budgetTier": 60,
+    "duration": {
+      "fr": "1h - 2h",
+      "en": "1h - 2h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "winter"
+    ],
+    "mood": [
+      "dynamique",
+      "calme"
+    ],
+    "tags": [
+      "romantique",
+      "dynamique",
+      "calme",
+      "photographe",
+      "hiver"
+    ],
+    "includes": {
+      "fr": [
+        "Location de patins (15$/pers)",
+        "Chocolat chaud artisanal",
+        "Couverture chaude"
+      ],
+      "en": [
+        "Skate rental ($15/pers)",
+        "Artisan hot chocolate",
+        "Warm blanket"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.8,
     "mapsQuery": "Victoria Park IceWay Edmonton"
   },
   {
     "id": "observation-etoiles-elk-island",
+    "slug": "observation-etoiles-elk-island",
     "segment": "couples",
-    "title": { "fr": "Observation des Étoiles à Elk Island", "en": "Stargazing at Elk Island" },
+    "title": {
+      "fr": "Observation des Étoiles à Elk Island",
+      "en": "Stargazing at Elk Island"
+    },
     "location": "Elk Island National Park (Dark Sky Preserve)",
     "address": "Hwy 16 E, Fort Saskatchewan, AB",
     "description": {
@@ -199,26 +400,66 @@
       "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
       "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80"
     ],
-    "priceRange": { "fr": "44$ - 90$ / couple", "en": "$44 - $90 / couple" },
-    "priceFrom": 44,
-    "budgetTier": 60,
-    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["summer", "fall", "winter"],
-    "mood": ["calme", "decouverte"],
-    "includes": {
-      "fr": ["Couverture chauffante", "Boisson chaude", "Carte du ciel", "Entrée 22$/adulte (Parcs Canada)"],
-      "en": ["Heated blanket", "Hot drink", "Star map", "Entry $22/adult (Parks Canada)"]
+    "priceRange": {
+      "fr": "44$ - 90$ / couple",
+      "en": "$44 - $90 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 44,
+    "priceTo": 90,
+    "budgetTier": 60,
+    "duration": {
+      "fr": "2h - 3h",
+      "en": "2h - 3h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "calme",
+      "decouverte"
+    ],
+    "tags": [
+      "romantique",
+      "calme",
+      "découverte",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Couverture chauffante",
+        "Boisson chaude",
+        "Carte du ciel",
+        "Entrée 22$/adulte (Parcs Canada)"
+      ],
+      "en": [
+        "Heated blanket",
+        "Hot drink",
+        "Star map",
+        "Entry $22/adult (Parks Canada)"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.9,
     "mapsQuery": "Elk Island National Park Edmonton"
   },
   {
     "id": "soiree-romance-fairmont",
+    "slug": "soiree-romance-fairmont",
     "segment": "couples",
-    "title": { "fr": "Soirée Romance au Fairmont Hotel Macdonald", "en": "Romance Evening at Fairmont Hotel Macdonald" },
+    "title": {
+      "fr": "Soirée Romance au Fairmont Hotel Macdonald",
+      "en": "Romance Evening at Fairmont Hotel Macdonald"
+    },
     "location": "Fairmont Hotel Macdonald",
     "address": "10065 100 St NW, Edmonton, AB",
     "description": {
@@ -235,26 +476,68 @@
       "https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80",
       "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&q=80"
     ],
-    "priceRange": { "fr": "300$ - 550$ / couple", "en": "$300 - $550 / couple" },
-    "priceFrom": 300,
-    "budgetTier": 400,
-    "duration": { "fr": "Soirée + nuitée", "en": "Evening + overnight" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["calme", "gourmand"],
-    "includes": {
-      "fr": ["Décoration romantique chambre", "Pétales & bougies LED", "Champagne à l'arrivée", "Dîner en chambre optionnel"],
-      "en": ["Romantic room decoration", "Petals & LED candles", "Champagne on arrival", "Optional in-room dinner"]
+    "priceRange": {
+      "fr": "300$ - 550$ / couple",
+      "en": "$300 - $550 / couple"
     },
-    "services": ["photographer", "roomDecor"],
+    "priceFrom": 300,
+    "priceTo": 550,
+    "budgetTier": 400,
+    "duration": {
+      "fr": "Soirée + nuitée",
+      "en": "Evening + overnight"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "calme",
+      "gourmand"
+    ],
+    "tags": [
+      "romantique",
+      "calme",
+      "gourmand",
+      "photographe",
+      "décoration"
+    ],
+    "includes": {
+      "fr": [
+        "Décoration romantique chambre",
+        "Pétales & bougies LED",
+        "Champagne à l'arrivée",
+        "Dîner en chambre optionnel"
+      ],
+      "en": [
+        "Romantic room decoration",
+        "Petals & LED candles",
+        "Champagne on arrival",
+        "Optional in-room dinner"
+      ]
+    },
+    "services": [
+      "photographer",
+      "roomDecor"
+    ],
     "cta": "quote",
     "rating": 5.0,
     "mapsQuery": "Fairmont Hotel Macdonald Edmonton"
   },
   {
     "id": "brunch-balade-the-marc",
+    "slug": "brunch-balade-the-marc",
     "segment": "couples",
-    "title": { "fr": "Brunch & Balade — The Marc + Legislature", "en": "Brunch & Stroll — The Marc + Legislature" },
+    "title": {
+      "fr": "Brunch & Balade — The Marc + Legislature",
+      "en": "Brunch & Stroll — The Marc + Legislature"
+    },
     "location": "The Marc Restaurant",
     "address": "9940 106 St NW, Edmonton, AB",
     "description": {
@@ -271,26 +554,64 @@
       "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80",
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
     ],
-    "priceRange": { "fr": "70$ - 120$ / couple", "en": "$70 - $120 / couple" },
-    "priceFrom": 70,
-    "budgetTier": 120,
-    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer", "fall"],
-    "mood": ["gourmand", "calme"],
-    "includes": {
-      "fr": ["Réservation The Marc", "Brunch 2 services", "Carte de balade"],
-      "en": ["The Marc reservation", "Two-course brunch", "Stroll map"]
+    "priceRange": {
+      "fr": "70$ - 120$ / couple",
+      "en": "$70 - $120 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 70,
+    "priceTo": 120,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h - 3h",
+      "en": "2h - 3h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "mood": [
+      "gourmand",
+      "calme"
+    ],
+    "tags": [
+      "romantique",
+      "gourmand",
+      "calme",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Réservation The Marc",
+        "Brunch 2 services",
+        "Carte de balade"
+      ],
+      "en": [
+        "The Marc reservation",
+        "Two-course brunch",
+        "Stroll map"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.7,
     "mapsQuery": "The Marc Restaurant Edmonton"
   },
   {
     "id": "spa-duo-eveline-charles",
+    "slug": "spa-duo-eveline-charles",
     "segment": "couples",
-    "title": { "fr": "Spa en Duo chez Eveline Charles", "en": "Couples Spa at Eveline Charles" },
+    "title": {
+      "fr": "Spa en Duo chez Eveline Charles",
+      "en": "Couples Spa at Eveline Charles"
+    },
     "location": "Eveline Charles Salon & Spa",
     "address": "10180 101 St NW (Manulife Place), Edmonton, AB",
     "description": {
@@ -307,26 +628,64 @@
       "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80",
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
     ],
-    "priceRange": { "fr": "260$ - 420$ / couple", "en": "$260 - $420 / couple" },
-    "priceFrom": 260,
-    "budgetTier": 400,
-    "duration": { "fr": "Demi-journée", "en": "Half-day" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["calme"],
-    "includes": {
-      "fr": ["Massage en duo", "Soin du visage x2", "Accès relaxation", "Mousseux & collations"],
-      "en": ["Couples massage", "Facial x2", "Relaxation access", "Sparkling & snacks"]
+    "priceRange": {
+      "fr": "260$ - 420$ / couple",
+      "en": "$260 - $420 / couple"
     },
-    "services": ["roomDecor"],
+    "priceFrom": 260,
+    "priceTo": 420,
+    "budgetTier": 400,
+    "duration": {
+      "fr": "Demi-journée",
+      "en": "Half-day"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "calme"
+    ],
+    "tags": [
+      "romantique",
+      "calme",
+      "décoration"
+    ],
+    "includes": {
+      "fr": [
+        "Massage en duo",
+        "Soin du visage x2",
+        "Accès relaxation",
+        "Mousseux & collations"
+      ],
+      "en": [
+        "Couples massage",
+        "Facial x2",
+        "Relaxation access",
+        "Sparkling & snacks"
+      ]
+    },
+    "services": [
+      "roomDecor"
+    ],
     "cta": "book",
     "rating": 4.7,
     "mapsQuery": "Eveline Charles Salon Spa Manulife Place Edmonton"
   },
   {
     "id": "croisiere-edmonton-riverboat",
+    "slug": "croisiere-edmonton-riverboat",
     "segment": "couples",
-    "title": { "fr": "Croisière au Coucher du Soleil — Edmonton Riverboat", "en": "Sunset Cruise — Edmonton Riverboat" },
+    "title": {
+      "fr": "Croisière au Coucher du Soleil — Edmonton Riverboat",
+      "en": "Sunset Cruise — Edmonton Riverboat"
+    },
     "location": "Edmonton Riverboat",
     "address": "9734 98 Ave NW (Rafters Landing), Edmonton, AB",
     "description": {
@@ -343,18 +702,50 @@
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=800&q=80",
       "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=800&q=80"
     ],
-    "priceRange": { "fr": "80$ - 160$ / couple", "en": "$80 - $160 / couple" },
-    "priceFrom": 80,
-    "budgetTier": 120,
-    "duration": { "fr": "1h30 - 2h", "en": "1.5h - 2h" },
-    "groupSize": { "fr": "2 personnes", "en": "2 people" },
-    "season": ["summer"],
-    "mood": ["calme", "decouverte"],
-    "includes": {
-      "fr": ["Place pont supérieur", "Consommation de bienvenue", "Croisière coucher du soleil"],
-      "en": ["Upper deck spot", "Welcome drink", "Sunset cruise"]
+    "priceRange": {
+      "fr": "80$ - 160$ / couple",
+      "en": "$80 - $160 / couple"
     },
-    "services": ["photographer"],
+    "priceFrom": 80,
+    "priceTo": 160,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "1h30 - 2h",
+      "en": "1.5h - 2h"
+    },
+    "groupSize": {
+      "fr": "2 personnes",
+      "en": "2 people"
+    },
+    "season": [
+      "summer"
+    ],
+    "mood": [
+      "calme",
+      "decouverte"
+    ],
+    "tags": [
+      "romantique",
+      "calme",
+      "découverte",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Place pont supérieur",
+        "Consommation de bienvenue",
+        "Croisière coucher du soleil"
+      ],
+      "en": [
+        "Upper deck spot",
+        "Welcome drink",
+        "Sunset cruise"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.6,
     "mapsQuery": "Edmonton Riverboat Rafters Landing"

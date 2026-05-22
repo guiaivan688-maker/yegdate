@@ -52,6 +52,15 @@ export default function ActivityDetail({ slug }: { slug: string }) {
               {activity.longDescription[locale].split("\n\n").map((para, i) => (
                 <p key={i} className="text-navy/75 leading-relaxed mb-4">{para}</p>
               ))}
+              {activity.tags?.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {activity.tags.map((tag) => (
+                    <span key={tag} className="text-xs bg-navy/5 text-navy/70 rounded-full px-3 py-1 capitalize">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Gallery */}

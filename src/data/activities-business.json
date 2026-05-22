@@ -1,8 +1,12 @@
 [
   {
     "id": "bad-axe-team-building",
+    "slug": "bad-axe-team-building",
     "segment": "business",
-    "title": { "fr": "Team-Building Lancer de Hache — Bad Axe", "en": "Axe Throwing Team-Building — Bad Axe" },
+    "title": {
+      "fr": "Team-Building Lancer de Hache — Bad Axe",
+      "en": "Axe Throwing Team-Building — Bad Axe"
+    },
     "location": "Bad Axe Throwing (privatisé)",
     "address": "10018 105 St NW, Edmonton, AB",
     "description": {
@@ -19,26 +23,68 @@
       "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80",
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
     ],
-    "priceRange": { "fr": "75$ - 120$ / personne", "en": "$75 - $120 / person" },
-    "priceFrom": 75,
-    "budgetTier": 120,
-    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
-    "groupSize": { "fr": "8-40 personnes", "en": "8-40 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["dynamique"],
-    "includes": {
-      "fr": ["Salle privatisée", "Coachs certifiés", "Tournoi inter-équipes", "Restauration optionnelle", "Facture corporate"],
-      "en": ["Private venue", "Certified coaches", "Inter-team tournament", "Optional catering", "Corporate invoice"]
+    "priceRange": {
+      "fr": "75$ - 120$ / personne",
+      "en": "$75 - $120 / person"
     },
-    "services": ["eventPlanner", "photographer"],
+    "priceFrom": 75,
+    "priceTo": 120,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h - 3h",
+      "en": "2h - 3h"
+    },
+    "groupSize": {
+      "fr": "8-40 personnes",
+      "en": "8-40 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique"
+    ],
+    "tags": [
+      "corporate",
+      "dynamique",
+      "événement",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Salle privatisée",
+        "Coachs certifiés",
+        "Tournoi inter-équipes",
+        "Restauration optionnelle",
+        "Facture corporate"
+      ],
+      "en": [
+        "Private venue",
+        "Certified coaches",
+        "Inter-team tournament",
+        "Optional catering",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner",
+      "photographer"
+    ],
     "cta": "quote",
     "rating": 4.8,
     "mapsQuery": "Bad Axe Throwing Edmonton"
   },
   {
     "id": "escape-room-quest-corporate",
+    "slug": "escape-room-quest-corporate",
     "segment": "business",
-    "title": { "fr": "Escape Room Corporate — Quest Edmonton", "en": "Corporate Escape Room — Quest Edmonton" },
+    "title": {
+      "fr": "Escape Room Corporate — Quest Edmonton",
+      "en": "Corporate Escape Room — Quest Edmonton"
+    },
     "location": "Quest Edmonton (privatisé)",
     "address": "10575 115 St NW, Edmonton, AB",
     "description": {
@@ -55,26 +101,68 @@
       "https://images.unsplash.com/photo-1614107151491-6876eecbff89?w=800&q=80",
       "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
     ],
-    "priceRange": { "fr": "75$ - 110$ / personne", "en": "$75 - $110 / person" },
-    "priceFrom": 75,
-    "budgetTier": 120,
-    "duration": { "fr": "1h30 - 2h", "en": "1.5h - 2h" },
-    "groupSize": { "fr": "4-24 personnes", "en": "4-24 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["dynamique", "decouverte"],
-    "includes": {
-      "fr": ["Salles privatisées", "Débrief facilitateur", "Classement & photos", "Compte rendu d'équipe"],
-      "en": ["Private rooms", "Facilitator debrief", "Ranking & photos", "Team report"]
+    "priceRange": {
+      "fr": "75$ - 110$ / personne",
+      "en": "$75 - $110 / person"
     },
-    "services": ["eventPlanner", "photographer"],
+    "priceFrom": 75,
+    "priceTo": 110,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "1h30 - 2h",
+      "en": "1.5h - 2h"
+    },
+    "groupSize": {
+      "fr": "4-24 personnes",
+      "en": "4-24 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique",
+      "decouverte"
+    ],
+    "tags": [
+      "corporate",
+      "dynamique",
+      "découverte",
+      "événement",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Salles privatisées",
+        "Débrief facilitateur",
+        "Classement & photos",
+        "Compte rendu d'équipe"
+      ],
+      "en": [
+        "Private rooms",
+        "Facilitator debrief",
+        "Ranking & photos",
+        "Team report"
+      ]
+    },
+    "services": [
+      "eventPlanner",
+      "photographer"
+    ],
     "cta": "quote",
     "rating": 4.7,
     "mapsQuery": "Quest Edmonton escape room"
   },
   {
     "id": "cours-cuisine-get-cooking",
+    "slug": "cours-cuisine-get-cooking",
     "segment": "business",
-    "title": { "fr": "Cours de Cuisine Corporate — Get Cooking", "en": "Corporate Cooking Class — Get Cooking" },
+    "title": {
+      "fr": "Cours de Cuisine Corporate — Get Cooking",
+      "en": "Corporate Cooking Class — Get Cooking"
+    },
     "location": "Get Cooking",
     "address": "10923 101 St NW, Edmonton, AB",
     "description": {
@@ -91,26 +179,68 @@
       "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80",
       "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"
     ],
-    "priceRange": { "fr": "110$ - 180$ / personne", "en": "$110 - $180 / person" },
-    "priceFrom": 110,
-    "budgetTier": 250,
-    "duration": { "fr": "3h", "en": "3h" },
-    "groupSize": { "fr": "10-30 personnes", "en": "10-30 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "dynamique"],
-    "includes": {
-      "fr": ["Chef professionnel", "Repas complet cuisiné", "Stations collaboratives", "Gestion allergies", "Facture corporate"],
-      "en": ["Professional chef", "Full cooked meal", "Collaborative stations", "Allergy management", "Corporate invoice"]
+    "priceRange": {
+      "fr": "110$ - 180$ / personne",
+      "en": "$110 - $180 / person"
     },
-    "services": ["eventPlanner"],
+    "priceFrom": 110,
+    "priceTo": 180,
+    "budgetTier": 250,
+    "duration": {
+      "fr": "3h",
+      "en": "3h"
+    },
+    "groupSize": {
+      "fr": "10-30 personnes",
+      "en": "10-30 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "dynamique"
+    ],
+    "tags": [
+      "corporate",
+      "gourmand",
+      "dynamique",
+      "événement"
+    ],
+    "includes": {
+      "fr": [
+        "Chef professionnel",
+        "Repas complet cuisiné",
+        "Stations collaboratives",
+        "Gestion allergies",
+        "Facture corporate"
+      ],
+      "en": [
+        "Professional chef",
+        "Full cooked meal",
+        "Collaborative stations",
+        "Allergy management",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner"
+    ],
     "cta": "quote",
     "rating": 4.8,
     "mapsQuery": "Get Cooking Edmonton"
   },
   {
     "id": "curling-granite-club",
+    "slug": "curling-granite-club",
     "segment": "business",
-    "title": { "fr": "Initiation Curling — Granite Curling Club", "en": "Curling Intro — Granite Curling Club" },
+    "title": {
+      "fr": "Initiation Curling — Granite Curling Club",
+      "en": "Curling Intro — Granite Curling Club"
+    },
     "location": "Granite Curling Club",
     "address": "8620 107 St NW, Edmonton, AB",
     "description": {
@@ -127,26 +257,64 @@
       "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&q=80",
       "https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=800&q=80"
     ],
-    "priceRange": { "fr": "75$ - 130$ / personne", "en": "$75 - $130 / person" },
-    "priceFrom": 75,
-    "budgetTier": 120,
-    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
-    "groupSize": { "fr": "8-40 personnes", "en": "8-40 people" },
-    "season": ["fall", "winter"],
-    "mood": ["dynamique"],
-    "includes": {
-      "fr": ["Instructeurs certifiés", "Équipement fourni", "Mini-tournoi", "Accès lounge", "Facture corporate"],
-      "en": ["Certified instructors", "Equipment provided", "Mini-tournament", "Lounge access", "Corporate invoice"]
+    "priceRange": {
+      "fr": "75$ - 130$ / personne",
+      "en": "$75 - $130 / person"
     },
-    "services": ["eventPlanner"],
+    "priceFrom": 75,
+    "priceTo": 130,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h - 3h",
+      "en": "2h - 3h"
+    },
+    "groupSize": {
+      "fr": "8-40 personnes",
+      "en": "8-40 people"
+    },
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique"
+    ],
+    "tags": [
+      "corporate",
+      "dynamique",
+      "événement"
+    ],
+    "includes": {
+      "fr": [
+        "Instructeurs certifiés",
+        "Équipement fourni",
+        "Mini-tournoi",
+        "Accès lounge",
+        "Facture corporate"
+      ],
+      "en": [
+        "Certified instructors",
+        "Equipment provided",
+        "Mini-tournament",
+        "Lounge access",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner"
+    ],
     "cta": "quote",
     "rating": 4.7,
     "mapsQuery": "Granite Curling Club Edmonton"
   },
   {
     "id": "brewery-tour-corporate",
+    "slug": "brewery-tour-corporate",
     "segment": "business",
-    "title": { "fr": "Tour des Brasseries Corporate", "en": "Corporate Brewery Tour" },
+    "title": {
+      "fr": "Tour des Brasseries Corporate",
+      "en": "Corporate Brewery Tour"
+    },
     "location": "Sea Change · Polyrhythm · Yellowhead",
     "address": "Quartier des brasseries, Edmonton, AB",
     "description": {
@@ -163,26 +331,66 @@
       "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80",
       "https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=800&q=80"
     ],
-    "priceRange": { "fr": "120$ - 200$ / personne", "en": "$120 - $200 / person" },
-    "priceFrom": 120,
-    "budgetTier": 250,
-    "duration": { "fr": "4h", "en": "4h" },
-    "groupSize": { "fr": "8-30 personnes", "en": "8-30 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "decouverte"],
-    "includes": {
-      "fr": ["3 brasseries guidées", "Transport privé inclus", "Dégustations & bouchées", "Facture corporate"],
-      "en": ["3 guided breweries", "Private transport", "Tastings & bites", "Corporate invoice"]
+    "priceRange": {
+      "fr": "120$ - 200$ / personne",
+      "en": "$120 - $200 / person"
     },
-    "services": ["eventPlanner"],
+    "priceFrom": 120,
+    "priceTo": 200,
+    "budgetTier": 250,
+    "duration": {
+      "fr": "4h",
+      "en": "4h"
+    },
+    "groupSize": {
+      "fr": "8-30 personnes",
+      "en": "8-30 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "decouverte"
+    ],
+    "tags": [
+      "corporate",
+      "gourmand",
+      "découverte",
+      "événement"
+    ],
+    "includes": {
+      "fr": [
+        "3 brasseries guidées",
+        "Transport privé inclus",
+        "Dégustations & bouchées",
+        "Facture corporate"
+      ],
+      "en": [
+        "3 guided breweries",
+        "Private transport",
+        "Tastings & bites",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner"
+    ],
     "cta": "quote",
     "rating": 4.7,
     "mapsQuery": "Sea Change Brewing Edmonton"
   },
   {
     "id": "segway-river-valley-corporate",
+    "slug": "segway-river-valley-corporate",
     "segment": "business",
-    "title": { "fr": "Tour Segway River Valley Corporate", "en": "Corporate Segway River Valley Tour" },
+    "title": {
+      "fr": "Tour Segway River Valley Corporate",
+      "en": "Corporate Segway River Valley Tour"
+    },
     "location": "River Valley Adventure Co.",
     "address": "9939 Grierson Hill NW, Edmonton, AB",
     "description": {
@@ -199,26 +407,68 @@
       "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=800&q=80",
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
     ],
-    "priceRange": { "fr": "85$ - 140$ / personne", "en": "$85 - $140 / person" },
-    "priceFrom": 85,
-    "budgetTier": 120,
-    "duration": { "fr": "2h", "en": "2h" },
-    "groupSize": { "fr": "4-24 personnes", "en": "4-24 people" },
-    "season": ["spring", "summer", "fall"],
-    "mood": ["dynamique", "decouverte"],
-    "includes": {
-      "fr": ["Initiation Segway", "Guide dédié", "Casques & équipement", "Facture corporate"],
-      "en": ["Segway intro", "Dedicated guide", "Helmets & equipment", "Corporate invoice"]
+    "priceRange": {
+      "fr": "85$ - 140$ / personne",
+      "en": "$85 - $140 / person"
     },
-    "services": ["eventPlanner", "photographer"],
+    "priceFrom": 85,
+    "priceTo": 140,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h",
+      "en": "2h"
+    },
+    "groupSize": {
+      "fr": "4-24 personnes",
+      "en": "4-24 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "mood": [
+      "dynamique",
+      "decouverte"
+    ],
+    "tags": [
+      "corporate",
+      "dynamique",
+      "découverte",
+      "événement",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Initiation Segway",
+        "Guide dédié",
+        "Casques & équipement",
+        "Facture corporate"
+      ],
+      "en": [
+        "Segway intro",
+        "Dedicated guide",
+        "Helmets & equipment",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner",
+      "photographer"
+    ],
     "cta": "quote",
     "rating": 4.6,
     "mapsQuery": "River Valley Adventure Co Edmonton"
   },
   {
     "id": "soiree-corporate-fairmont",
+    "slug": "soiree-corporate-fairmont",
     "segment": "business",
-    "title": { "fr": "Soirée Corporate au Fairmont Hotel Macdonald", "en": "Corporate Evening at Fairmont Hotel Macdonald" },
+    "title": {
+      "fr": "Soirée Corporate au Fairmont Hotel Macdonald",
+      "en": "Corporate Evening at Fairmont Hotel Macdonald"
+    },
     "location": "Fairmont Hotel Macdonald",
     "address": "10065 100 St NW, Edmonton, AB",
     "description": {
@@ -235,26 +485,70 @@
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
       "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
     ],
-    "priceRange": { "fr": "150$ - 350$ / personne", "en": "$150 - $350 / person" },
-    "priceFrom": 150,
-    "budgetTier": 400,
-    "duration": { "fr": "Soirée", "en": "Evening" },
-    "groupSize": { "fr": "20-150 personnes", "en": "20-150 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "calme"],
-    "includes": {
-      "fr": ["Salle réservée", "Traiteur 5 étoiles", "Décoration & AV", "Coordination complète", "Facture corporate"],
-      "en": ["Reserved ballroom", "5-star catering", "Decoration & AV", "Full coordination", "Corporate invoice"]
+    "priceRange": {
+      "fr": "150$ - 350$ / personne",
+      "en": "$150 - $350 / person"
     },
-    "services": ["eventPlanner", "photographer"],
+    "priceFrom": 150,
+    "priceTo": 350,
+    "budgetTier": 400,
+    "duration": {
+      "fr": "Soirée",
+      "en": "Evening"
+    },
+    "groupSize": {
+      "fr": "20-150 personnes",
+      "en": "20-150 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "calme"
+    ],
+    "tags": [
+      "corporate",
+      "gourmand",
+      "calme",
+      "événement",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Salle réservée",
+        "Traiteur 5 étoiles",
+        "Décoration & AV",
+        "Coordination complète",
+        "Facture corporate"
+      ],
+      "en": [
+        "Reserved ballroom",
+        "5-star catering",
+        "Decoration & AV",
+        "Full coordination",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner",
+      "photographer"
+    ],
     "cta": "quote",
     "rating": 4.9,
     "mapsQuery": "Fairmont Hotel Macdonald Edmonton"
   },
   {
     "id": "power-lunch-hardware-grill",
+    "slug": "power-lunch-hardware-grill",
     "segment": "business",
-    "title": { "fr": "Power Lunch au Hardware Grill", "en": "Power Lunch at Hardware Grill" },
+    "title": {
+      "fr": "Power Lunch au Hardware Grill",
+      "en": "Power Lunch at Hardware Grill"
+    },
     "location": "Hardware Grill",
     "address": "9698 Jasper Ave NW, Edmonton, AB",
     "description": {
@@ -271,26 +565,66 @@
       "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80",
       "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&q=80"
     ],
-    "priceRange": { "fr": "85$ - 150$ / personne", "en": "$85 - $150 / person" },
-    "priceFrom": 85,
-    "budgetTier": 120,
-    "duration": { "fr": "1h30", "en": "1.5h" },
-    "groupSize": { "fr": "4-12 personnes", "en": "4-12 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "calme"],
-    "includes": {
-      "fr": ["Table ou salon privé", "Menu express 2-3 services", "Service discret", "Facture corporate"],
-      "en": ["Private table or room", "Express 2-3 course menu", "Discreet service", "Corporate invoice"]
+    "priceRange": {
+      "fr": "85$ - 150$ / personne",
+      "en": "$85 - $150 / person"
     },
-    "services": ["eventPlanner"],
+    "priceFrom": 85,
+    "priceTo": 150,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "1h30",
+      "en": "1.5h"
+    },
+    "groupSize": {
+      "fr": "4-12 personnes",
+      "en": "4-12 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "calme"
+    ],
+    "tags": [
+      "corporate",
+      "gourmand",
+      "calme",
+      "événement"
+    ],
+    "includes": {
+      "fr": [
+        "Table ou salon privé",
+        "Menu express 2-3 services",
+        "Service discret",
+        "Facture corporate"
+      ],
+      "en": [
+        "Private table or room",
+        "Express 2-3 course menu",
+        "Discreet service",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner"
+    ],
     "cta": "quote",
     "rating": 4.8,
     "mapsQuery": "Hardware Grill Edmonton"
   },
   {
     "id": "afterwork-the-common",
+    "slug": "afterwork-the-common",
     "segment": "business",
-    "title": { "fr": "Afterwork Networking au The Common", "en": "Networking Afterwork at The Common" },
+    "title": {
+      "fr": "Afterwork Networking au The Common",
+      "en": "Networking Afterwork at The Common"
+    },
     "location": "The Common",
     "address": "9910 109 St NW, Edmonton, AB",
     "description": {
@@ -307,26 +641,68 @@
       "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
       "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80"
     ],
-    "priceRange": { "fr": "75$ - 130$ / personne", "en": "$75 - $130 / person" },
-    "priceFrom": 75,
-    "budgetTier": 120,
-    "duration": { "fr": "2h - 3h", "en": "2h - 3h" },
-    "groupSize": { "fr": "10-50 personnes", "en": "10-50 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["gourmand", "dynamique"],
-    "includes": {
-      "fr": ["Espace réservé", "Forfait cocktails & bouchées", "Options networking", "Facture corporate"],
-      "en": ["Reserved space", "Cocktails & bites package", "Networking options", "Corporate invoice"]
+    "priceRange": {
+      "fr": "75$ - 130$ / personne",
+      "en": "$75 - $130 / person"
     },
-    "services": ["eventPlanner", "photographer"],
+    "priceFrom": 75,
+    "priceTo": 130,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "2h - 3h",
+      "en": "2h - 3h"
+    },
+    "groupSize": {
+      "fr": "10-50 personnes",
+      "en": "10-50 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "gourmand",
+      "dynamique"
+    ],
+    "tags": [
+      "corporate",
+      "gourmand",
+      "dynamique",
+      "événement",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Espace réservé",
+        "Forfait cocktails & bouchées",
+        "Options networking",
+        "Facture corporate"
+      ],
+      "en": [
+        "Reserved space",
+        "Cocktails & bites package",
+        "Networking options",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner",
+      "photographer"
+    ],
     "cta": "quote",
     "rating": 4.6,
     "mapsQuery": "The Common Edmonton 109 Street"
   },
   {
     "id": "privatisation-telus-science",
+    "slug": "privatisation-telus-science",
     "segment": "business",
-    "title": { "fr": "Soirée Privée au TELUS World of Science", "en": "Private Evening at TELUS World of Science" },
+    "title": {
+      "fr": "Soirée Privée au TELUS World of Science",
+      "en": "Private Evening at TELUS World of Science"
+    },
     "location": "TELUS World of Science (privatisé)",
     "address": "11211 142 St NW, Edmonton, AB",
     "description": {
@@ -343,18 +719,58 @@
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80"
     ],
-    "priceRange": { "fr": "150$ - 350$ / personne", "en": "$150 - $350 / person" },
-    "priceFrom": 150,
-    "budgetTier": 400,
-    "duration": { "fr": "Soirée", "en": "Evening" },
-    "groupSize": { "fr": "50-300 personnes", "en": "50-300 people" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["decouverte", "gourmand"],
-    "includes": {
-      "fr": ["Centre privatisé", "Galeries + planétarium", "Traiteur & bar", "Coordination complète", "Facture corporate"],
-      "en": ["Private centre", "Galleries + planetarium", "Catering & bar", "Full coordination", "Corporate invoice"]
+    "priceRange": {
+      "fr": "150$ - 350$ / personne",
+      "en": "$150 - $350 / person"
     },
-    "services": ["eventPlanner", "photographer"],
+    "priceFrom": 150,
+    "priceTo": 350,
+    "budgetTier": 400,
+    "duration": {
+      "fr": "Soirée",
+      "en": "Evening"
+    },
+    "groupSize": {
+      "fr": "50-300 personnes",
+      "en": "50-300 people"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "decouverte",
+      "gourmand"
+    ],
+    "tags": [
+      "corporate",
+      "découverte",
+      "gourmand",
+      "événement",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Centre privatisé",
+        "Galeries + planétarium",
+        "Traiteur & bar",
+        "Coordination complète",
+        "Facture corporate"
+      ],
+      "en": [
+        "Private centre",
+        "Galleries + planetarium",
+        "Catering & bar",
+        "Full coordination",
+        "Corporate invoice"
+      ]
+    },
+    "services": [
+      "eventPlanner",
+      "photographer"
+    ],
     "cta": "quote",
     "rating": 4.9,
     "mapsQuery": "TELUS World of Science Edmonton"

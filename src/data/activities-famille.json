@@ -1,8 +1,12 @@
 [
   {
     "id": "telus-world-science",
+    "slug": "telus-world-science",
     "segment": "famille",
-    "title": { "fr": "TELUS World of Science", "en": "TELUS World of Science" },
+    "title": {
+      "fr": "TELUS World of Science",
+      "en": "TELUS World of Science"
+    },
     "location": "TELUS World of Science Edmonton",
     "address": "11211 142 St NW, Edmonton, AB",
     "description": {
@@ -19,17 +23,53 @@
       "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80",
       "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
     ],
-    "priceRange": { "fr": "60$ - 110$ / famille", "en": "$60 - $110 / family" },
+    "priceRange": {
+      "fr": "60$ - 110$ / famille",
+      "en": "$60 - $110 / family"
+    },
     "priceFrom": 60,
+    "priceTo": 110,
     "budgetTier": 120,
-    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["decouverte", "dynamique"],
+    "duration": {
+      "fr": "Demi-journée à journée",
+      "en": "Half to full day"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "3-15 ans",
+      "en": "3-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "decouverte",
+      "dynamique"
+    ],
+    "tags": [
+      "famille",
+      "découverte",
+      "dynamique"
+    ],
     "includes": {
-      "fr": ["Accès aux galeries", "Planétarium", "Accessible poussette", "Café sur place"],
-      "en": ["Gallery access", "Planetarium", "Stroller accessible", "On-site café"]
+      "fr": [
+        "Accès aux galeries",
+        "Planétarium",
+        "Accessible poussette",
+        "Café sur place"
+      ],
+      "en": [
+        "Gallery access",
+        "Planetarium",
+        "Stroller accessible",
+        "On-site café"
+      ]
     },
     "services": [],
     "cta": "book",
@@ -38,8 +78,12 @@
   },
   {
     "id": "royal-alberta-museum",
+    "slug": "royal-alberta-museum",
     "segment": "famille",
-    "title": { "fr": "Royal Alberta Museum", "en": "Royal Alberta Museum" },
+    "title": {
+      "fr": "Royal Alberta Museum",
+      "en": "Royal Alberta Museum"
+    },
     "location": "Royal Alberta Museum",
     "address": "9810 103a Ave NW, Edmonton, AB",
     "description": {
@@ -56,17 +100,53 @@
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80",
       "https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=800&q=80"
     ],
-    "priceRange": { "fr": "45$ - 90$ / famille", "en": "$45 - $90 / family" },
+    "priceRange": {
+      "fr": "45$ - 90$ / famille",
+      "en": "$45 - $90 / family"
+    },
     "priceFrom": 45,
+    "priceTo": 90,
     "budgetTier": 60,
-    "duration": { "fr": "2h - 4h", "en": "2h - 4h" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "0-15 ans", "en": "0-15 yrs" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["decouverte", "calme"],
+    "duration": {
+      "fr": "2h - 4h",
+      "en": "2h - 4h"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "0-15 ans",
+      "en": "0-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "decouverte",
+      "calme"
+    ],
+    "tags": [
+      "famille",
+      "découverte",
+      "calme"
+    ],
     "includes": {
-      "fr": ["Accès toutes galeries", "Espace tout-petits", "Accessible poussette", "Vestiaire"],
-      "en": ["All galleries access", "Toddler space", "Stroller accessible", "Coat check"]
+      "fr": [
+        "Accès toutes galeries",
+        "Espace tout-petits",
+        "Accessible poussette",
+        "Vestiaire"
+      ],
+      "en": [
+        "All galleries access",
+        "Toddler space",
+        "Stroller accessible",
+        "Coat check"
+      ]
     },
     "services": [],
     "cta": "book",
@@ -75,8 +155,12 @@
   },
   {
     "id": "fort-edmonton-park",
+    "slug": "fort-edmonton-park",
     "segment": "famille",
-    "title": { "fr": "Fort Edmonton Park", "en": "Fort Edmonton Park" },
+    "title": {
+      "fr": "Fort Edmonton Park",
+      "en": "Fort Edmonton Park"
+    },
     "location": "Fort Edmonton Park",
     "address": "7000 143 St NW, Edmonton, AB",
     "description": {
@@ -93,27 +177,70 @@
       "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80",
       "https://images.unsplash.com/photo-1551801841-ecad875a5142?w=800&q=80"
     ],
-    "priceRange": { "fr": "70$ - 130$ / famille", "en": "$70 - $130 / family" },
-    "priceFrom": 70,
-    "budgetTier": 120,
-    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
-    "season": ["spring", "summer", "fall"],
-    "mood": ["decouverte", "dynamique"],
-    "includes": {
-      "fr": ["Accès toutes les époques", "Train à vapeur", "Manège ancien", "Indigenous Experience"],
-      "en": ["All eras access", "Steam train", "Vintage midway", "Indigenous Experience"]
+    "priceRange": {
+      "fr": "70$ - 130$ / famille",
+      "en": "$70 - $130 / family"
     },
-    "services": ["photographer"],
+    "priceFrom": 70,
+    "priceTo": 130,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "Demi-journée à journée",
+      "en": "Half to full day"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "3-15 ans",
+      "en": "3-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "mood": [
+      "decouverte",
+      "dynamique"
+    ],
+    "tags": [
+      "famille",
+      "découverte",
+      "dynamique",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Accès toutes les époques",
+        "Train à vapeur",
+        "Manège ancien",
+        "Indigenous Experience"
+      ],
+      "en": [
+        "All eras access",
+        "Steam train",
+        "Vintage midway",
+        "Indigenous Experience"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.8,
     "mapsQuery": "Fort Edmonton Park"
   },
   {
     "id": "muttart-conservatory-famille",
+    "slug": "muttart-conservatory-famille",
     "segment": "famille",
-    "title": { "fr": "Muttart Conservatory", "en": "Muttart Conservatory" },
+    "title": {
+      "fr": "Muttart Conservatory",
+      "en": "Muttart Conservatory"
+    },
     "location": "Muttart Conservatory",
     "address": "9626 96a St NW, Edmonton, AB",
     "description": {
@@ -130,27 +257,70 @@
       "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=800&q=80",
       "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
     ],
-    "priceRange": { "fr": "40$ - 80$ / famille", "en": "$40 - $80 / family" },
-    "priceFrom": 40,
-    "budgetTier": 60,
-    "duration": { "fr": "1h - 2h", "en": "1h - 2h" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "0-15 ans", "en": "0-15 yrs" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["calme", "decouverte"],
-    "includes": {
-      "fr": ["Accès aux 4 pyramides", "Expo florale saisonnière", "Accessible poussette", "Café"],
-      "en": ["Access to 4 pyramids", "Seasonal floral show", "Stroller accessible", "Café"]
+    "priceRange": {
+      "fr": "40$ - 80$ / famille",
+      "en": "$40 - $80 / family"
     },
-    "services": ["photographer"],
+    "priceFrom": 40,
+    "priceTo": 80,
+    "budgetTier": 60,
+    "duration": {
+      "fr": "1h - 2h",
+      "en": "1h - 2h"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "0-15 ans",
+      "en": "0-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "calme",
+      "decouverte"
+    ],
+    "tags": [
+      "famille",
+      "calme",
+      "découverte",
+      "photographe"
+    ],
+    "includes": {
+      "fr": [
+        "Accès aux 4 pyramides",
+        "Expo florale saisonnière",
+        "Accessible poussette",
+        "Café"
+      ],
+      "en": [
+        "Access to 4 pyramids",
+        "Seasonal floral show",
+        "Stroller accessible",
+        "Café"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.7,
     "mapsQuery": "Muttart Conservatory Edmonton"
   },
   {
     "id": "galaxyland-wem",
+    "slug": "galaxyland-wem",
     "segment": "famille",
-    "title": { "fr": "Galaxyland — West Edmonton Mall", "en": "Galaxyland — West Edmonton Mall" },
+    "title": {
+      "fr": "Galaxyland — West Edmonton Mall",
+      "en": "Galaxyland — West Edmonton Mall"
+    },
     "location": "Galaxyland, West Edmonton Mall",
     "address": "8882 170 St NW, Edmonton, AB",
     "description": {
@@ -167,17 +337,51 @@
       "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80",
       "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
     ],
-    "priceRange": { "fr": "90$ - 170$ / famille", "en": "$90 - $170 / family" },
+    "priceRange": {
+      "fr": "90$ - 170$ / famille",
+      "en": "$90 - $170 / family"
+    },
     "priceFrom": 90,
+    "priceTo": 170,
     "budgetTier": 120,
-    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["dynamique"],
+    "duration": {
+      "fr": "Demi-journée à journée",
+      "en": "Half to full day"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "3-15 ans",
+      "en": "3-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique"
+    ],
+    "tags": [
+      "famille",
+      "dynamique"
+    ],
     "includes": {
-      "fr": ["Bracelet journée illimité", "25+ manèges", "Intérieur chauffé", "Casiers disponibles"],
-      "en": ["Unlimited day wristband", "25+ rides", "Heated indoors", "Lockers available"]
+      "fr": [
+        "Bracelet journée illimité",
+        "25+ manèges",
+        "Intérieur chauffé",
+        "Casiers disponibles"
+      ],
+      "en": [
+        "Unlimited day wristband",
+        "25+ rides",
+        "Heated indoors",
+        "Lockers available"
+      ]
     },
     "services": [],
     "cta": "book",
@@ -186,8 +390,12 @@
   },
   {
     "id": "world-waterpark-wem",
+    "slug": "world-waterpark-wem",
     "segment": "famille",
-    "title": { "fr": "World Waterpark — West Edmonton Mall", "en": "World Waterpark — West Edmonton Mall" },
+    "title": {
+      "fr": "World Waterpark — West Edmonton Mall",
+      "en": "World Waterpark — West Edmonton Mall"
+    },
     "location": "World Waterpark, West Edmonton Mall",
     "address": "8882 170 St NW, Edmonton, AB",
     "description": {
@@ -204,17 +412,51 @@
       "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
       "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80"
     ],
-    "priceRange": { "fr": "90$ - 180$ / famille", "en": "$90 - $180 / family" },
+    "priceRange": {
+      "fr": "90$ - 180$ / famille",
+      "en": "$90 - $180 / family"
+    },
     "priceFrom": 90,
+    "priceTo": 180,
     "budgetTier": 120,
-    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["dynamique"],
+    "duration": {
+      "fr": "Demi-journée à journée",
+      "en": "Half to full day"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "3-15 ans",
+      "en": "3-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique"
+    ],
+    "tags": [
+      "famille",
+      "dynamique"
+    ],
     "includes": {
-      "fr": ["Accès toboggans & vagues", "Zone tout-petits", "Intérieur 31°C", "Chaises longues"],
-      "en": ["Slides & wave pool access", "Toddler zone", "31°C indoors", "Loungers"]
+      "fr": [
+        "Accès toboggans & vagues",
+        "Zone tout-petits",
+        "Intérieur 31°C",
+        "Chaises longues"
+      ],
+      "en": [
+        "Slides & wave pool access",
+        "Toddler zone",
+        "31°C indoors",
+        "Loungers"
+      ]
     },
     "services": [],
     "cta": "book",
@@ -223,8 +465,12 @@
   },
   {
     "id": "elk-island-bisons-famille",
+    "slug": "elk-island-bisons-famille",
     "segment": "famille",
-    "title": { "fr": "Bisons & Sentiers à Elk Island", "en": "Bison & Trails at Elk Island" },
+    "title": {
+      "fr": "Bisons & Sentiers à Elk Island",
+      "en": "Bison & Trails at Elk Island"
+    },
     "location": "Elk Island National Park",
     "address": "Hwy 16 E, Fort Saskatchewan, AB",
     "description": {
@@ -241,27 +487,70 @@
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
       "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&q=80"
     ],
-    "priceRange": { "fr": "22$ / adulte (pass Parcs Canada)", "en": "$22 / adult (Parks Canada pass)" },
-    "priceFrom": 22,
-    "budgetTier": 60,
-    "duration": { "fr": "Demi-journée", "en": "Half day" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "3-15 ans", "en": "3-15 yrs" },
-    "season": ["spring", "summer", "fall"],
-    "mood": ["decouverte", "dynamique"],
-    "includes": {
-      "fr": ["Entrée 22$/adulte (pass Découverte)", "Sentiers familiaux", "Plage Astotin (été)", "Aires de pique-nique"],
-      "en": ["Entry $22/adult (Discovery pass)", "Family trails", "Astotin beach (summer)", "Picnic areas"]
+    "priceRange": {
+      "fr": "22$ / adulte (pass Parcs Canada)",
+      "en": "$22 / adult (Parks Canada pass)"
     },
-    "services": ["photographer"],
+    "priceFrom": 22,
+    "priceTo": 22,
+    "budgetTier": 60,
+    "duration": {
+      "fr": "Demi-journée",
+      "en": "Half day"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "3-15 ans",
+      "en": "3-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "mood": [
+      "decouverte",
+      "dynamique"
+    ],
+    "tags": [
+      "famille",
+      "découverte",
+      "dynamique",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Entrée 22$/adulte (pass Découverte)",
+        "Sentiers familiaux",
+        "Plage Astotin (été)",
+        "Aires de pique-nique"
+      ],
+      "en": [
+        "Entry $22/adult (Discovery pass)",
+        "Family trails",
+        "Astotin beach (summer)",
+        "Picnic areas"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.9,
     "mapsQuery": "Elk Island National Park"
   },
   {
     "id": "prairie-gardens-adventure-farm",
+    "slug": "prairie-gardens-adventure-farm",
     "segment": "famille",
-    "title": { "fr": "Prairie Gardens Adventure Farm", "en": "Prairie Gardens Adventure Farm" },
+    "title": {
+      "fr": "Prairie Gardens Adventure Farm",
+      "en": "Prairie Gardens Adventure Farm"
+    },
     "location": "Prairie Gardens Adventure Farm",
     "address": "56311 Lily Lake Rd, Bon Accord, AB",
     "description": {
@@ -278,27 +567,70 @@
       "https://images.unsplash.com/photo-1445964047600-cdbdb873673d?w=800&q=80",
       "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80"
     ],
-    "priceRange": { "fr": "60$ - 120$ / famille", "en": "$60 - $120 / family" },
-    "priceFrom": 60,
-    "budgetTier": 120,
-    "duration": { "fr": "Demi-journée à journée", "en": "Half to full day" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "3-12 ans", "en": "3-12 yrs" },
-    "season": ["summer", "fall", "winter"],
-    "mood": ["dynamique", "decouverte"],
-    "includes": {
-      "fr": ["Accès ferme & jeux", "Labyrinthe de maïs", "Animaux de ferme", "Festival saisonnier"],
-      "en": ["Farm & games access", "Corn maze", "Farm animals", "Seasonal festival"]
+    "priceRange": {
+      "fr": "60$ - 120$ / famille",
+      "en": "$60 - $120 / family"
     },
-    "services": ["photographer"],
+    "priceFrom": 60,
+    "priceTo": 120,
+    "budgetTier": 120,
+    "duration": {
+      "fr": "Demi-journée à journée",
+      "en": "Half to full day"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "3-12 ans",
+      "en": "3-12 yrs"
+    },
+    "season": [
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique",
+      "decouverte"
+    ],
+    "tags": [
+      "famille",
+      "dynamique",
+      "découverte",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Accès ferme & jeux",
+        "Labyrinthe de maïs",
+        "Animaux de ferme",
+        "Festival saisonnier"
+      ],
+      "en": [
+        "Farm & games access",
+        "Corn maze",
+        "Farm animals",
+        "Seasonal festival"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.6,
     "mapsQuery": "Prairie Gardens Adventure Farm Bon Accord"
   },
   {
     "id": "devonian-botanic-garden",
+    "slug": "devonian-botanic-garden",
     "segment": "famille",
-    "title": { "fr": "Devonian Botanic Garden", "en": "Devonian Botanic Garden" },
+    "title": {
+      "fr": "Devonian Botanic Garden",
+      "en": "Devonian Botanic Garden"
+    },
     "location": "University of Alberta Botanic Garden",
     "address": "51227 AB-60, Parkland County, AB",
     "description": {
@@ -315,27 +647,70 @@
       "https://images.unsplash.com/photo-1462143338528-eca9936a4d09?w=800&q=80",
       "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=800&q=80"
     ],
-    "priceRange": { "fr": "40$ - 80$ / famille", "en": "$40 - $80 / family" },
-    "priceFrom": 40,
-    "budgetTier": 60,
-    "duration": { "fr": "2h - 4h", "en": "2h - 4h" },
-    "groupSize": { "fr": "Famille (2-6)", "en": "Family (2-6)" },
-    "ageRange": { "fr": "0-15 ans", "en": "0-15 yrs" },
-    "season": ["spring", "summer", "fall"],
-    "mood": ["calme", "decouverte"],
-    "includes": {
-      "fr": ["Accès tous les jardins", "Jardin japonais Kurimoto", "Pavillon papillons", "Sentiers nature"],
-      "en": ["All gardens access", "Kurimoto Japanese garden", "Butterfly pavilion", "Nature trails"]
+    "priceRange": {
+      "fr": "40$ - 80$ / famille",
+      "en": "$40 - $80 / family"
     },
-    "services": ["photographer"],
+    "priceFrom": 40,
+    "priceTo": 80,
+    "budgetTier": 60,
+    "duration": {
+      "fr": "2h - 4h",
+      "en": "2h - 4h"
+    },
+    "groupSize": {
+      "fr": "Famille (2-6)",
+      "en": "Family (2-6)"
+    },
+    "ageRange": {
+      "fr": "0-15 ans",
+      "en": "0-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "mood": [
+      "calme",
+      "decouverte"
+    ],
+    "tags": [
+      "famille",
+      "calme",
+      "découverte",
+      "photographe",
+      "été"
+    ],
+    "includes": {
+      "fr": [
+        "Accès tous les jardins",
+        "Jardin japonais Kurimoto",
+        "Pavillon papillons",
+        "Sentiers nature"
+      ],
+      "en": [
+        "All gardens access",
+        "Kurimoto Japanese garden",
+        "Butterfly pavilion",
+        "Nature trails"
+      ]
+    },
+    "services": [
+      "photographer"
+    ],
     "cta": "book",
     "rating": 4.7,
     "mapsQuery": "University of Alberta Botanic Garden"
   },
   {
     "id": "jump-360-anniversaire",
+    "slug": "jump-360-anniversaire",
     "segment": "famille",
-    "title": { "fr": "Anniversaire au Jump 360 Trampoline Park", "en": "Birthday at Jump 360 Trampoline Park" },
+    "title": {
+      "fr": "Anniversaire au Jump 360 Trampoline Park",
+      "en": "Birthday at Jump 360 Trampoline Park"
+    },
     "location": "Jump 360 Trampoline Park",
     "address": "14219 137 Ave NW, Edmonton, AB",
     "description": {
@@ -352,19 +727,58 @@
       "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&q=80",
       "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80"
     ],
-    "priceRange": { "fr": "150$ - 350$ / groupe", "en": "$150 - $350 / group" },
-    "priceFrom": 150,
-    "budgetTier": 250,
-    "duration": { "fr": "2h", "en": "2h" },
-    "groupSize": { "fr": "Groupe (6-15)", "en": "Group (6-15)" },
-    "ageRange": { "fr": "6-15 ans", "en": "6-15 yrs" },
-    "season": ["spring", "summer", "fall", "winter"],
-    "mood": ["dynamique"],
-    "includes": {
-      "fr": ["Accès parc pour le groupe", "Salle privée gâteau", "Chaussettes antidérapantes", "Animateur dédié"],
-      "en": ["Group park access", "Private cake room", "Grip socks", "Dedicated host"]
+    "priceRange": {
+      "fr": "150$ - 350$ / groupe",
+      "en": "$150 - $350 / group"
     },
-    "services": ["photographer", "eventPlanner"],
+    "priceFrom": 150,
+    "priceTo": 350,
+    "budgetTier": 250,
+    "duration": {
+      "fr": "2h",
+      "en": "2h"
+    },
+    "groupSize": {
+      "fr": "Groupe (6-15)",
+      "en": "Group (6-15)"
+    },
+    "ageRange": {
+      "fr": "6-15 ans",
+      "en": "6-15 yrs"
+    },
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "mood": [
+      "dynamique"
+    ],
+    "tags": [
+      "famille",
+      "dynamique",
+      "photographe",
+      "événement"
+    ],
+    "includes": {
+      "fr": [
+        "Accès parc pour le groupe",
+        "Salle privée gâteau",
+        "Chaussettes antidérapantes",
+        "Animateur dédié"
+      ],
+      "en": [
+        "Group park access",
+        "Private cake room",
+        "Grip socks",
+        "Dedicated host"
+      ]
+    },
+    "services": [
+      "photographer",
+      "eventPlanner"
+    ],
     "cta": "quote",
     "rating": 4.6,
     "mapsQuery": "Jump 360 Trampoline Park Edmonton"
