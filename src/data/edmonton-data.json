@@ -216,6 +216,90 @@
       "dateLabel": { "fr": "SAM·DIM", "en": "SAT·SUN" },
       "price": { "fr": "Gratuit", "en": "Free" },
       "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton International Film Festival",
+      "is_buffet": false,
+      "location": "Landmark Cinemas City Centre, Downtown",
+      "description": "Festival de cinéma présentant longs et courts métrages canadiens et internationaux. Projections, premières et rencontres avec les cinéastes.",
+      "tags": ["festival", "cinéma", "culture", "automne"],
+      "source_url": "https://exploreedmonton.com/events/film-festival",
+      "dateLabel": { "fr": "OCT", "en": "OCT" },
+      "price": { "fr": "Dès 15$", "en": "From $15" },
+      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Expo",
+      "is_buffet": false,
+      "location": "Edmonton Expo Centre, 7515 118 Ave NW",
+      "description": "Grand rassemblement pop-culture avec invités célèbres, cosplay, jeux et bandes dessinées. Un week-end geek pour toute la famille.",
+      "tags": ["expo", "pop-culture", "famille", "cosplay"],
+      "source_url": "https://exploreedmonton.com/events/expo",
+      "dateLabel": { "fr": "SEPT", "en": "SEP" },
+      "price": { "fr": "Dès 40$", "en": "From $40" },
+      "image": "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Pride Festival",
+      "is_buffet": false,
+      "location": "Old Strathcona / Whyte Avenue",
+      "description": "Célébration de la communauté 2SLGBTQ+ avec spectacles, marché et événements festifs. Une ambiance inclusive et colorée.",
+      "tags": ["festival", "pride", "communauté", "été"],
+      "source_url": "https://exploreedmonton.com/events/pride",
+      "dateLabel": { "fr": "JUIN", "en": "JUN" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1561612217-e5147162fd31?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Deep Freeze : A Byzantine Winter Festival",
+      "is_buffet": false,
+      "location": "Alberta Avenue (118 Ave NW)",
+      "description": "Festival hivernal de quartier avec sculptures de glace, course de canapés sur neige et cuisines du monde. Le meilleur de l'hiver edmontonien.",
+      "tags": ["festival", "hiver", "quartier", "famille"],
+      "source_url": "https://exploreedmonton.com/events/deep-freeze",
+      "dateLabel": { "fr": "JANV", "en": "JAN" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton International Street Performers Festival",
+      "is_buffet": false,
+      "location": "Sir Winston Churchill Square",
+      "description": "Artistes de rue, jongleurs et acrobates du monde entier au cœur du centre-ville. Spectacles gratuits en plein air pendant 10 jours.",
+      "tags": ["festival", "spectacle", "famille", "été"],
+      "source_url": "https://exploreedmonton.com/events/street-performers",
+      "dateLabel": { "fr": "JUIL", "en": "JUL" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Fête du Canada à la Legislature",
+      "is_buffet": false,
+      "location": "Alberta Legislature Grounds",
+      "description": "Célébration de la fête du Canada avec spectacles, activités familiales et feux d'artifice. Le rassemblement du 1er juillet à Edmonton.",
+      "tags": ["fête", "famille", "feux d'artifice", "été"],
+      "source_url": "https://exploreedmonton.com/events/canada-day",
+      "dateLabel": { "fr": "1 JUIL", "en": "JUL 1" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Nouvel An au Centre-ville",
+      "is_buffet": false,
+      "location": "Sir Winston Churchill Square",
+      "description": "Soirée du Nouvel An avec patinoire, musique et feux d'artifice à minuit. Une célébration familiale gratuite au cœur d'Edmonton.",
+      "tags": ["fête", "hiver", "feux d'artifice", "nuit"],
+      "source_url": "https://exploreedmonton.com/events/new-years-eve",
+      "dateLabel": { "fr": "31 DÉC", "en": "DEC 31" },
+      "price": { "fr": "Gratuit", "en": "Free" },
+      "image": "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80"
     }
   ]
 }

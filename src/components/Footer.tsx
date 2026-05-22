@@ -33,6 +33,7 @@ export default function Footer() {
             <div className="space-y-2">
               {[
                 { href: "/decouvrir", key: "nav.discover" },
+                { href: "/evenements", key: "nav.events" },
                 { href: "/weekend-match", key: "nav.weekendMatch" },
                 { href: "/couples", key: "nav.couples" },
                 { href: "/famille", key: "nav.famille" },

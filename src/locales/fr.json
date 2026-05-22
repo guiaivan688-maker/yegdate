@@ -11,7 +11,17 @@
     "services": "Services",
     "packages": "Forfaits",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "events": "Événements"
+  },
+  "events": {
+    "title": "Événements à Edmonton",
+    "subtitle": "Festivals, marchés et événements à ne pas manquer toute l'année",
+    "all": "Tout",
+    "free": "Gratuit",
+    "festivals": "Festivals",
+    "summer": "Été",
+    "winter": "Hiver"
   },
   "hero": {
     "title": "Edmonton, sublimé par vous.",

@@ -11,7 +11,17 @@
     "services": "Services",
     "packages": "Packages",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "events": "Events"
+  },
+  "events": {
+    "title": "Events in Edmonton",
+    "subtitle": "Festivals, markets and can't-miss events all year round",
+    "all": "All",
+    "free": "Free",
+    "festivals": "Festivals",
+    "summer": "Summer",
+    "winter": "Winter"
   },
   "hero": {
     "title": "Edmonton, elevated by you.",

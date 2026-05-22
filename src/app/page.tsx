@@ -93,7 +93,7 @@ export default function Home() {
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-2">{t("home.weekendTitle")}</h2>
               <p className="text-navy/60">{t("home.weekendSubtitle")}</p>
             </div>
-            <Link href="/decouvrir" className="hidden sm:inline-flex items-center gap-1 text-gold font-semibold whitespace-nowrap hover:underline">
+            <Link href="/evenements" className="hidden sm:inline-flex items-center gap-1 text-gold font-semibold whitespace-nowrap hover:underline">
               {t("home.allEvents")}
             </Link>
           </motion.div>
@@ -126,7 +126,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          <Link href="/decouvrir" className="sm:hidden inline-flex items-center gap-1 text-gold font-semibold mt-4">
+          <Link href="/evenements" className="sm:hidden inline-flex items-center gap-1 text-gold font-semibold mt-4">
             {t("home.allEvents")}
           </Link>
         </div>
