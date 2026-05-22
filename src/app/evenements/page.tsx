@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, CalendarDays, Ticket } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import edmonton from "@/data/edmonton-data.json";
 
@@ -13,7 +13,9 @@ interface EventItem {
   description: string;
   tags: string[];
   dateLabel: Record<string, string>;
+  dates: Record<string, string>;
   price: Record<string, string>;
+  bookingUrl: string;
   image: string;
 }
 
@@ -84,13 +86,25 @@ export default function EvenementsPage() {
                 <span className="absolute top-3 right-3 glass text-navy text-xs font-bold rounded-full px-2.5 py-1">{ev.price[locale]}</span>
               </div>
               <div className="p-5">
-                <h3 className="font-serif text-lg font-bold text-navy mb-1 leading-snug">{ev.name}</h3>
-                <p className="text-navy/50 text-xs flex items-center gap-1 mb-3"><MapPin className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} /> {ev.location}</p>
-                <div className="flex flex-wrap gap-1.5">
+                <h3 className="font-serif text-lg font-bold text-navy mb-2 leading-snug">{ev.name}</h3>
+                <div className="space-y-1.5 mb-4 text-xs text-navy/55">
+                  <p className="flex items-center gap-1.5"><CalendarDays className="w-3.5 h-3.5 shrink-0 text-gold" strokeWidth={1.5} /> {ev.dates[locale]}</p>
+                  <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 shrink-0 text-gold" strokeWidth={1.5} /> {ev.location}</p>
+                  <p className="flex items-center gap-1.5"><Ticket className="w-3.5 h-3.5 shrink-0 text-gold" strokeWidth={1.5} /> {t("events.tickets")} : {ev.price[locale]}</p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {ev.tags.slice(0, 3).map((tag) => (
                     <span key={tag} className="text-[10px] bg-gold/10 text-[#9a7e34] border border-gold/25 rounded-full px-2 py-0.5 capitalize">{tag}</span>
                   ))}
                 </div>
+                <a
+                  href={ev.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center w-full gradient-gold text-navy text-sm font-bold py-2.5 rounded-full hover:opacity-90 transition-opacity"
+                >
+                  {t("events.book")}
+                </a>
               </div>
             </motion.div>
           ))}

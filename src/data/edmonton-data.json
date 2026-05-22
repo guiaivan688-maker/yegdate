@@ -1,7 +1,15 @@
 {
   "_meta": {
     "note": "Curated dataset of real Edmonton venues & events in the exploreedmonton.com schema. Not a live scrape — hand-verified real establishments. Import-ready (NoSQL).",
-    "schema": ["category", "name", "is_buffet", "location", "description", "tags", "source_url"],
+    "schema": [
+      "category",
+      "name",
+      "is_buffet",
+      "location",
+      "description",
+      "tags",
+      "source_url"
+    ],
     "generated": "2026-05-22"
   },
   "restaurants": [
@@ -11,7 +19,13 @@
       "is_buffet": true,
       "location": "10712 100 Ave NW, Edmonton",
       "description": "Buffet chinois copieux au centre-ville avec dim sum le week-end. Service à volonté midi et soir.",
-      "tags": ["buffet", "chinois", "dim sum", "all-you-can-eat", "centre-ville"],
+      "tags": [
+        "buffet",
+        "chinois",
+        "dim sum",
+        "all-you-can-eat",
+        "centre-ville"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/yang-ming"
     },
     {
@@ -20,7 +34,13 @@
       "is_buffet": true,
       "location": "9929 109 St NW, Edmonton",
       "description": "Churrascaria brésilienne à volonté avec viandes grillées à la broche servies à table. Salad bar généreux inclus.",
-      "tags": ["buffet", "brésilien", "churrasco", "all-you-can-eat", "viande"],
+      "tags": [
+        "buffet",
+        "brésilien",
+        "churrasco",
+        "all-you-can-eat",
+        "viande"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/pampa"
     },
     {
@@ -29,7 +49,12 @@
       "is_buffet": false,
       "location": "10643 123 St NW, Edmonton",
       "description": "Restaurant farm-to-table primé travaillant exclusivement avec des fermes albertaines. Menu dégustation qui change selon les saisons.",
-      "tags": ["gastronomique", "farm-to-table", "local", "menu dégustation"],
+      "tags": [
+        "gastronomique",
+        "farm-to-table",
+        "local",
+        "menu dégustation"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/rge-rd"
     },
     {
@@ -38,7 +63,12 @@
       "is_buffet": false,
       "location": "10345 Jasper Ave NW, Edmonton",
       "description": "Restaurant italien intime régulièrement classé parmi les meilleurs du Canada. Pâtes fraîches faites maison chaque jour.",
-      "tags": ["italien", "pâtes", "romantique", "haut de gamme"],
+      "tags": [
+        "italien",
+        "pâtes",
+        "romantique",
+        "haut de gamme"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/corso-32"
     },
     {
@@ -47,7 +77,13 @@
       "is_buffet": true,
       "location": "8882 170 St NW, Edmonton",
       "description": "Immense buffet international au plus grand centre commercial d'Amérique du Nord. Idéal pour les familles et les grands groupes.",
-      "tags": ["buffet", "international", "famille", "all-you-can-eat", "WEM"],
+      "tags": [
+        "buffet",
+        "international",
+        "famille",
+        "all-you-can-eat",
+        "WEM"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/the-buffet-wem"
     },
     {
@@ -56,7 +92,13 @@
       "is_buffet": true,
       "location": "11704 104 Ave NW, Edmonton",
       "description": "Sushi à volonté avec un menu varié de rouleaux, nigiris et plats coréens. Excellent rapport qualité-prix.",
-      "tags": ["buffet", "sushi", "coréen", "all-you-can-eat", "à volonté"],
+      "tags": [
+        "buffet",
+        "sushi",
+        "coréen",
+        "all-you-can-eat",
+        "à volonté"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/tatsu-sushi"
     },
     {
@@ -65,7 +107,12 @@
       "is_buffet": false,
       "location": "9698 Jasper Ave NW, Edmonton",
       "description": "Institution de la cuisine canadienne raffinée, idéale pour les repas d'affaires et occasions spéciales. Cadre élégant avec salles privées.",
-      "tags": ["gastronomique", "canadien", "affaires", "élégant"],
+      "tags": [
+        "gastronomique",
+        "canadien",
+        "affaires",
+        "élégant"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/hardware-grill"
     },
     {
@@ -74,7 +121,13 @@
       "is_buffet": true,
       "location": "10548 82 Ave NW, Edmonton",
       "description": "Hot pot à volonté avec un large choix de bouillons et d'ingrédients frais. Parfait pour les soirées d'hiver à deux ou en groupe.",
-      "tags": ["buffet", "hot pot", "asiatique", "all-you-can-eat", "hiver"],
+      "tags": [
+        "buffet",
+        "hot pot",
+        "asiatique",
+        "all-you-can-eat",
+        "hiver"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/chili-hot-pot"
     },
     {
@@ -83,7 +136,12 @@
       "is_buffet": false,
       "location": "10550 115 St NW, Edmonton",
       "description": "Cuisine du Sud américain et cocktails créatifs dans un décor chaleureux. Ambiance animée idéale pour les groupes d'amis.",
-      "tags": ["sud-américain", "cocktails", "amis", "brunch"],
+      "tags": [
+        "sud-américain",
+        "cocktails",
+        "amis",
+        "brunch"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/have-mercy"
     },
     {
@@ -92,7 +150,12 @@
       "is_buffet": false,
       "location": "10228 104 St NW, Edmonton",
       "description": "Bistro contemporain au cœur du quartier des entrepôts, reconnu nationalement. Menu de saison axé sur des produits frais et locaux.",
-      "tags": ["contemporain", "local", "centre-ville", "saisonnier"],
+      "tags": [
+        "contemporain",
+        "local",
+        "centre-ville",
+        "saisonnier"
+      ],
       "source_url": "https://exploreedmonton.com/restaurants/bundok"
     }
   ],
@@ -103,11 +166,27 @@
       "is_buffet": false,
       "location": "Winspear Centre, 9720 102 Ave NW",
       "description": "Festival annuel de jazz réunissant des artistes locaux et internationaux. Concerts en salle et spectacles gratuits en plein air.",
-      "tags": ["festival", "musique", "jazz", "été"],
+      "tags": [
+        "festival",
+        "musique",
+        "jazz",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/jazz-festival",
-      "dateLabel": { "fr": "JUIN", "en": "JUN" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+      "dateLabel": {
+        "fr": "JUIN",
+        "en": "JUN"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
+      "dates": {
+        "fr": "19–28 juin 2026",
+        "en": "Jun 19–28, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+International+Jazz+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -115,11 +194,27 @@
       "is_buffet": false,
       "location": "Sir Winston Churchill Square",
       "description": "Le plus grand festival culinaire d'Edmonton avec des dizaines de restaurants et food trucks. Dégustez la ville sur une seule place.",
-      "tags": ["festival", "gastronomie", "food trucks", "été"],
+      "tags": [
+        "festival",
+        "gastronomie",
+        "food trucks",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/taste-of-edmonton",
-      "dateLabel": { "fr": "JUIL", "en": "JUL" },
-      "price": { "fr": "Dès 5$", "en": "From $5" },
-      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+      "dateLabel": {
+        "fr": "JUIL",
+        "en": "JUL"
+      },
+      "price": {
+        "fr": "Dès 5$",
+        "en": "From $5"
+      },
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+      "dates": {
+        "fr": "23 juil – 2 août 2026",
+        "en": "Jul 23 – Aug 2, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Taste+of+Edmonton+Edmonton+billets"
     },
     {
       "category": "event",
@@ -127,11 +222,28 @@
       "is_buffet": false,
       "location": "Old Strathcona / Whyte Avenue",
       "description": "Le plus grand et le plus ancien festival de théâtre fringe en Amérique du Nord. Des centaines de spectacles dans tout le quartier.",
-      "tags": ["festival", "théâtre", "art", "Whyte Avenue", "été"],
+      "tags": [
+        "festival",
+        "théâtre",
+        "art",
+        "Whyte Avenue",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/fringe-festival",
-      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
-      "price": { "fr": "Dès 15$", "en": "From $15" },
-      "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80"
+      "dateLabel": {
+        "fr": "AOÛT",
+        "en": "AUG"
+      },
+      "price": {
+        "fr": "Dès 15$",
+        "en": "From $15"
+      },
+      "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
+      "dates": {
+        "fr": "13–23 août 2026",
+        "en": "Aug 13–23, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+International+Fringe+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -139,11 +251,27 @@
       "is_buffet": false,
       "location": "Emily Murphy Park",
       "description": "Course sur les sentiers panoramiques de la vallée de la rivière North Saskatchewan. Parcours pour tous les niveaux.",
-      "tags": ["sport", "course", "plein air", "River Valley"],
+      "tags": [
+        "sport",
+        "course",
+        "plein air",
+        "River Valley"
+      ],
       "source_url": "https://exploreedmonton.com/events/river-valley-run",
-      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+      "dateLabel": {
+        "fr": "AOÛT",
+        "en": "AUG"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "dates": {
+        "fr": "16 août 2026",
+        "en": "Aug 16, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=River+Valley+Trail+Run+Edmonton+billets"
     },
     {
       "category": "event",
@@ -151,11 +279,27 @@
       "is_buffet": false,
       "location": "Gallagher Park",
       "description": "Festival de musique folk de renommée mondiale sur la colline de Gallagher Park. Ambiance conviviale au coucher du soleil.",
-      "tags": ["festival", "musique", "folk", "été"],
+      "tags": [
+        "festival",
+        "musique",
+        "folk",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/folk-fest",
-      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
-      "price": { "fr": "Dès 75$", "en": "From $75" },
-      "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80"
+      "dateLabel": {
+        "fr": "AOÛT",
+        "en": "AUG"
+      },
+      "price": {
+        "fr": "Dès 75$",
+        "en": "From $75"
+      },
+      "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80",
+      "dates": {
+        "fr": "6–9 août 2026",
+        "en": "Aug 6–9, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Folk+Music+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -163,11 +307,27 @@
       "is_buffet": false,
       "location": "Edmonton Expo Centre, 7515 118 Ave NW",
       "description": "La plus grande foire estivale d'Edmonton avec manèges, concerts et feux d'artifice. Dix jours d'activités pour toute la famille.",
-      "tags": ["festival", "famille", "manèges", "été"],
+      "tags": [
+        "festival",
+        "famille",
+        "manèges",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/k-days",
-      "dateLabel": { "fr": "JUIL", "en": "JUL" },
-      "price": { "fr": "Dès 20$", "en": "From $20" },
-      "image": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+      "dateLabel": {
+        "fr": "JUIL",
+        "en": "JUL"
+      },
+      "price": {
+        "fr": "Dès 20$",
+        "en": "From $20"
+      },
+      "image": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "dates": {
+        "fr": "17–26 juillet 2026",
+        "en": "Jul 17–26, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=K-Days+Edmonton+billets"
     },
     {
       "category": "event",
@@ -175,11 +335,27 @@
       "is_buffet": false,
       "location": "Old Strathcona",
       "description": "Festival hivernal de sculptures sur glace avec glissades et compétitions de sculpteurs internationaux. Magie glacée sur Whyte Avenue.",
-      "tags": ["festival", "hiver", "glace", "Whyte Avenue"],
+      "tags": [
+        "festival",
+        "hiver",
+        "glace",
+        "Whyte Avenue"
+      ],
       "source_url": "https://exploreedmonton.com/events/ice-on-whyte",
-      "dateLabel": { "fr": "JANV", "en": "JAN" },
-      "price": { "fr": "Dès 8$", "en": "From $8" },
-      "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80"
+      "dateLabel": {
+        "fr": "JANV",
+        "en": "JAN"
+      },
+      "price": {
+        "fr": "Dès 8$",
+        "en": "From $8"
+      },
+      "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80",
+      "dates": {
+        "fr": "22 janv – 1 févr 2026",
+        "en": "Jan 22 – Feb 1, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Ice+on+Whyte+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -187,11 +363,28 @@
       "is_buffet": false,
       "location": "Mill Creek Ravine / La Cité Francophone",
       "description": "Festival hivernal célébrant les cultures francophone, métisse et autochtone avec sentiers illuminés et musique. Une féérie nocturne en plein hiver.",
-      "tags": ["festival", "hiver", "culture", "francophone", "nuit"],
+      "tags": [
+        "festival",
+        "hiver",
+        "culture",
+        "francophone",
+        "nuit"
+      ],
       "source_url": "https://exploreedmonton.com/events/flying-canoe",
-      "dateLabel": { "fr": "FÉVR", "en": "FEB" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80"
+      "dateLabel": {
+        "fr": "FÉVR",
+        "en": "FEB"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80",
+      "dates": {
+        "fr": "5–7 février 2026",
+        "en": "Feb 5–7, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Flying+Cano%C3%AB+Volant+Edmonton+billets"
     },
     {
       "category": "event",
@@ -199,11 +392,28 @@
       "is_buffet": false,
       "location": "Downtown / Sir Winston Churchill Square",
       "description": "Festival caribéen vibrant avec défilé costumé, musique soca et cuisine des îles. Une explosion de couleurs au centre-ville.",
-      "tags": ["festival", "caribéen", "défilé", "été", "musique"],
+      "tags": [
+        "festival",
+        "caribéen",
+        "défilé",
+        "été",
+        "musique"
+      ],
       "source_url": "https://exploreedmonton.com/events/cariwest",
-      "dateLabel": { "fr": "AOÛT", "en": "AUG" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80"
+      "dateLabel": {
+        "fr": "AOÛT",
+        "en": "AUG"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80",
+      "dates": {
+        "fr": "7–9 août 2026",
+        "en": "Aug 7–9, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Cariwest+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -211,11 +421,27 @@
       "is_buffet": false,
       "location": "10305 97 St NW (Downtown)",
       "description": "Marché de producteurs et d'artisans locaux ouvert toute l'année les fins de semaine. Produits frais, café et ambiance conviviale.",
-      "tags": ["marché", "local", "famille", "week-end"],
+      "tags": [
+        "marché",
+        "local",
+        "famille",
+        "week-end"
+      ],
       "source_url": "https://exploreedmonton.com/events/downtown-farmers-market",
-      "dateLabel": { "fr": "SAM·DIM", "en": "SAT·SUN" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80"
+      "dateLabel": {
+        "fr": "SAM·DIM",
+        "en": "SAT·SUN"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+      "dates": {
+        "fr": "Toute l'année · sam-dim",
+        "en": "Year-round · Sat-Sun"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Downtown+Farmers+Market+Edmonton+billets"
     },
     {
       "category": "event",
@@ -223,11 +449,27 @@
       "is_buffet": false,
       "location": "Landmark Cinemas City Centre, Downtown",
       "description": "Festival de cinéma présentant longs et courts métrages canadiens et internationaux. Projections, premières et rencontres avec les cinéastes.",
-      "tags": ["festival", "cinéma", "culture", "automne"],
+      "tags": [
+        "festival",
+        "cinéma",
+        "culture",
+        "automne"
+      ],
       "source_url": "https://exploreedmonton.com/events/film-festival",
-      "dateLabel": { "fr": "OCT", "en": "OCT" },
-      "price": { "fr": "Dès 15$", "en": "From $15" },
-      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80"
+      "dateLabel": {
+        "fr": "OCT",
+        "en": "OCT"
+      },
+      "price": {
+        "fr": "Dès 15$",
+        "en": "From $15"
+      },
+      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80",
+      "dates": {
+        "fr": "1–10 octobre 2026",
+        "en": "Oct 1–10, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+International+Film+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -235,11 +477,27 @@
       "is_buffet": false,
       "location": "Edmonton Expo Centre, 7515 118 Ave NW",
       "description": "Grand rassemblement pop-culture avec invités célèbres, cosplay, jeux et bandes dessinées. Un week-end geek pour toute la famille.",
-      "tags": ["expo", "pop-culture", "famille", "cosplay"],
+      "tags": [
+        "expo",
+        "pop-culture",
+        "famille",
+        "cosplay"
+      ],
       "source_url": "https://exploreedmonton.com/events/expo",
-      "dateLabel": { "fr": "SEPT", "en": "SEP" },
-      "price": { "fr": "Dès 40$", "en": "From $40" },
-      "image": "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80"
+      "dateLabel": {
+        "fr": "SEPT",
+        "en": "SEP"
+      },
+      "price": {
+        "fr": "Dès 40$",
+        "en": "From $40"
+      },
+      "image": "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80",
+      "dates": {
+        "fr": "25–27 septembre 2026",
+        "en": "Sep 25–27, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Expo+Edmonton+billets"
     },
     {
       "category": "event",
@@ -247,11 +505,27 @@
       "is_buffet": false,
       "location": "Old Strathcona / Whyte Avenue",
       "description": "Célébration de la communauté 2SLGBTQ+ avec spectacles, marché et événements festifs. Une ambiance inclusive et colorée.",
-      "tags": ["festival", "pride", "communauté", "été"],
+      "tags": [
+        "festival",
+        "pride",
+        "communauté",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/pride",
-      "dateLabel": { "fr": "JUIN", "en": "JUN" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1561612217-e5147162fd31?w=800&q=80"
+      "dateLabel": {
+        "fr": "JUIN",
+        "en": "JUN"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1561612217-e5147162fd31?w=800&q=80",
+      "dates": {
+        "fr": "5–14 juin 2026",
+        "en": "Jun 5–14, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Pride+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -259,11 +533,27 @@
       "is_buffet": false,
       "location": "Alberta Avenue (118 Ave NW)",
       "description": "Festival hivernal de quartier avec sculptures de glace, course de canapés sur neige et cuisines du monde. Le meilleur de l'hiver edmontonien.",
-      "tags": ["festival", "hiver", "quartier", "famille"],
+      "tags": [
+        "festival",
+        "hiver",
+        "quartier",
+        "famille"
+      ],
       "source_url": "https://exploreedmonton.com/events/deep-freeze",
-      "dateLabel": { "fr": "JANV", "en": "JAN" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80"
+      "dateLabel": {
+        "fr": "JANV",
+        "en": "JAN"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80",
+      "dates": {
+        "fr": "10–11 janvier 2026",
+        "en": "Jan 10–11, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Deep+Freeze+%3A+A+Byzantine+Winter+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -271,11 +561,27 @@
       "is_buffet": false,
       "location": "Sir Winston Churchill Square",
       "description": "Artistes de rue, jongleurs et acrobates du monde entier au cœur du centre-ville. Spectacles gratuits en plein air pendant 10 jours.",
-      "tags": ["festival", "spectacle", "famille", "été"],
+      "tags": [
+        "festival",
+        "spectacle",
+        "famille",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/street-performers",
-      "dateLabel": { "fr": "JUIL", "en": "JUL" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80"
+      "dateLabel": {
+        "fr": "JUIL",
+        "en": "JUL"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+      "dates": {
+        "fr": "3–12 juillet 2026",
+        "en": "Jul 3–12, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+International+Street+Performers+Festival+Edmonton+billets"
     },
     {
       "category": "event",
@@ -283,11 +589,27 @@
       "is_buffet": false,
       "location": "Alberta Legislature Grounds",
       "description": "Célébration de la fête du Canada avec spectacles, activités familiales et feux d'artifice. Le rassemblement du 1er juillet à Edmonton.",
-      "tags": ["fête", "famille", "feux d'artifice", "été"],
+      "tags": [
+        "fête",
+        "famille",
+        "feux d'artifice",
+        "été"
+      ],
       "source_url": "https://exploreedmonton.com/events/canada-day",
-      "dateLabel": { "fr": "1 JUIL", "en": "JUL 1" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=800&q=80"
+      "dateLabel": {
+        "fr": "1 JUIL",
+        "en": "JUL 1"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=800&q=80",
+      "dates": {
+        "fr": "1 juillet 2026",
+        "en": "Jul 1, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=F%C3%AAte+du+Canada+%C3%A0+la+Legislature+Edmonton+billets"
     },
     {
       "category": "event",
@@ -295,11 +617,251 @@
       "is_buffet": false,
       "location": "Sir Winston Churchill Square",
       "description": "Soirée du Nouvel An avec patinoire, musique et feux d'artifice à minuit. Une célébration familiale gratuite au cœur d'Edmonton.",
-      "tags": ["fête", "hiver", "feux d'artifice", "nuit"],
+      "tags": [
+        "fête",
+        "hiver",
+        "feux d'artifice",
+        "nuit"
+      ],
       "source_url": "https://exploreedmonton.com/events/new-years-eve",
-      "dateLabel": { "fr": "31 DÉC", "en": "DEC 31" },
-      "price": { "fr": "Gratuit", "en": "Free" },
-      "image": "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80"
+      "dateLabel": {
+        "fr": "31 DÉC",
+        "en": "DEC 31"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80",
+      "dates": {
+        "fr": "31 décembre 2026",
+        "en": "Dec 31, 2026"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Nouvel+An+au+Centre-ville+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Whyte Avenue Art Walk",
+      "is_buffet": false,
+      "location": "Old Strathcona / Whyte Avenue",
+      "description": "Plus grand festival d'art en plein air de l'Ouest canadien, avec des centaines d'artistes le long de Whyte Avenue. Démonstrations, ventes et ambiance créative.",
+      "tags": [
+        "festival",
+        "art",
+        "extérieur",
+        "été"
+      ],
+      "source_url": "https://exploreedmonton.com/events/art-walk",
+      "dateLabel": {
+        "fr": "JUIL",
+        "en": "JUL"
+      },
+      "dates": {
+        "fr": "10–12 juillet 2026",
+        "en": "Jul 10–12, 2026"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Whyte+Avenue+Art+Walk+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Match des Oilers d'Edmonton (LNH)",
+      "is_buffet": false,
+      "location": "Rogers Place, 10220 104 Ave NW",
+      "description": "Vivez l'ambiance électrique d'un match de hockey des Oilers dans l'aréna ultramoderne du centre-ville. L'expérience sportive incontournable d'Edmonton.",
+      "tags": [
+        "sport",
+        "hockey",
+        "soirée",
+        "hiver"
+      ],
+      "source_url": "https://exploreedmonton.com/events/oilers",
+      "dateLabel": {
+        "fr": "OCT–AVR",
+        "en": "OCT–APR"
+      },
+      "dates": {
+        "fr": "Saison oct 2025 – avr 2026",
+        "en": "Season Oct 2025 – Apr 2026"
+      },
+      "price": {
+        "fr": "Dès 60$",
+        "en": "From $60"
+      },
+      "image": "https://images.unsplash.com/photo-1515703407324-5f753afd8be8?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Match+des+Oilers+d%27Edmonton+%28LNH%29+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton International BeerFest",
+      "is_buffet": false,
+      "location": "Edmonton Convention Centre, 9797 Jasper Ave NW",
+      "description": "Le plus grand festival de bière de l'Alberta avec des centaines de bières artisanales à déguster. Cuisine de rue et musique live au programme.",
+      "tags": [
+        "festival",
+        "bière",
+        "dégustation",
+        "printemps"
+      ],
+      "source_url": "https://exploreedmonton.com/events/beerfest",
+      "dateLabel": {
+        "fr": "MARS",
+        "en": "MAR"
+      },
+      "dates": {
+        "fr": "27–28 mars 2026",
+        "en": "Mar 27–28, 2026"
+      },
+      "price": {
+        "fr": "Dès 35$",
+        "en": "From $35"
+      },
+      "image": "https://images.unsplash.com/photo-1518176258769-f227c798150e?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+International+BeerFest+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Candy Cane Lane",
+      "is_buffet": false,
+      "location": "Crestwood (148 St NW)",
+      "description": "Rue résidentielle illuminée de décorations de Noël féeriques, tradition edmontonienne depuis 1968. À parcourir à pied ou en voiture, dons pour la banque alimentaire.",
+      "tags": [
+        "fête",
+        "hiver",
+        "lumières",
+        "famille"
+      ],
+      "source_url": "https://exploreedmonton.com/events/candy-cane-lane",
+      "dateLabel": {
+        "fr": "DÉC",
+        "en": "DEC"
+      },
+      "dates": {
+        "fr": "Mi-décembre – 1 janv 2026",
+        "en": "Mid-Dec – Jan 1, 2026"
+      },
+      "price": {
+        "fr": "Gratuit (dons)",
+        "en": "Free (donations)"
+      },
+      "image": "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Candy+Cane+Lane+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Luminaria au Jardin Botanique",
+      "is_buffet": false,
+      "location": "University of Alberta Botanic Garden",
+      "description": "Promenade nocturne magique à la lueur de milliers de bougies et lanternes dans le jardin japonais enneigé. Une tradition hivernale intime et féerique.",
+      "tags": [
+        "hiver",
+        "lumières",
+        "nuit",
+        "famille"
+      ],
+      "source_url": "https://exploreedmonton.com/events/luminaria",
+      "dateLabel": {
+        "fr": "DÉC",
+        "en": "DEC"
+      },
+      "dates": {
+        "fr": "5–7 décembre 2026",
+        "en": "Dec 5–7, 2026"
+      },
+      "price": {
+        "fr": "Dès 25$",
+        "en": "From $25"
+      },
+      "image": "https://images.unsplash.com/photo-1545048702-79362596cdc9?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Luminaria+au+Jardin+Botanique+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Royal Bison Art & Craft Fair",
+      "is_buffet": false,
+      "location": "Old Strathcona (8426 Gateway Blvd)",
+      "description": "Foire d'art et d'artisanat indépendante mettant en vedette des créateurs locaux. Idéale pour des cadeaux uniques faits main.",
+      "tags": [
+        "marché",
+        "art",
+        "local",
+        "automne"
+      ],
+      "source_url": "https://exploreedmonton.com/events/royal-bison",
+      "dateLabel": {
+        "fr": "NOV",
+        "en": "NOV"
+      },
+      "dates": {
+        "fr": "21–23 novembre 2026",
+        "en": "Nov 21–23, 2026"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Royal+Bison+Art+%26+Craft+Fair+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "All Is Bright Festival",
+      "is_buffet": false,
+      "location": "124 Street NW",
+      "description": "Festival d'illumination du quartier 124 Street lançant la saison des fêtes, avec marché, musique et feux d'artifice. Une soirée chaleureuse en plein hiver.",
+      "tags": [
+        "festival",
+        "hiver",
+        "lumières",
+        "famille"
+      ],
+      "source_url": "https://exploreedmonton.com/events/all-is-bright",
+      "dateLabel": {
+        "fr": "NOV",
+        "en": "NOV"
+      },
+      "dates": {
+        "fr": "14 novembre 2026",
+        "en": "Nov 14, 2026"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "image": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=All+Is+Bright+Festival+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Motor Show",
+      "is_buffet": false,
+      "location": "Edmonton Expo Centre, 7515 118 Ave NW",
+      "description": "Salon de l'auto présentant les derniers modèles, véhicules de luxe et concepts. Un rendez-vous pour les passionnés et les familles.",
+      "tags": [
+        "expo",
+        "auto",
+        "famille",
+        "printemps"
+      ],
+      "source_url": "https://exploreedmonton.com/events/motor-show",
+      "dateLabel": {
+        "fr": "AVR",
+        "en": "APR"
+      },
+      "dates": {
+        "fr": "9–12 avril 2026",
+        "en": "Apr 9–12, 2026"
+      },
+      "price": {
+        "fr": "Dès 18$",
+        "en": "From $18"
+      },
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Motor+Show+Edmonton+billets"
     }
   ]
 }

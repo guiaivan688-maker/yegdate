@@ -21,7 +21,10 @@
     "free": "Gratuit",
     "festivals": "Festivals",
     "summer": "Été",
-    "winter": "Hiver"
+    "winter": "Hiver",
+    "book": "Réserver / Billets",
+    "when": "Dates",
+    "tickets": "Billets"
   },
   "hero": {
     "title": "Edmonton, sublimé par vous.",

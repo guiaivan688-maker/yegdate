@@ -21,7 +21,10 @@
     "free": "Free",
     "festivals": "Festivals",
     "summer": "Summer",
-    "winter": "Winter"
+    "winter": "Winter",
+    "book": "Book / Tickets",
+    "when": "Dates",
+    "tickets": "Tickets"
   },
   "hero": {
     "title": "Edmonton, elevated by you.",
