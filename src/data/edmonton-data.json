@@ -862,6 +862,286 @@
       },
       "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
       "bookingUrl": "https://www.google.com/search?q=Edmonton+Motor+Show+Edmonton+billets"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Symphony Orchestra",
+      "is_buffet": false,
+      "location": "Winspear Centre, 9720 102 Ave NW",
+      "description": "Concerts symphoniques de classe mondiale dans l'acoustique exceptionnelle du Winspear Centre. Programmes classiques, pops et ciné-concerts.",
+      "tags": [
+        "musique",
+        "classique",
+        "spectacle",
+        "soirée"
+      ],
+      "source_url": "https://exploreedmonton.com/events/edmonton-symphony-orchestra",
+      "dateLabel": {
+        "fr": "SEPT–MAI",
+        "en": "SEP–MAY"
+      },
+      "dates": {
+        "fr": "Saison sept 2025 – mai 2026",
+        "en": "Season Sep 2025 – May 2026"
+      },
+      "price": {
+        "fr": "Dès 30$",
+        "en": "From $30"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Symphony+Orchestra+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "The Works Art & Design Festival",
+      "is_buffet": false,
+      "location": "Sir Winston Churchill Square",
+      "description": "Festival d'art et de design en plein air au centre-ville, avec installations, expositions et ateliers. Entrée gratuite pendant deux semaines.",
+      "tags": [
+        "festival",
+        "art",
+        "design",
+        "été"
+      ],
+      "source_url": "https://exploreedmonton.com/events/the-works-art-%26-design-festival",
+      "dateLabel": {
+        "fr": "JUIN",
+        "en": "JUN"
+      },
+      "dates": {
+        "fr": "19 juin – 1 juil 2026",
+        "en": "Jun 19 – Jul 1, 2026"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "bookingUrl": "https://www.google.com/search?q=The+Works+Art+%26+Design+Festival+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Nextfest",
+      "is_buffet": false,
+      "location": "The Roxy Theatre, 10708 124 St NW",
+      "description": "Festival multidisciplinaire dédié aux artistes émergents : théâtre, musique, danse et arts visuels. La relève créative d'Edmonton.",
+      "tags": [
+        "festival",
+        "théâtre",
+        "émergent",
+        "été"
+      ],
+      "source_url": "https://exploreedmonton.com/events/nextfest",
+      "dateLabel": {
+        "fr": "JUIN",
+        "en": "JUN"
+      },
+      "dates": {
+        "fr": "4–14 juin 2026",
+        "en": "Jun 4–14, 2026"
+      },
+      "price": {
+        "fr": "Dès 15$",
+        "en": "From $15"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Nextfest+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Found Festival",
+      "is_buffet": false,
+      "location": "Old Strathcona / Mill Creek Ravine",
+      "description": "Festival d'arts de la scène dans des lieux inattendus du quartier Old Strathcona. Théâtre, performance et installations hors des sentiers battus.",
+      "tags": [
+        "festival",
+        "art",
+        "théâtre",
+        "été"
+      ],
+      "source_url": "https://exploreedmonton.com/events/found-festival",
+      "dateLabel": {
+        "fr": "JUIL",
+        "en": "JUL"
+      },
+      "dates": {
+        "fr": "9–12 juillet 2026",
+        "en": "Jul 9–12, 2026"
+      },
+      "price": {
+        "fr": "Dès 20$",
+        "en": "From $20"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Found+Festival+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Dragon Boat Festival",
+      "is_buffet": false,
+      "location": "Louise McKinney Riverfront Park",
+      "description": "Courses de bateaux-dragons colorées sur la rivière North Saskatchewan, avec cuisine et culture asiatiques. Spectacle gratuit au bord de l'eau.",
+      "tags": [
+        "sport",
+        "festival",
+        "extérieur",
+        "été"
+      ],
+      "source_url": "https://exploreedmonton.com/events/edmonton-dragon-boat-festival",
+      "dateLabel": {
+        "fr": "AOÛT",
+        "en": "AUG"
+      },
+      "dates": {
+        "fr": "22–23 août 2026",
+        "en": "Aug 22–23, 2026"
+      },
+      "price": {
+        "fr": "Gratuit",
+        "en": "Free"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Dragon+Boat+Festival+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1530870110042-98b2cb110834?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "A Christmas Carol au Citadel Theatre",
+      "is_buffet": false,
+      "location": "Citadel Theatre, 9828 101A Ave NW",
+      "description": "Adaptation théâtrale magistrale du classique de Dickens, tradition des fêtes à Edmonton depuis des décennies. Une sortie incontournable de décembre.",
+      "tags": [
+        "théâtre",
+        "fête",
+        "hiver",
+        "famille"
+      ],
+      "source_url": "https://exploreedmonton.com/events/a-christmas-carol-au-citadel-theatre",
+      "dateLabel": {
+        "fr": "DÉC",
+        "en": "DEC"
+      },
+      "dates": {
+        "fr": "28 nov – 23 déc 2026",
+        "en": "Nov 28 – Dec 23, 2026"
+      },
+      "price": {
+        "fr": "Dès 45$",
+        "en": "From $45"
+      },
+      "bookingUrl": "https://www.google.com/search?q=A+Christmas+Carol+au+Citadel+Theatre+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Rapid Fire Theatre — Impro",
+      "is_buffet": false,
+      "location": "Citadel Theatre (Backstage)",
+      "description": "Spectacles d'improvisation hilarants chaque semaine par la troupe culte d'Edmonton. Aucune soirée ne se ressemble.",
+      "tags": [
+        "comédie",
+        "spectacle",
+        "soirée",
+        "amis"
+      ],
+      "source_url": "https://exploreedmonton.com/events/rapid-fire-theatre-%E2%80%94-impro",
+      "dateLabel": {
+        "fr": "HEBDO",
+        "en": "WEEKLY"
+      },
+      "dates": {
+        "fr": "Toute l'année · ven-sam",
+        "en": "Year-round · Fri-Sat"
+      },
+      "price": {
+        "fr": "Dès 20$",
+        "en": "From $20"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Rapid+Fire+Theatre+%E2%80%94+Impro+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Comedy Festival",
+      "is_buffet": false,
+      "location": "Salles variées (centre-ville)",
+      "description": "Festival réunissant humoristes canadiens et internationaux dans plusieurs salles de la ville. Stand-up, galas et spectacles à guichets fermés.",
+      "tags": [
+        "comédie",
+        "festival",
+        "soirée",
+        "automne"
+      ],
+      "source_url": "https://exploreedmonton.com/events/edmonton-comedy-festival",
+      "dateLabel": {
+        "fr": "OCT",
+        "en": "OCT"
+      },
+      "dates": {
+        "fr": "15–18 octobre 2026",
+        "en": "Oct 15–18, 2026"
+      },
+      "price": {
+        "fr": "Dès 25$",
+        "en": "From $25"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Comedy+Festival+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1527224538127-2104bb71c51b?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Servus Festival of Trees",
+      "is_buffet": false,
+      "location": "Edmonton Convention Centre, 9797 Jasper Ave NW",
+      "description": "Forêt de sapins magnifiquement décorés lançant la saison des fêtes, au profit d'œuvres caritatives. Ateliers, spectacles et magie de Noël.",
+      "tags": [
+        "fête",
+        "hiver",
+        "famille",
+        "caritatif"
+      ],
+      "source_url": "https://exploreedmonton.com/events/servus-festival-of-trees",
+      "dateLabel": {
+        "fr": "NOV",
+        "en": "NOV"
+      },
+      "dates": {
+        "fr": "25–29 novembre 2026",
+        "en": "Nov 25–29, 2026"
+      },
+      "price": {
+        "fr": "Dès 20$",
+        "en": "From $20"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Servus+Festival+of+Trees+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=800&q=80"
+    },
+    {
+      "category": "event",
+      "name": "Edmonton Home + Garden Show",
+      "is_buffet": false,
+      "location": "Edmonton Expo Centre, 7515 118 Ave NW",
+      "description": "Salon de la maison et du jardin avec experts, exposants et idées déco. Parfait pour planifier ses projets du printemps.",
+      "tags": [
+        "expo",
+        "maison",
+        "jardin",
+        "printemps"
+      ],
+      "source_url": "https://exploreedmonton.com/events/edmonton-home-%2B-garden-show",
+      "dateLabel": {
+        "fr": "MARS",
+        "en": "MAR"
+      },
+      "dates": {
+        "fr": "19–22 mars 2026",
+        "en": "Mar 19–22, 2026"
+      },
+      "price": {
+        "fr": "Dès 16$",
+        "en": "From $16"
+      },
+      "bookingUrl": "https://www.google.com/search?q=Edmonton+Home+%2B+Garden+Show+Edmonton+billets",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
     }
   ]
 }
