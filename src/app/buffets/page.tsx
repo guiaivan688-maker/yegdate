@@ -47,7 +47,7 @@ export default function BuffetsPage() {
 
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto space-y-16">
-          {data.map((cat, ci) => (
+          {data.map((cat) => (
             <motion.div
               key={cat.category}
               initial={{ opacity: 0, y: 20 }}

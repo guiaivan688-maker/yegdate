@@ -40,6 +40,8 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === "fr" || stored === "en") {
+      // SSR-safe: hydrate from localStorage after mount to avoid a hydration mismatch.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocaleState(stored);
     }
   }, []);

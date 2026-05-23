@@ -23,7 +23,7 @@ interface Guide {
 }
 
 export default function GuideArticle({ slug }: { slug: string }) {
-  const { locale, t } = useLocale();
+  const { locale } = useLocale();
   const fr = locale === "fr";
   const guide = (guides as Guide[]).find((g) => g.slug === slug);
   if (!guide) notFound();

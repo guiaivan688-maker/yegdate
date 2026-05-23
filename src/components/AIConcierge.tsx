@@ -99,6 +99,8 @@ export default function AIConcierge() {
 
   useEffect(() => {
     if (open) {
+      // Reset the greeting each time the panel opens (intentional state sync).
+      // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps
       setMessages([{ role: "assistant", content: buildGreeting(weather?.temperature ?? null, locale) }]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

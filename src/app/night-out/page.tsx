@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Music, Wine, Pizza, PartyPopper, Ticket, Flame, Sparkles, MapPin, ArrowRight } from "lucide-react";
+import { Music, Wine, Pizza, PartyPopper, Ticket, Flame, Sparkles, ArrowRight } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 
 interface NightPackage {

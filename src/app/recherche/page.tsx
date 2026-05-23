@@ -18,7 +18,7 @@ interface Result {
 }
 
 export default function RecherchePage() {
-  const { locale, t } = useLocale();
+  const { locale } = useLocale();
   const fr = locale === "fr";
   const [q, setQ] = useState("");
 

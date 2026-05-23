@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Tooling / scaffolding & node helper scripts (not app code):
+    "_bmad/**",
+    ".claude/**",
+    "scripts/**",
+    "start-dev.js",
+    "start-prod.js",
   ]),
 ]);
 

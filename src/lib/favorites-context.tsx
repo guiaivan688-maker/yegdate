@@ -22,6 +22,8 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
+      // SSR-safe: hydrate from localStorage after mount.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (stored) setFavorites(JSON.parse(stored));
     } catch {}
   }, []);

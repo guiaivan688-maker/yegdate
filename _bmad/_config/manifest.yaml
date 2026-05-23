@@ -1,0 +1,66 @@
+installation:
+  version: 6.7.1
+  installDate: 2026-05-23T05:41:47.866Z
+  lastUpdated: 2026-05-23T06:11:54.526Z
+modules:
+  - name: core
+    version: 6.7.1
+    installDate: 2026-05-23T05:41:45.873Z
+    lastUpdated: 2026-05-23T06:11:54.506Z
+    source: built-in
+    npmPackage: null
+    repoUrl: null
+  - name: bmm
+    version: 6.7.1
+    installDate: 2026-05-23T05:41:47.150Z
+    lastUpdated: 2026-05-23T06:11:54.508Z
+    source: built-in
+    npmPackage: null
+    repoUrl: null
+  - name: bmb
+    version: v1.8.1
+    installDate: 2026-05-23T06:10:46.150Z
+    lastUpdated: 2026-05-23T06:11:54.510Z
+    source: external
+    npmPackage: bmad-builder
+    repoUrl: https://github.com/bmad-code-org/bmad-builder
+    channel: stable
+    sha: 3410d952eafe621f31fcdf4dd5efb2b06690a306
+  - name: cis
+    version: v0.2.1
+    installDate: 2026-05-23T06:10:46.262Z
+    lastUpdated: 2026-05-23T06:11:54.512Z
+    source: external
+    npmPackage: bmad-creative-intelligence-suite
+    repoUrl: https://github.com/bmad-code-org/bmad-module-creative-intelligence-suite
+    channel: stable
+    sha: 07a8dd03d196a762f21c241d985293fe5b0f90e7
+  - name: wds
+    version: v0.4.3
+    installDate: 2026-05-23T06:10:47.817Z
+    lastUpdated: 2026-05-23T06:11:54.520Z
+    source: external
+    npmPackage: bmad-wds
+    repoUrl: https://github.com/bmad-code-org/bmad-method-wds-expansion
+    channel: stable
+    sha: cc16f09fcfab26d35635af1491f36a38a8431c8d
+  - name: tea
+    version: v1.19.0
+    installDate: 2026-05-23T06:10:49.188Z
+    lastUpdated: 2026-05-23T06:11:54.523Z
+    source: external
+    npmPackage: bmad-method-test-architecture-enterprise
+    repoUrl: https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise
+    channel: stable
+    sha: 8734d51f24071ddbcb3617390b5fcddb4128ef77
+  - name: automator
+    version: main
+    installDate: 2026-05-23T06:11:53.983Z
+    lastUpdated: 2026-05-23T06:11:54.526Z
+    source: external
+    npmPackage: bmad-story-automator
+    repoUrl: https://github.com/bmad-code-org/bmad-automator
+    channel: next
+    sha: 3b01cfd309707389887e4c7ee1388a579a8d039b
+ides:
+  - claude-code
