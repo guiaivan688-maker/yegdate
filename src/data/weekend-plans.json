@@ -279,5 +279,62 @@
       { "time": "20:00", "title": { "fr": "Soirée privée au centre des sciences", "en": "Private science centre evening" }, "place": "TELUS World of Science", "address": "11211 142 St NW", "price": 150 }
     ],
     "total": 400
+  },
+
+  {
+    "id": "so-art-cafe",
+    "segment": "solo",
+    "title": { "fr": "Art & Café en Solo", "en": "Solo Art & Café" },
+    "image": "https://images.unsplash.com/photo-1533230408708-8f9f91d1235a?w=900&q=80",
+    "ambiance": "decouverte",
+    "budgetTier": 60,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "14:00", "title": { "fr": "Galeries d'art contemporain", "en": "Contemporary art galleries" }, "place": "Art Gallery of Alberta", "address": "2 Sir Winston Churchill Sq NW", "price": 14 },
+      { "time": "16:00", "title": { "fr": "Café de spécialité & lecture", "en": "Specialty coffee & a good book" }, "place": "Credo Coffee", "address": "10134 104 St NW", "price": 12 }
+    ],
+    "total": 26
+  },
+  {
+    "id": "so-vallee-librairie",
+    "segment": "solo",
+    "title": { "fr": "Vallée & Librairie", "en": "River Valley & Bookshop" },
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80",
+    "ambiance": "calme",
+    "budgetTier": 60,
+    "season": ["spring", "summer", "fall"],
+    "steps": [
+      { "time": "11:00", "title": { "fr": "Marche dans le ravin Mill Creek", "en": "Walk the Mill Creek ravine" }, "place": "Mill Creek Ravine", "address": "95 Ave & 91 St NW", "price": 0 },
+      { "time": "13:00", "title": { "fr": "Brunch solo & librairie indépendante", "en": "Solo brunch & indie bookshop" }, "place": "Glass Bookshop & Café", "address": "10932 88 Ave NW", "price": 30 }
+    ],
+    "total": 30
+  },
+  {
+    "id": "so-jazz-bistro",
+    "segment": "solo",
+    "title": { "fr": "Jazz & Bistro en Solo", "en": "Solo Jazz & Bistro" },
+    "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80",
+    "ambiance": "dynamique",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "19:00", "title": { "fr": "Dîner au comptoir d'un bistro", "en": "Dinner at the bistro counter" }, "place": "Bar Bricks", "address": "10004 Jasper Ave NW", "price": 45 },
+      { "time": "21:00", "title": { "fr": "Soirée jazz live", "en": "Live jazz night" }, "place": "Yardbird Suite", "address": "11 Tommy Banks Way NW", "price": 30 }
+    ],
+    "total": 75
+  },
+  {
+    "id": "so-atelier-cuisine",
+    "segment": "solo",
+    "title": { "fr": "Atelier Cuisine & Marché", "en": "Cooking Class & Market" },
+    "image": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=900&q=80",
+    "ambiance": "gourmand",
+    "budgetTier": 120,
+    "season": ["spring", "summer", "fall", "winter"],
+    "steps": [
+      { "time": "11:00", "title": { "fr": "Cours de cuisine en petit groupe", "en": "Small-group cooking class" }, "place": "Get Cooking", "address": "10923 101 St NW", "price": 95 },
+      { "time": "14:00", "title": { "fr": "Flâner au marché du centre-ville", "en": "Wander the downtown market" }, "place": "City Market Downtown", "address": "10305 97 St NW", "price": 15 }
+    ],
+    "total": 110
   }
 ]

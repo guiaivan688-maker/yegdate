@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Heart, Users, PartyPopper, Briefcase, MapPin, ArrowRight } from "lucide-react";
+import { Heart, Users, PartyPopper, User, Briefcase, MapPin, ArrowRight } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import Testimonials from "@/components/Testimonials";
@@ -39,6 +39,7 @@ const quickAccess = [
   { key: "couples", href: "/couples", Icon: Heart },
   { key: "famille", href: "/famille", Icon: Users },
   { key: "amis", href: "/amis", Icon: PartyPopper },
+  { key: "solo", href: "/compositeur", Icon: User },
   { key: "business", href: "/business", Icon: Briefcase },
 ];
 
@@ -68,7 +69,7 @@ export default function Home() {
 
       {/* SECTION 2 — Quick access bar */}
       <section className="px-4 -mt-10 relative z-20">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-4">
           {quickAccess.map((q, i) => (
             <motion.div key={q.key} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
               <Link

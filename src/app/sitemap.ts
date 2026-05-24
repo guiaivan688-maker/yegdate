@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allActivities } from "@/lib/activities";
+import { ideaPages } from "@/lib/ideas";
 
 const BASE = "https://yegdate.vercel.app";
 
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/contact",
     "/guides",
+    "/idees",
     "/carte",
     "/recherche",
     "/mes-favoris",
@@ -40,5 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...activityRoutes];
+  const ideaRoutes = ideaPages.map((p) => ({
+    url: `${BASE}/idees/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...activityRoutes, ...ideaRoutes];
 }

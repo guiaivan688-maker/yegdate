@@ -8,6 +8,7 @@ import { Menu, X, ArrowLeft, Search, Heart } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 
 const links = [
+  { href: "/compositeur", key: "nav.compositeur" },
   { href: "/decouvrir", key: "nav.discover" },
   { href: "/weekend-match", key: "nav.weekendMatch" },
   { href: "/packages", key: "nav.packages" },
