@@ -9,6 +9,7 @@ import HeroSlideshow from "@/components/HeroSlideshow";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
 import SplitSection from "@/components/SplitSection";
+import EdmontonStory from "@/components/EdmontonStory";
 import edmonton from "@/data/edmonton-data.json";
 
 const howItWorks = [
@@ -132,6 +133,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* SECTION — Edmonton story */}
+      <EdmontonStory />
 
       {/* How it works */}
       <section className="py-20 px-4">
