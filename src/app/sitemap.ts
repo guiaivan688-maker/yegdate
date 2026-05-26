@@ -23,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/guides",
     "/idees",
+    "/compositeur",
+    "/reserver",
     "/carte",
     "/recherche",
     "/mes-favoris",
