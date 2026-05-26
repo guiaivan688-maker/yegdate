@@ -26,6 +26,12 @@ interface BookingRequest {
   created_at: string;
 }
 
+const STATUS: Record<string, { fr: string; en: string; cls: string }> = {
+  draft: { fr: "En attente de validation", en: "Pending review", cls: "bg-amber-500/15 text-amber-700" },
+  published: { fr: "En ligne", en: "Live", cls: "bg-green-500/15 text-green-700" },
+  suspended: { fr: "Suspendu", en: "Suspended", cls: "bg-red-500/15 text-red-700" },
+};
+
 export default function PrestatairePage() {
   const { locale } = useLocale();
   const fr = locale === "fr";
@@ -81,7 +87,7 @@ export default function PrestatairePage() {
       location: activity.location,
       price_from: activity.priceFrom,
       image: activity.image,
-      status: "published",
+      status: "draft",
     });
     await reload(user.id);
     setBusy(false);
@@ -166,6 +172,7 @@ export default function PrestatairePage() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-semibold text-navy truncate">{o.title_fr}</h3>
+                          <span className={`inline-block text-[11px] font-semibold px-2 py-0.5 rounded-full my-1 ${STATUS[o.status]?.cls ?? "bg-navy/10 text-navy/60"}`}>{STATUS[o.status]?.[locale] ?? o.status}</span>
                           <p className="text-navy/45 text-xs flex items-center gap-1 mb-2"><MapPin className="w-3 h-3 shrink-0" strokeWidth={1.5} /> {o.location}</p>
                           <label className="text-xs text-navy/60 flex items-center gap-1.5">
                             {fr ? "Prix dès" : "Price from"}
