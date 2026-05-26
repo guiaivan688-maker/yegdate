@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowLeft, Search, Heart } from "lucide-react";
+import { Menu, X, ArrowLeft, Search, Heart, ShieldCheck } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
+import { supabase } from "@/lib/supabase";
 
 const links = [
   { href: "/compositeur", key: "nav.compositeur" },
@@ -24,6 +25,19 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const isHome = pathname === "/";
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    const check = async (uid?: string) => {
+      if (!uid) { if (active) setIsAdmin(false); return; }
+      const { data } = await supabase.from("profiles").select("role").eq("id", uid).single();
+      if (active) setIsAdmin((data as { role?: string } | null)?.role === "admin");
+    };
+    supabase.auth.getSession().then(({ data }) => check(data.session?.user?.id));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => check(s?.user?.id));
+    return () => { active = false; sub.subscription.unsubscribe(); };
+  }, []);
 
   function goBack() {
     if (typeof window !== "undefined" && window.history.length > 1) {
@@ -70,6 +84,11 @@ export default function Navbar() {
                 {t(link.key)}
               </Link>
             ))}
+            {isAdmin && (
+              <Link href="/admin" className="inline-flex items-center gap-1 text-gold hover:text-gold-dark font-semibold text-sm transition-colors">
+                <ShieldCheck className="w-4 h-4" strokeWidth={1.75} /> Admin
+              </Link>
+            )}
             <Link href="/recherche" aria-label="Recherche" className="text-navy/70 hover:text-gold transition-colors">
               <Search className="w-5 h-5" strokeWidth={1.5} />
             </Link>
@@ -125,6 +144,11 @@ export default function Navbar() {
                   {t(link.key)}
                 </Link>
               ))}
+              {isAdmin && (
+                <Link href="/admin" onClick={() => setOpen(false)} className="flex items-center gap-1.5 py-2.5 text-gold font-semibold transition-colors">
+                  <ShieldCheck className="w-4 h-4" strokeWidth={1.75} /> Admin
+                </Link>
+              )}
             </div>
           </motion.div>
         )}
