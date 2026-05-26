@@ -26,10 +26,12 @@ export default function Navbar() {
   const router = useRouter();
   const isHome = pathname === "/";
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     let active = true;
     const check = async (uid?: string) => {
+      if (active) setIsLoggedIn(!!uid);
       if (!uid) { if (active) setIsAdmin(false); return; }
       const { data } = await supabase.from("profiles").select("role").eq("id", uid).single();
       if (active) setIsAdmin((data as { role?: string } | null)?.role === "admin");
@@ -87,6 +89,11 @@ export default function Navbar() {
             {isAdmin && (
               <Link href="/admin" className="inline-flex items-center gap-1 text-gold hover:text-gold-dark font-semibold text-sm transition-colors">
                 <ShieldCheck className="w-4 h-4" strokeWidth={1.75} /> Admin
+              </Link>
+            )}
+            {!isLoggedIn && (
+              <Link href="/connexion" className="text-navy/70 hover:text-navy font-medium text-sm transition-colors duration-200">
+                {t("nav.connexion")}
               </Link>
             )}
             <Link href="/recherche" aria-label="Recherche" className="text-navy/70 hover:text-gold transition-colors">
@@ -147,6 +154,11 @@ export default function Navbar() {
               {isAdmin && (
                 <Link href="/admin" onClick={() => setOpen(false)} className="flex items-center gap-1.5 py-2.5 text-gold font-semibold transition-colors">
                   <ShieldCheck className="w-4 h-4" strokeWidth={1.75} /> Admin
+                </Link>
+              )}
+              {!isLoggedIn && (
+                <Link href="/connexion" onClick={() => setOpen(false)} className="block py-2.5 text-navy/80 hover:text-navy font-medium transition-colors">
+                  {t("nav.connexion")}
                 </Link>
               )}
             </div>
