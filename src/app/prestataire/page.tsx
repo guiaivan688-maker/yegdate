@@ -8,6 +8,7 @@ import { useLocale } from "@/lib/locale-context";
 import { allActivities } from "@/lib/activities";
 import { supabase } from "@/lib/supabase";
 import GoogleSignIn from "@/components/GoogleSignIn";
+import EmailPasswordAuth from "@/components/EmailPasswordAuth";
 
 interface Offer {
   id: string;
@@ -135,6 +136,8 @@ export default function PrestatairePage() {
           <div className="max-w-md bg-surface border border-black/5 rounded-3xl p-8">
             <Mail className="w-8 h-8 text-gold mb-4" strokeWidth={1.5} />
             <h2 className="font-serif text-2xl font-bold text-navy mb-2">{fr ? "Connecte-toi" : "Sign in"}</h2>
+            <EmailPasswordAuth />
+            <div className="flex items-center gap-3 my-4 text-navy/35 text-xs"><span className="h-px flex-1 bg-black/10" />{fr ? "ou" : "or"}<span className="h-px flex-1 bg-black/10" /></div>
             <GoogleSignIn redirectTo="/prestataire" label={fr ? "Continuer avec Google" : "Continue with Google"} />
             <div className="flex items-center gap-3 my-4 text-navy/35 text-xs"><span className="h-px flex-1 bg-black/10" />{fr ? "ou par email" : "or by email"}<span className="h-px flex-1 bg-black/10" /></div>
             {emailSent ? (
