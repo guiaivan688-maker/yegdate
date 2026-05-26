@@ -5,6 +5,7 @@ import { Loader2, Mail, ShieldCheck, CheckCircle2, PauseCircle, RotateCcw, Layou
 import type { User } from "@supabase/supabase-js";
 import { useLocale } from "@/lib/locale-context";
 import { supabase } from "@/lib/supabase";
+import GoogleSignIn from "@/components/GoogleSignIn";
 
 interface Offer { id: string; title_fr: string; location: string | null; price_from: number; status: string; owner: string; created_at: string; }
 interface Profile { id: string; role: string; display_name: string | null; created_at: string; }
@@ -105,6 +106,8 @@ export default function AdminPage() {
           <div className="max-w-md bg-surface border border-black/5 rounded-3xl p-8">
             <Mail className="w-8 h-8 text-gold mb-4" strokeWidth={1.5} />
             <h2 className="font-serif text-2xl font-bold text-navy mb-2">{fr ? "Connexion admin" : "Admin sign in"}</h2>
+            <GoogleSignIn redirectTo="/admin" label={fr ? "Continuer avec Google" : "Continue with Google"} />
+            <div className="flex items-center gap-3 my-4 text-navy/35 text-xs"><span className="h-px flex-1 bg-black/10" />{fr ? "ou par email" : "or by email"}<span className="h-px flex-1 bg-black/10" /></div>
             {emailSent ? (
               <p className="text-navy/65">{fr ? "Lien envoyé ! Vérifie ta boîte mail." : "Link sent! Check your inbox."}</p>
             ) : (
