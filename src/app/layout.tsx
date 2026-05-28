@@ -39,7 +39,7 @@ const jsonLd = {
   name: "Where To Go YEG",
   description: "L'agenda intelligent d'Edmonton — activités, sorties et réservations pour couples, familles, amis et entreprises.",
   address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "AB", addressCountry: "CA" },
-  email: "hello@wheretogoyeg.ca",
+  email: "wheretogoyeg@gmail.com",
   areaServed: "Edmonton, Alberta",
   url: "https://wheretogoyeg.ca",
 };

@@ -13,7 +13,7 @@ export default function ConditionsPage() {
         ["Annulation", "Sauf indication contraire, l'annulation est gratuite jusqu'à 72 heures avant la date prévue. Au-delà, des frais peuvent s'appliquer selon les conditions du prestataire."],
         ["Prestataires tiers", "Certaines activités sont opérées par des partenaires indépendants. Leurs propres conditions s'appliquent. Where To Go YEG agit comme intermédiaire et coordonnateur."],
         ["Responsabilité", "Nous faisons de notre mieux pour assurer l'exactitude des informations (lieux, horaires, prix), mais ne pouvons garantir l'absence d'erreurs ou de changements. Votre participation aux activités se fait sous votre responsabilité."],
-        ["Contact", "Pour toute question relative à ces conditions : hello@wheretogoyeg.ca."],
+        ["Contact", "Pour toute question relative à ces conditions : wheretogoyeg@gmail.com."],
       ]
     : [
         ["Purpose", "Where To Go YEG connects Edmonton residents and visitors with local activities, places and vendors, and offers experience-planning services. By using the site, you accept these terms."],
@@ -21,7 +21,7 @@ export default function ConditionsPage() {
         ["Cancellation", "Unless otherwise stated, cancellation is free up to 72 hours before the scheduled date. Beyond that, fees may apply per the vendor's terms."],
         ["Third-party vendors", "Some activities are operated by independent partners whose own terms apply. Where To Go YEG acts as an intermediary and coordinator."],
         ["Liability", "We do our best to keep information accurate (places, times, prices) but cannot guarantee it is error-free or unchanged. Participation in activities is at your own risk."],
-        ["Contact", "For any question about these terms: hello@wheretogoyeg.ca."],
+        ["Contact", "For any question about these terms: wheretogoyeg@gmail.com."],
       ];
 
   return (

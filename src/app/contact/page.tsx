@@ -49,7 +49,7 @@ export default function ContactPage() {
           {/* Info */}
           <div className="space-y-5">
             <div className="space-y-3 text-navy/75">
-              <p className="flex items-center gap-3"><Mail className="w-5 h-5 text-gold" strokeWidth={1.5} /> <a href="mailto:hello@wheretogoyeg.ca" className="hover:text-gold transition-colors">hello@wheretogoyeg.ca</a></p>
+              <p className="flex items-center gap-3"><Mail className="w-5 h-5 text-gold" strokeWidth={1.5} /> <a href="mailto:wheretogoyeg@gmail.com" className="hover:text-gold transition-colors">wheretogoyeg@gmail.com</a></p>
               <p className="flex items-center gap-3"><Phone className="w-5 h-5 text-gold" strokeWidth={1.5} /> +1 (780) 000-0000</p>
               <p className="flex items-center gap-3"><Clock className="w-5 h-5 text-gold" strokeWidth={1.5} /> {fr ? "Lun-Ven 9h-18h · Sam 10h-16h" : "Mon-Fri 9am-6pm · Sat 10am-4pm"}</p>
               <p className="flex items-center gap-3"><MapPin className="w-5 h-5 text-gold" strokeWidth={1.5} /> Edmonton, Alberta, Canada</p>
