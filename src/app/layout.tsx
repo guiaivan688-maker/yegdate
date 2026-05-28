@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wheretogoyeg.ca"),
+  verification: { google: "zQJKxCCmzDFwPztlTfXbTGJuUVeBTOQvT8tHcq4wjVE" },
   title: "Where To Go YEG — L'agenda intelligent d'Edmonton | Activités, sorties, réservations",
   description:
     "Trouvez quoi faire à Edmonton ce week-end. Couples, famille, amis, business — planifiez votre sortie en 3 minutes et réservez en 1 clic.",
