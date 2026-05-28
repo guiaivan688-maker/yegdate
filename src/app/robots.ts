@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://yegdate.vercel.app/sitemap.xml",
+    sitemap: "https://wheretogoyeg.ca/sitemap.xml",
   };
 }

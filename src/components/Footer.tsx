@@ -19,9 +19,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
             <span className="text-2xl tracking-tight mb-3 block">
-              <span className="font-serif font-bold text-cream">YEG</span>
+              <span className="font-light text-cream">Where To Go</span>
               <span className="text-gold font-bold">·</span>
-              <span className="font-light text-cream">Date</span>
+              <span className="font-serif font-bold text-cream">YEG</span>
             </span>
             <p className="text-cream/60 text-sm font-serif italic">{t("footer.tagline")}</p>
           </div>
@@ -87,8 +87,8 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <a href="mailto:hello@yegdate.ca" className="text-cream/60 hover:text-gold text-sm transition-colors">
-              hello@yegdate.ca
+            <a href="mailto:hello@wheretogoyeg.ca" className="text-cream/60 hover:text-gold text-sm transition-colors">
+              hello@wheretogoyeg.ca
             </a>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function Footer() {
             <Link href="/conditions" className="hover:text-gold transition-colors">{t("footer.terms")}</Link>
           </div>
           <p className="text-cream/40 text-sm">
-            {t("footer.madeWith")} &copy; {new Date().getFullYear()} YEG Date — Edmonton, AB, Canada
+            {t("footer.madeWith")} &copy; {new Date().getFullYear()} Where To Go YEG — Edmonton, AB, Canada
           </p>
         </div>
       </div>

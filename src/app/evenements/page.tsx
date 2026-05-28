@@ -4,7 +4,7 @@ import { getCityEvents, type EventItem } from "@/lib/cityEvents";
 import EventsClient from "./EventsClient";
 
 export const metadata: Metadata = {
-  title: "Événements à Edmonton — festivals, concerts, sorties | YEG Date",
+  title: "Événements à Edmonton — festivals, concerts, sorties | Where To Go YEG",
   description:
     "Tous les événements à venir à Edmonton : festivals, concerts, marchés, sports et sorties en famille. Mis à jour chaque jour depuis le calendrier officiel de la Ville d'Edmonton.",
 };

@@ -222,7 +222,7 @@ export default function PrestatairePage() {
 
             <section>
               <h2 className="font-serif text-2xl font-bold text-navy mb-2">{fr ? "Réclame ta fiche" : "Claim your listing"}</h2>
-              <p className="text-navy/55 mb-5">{fr ? "Ces établissements sont déjà sur YEG Date. Trouve le tien et réclame-le." : "These businesses are already on YEG Date. Find yours and claim it."}</p>
+              <p className="text-navy/55 mb-5">{fr ? "Ces établissements sont déjà sur Where To Go YEG. Trouve le tien et réclame-le." : "These businesses are already on Where To Go YEG. Find yours and claim it."}</p>
               <div className="relative mb-6 max-w-md">
                 <Search className="w-4 h-4 text-navy/40 absolute left-3.5 top-1/2 -translate-y-1/2" strokeWidth={1.5} />
                 <input

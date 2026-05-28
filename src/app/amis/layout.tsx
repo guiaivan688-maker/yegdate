@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sorties entre amis Edmonton — EVJF, anniversaires, groupes | YEG Date",
+  title: "Sorties entre amis Edmonton — EVJF, anniversaires, groupes | Where To Go YEG",
   description:
     "Escape rooms, axe throwing, soirées thématiques, EVJF Premium. Organisez votre sortie entre amis à Edmonton en quelques clics.",
 };

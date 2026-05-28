@@ -65,10 +65,10 @@ export default function Navbar() {
               </button>
             )}
             <Link href="/" className="flex flex-col leading-none">
-              <span className="text-xl sm:text-2xl tracking-tight">
-                <span className="font-serif font-bold text-navy">YEG</span>
+              <span className="text-lg sm:text-2xl tracking-tight whitespace-nowrap">
+                <span className="font-light text-navy">Where To Go</span>
                 <span className="text-gold font-bold">·</span>
-                <span className="font-light text-navy">Date</span>
+                <span className="font-serif font-bold text-navy">YEG</span>
               </span>
               <span className="hidden sm:block text-[10px] text-navy/45 tracking-wide mt-0.5">
                 {t("hero.tagline")}

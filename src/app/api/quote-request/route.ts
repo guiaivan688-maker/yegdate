@@ -13,7 +13,7 @@ interface QuoteBody {
 }
 
 const OWNER_EMAIL = process.env.QUOTE_TO_EMAIL || "guiaivan688@gmail.com";
-const FROM_EMAIL = process.env.QUOTE_FROM_EMAIL || "YEG Date <onboarding@resend.dev>";
+const FROM_EMAIL = process.env.QUOTE_FROM_EMAIL || "Where To Go YEG <onboarding@resend.dev>";
 
 export async function POST(request: Request) {
   let body: QuoteBody;
@@ -57,15 +57,15 @@ export async function POST(request: Request) {
       to: OWNER_EMAIL,
       replyTo: email,
       subject: `Nouvelle demande de devis — ${name}`,
-      text: `Nouvelle demande de devis depuis YEG Date\n\nDe: ${name} <${email}>\n\n${summary}`,
+      text: `Nouvelle demande de devis depuis Where To Go YEG\n\nDe: ${name} <${email}>\n\n${summary}`,
     });
 
     // 2) Confirmation to the client
-    const clientSubject = locale === "fr" ? "Votre demande de devis — YEG Date" : "Your quote request — YEG Date";
+    const clientSubject = locale === "fr" ? "Votre demande de devis — Where To Go YEG" : "Your quote request — Where To Go YEG";
     const clientText =
       locale === "fr"
-        ? `Bonjour ${name},\n\nMerci pour votre demande ! Nous avons bien reçu les détails suivants :\n\n${summary}\n\nNotre équipe revient vers vous sous 24h.\n\n— L'équipe YEG Date`
-        : `Hello ${name},\n\nThank you for your request! We've received the following details:\n\n${summary}\n\nOur team will get back to you within 24h.\n\n— The YEG Date team`;
+        ? `Bonjour ${name},\n\nMerci pour votre demande ! Nous avons bien reçu les détails suivants :\n\n${summary}\n\nNotre équipe revient vers vous sous 24h.\n\n— L'équipe Where To Go YEG`
+        : `Hello ${name},\n\nThank you for your request! We've received the following details:\n\n${summary}\n\nOur team will get back to you within 24h.\n\n— The Where To Go YEG team`;
 
     await resend.emails.send({
       from: FROM_EMAIL,

@@ -19,13 +19,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yegdate.vercel.app"),
-  title: "YEG Date — L'agenda intelligent d'Edmonton | Activités, sorties, réservations",
+  metadataBase: new URL("https://wheretogoyeg.ca"),
+  title: "Where To Go YEG — L'agenda intelligent d'Edmonton | Activités, sorties, réservations",
   description:
     "Trouvez quoi faire à Edmonton ce week-end. Couples, famille, amis, business — planifiez votre sortie en 3 minutes et réservez en 1 clic.",
   keywords: ["Edmonton", "activités Edmonton", "date ideas Edmonton", "sorties Edmonton", "team building Edmonton", "weekend Edmonton"],
   openGraph: {
-    title: "YEG Date — L'agenda intelligent d'Edmonton",
+    title: "Where To Go YEG — L'agenda intelligent d'Edmonton",
     description: "Trouvez quoi faire à Edmonton ce week-end. Planifiez en 3 minutes, réservez en 1 clic.",
     locale: "fr_CA",
     type: "website",
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "YEG Date",
+  name: "Where To Go YEG",
   description: "L'agenda intelligent d'Edmonton — activités, sorties et réservations pour couples, familles, amis et entreprises.",
   address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "AB", addressCountry: "CA" },
-  email: "hello@yegdate.ca",
+  email: "hello@wheretogoyeg.ca",
   areaServed: "Edmonton, Alberta",
-  url: "https://yegdate.vercel.app",
+  url: "https://wheretogoyeg.ca",
 };
 
 export default function RootLayout({

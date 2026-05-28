@@ -8,20 +8,20 @@ export default function ConditionsPage() {
 
   const sections = fr
     ? [
-        ["Objet", "YEG Date met en relation des résidents et visiteurs d'Edmonton avec des activités, lieux et prestataires locaux, et propose des services de planification d'expériences. En utilisant le site, vous acceptez ces conditions."],
+        ["Objet", "Where To Go YEG met en relation des résidents et visiteurs d'Edmonton avec des activités, lieux et prestataires locaux, et propose des services de planification d'expériences. En utilisant le site, vous acceptez ces conditions."],
         ["Réservations & devis", "Les prix affichés sont indicatifs et peuvent varier selon la disponibilité, la saison et le prestataire. Une demande de devis ou de réservation ne devient ferme qu'après confirmation écrite de notre part."],
         ["Annulation", "Sauf indication contraire, l'annulation est gratuite jusqu'à 72 heures avant la date prévue. Au-delà, des frais peuvent s'appliquer selon les conditions du prestataire."],
-        ["Prestataires tiers", "Certaines activités sont opérées par des partenaires indépendants. Leurs propres conditions s'appliquent. YEG Date agit comme intermédiaire et coordonnateur."],
+        ["Prestataires tiers", "Certaines activités sont opérées par des partenaires indépendants. Leurs propres conditions s'appliquent. Where To Go YEG agit comme intermédiaire et coordonnateur."],
         ["Responsabilité", "Nous faisons de notre mieux pour assurer l'exactitude des informations (lieux, horaires, prix), mais ne pouvons garantir l'absence d'erreurs ou de changements. Votre participation aux activités se fait sous votre responsabilité."],
-        ["Contact", "Pour toute question relative à ces conditions : hello@yegdate.ca."],
+        ["Contact", "Pour toute question relative à ces conditions : hello@wheretogoyeg.ca."],
       ]
     : [
-        ["Purpose", "YEG Date connects Edmonton residents and visitors with local activities, places and vendors, and offers experience-planning services. By using the site, you accept these terms."],
+        ["Purpose", "Where To Go YEG connects Edmonton residents and visitors with local activities, places and vendors, and offers experience-planning services. By using the site, you accept these terms."],
         ["Bookings & quotes", "Displayed prices are indicative and may vary by availability, season and vendor. A quote or booking request becomes firm only after our written confirmation."],
         ["Cancellation", "Unless otherwise stated, cancellation is free up to 72 hours before the scheduled date. Beyond that, fees may apply per the vendor's terms."],
-        ["Third-party vendors", "Some activities are operated by independent partners whose own terms apply. YEG Date acts as an intermediary and coordinator."],
+        ["Third-party vendors", "Some activities are operated by independent partners whose own terms apply. Where To Go YEG acts as an intermediary and coordinator."],
         ["Liability", "We do our best to keep information accurate (places, times, prices) but cannot guarantee it is error-free or unchanged. Participation in activities is at your own risk."],
-        ["Contact", "For any question about these terms: hello@yegdate.ca."],
+        ["Contact", "For any question about these terms: hello@wheretogoyeg.ca."],
       ];
 
   return (

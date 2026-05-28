@@ -10,7 +10,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const page = getIdeaPage(slug);
-  if (!page) return { title: "YEG Date" };
+  if (!page) return { title: "Where To Go YEG" };
   return {
     title: page.title.fr,
     description: page.description.fr,

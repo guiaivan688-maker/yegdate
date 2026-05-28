@@ -35,8 +35,8 @@ export default function AboutPage() {
           </h1>
           <p className="text-cream/80 leading-relaxed">
             {fr
-              ? "On est Ivan et Karl. Comme 500 000 Edmontoniens, on s'est posé la question 100 fois : qu'est-ce qu'on fait ce week-end. Au lieu de continuer à scroller Reddit, on a construit YEG Date — l'outil qu'on aurait voulu avoir."
-              : "We're Ivan and Karl. Like 500,000 Edmontonians, we asked ourselves the same question 100 times: what do we do this weekend. Instead of scrolling Reddit, we built YEG Date — the tool we wished we had."}
+              ? "On est Ivan et Karl. Comme 500 000 Edmontoniens, on s'est posé la question 100 fois : qu'est-ce qu'on fait ce week-end. Au lieu de continuer à scroller Reddit, on a construit Where To Go YEG — l'outil qu'on aurait voulu avoir."
+              : "We're Ivan and Karl. Like 500,000 Edmontonians, we asked ourselves the same question 100 times: what do we do this weekend. Instead of scrolling Reddit, we built Where To Go YEG — the tool we wished we had."}
           </p>
         </div>
       </section>
@@ -58,12 +58,12 @@ export default function AboutPage() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto bg-navy-dark text-cream rounded-3xl p-10 sm:p-14 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-5">
-            {fr ? "De YEG Date à Private Haven" : "From YEG Date to Private Haven"}
+            {fr ? "De Where To Go YEG à Private Haven" : "From Where To Go YEG to Private Haven"}
           </h2>
           <p className="text-cream/75 leading-relaxed max-w-2xl mx-auto">
             {fr
-              ? "YEG Date est la première étape d'une vision plus grande. Nous construisons aujourd'hui la plateforme d'activités la plus complète d'Edmonton. Demain, nous ouvrirons Private Haven — un hôtel-boutique romantique où chaque séjour est une expérience complète, planifiée et mémorable. Chaque client YEG Date nous rapproche de ce rêve."
-              : "YEG Date is the first step of a bigger vision. Today we're building Edmonton's most complete activity platform. Tomorrow, we'll open Private Haven — a romantic boutique hotel where every stay is a complete, planned and memorable experience. Every YEG Date client brings us closer to that dream."}
+              ? "Where To Go YEG est la première étape d'une vision plus grande. Nous construisons aujourd'hui la plateforme d'activités la plus complète d'Edmonton. Demain, nous ouvrirons Private Haven — un hôtel-boutique romantique où chaque séjour est une expérience complète, planifiée et mémorable. Chaque client Where To Go YEG nous rapproche de ce rêve."
+              : "Where To Go YEG is the first step of a bigger vision. Today we're building Edmonton's most complete activity platform. Tomorrow, we'll open Private Haven — a romantic boutique hotel where every stay is a complete, planned and memorable experience. Every Where To Go YEG client brings us closer to that dream."}
           </p>
         </div>
       </section>

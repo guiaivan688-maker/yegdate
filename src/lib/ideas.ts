@@ -33,7 +33,7 @@ function build(): IdeaPage[] {
       slug: `sorties-${s.slug}-edmonton`,
       segment: s.key,
       maxBudget: null,
-      title: { fr: `Que faire ${s.fr} à Edmonton ? | YEG Date`, en: `What to do ${s.en} in Edmonton? | YEG Date` },
+      title: { fr: `Que faire ${s.fr} à Edmonton ? | Where To Go YEG`, en: `What to do ${s.en} in Edmonton? | Where To Go YEG` },
       description: {
         fr: `Idées de sorties ${s.fr} à Edmonton : soirées clé en main avec étapes, adresses et budget. Compose la tienne en quelques secondes.`,
         en: `Outing ideas ${s.en} in Edmonton: ready-made nights with steps, addresses and budget. Compose yours in seconds.`,
@@ -45,7 +45,7 @@ function build(): IdeaPage[] {
         slug: `sorties-${s.slug}-${b}-edmonton`,
         segment: s.key,
         maxBudget: b,
-        title: { fr: `Sortir ${s.fr} à Edmonton pour ${b}$ | YEG Date`, en: `Going out ${s.en} in Edmonton for $${b} | YEG Date` },
+        title: { fr: `Sortir ${s.fr} à Edmonton pour ${b}$ | Where To Go YEG`, en: `Going out ${s.en} in Edmonton for $${b} | Where To Go YEG` },
         description: {
           fr: `Sorties ${s.fr} à Edmonton à ${b}$ ou moins : des soirées complètes qui tiennent dans ton budget.`,
           en: `Outings ${s.en} in Edmonton for $${b} or less: full nights that fit your budget.`,

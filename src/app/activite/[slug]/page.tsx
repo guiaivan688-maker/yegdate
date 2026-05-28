@@ -9,13 +9,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const activity = getActivityBySlug(slug);
-  if (!activity) return { title: "YEG Date" };
+  if (!activity) return { title: "Where To Go YEG" };
   return {
-    title: `${activity.title.fr} — ${activity.location} | YEG Date`,
+    title: `${activity.title.fr} — ${activity.location} | Where To Go YEG`,
     description: activity.description.fr,
     keywords: [...activity.tags, "Edmonton", activity.location],
     openGraph: {
-      title: `${activity.title.fr} | YEG Date`,
+      title: `${activity.title.fr} | Where To Go YEG`,
       description: activity.description.fr,
       images: [activity.image],
     },

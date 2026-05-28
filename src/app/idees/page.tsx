@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ideaPages } from "@/lib/ideas";
 
 export const metadata: Metadata = {
-  title: "Idées de sorties à Edmonton | YEG Date",
+  title: "Idées de sorties à Edmonton | Where To Go YEG",
   description: "Toutes nos idées de sorties à Edmonton par occasion et par budget : couple, famille, amis, solo, affaires. Compose ensuite ta soirée sur mesure.",
   alternates: { canonical: "/idees" },
 };

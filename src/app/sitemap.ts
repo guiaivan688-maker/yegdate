@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { allActivities } from "@/lib/activities";
 import { ideaPages } from "@/lib/ideas";
 
-const BASE = "https://yegdate.vercel.app";
+const BASE = "https://wheretogoyeg.ca";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

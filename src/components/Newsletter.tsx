@@ -13,7 +13,7 @@ export default function Newsletter() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
-    // Hidden source field for later segmentation (YEG Date vs Private Haven)
+    // Hidden source field for later segmentation (Where To Go YEG vs Private Haven)
     const payload = { email, source: "yegdate", type: "newsletter" };
     try {
       await fetch("/api/quote-request", {

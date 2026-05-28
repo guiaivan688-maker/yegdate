@@ -11,9 +11,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const g = (guides as Guide[]).find((x) => x.slug === slug);
-  if (!g) return { title: "YEG Date" };
+  if (!g) return { title: "Where To Go YEG" };
   return {
-    title: `${g.title.fr} | YEG Date`,
+    title: `${g.title.fr} | Where To Go YEG`,
     description: g.excerpt.fr,
   };
 }
