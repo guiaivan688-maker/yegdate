@@ -46,20 +46,21 @@ export default function ReserverPage() {
     if (!selected || busy) return;
     setBusy(true);
     const { data: sess } = await supabase.auth.getSession();
-    const { data, error } = await supabase
-      .from("booking_requests")
-      .insert({
-        offer_id: selected.id,
-        client: sess.session?.user?.id ?? null,
-        guest_name: name || null,
-        party_size: partySize,
-        requested_for: date ? new Date(date).toISOString() : null,
-        status: "pending",
-      })
-      .select("id")
-      .single();
+    // L'id est généré côté client : pas de relecture (un invité n'a pas le droit de
+    // relire sa propre réservation via RLS), ce qui permet la réservation anonyme.
+    const id = crypto.randomUUID();
+    const { error } = await supabase.from("booking_requests").insert({
+      id,
+      offer_id: selected.id,
+      client: sess.session?.user?.id ?? null,
+      guest_name: name || null,
+      party_size: partySize,
+      requested_for: date ? new Date(date).toISOString() : null,
+      status: "pending",
+    });
     setBusy(false);
-    if (!error && data) setTicket({ id: (data as { id: string }).id, offer: selected });
+    if (!error) setTicket({ id, offer: selected });
+    else console.error("Booking failed:", error.message);
   }
 
   function reset() {
