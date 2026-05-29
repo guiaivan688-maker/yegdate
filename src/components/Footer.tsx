@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLocale } from "@/lib/locale-context";
 import { InstagramIcon, FacebookIcon, TikTokIcon } from "./SocialIcons";
+import ReportButton from "./ReportButton";
 
 const socials = [
   { label: "Instagram", href: "https://www.instagram.com/wheretogoyeg", Icon: InstagramIcon },
@@ -105,6 +106,8 @@ export default function Footer() {
             <Link href="/confidentialite" className="hover:text-gold transition-colors">{t("footer.privacy")}</Link>
             <span className="text-cream/20">·</span>
             <Link href="/conditions" className="hover:text-gold transition-colors">{t("footer.terms")}</Link>
+            <span className="text-cream/20">·</span>
+            <ReportButton target_type="general" className="inline-flex items-center gap-1 text-cream/50 hover:text-gold transition-colors" />
           </div>
           <p className="text-cream/40 text-sm">
             {t("footer.madeWith")} &copy; {new Date().getFullYear()} Where To Go YEG — Edmonton, AB, Canada

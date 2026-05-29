@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import {
   Loader2, Mail, ShieldCheck, CheckCircle2, PauseCircle, RotateCcw,
   LayoutDashboard, Store, Users, CalendarCheck, BarChart3, Search, XCircle, MapPin,
-  Megaphone, Star, Copy, Check, Tag, Plus, Trash2, Download, Target, Bell,
+  Megaphone, Star, Copy, Check, Tag, Plus, Trash2, Download, Target, Bell, Flag,
 } from "lucide-react";
 import type { User } from "@supabase/supabase-js";
 import { useLocale } from "@/lib/locale-context";
@@ -12,6 +12,7 @@ import { supabase } from "@/lib/supabase";
 import GoogleSignIn from "@/components/GoogleSignIn";
 import EmailPasswordAuth from "@/components/EmailPasswordAuth";
 import BannerManager from "@/components/BannerManager";
+import ReportsManager from "@/components/ReportsManager";
 
 interface Offer { id: string; title_fr: string; location: string | null; price_from: number; status: string; owner: string; created_at: string; featured: boolean; }
 interface Profile { id: string; role: string; display_name: string | null; created_at: string; }
@@ -36,7 +37,7 @@ const CTX: Record<string, string> = { couples: "Couples", famille: "Famille", am
 const PAGES = ["/", "/evenements", "/compositeur", "/reserver", "/idees", "/couples", "/famille"];
 const SOURCES = ["instagram", "facebook", "tiktok", "email", "google", "autre"];
 
-type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "users" | "bookings" | "analytics";
+type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "reports" | "users" | "bookings" | "analytics";
 
 function budgetLabel(b: number) {
   if (b < 60) return "≤ 60 $"; if (b < 120) return "60–120 $"; if (b < 200) return "120–200 $"; if (b < 300) return "200–300 $"; return "300 $ +";
@@ -211,6 +212,7 @@ export default function AdminPage() {
     { key: "marketing", fr: "Marketing", en: "Marketing", Icon: Megaphone },
     { key: "promos", fr: "Codes promo", en: "Promo codes", Icon: Tag },
     { key: "content", fr: "Bannière", en: "Banner", Icon: Bell },
+    { key: "reports", fr: "Signalements", en: "Reports", Icon: Flag },
     { key: "users", fr: "Utilisateurs", en: "Users", Icon: Users },
     { key: "bookings", fr: "Réservations", en: "Bookings", Icon: CalendarCheck, badge: counts.bookingsPending },
     { key: "analytics", fr: "Analyses", en: "Analytics", Icon: BarChart3 },
@@ -377,6 +379,8 @@ export default function AdminPage() {
             )}
 
             {tab === "content" && <BannerManager fr={fr} />}
+
+            {tab === "reports" && <ReportsManager />}
 
             {tab === "users" && (
               <div>

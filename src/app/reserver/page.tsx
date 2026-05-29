@@ -5,6 +5,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { MapPin, Loader2, CheckCircle2, Ticket, ArrowLeft } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import { supabase } from "@/lib/supabase";
+import ReportButton from "@/components/ReportButton";
 
 interface Offer {
   id: string;
@@ -146,6 +147,7 @@ export default function ReserverPage() {
                 <button onClick={() => setSelected(o)} className="mt-auto inline-flex items-center justify-center gap-1.5 gradient-gold text-navy font-semibold text-sm px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
                   <Ticket className="w-4 h-4" strokeWidth={2} /> {fr ? "Réserver" : "Book"}
                 </button>
+                <ReportButton target_type="offer" target_id={o.id} target_label={offerTitle(o)} className="inline-flex items-center gap-1 mt-2 mx-auto text-[11px] text-navy/40 hover:text-navy/60 transition-colors" />
               </div>
             ))}
           </div>
