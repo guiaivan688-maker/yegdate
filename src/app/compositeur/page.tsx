@@ -13,6 +13,34 @@ interface Plan { id: string; segment: string; title: { fr: string; en: string };
 
 const plans = plansRaw as Plan[];
 
+// Catégories par plan, pour suivre les combinaisons les plus demandées (ex: Resto + Spectacle).
+const PLAN_CATEGORIES: Record<string, string[]> = {
+  "cp-patinage-chocolat": ["Plein air", "Café"],
+  "cp-brunch-jardins": ["Resto", "Plein air"],
+  "cp-diner-exception": ["Resto", "Bar"],
+  "cp-croisiere-coucher": ["Plein air", "Café"],
+  "cp-sous-les-etoiles": ["Plein air"],
+  "cp-escapade-fairmont": ["Hôtel", "Resto"],
+  "cp-spa-diner": ["Spa", "Resto"],
+  "cp-aventure-hivernale": ["Plein air", "Resto"],
+  "cp-tramway-diner": ["Activité", "Resto"],
+  "cp-pique-nique-riviere": ["Plein air", "Culture"],
+  "fm-science-lunch": ["Culture", "Resto"],
+  "fm-fort-edmonton-journee": ["Culture", "Café"],
+  "fm-galaxyland-waterpark": ["Activité"],
+  "fm-elk-island-nature": ["Plein air"],
+  "am-axe-burgers": ["Activité", "Bar"],
+  "am-escape-cocktails": ["Activité", "Bar"],
+  "am-brewery-creatif": ["Activité", "Bar"],
+  "bz-team-day": ["Activité"],
+  "bz-afterwork": ["Bar"],
+  "bz-soiree-corporate": ["Activité", "Culture"],
+  "so-art-cafe": ["Culture", "Café"],
+  "so-vallee-librairie": ["Plein air", "Café"],
+  "so-jazz-bistro": ["Resto", "Spectacle"],
+  "so-atelier-cuisine": ["Activité", "Culture"],
+};
+
 const MAX_BUDGET = 400;
 
 const contextOptions = [
@@ -82,7 +110,8 @@ export default function CompositeurPage() {
     setShareCopied(false);
     setStep("result");
     // Suivi anonyme pour les analyses (budget, contexte, et si une soirée a été trouvée) — aucune donnée perso.
-    void supabase.from("composer_runs").insert({ budget, context, fits: r.fits });
+    const categories = r.plan ? PLAN_CATEGORIES[r.plan.id] ?? [] : [];
+    void supabase.from("composer_runs").insert({ budget, context, fits: r.fits, categories });
   }, [context, budget]);
 
   const surprise = useCallback(() => {

@@ -7,6 +7,7 @@ import { FavoritesProvider } from "@/lib/favorites-context";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import AIConcierge from "./AIConcierge";
+import SiteBanner from "./SiteBanner";
 
 export default function ClientShell({ children }: { children: ReactNode }) {
   return (
@@ -14,7 +15,7 @@ export default function ClientShell({ children }: { children: ReactNode }) {
       <FavoritesProvider>
         <WeatherProvider>
           <Navbar />
-          <main className="flex-1 pt-16">{children}</main>
+          <main className="flex-1 pt-16"><SiteBanner />{children}</main>
           <Footer />
           <AIConcierge />
         </WeatherProvider>

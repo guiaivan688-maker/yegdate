@@ -4,18 +4,19 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import {
   Loader2, Mail, ShieldCheck, CheckCircle2, PauseCircle, RotateCcw,
   LayoutDashboard, Store, Users, CalendarCheck, BarChart3, Search, XCircle, MapPin,
-  Megaphone, Star, Copy, Check, Tag, Plus, Trash2, Download, Target,
+  Megaphone, Star, Copy, Check, Tag, Plus, Trash2, Download, Target, Bell,
 } from "lucide-react";
 import type { User } from "@supabase/supabase-js";
 import { useLocale } from "@/lib/locale-context";
 import { supabase } from "@/lib/supabase";
 import GoogleSignIn from "@/components/GoogleSignIn";
 import EmailPasswordAuth from "@/components/EmailPasswordAuth";
+import BannerManager from "@/components/BannerManager";
 
 interface Offer { id: string; title_fr: string; location: string | null; price_from: number; status: string; owner: string; created_at: string; featured: boolean; }
 interface Profile { id: string; role: string; display_name: string | null; created_at: string; }
 interface Booking { id: string; offer_id: string; guest_name: string | null; party_size: number | null; status: string; created_at: string; requested_for: string | null; }
-interface Run { budget: number; context: string; fits: boolean; created_at: string; }
+interface Run { budget: number; context: string; fits: boolean; created_at: string; categories: string[] | null; }
 interface Promo { id: number; code: string; description: string | null; percent_off: number; active: boolean; uses: number; created_at: string; }
 
 const SITE = "https://wheretogoyeg.ca";
@@ -35,7 +36,7 @@ const CTX: Record<string, string> = { couples: "Couples", famille: "Famille", am
 const PAGES = ["/", "/evenements", "/compositeur", "/reserver", "/idees", "/couples", "/famille"];
 const SOURCES = ["instagram", "facebook", "tiktok", "email", "google", "autre"];
 
-type Tab = "overview" | "moderation" | "marketing" | "promos" | "users" | "bookings" | "analytics";
+type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "users" | "bookings" | "analytics";
 
 function budgetLabel(b: number) {
   if (b < 60) return "≤ 60 $"; if (b < 120) return "60–120 $"; if (b < 200) return "120–200 $"; if (b < 300) return "200–300 $"; return "300 $ +";
@@ -111,7 +112,7 @@ export default function AdminPage() {
       // Les analyses du Compositeur (jusqu'à 1000 lignes) ne bloquent pas le rendu :
       // on les charge en arrière-plan et les panneaux concernés affichent un état de chargement.
       setRunsLoading(true);
-      supabase.from("composer_runs").select("budget,context,fits,created_at").order("created_at", { ascending: false }).limit(1000)
+      supabase.from("composer_runs").select("budget,context,fits,created_at,categories").order("created_at", { ascending: false }).limit(1000)
         .then(({ data }) => { setRuns((data as Run[]) ?? []); setRunsLoading(false); });
 
       // Données essentielles au tableau de bord : on n'attend que celles-ci pour afficher.
@@ -183,6 +184,11 @@ export default function AdminPage() {
     runs.filter((r) => !r.fits).forEach((r) => { const k = `${CTX[r.context] ?? r.context} · ${budgetLabel(r.budget)}`; m.set(k, (m.get(k) ?? 0) + 1); });
     return [...m.entries()].map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 6);
   }, [runs]);
+  const topCombos = useMemo(() => {
+    const m = new Map<string, number>();
+    runs.forEach((r) => { if (!r.categories || r.categories.length === 0) return; const k = [...r.categories].sort().join(" + "); m.set(k, (m.get(k) ?? 0) + 1); });
+    return [...m.entries()].map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 6);
+  }, [runs]);
   const topBudget = useMemo(() => [...budgetBuckets].sort((a, b) => b.n - a.n)[0], [budgetBuckets]);
   const topCtx = useMemo(() => [...ctxCounts].sort((a, b) => b.n - a.n)[0], [ctxCounts]);
 
@@ -204,6 +210,7 @@ export default function AdminPage() {
     { key: "moderation", fr: "Modération", en: "Moderation", Icon: Store, badge: counts.pending },
     { key: "marketing", fr: "Marketing", en: "Marketing", Icon: Megaphone },
     { key: "promos", fr: "Codes promo", en: "Promo codes", Icon: Tag },
+    { key: "content", fr: "Bannière", en: "Banner", Icon: Bell },
     { key: "users", fr: "Utilisateurs", en: "Users", Icon: Users },
     { key: "bookings", fr: "Réservations", en: "Bookings", Icon: CalendarCheck, badge: counts.bookingsPending },
     { key: "analytics", fr: "Analyses", en: "Analytics", Icon: BarChart3 },
@@ -369,6 +376,8 @@ export default function AdminPage() {
               </div>
             )}
 
+            {tab === "content" && <BannerManager fr={fr} />}
+
             {tab === "users" && (
               <div>
                 <div className="flex flex-wrap items-center gap-3 mb-5">
@@ -420,6 +429,9 @@ export default function AdminPage() {
                 </Panel>
                 <Panel title={fr ? "Budgets demandés" : "Requested budgets"}>
                   {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune donnée." : "No data."}</p> : <div className="space-y-2.5">{budgetBuckets.map((b) => <BarRow key={b.label} label={b.label} n={b.n} max={Math.max(1, ...budgetBuckets.map((x) => x.n))} />)}</div>}
+                </Panel>
+                <Panel title={fr ? "Combinaisons de catégories (composées)" : "Category combos (composed)"}>
+                  {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : topCombos.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de données." : "No data yet."}</p> : <div className="space-y-2.5">{topCombos.map((c) => <BarRow key={c.label} label={c.label} n={c.n} max={topCombos[0].n} />)}</div>}
                 </Panel>
                 <Panel title={fr ? "Valeur des réservations" : "Booking value"}>
                   <div className="grid grid-cols-2 gap-4"><div><p className="font-serif text-2xl font-bold text-navy">${estValue}</p><p className="text-navy/50 text-xs">{fr ? "valeur estimée totale" : "total est. value"}</p></div><div><p className="font-serif text-2xl font-bold text-navy">${counts.bookingsTotal ? Math.round(estValue / counts.bookingsTotal) : 0}</p><p className="text-navy/50 text-xs">{fr ? "par réservation" : "per booking"}</p></div></div>
