@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import {
   Loader2, Mail, ShieldCheck, CheckCircle2, PauseCircle, RotateCcw,
   LayoutDashboard, Store, Users, CalendarCheck, BarChart3, Search, XCircle, MapPin,
+  Megaphone, Star, Copy, Check,
 } from "lucide-react";
 import type { User } from "@supabase/supabase-js";
 import { useLocale } from "@/lib/locale-context";
@@ -11,11 +12,12 @@ import { supabase } from "@/lib/supabase";
 import GoogleSignIn from "@/components/GoogleSignIn";
 import EmailPasswordAuth from "@/components/EmailPasswordAuth";
 
-interface Offer { id: string; title_fr: string; location: string | null; price_from: number; status: string; owner: string; created_at: string; }
+interface Offer { id: string; title_fr: string; location: string | null; price_from: number; status: string; owner: string; created_at: string; featured: boolean; }
 interface Profile { id: string; role: string; display_name: string | null; created_at: string; }
 interface Booking { id: string; offer_id: string; guest_name: string | null; party_size: number | null; status: string; created_at: string; requested_for: string | null; }
 interface Run { budget: number; context: string; created_at: string; }
 
+const SITE = "https://wheretogoyeg.ca";
 const OSTATUS: Record<string, { fr: string; en: string; cls: string }> = {
   draft: { fr: "En attente", en: "Pending", cls: "bg-amber-500/15 text-amber-700" },
   published: { fr: "En ligne", en: "Live", cls: "bg-green-500/15 text-green-700" },
@@ -29,8 +31,10 @@ const BSTATUS: Record<string, { fr: string; en: string; cls: string }> = {
 const ROLE_CLS: Record<string, string> = { admin: "bg-gold/20 text-[#9a7e34]", prestataire: "bg-navy/10 text-navy", client: "bg-black/5 text-navy/60" };
 const ROLES = ["client", "prestataire", "admin"];
 const CTX: Record<string, string> = { couples: "Couples", famille: "Famille", amis: "Amis", solo: "Solo" };
+const PAGES = ["/", "/evenements", "/compositeur", "/reserver", "/idees", "/couples", "/famille"];
+const SOURCES = ["instagram", "facebook", "tiktok", "email", "google", "autre"];
 
-type Tab = "overview" | "moderation" | "users" | "bookings" | "analytics";
+type Tab = "overview" | "moderation" | "users" | "bookings" | "analytics" | "marketing";
 
 function BarRow({ label, n, max, color = "gradient-gold" }: { label: string; n: number; max: number; color?: string }) {
   return (
@@ -43,7 +47,6 @@ function BarRow({ label, n, max, color = "gradient-gold" }: { label: string; n: 
     </div>
   );
 }
-
 function Panel({ children, title }: { children: React.ReactNode; title?: string }) {
   return (
     <div className="bg-surface border border-black/5 rounded-2xl p-5">
@@ -71,6 +74,12 @@ export default function AdminPage() {
   const [userRoleF, setUserRoleF] = useState("all");
   const [userQuery, setUserQuery] = useState("");
   const [bookingF, setBookingF] = useState("all");
+  // marketing tools
+  const [utmPage, setUtmPage] = useState("/");
+  const [utmSource, setUtmSource] = useState("instagram");
+  const [utmCampaign, setUtmCampaign] = useState("");
+  const [shareOffer, setShareOffer] = useState("");
+  const [copied, setCopied] = useState("");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -115,6 +124,10 @@ export default function AdminPage() {
     setOffers((prev) => prev.map((o) => (o.id === id ? { ...o, status } : o)));
     await supabase.from("offers").update({ status }).eq("id", id);
   }
+  async function setFeaturedFn(id: string, featured: boolean) {
+    setOffers((prev) => prev.map((o) => (o.id === id ? { ...o, featured } : o)));
+    await supabase.from("offers").update({ featured }).eq("id", id);
+  }
   async function setUserRoleFn(id: string, newRole: string) {
     setProfiles((prev) => prev.map((p) => (p.id === id ? { ...p, role: newRole } : p)));
     await supabase.from("profiles").update({ role: newRole }).eq("id", id);
@@ -122,6 +135,9 @@ export default function AdminPage() {
   async function setBookingStatusFn(id: string, status: string) {
     setBookings((prev) => prev.map((b) => (b.id === id ? { ...b, status } : b)));
     await supabase.from("booking_requests").update({ status }).eq("id", id);
+  }
+  function copy(text: string, key: string) {
+    navigator.clipboard?.writeText(text).then(() => { setCopied(key); setTimeout(() => setCopied(""), 1800); }).catch(() => {});
   }
 
   const offerById = useMemo(() => Object.fromEntries(offers.map((o) => [o.id, o])) as Record<string, Offer>, [offers]);
@@ -132,6 +148,7 @@ export default function AdminPage() {
     published: offers.filter((o) => o.status === "published").length,
     pending: offers.filter((o) => o.status === "draft").length,
     suspended: offers.filter((o) => o.status === "suspended").length,
+    featured: offers.filter((o) => o.featured).length,
     bookingsTotal: bookings.length,
     bookingsPending: bookings.filter((b) => b.status === "pending").length,
   }), [profiles, offers, bookings]);
@@ -155,17 +172,26 @@ export default function AdminPage() {
     return defs.map(([lo, hi, label]) => ({ label, n: runs.filter((r) => r.budget >= lo && r.budget < hi).length }));
   }, [runs]);
   const ctxCounts = useMemo(() => Object.keys(CTX).map((k) => ({ k, n: runs.filter((r) => r.context === k).length })), [runs]);
+  const topBudget = useMemo(() => [...budgetBuckets].sort((a, b) => b.n - a.n)[0], [budgetBuckets]);
+  const topCtx = useMemo(() => [...ctxCounts].sort((a, b) => b.n - a.n)[0], [ctxCounts]);
 
   const fOffers = offers.filter((o) => (offerStatus === "all" || o.status === offerStatus) && (offerQuery === "" || o.title_fr.toLowerCase().includes(offerQuery.toLowerCase()) || (o.location ?? "").toLowerCase().includes(offerQuery.toLowerCase())));
   const fProfiles = profiles.filter((p) => (userRoleF === "all" || p.role === userRoleF) && (userQuery === "" || (p.display_name ?? "").toLowerCase().includes(userQuery.toLowerCase()) || p.id.includes(userQuery)));
   const fBookings = bookings.filter((b) => bookingF === "all" || b.status === bookingF);
+  const publishedOffers = offers.filter((o) => o.status === "published");
   const offerName = (id: string) => offerById[id]?.title_fr ?? id.slice(0, 8);
-
   const pill = (active: boolean) => `px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${active ? "gradient-navy text-cream" : "bg-surface text-navy/60 hover:text-navy border border-black/5"}`;
+
+  const utmUrl = `${SITE}${utmPage === "/" ? "" : utmPage}?utm_source=${utmSource}&utm_medium=${utmSource === "email" ? "email" : "social"}&utm_campaign=${encodeURIComponent(utmCampaign.trim() || "campagne")}`;
+  const shareTitle = publishedOffers.find((o) => o.id === shareOffer)?.title_fr ?? publishedOffers[0]?.title_fr ?? "";
+  const shareCaption = shareTitle
+    ? `✨ ${shareTitle} — réserve ta sortie à Edmonton sur Where To Go YEG 👉 ${SITE}/reserver?utm_source=${utmSource}&utm_medium=social&utm_campaign=offre\n#yeg #edmonton #yegevents`
+    : "";
 
   const tabs: { key: Tab; fr: string; en: string; Icon: typeof Store; badge?: number }[] = [
     { key: "overview", fr: "Vue d'ensemble", en: "Overview", Icon: LayoutDashboard },
     { key: "moderation", fr: "Modération", en: "Moderation", Icon: Store, badge: counts.pending },
+    { key: "marketing", fr: "Marketing", en: "Marketing", Icon: Megaphone },
     { key: "users", fr: "Utilisateurs", en: "Users", Icon: Users },
     { key: "bookings", fr: "Réservations", en: "Bookings", Icon: CalendarCheck, badge: counts.bookingsPending },
     { key: "analytics", fr: "Analyses", en: "Analytics", Icon: BarChart3 },
@@ -221,8 +247,8 @@ export default function AdminPage() {
               <div className="space-y-6">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {[
-                    { label: fr ? "Utilisateurs" : "Users", value: profiles.length, sub: `${counts.clients} ${fr ? "clients" : "clients"} · ${counts.prestataires} ${fr ? "prest." : "providers"}` },
-                    { label: fr ? "Offres en ligne" : "Live offers", value: counts.published, sub: `${counts.pending} ${fr ? "en attente" : "pending"}` },
+                    { label: fr ? "Utilisateurs" : "Users", value: profiles.length, sub: `${counts.clients} clients · ${counts.prestataires} ${fr ? "prest." : "providers"}` },
+                    { label: fr ? "Offres en ligne" : "Live offers", value: counts.published, sub: `${counts.pending} ${fr ? "en attente" : "pending"} · ${counts.featured} ★` },
                     { label: fr ? "Réservations" : "Bookings", value: counts.bookingsTotal, sub: `${counts.bookingsPending} ${fr ? "en attente" : "pending"}` },
                     { label: fr ? "Valeur estimée" : "Est. value", value: `$${estValue}`, sub: fr ? "des réservations" : "of bookings" },
                   ].map((s) => (
@@ -273,9 +299,7 @@ export default function AdminPage() {
                 <div className="flex flex-wrap items-center gap-3 mb-5">
                   <div className="flex gap-1.5">
                     {["all", "draft", "published", "suspended"].map((s) => (
-                      <button key={s} onClick={() => setOfferStatus(s)} className={pill(offerStatus === s)}>
-                        {s === "all" ? (fr ? "Toutes" : "All") : OSTATUS[s]?.[locale] ?? s}
-                      </button>
+                      <button key={s} onClick={() => setOfferStatus(s)} className={pill(offerStatus === s)}>{s === "all" ? (fr ? "Toutes" : "All") : OSTATUS[s]?.[locale] ?? s}</button>
                     ))}
                   </div>
                   <div className="relative flex-1 min-w-[160px] max-w-xs">
@@ -286,13 +310,18 @@ export default function AdminPage() {
                 {fOffers.length === 0 ? <p className="text-navy/50">{fr ? "Aucune offre." : "No offers."}</p> : (
                   <div className="space-y-3">
                     {fOffers.map((o) => (
-                      <div key={o.id} className="flex items-center gap-4 bg-surface border border-black/5 rounded-2xl p-4">
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-navy truncate">{o.title_fr}</h3>
+                      <div key={o.id} className="flex flex-wrap items-center gap-3 bg-surface border border-black/5 rounded-2xl p-4">
+                        <div className="flex-1 min-w-[160px]">
+                          <h3 className="font-semibold text-navy truncate flex items-center gap-1.5">{o.featured && <Star className="w-3.5 h-3.5 text-gold shrink-0" fill="currentColor" strokeWidth={0} />}{o.title_fr}</h3>
                           <p className="text-navy/45 text-xs truncate flex items-center gap-1"><MapPin className="w-3 h-3 shrink-0" strokeWidth={1.5} /> {o.location} · ${o.price_from}</p>
                         </div>
                         <span className={`shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full ${OSTATUS[o.status]?.cls ?? "bg-navy/10 text-navy/60"}`}>{OSTATUS[o.status]?.[locale] ?? o.status}</span>
-                        <div className="flex gap-2 shrink-0">
+                        <div className="flex flex-wrap gap-2 shrink-0">
+                          {o.status === "published" && (
+                            <button onClick={() => setFeaturedFn(o.id, !o.featured)} className={`inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold border transition-colors ${o.featured ? "bg-gold/20 text-[#9a7e34] border-gold/40" : "text-navy/55 border-black/10 hover:bg-black/5"}`}>
+                              <Star className="w-3.5 h-3.5" strokeWidth={1.75} fill={o.featured ? "currentColor" : "none"} /> {o.featured ? (fr ? "En vedette" : "Featured") : (fr ? "Mettre en avant" : "Feature")}
+                            </button>
+                          )}
                           {o.status !== "published" && <button onClick={() => setOfferStatusFn(o.id, "published")} className="inline-flex items-center gap-1 text-green-700 hover:bg-green-500/10 border border-green-500/30 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors"><CheckCircle2 className="w-3.5 h-3.5" strokeWidth={1.75} /> {fr ? "Publier" : "Publish"}</button>}
                           {o.status === "published" && <button onClick={() => setOfferStatusFn(o.id, "suspended")} className="inline-flex items-center gap-1 text-red-600 hover:bg-red-500/10 border border-red-500/30 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors"><PauseCircle className="w-3.5 h-3.5" strokeWidth={1.75} /> {fr ? "Suspendre" : "Suspend"}</button>}
                           {o.status === "suspended" && <button onClick={() => setOfferStatusFn(o.id, "draft")} className="inline-flex items-center gap-1 text-navy/60 hover:bg-navy/5 border border-black/10 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors"><RotateCcw className="w-3.5 h-3.5" strokeWidth={1.75} /> {fr ? "En attente" : "Pending"}</button>}
@@ -301,6 +330,71 @@ export default function AdminPage() {
                     ))}
                   </div>
                 )}
+              </div>
+            )}
+
+            {tab === "marketing" && (
+              <div className="grid md:grid-cols-2 gap-5">
+                <Panel title={fr ? "Ciblage recommandé" : "Recommended targeting"}>
+                  {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de données. Dès que des gens utilisent le Compositeur, une reco de ciblage apparaît ici." : "No data yet. Targeting recommendation appears once people use the Composer."}</p> : (
+                    <>
+                      <div className="bg-gold/10 border border-gold/30 rounded-xl p-4 mb-4">
+                        <p className="text-navy/60 text-xs mb-1">{fr ? "D'après la demande réelle" : "Based on real demand"}</p>
+                        <p className="text-navy font-semibold">{fr ? "Cible : " : "Target: "}<span className="text-[#9a7e34]">{CTX[topCtx?.k] ?? "—"}</span>{fr ? ", budget " : ", budget "}<span className="text-[#9a7e34]">{topBudget?.label ?? "—"}</span></p>
+                        <p className="text-navy/55 text-xs mt-1">{fr ? `Budget moyen demandé : $${avgBudget} · ${runs.length} recherches` : `Avg requested budget: $${avgBudget} · ${runs.length} runs`}</p>
+                      </div>
+                      <div className="space-y-2.5">{ctxCounts.map((c) => <BarRow key={c.k} label={CTX[c.k]} n={c.n} max={Math.max(1, ...ctxCounts.map((x) => x.n))} />)}</div>
+                    </>
+                  )}
+                </Panel>
+
+                <Panel title={fr ? "Générateur de lien de campagne" : "Campaign link builder"}>
+                  <p className="text-navy/55 text-xs mb-3">{fr ? "Crée un lien traçable pour tes pubs (tu verras la source dans tes stats)." : "Create a trackable link for your ads."}</p>
+                  <div className="space-y-3">
+                    <div className="flex gap-2">
+                      <select value={utmPage} onChange={(e) => setUtmPage(e.target.value)} className="flex-1 border border-black/10 rounded-lg px-2 py-2 text-sm text-navy bg-white">
+                        {PAGES.map((p) => <option key={p} value={p}>{p}</option>)}
+                      </select>
+                      <select value={utmSource} onChange={(e) => setUtmSource(e.target.value)} className="flex-1 border border-black/10 rounded-lg px-2 py-2 text-sm text-navy bg-white">
+                        {SOURCES.map((s) => <option key={s} value={s}>{s}</option>)}
+                      </select>
+                    </div>
+                    <input value={utmCampaign} onChange={(e) => setUtmCampaign(e.target.value)} placeholder={fr ? "nom de campagne (ex: ete2026)" : "campaign name"} className="w-full border border-black/10 rounded-lg px-3 py-2 text-sm text-navy" />
+                    <div className="bg-black/5 rounded-lg p-3 text-xs text-navy/70 break-all font-mono">{utmUrl}</div>
+                    <button onClick={() => copy(utmUrl, "utm")} className="inline-flex items-center gap-1.5 gradient-navy text-cream text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
+                      {copied === "utm" ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied === "utm" ? (fr ? "Copié !" : "Copied!") : (fr ? "Copier le lien" : "Copy link")}
+                    </button>
+                  </div>
+                </Panel>
+
+                <Panel title={fr ? "Kit de partage social" : "Social share kit"}>
+                  {publishedOffers.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Publie une offre pour générer une légende." : "Publish an offer to generate a caption."}</p> : (
+                    <div className="space-y-3">
+                      <select value={shareOffer || publishedOffers[0].id} onChange={(e) => setShareOffer(e.target.value)} className="w-full border border-black/10 rounded-lg px-3 py-2 text-sm text-navy bg-white">
+                        {publishedOffers.map((o) => <option key={o.id} value={o.id}>{o.title_fr}</option>)}
+                      </select>
+                      <textarea readOnly value={shareCaption} rows={4} className="w-full border border-black/10 rounded-lg px-3 py-2 text-sm text-navy bg-black/5 resize-none" />
+                      <button onClick={() => copy(shareCaption, "share")} className="inline-flex items-center gap-1.5 gradient-navy text-cream text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
+                        {copied === "share" ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied === "share" ? (fr ? "Copié !" : "Copied!") : (fr ? "Copier la légende" : "Copy caption")}
+                      </button>
+                    </div>
+                  )}
+                </Panel>
+
+                <Panel title={fr ? "Offres en vedette" : "Featured offers"}>
+                  <p className="text-navy/55 text-xs mb-3">{fr ? "Les offres en vedette remontent en tête sur le site (placement sponsorisé). Active la mise en avant dans l'onglet Modération." : "Featured offers appear first on the site (sponsored). Toggle in the Moderation tab."}</p>
+                  {offers.filter((o) => o.featured).length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune offre en vedette." : "No featured offers."}</p> : (
+                    <div className="space-y-2">
+                      {offers.filter((o) => o.featured).map((o) => (
+                        <div key={o.id} className="flex items-center gap-2 text-sm">
+                          <Star className="w-3.5 h-3.5 text-gold shrink-0" fill="currentColor" strokeWidth={0} />
+                          <span className="flex-1 truncate text-navy">{o.title_fr}</span>
+                          <span className="text-navy/50 text-xs">${o.price_from}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </Panel>
               </div>
             )}
 
@@ -320,15 +414,18 @@ export default function AdminPage() {
                 {fProfiles.length === 0 ? <p className="text-navy/50">{fr ? "Aucun utilisateur." : "No users."}</p> : (
                   <div className="space-y-2">
                     {fProfiles.map((p) => (
-                      <div key={p.id} className="flex items-center gap-3 bg-surface border border-black/5 rounded-xl px-4 py-3">
-                        <span className="flex-1 min-w-0 truncate text-navy text-sm">{p.display_name || p.id.slice(0, 8)}</span>
-                        <span className={`shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full ${ROLE_CLS[p.role] ?? "bg-black/5 text-navy/60"}`}>{p.role}</span>
-                        <select value={p.role} onChange={(e) => setUserRoleFn(p.id, e.target.value)} className="shrink-0 border border-black/10 rounded-lg px-2 py-1 text-xs text-navy bg-white" aria-label={fr ? "Changer le rôle" : "Change role"}>
-                          {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
-                        </select>
+                      <div key={p.id} className="flex flex-wrap items-center gap-3 bg-surface border border-black/5 rounded-xl px-4 py-3">
+                        <span className="flex-1 min-w-[120px] truncate text-navy text-sm">{p.display_name || p.id.slice(0, 8)}</span>
+                        <div className="flex gap-1 shrink-0">
+                          {ROLES.map((r) => (
+                            <button key={r} onClick={() => p.role !== r && setUserRoleFn(p.id, r)} className={`text-[11px] font-semibold px-2.5 py-1 rounded-full transition-colors ${p.role === r ? (ROLE_CLS[r] ?? "bg-navy text-cream") + " ring-1 ring-inset ring-current/30" : "bg-black/5 text-navy/45 hover:text-navy hover:bg-black/10"}`}>
+                              {r}
+                            </button>
+                          ))}
+                        </div>
                       </div>
                     ))}
-                    <p className="text-navy/40 text-xs mt-2">{fr ? "Change le rôle directement dans le menu déroulant." : "Change a role directly with the dropdown."}</p>
+                    <p className="text-navy/40 text-xs mt-2">{fr ? "Clique un rôle pour l'attribuer (le rôle actif est surligné)." : "Click a role to assign it (active role highlighted)."}</p>
                   </div>
                 )}
               </div>
@@ -344,8 +441,8 @@ export default function AdminPage() {
                 {fBookings.length === 0 ? <p className="text-navy/50">{fr ? "Aucune réservation." : "No bookings."}</p> : (
                   <div className="space-y-2">
                     {fBookings.map((b) => (
-                      <div key={b.id} className="flex items-center gap-3 bg-surface border border-black/5 rounded-xl px-4 py-3">
-                        <div className="flex-1 min-w-0">
+                      <div key={b.id} className="flex flex-wrap items-center gap-3 bg-surface border border-black/5 rounded-xl px-4 py-3">
+                        <div className="flex-1 min-w-[140px]">
                           <p className="text-navy text-sm truncate">{b.guest_name || "—"} · {b.party_size ?? 1} {fr ? "pers." : "guests"}</p>
                           <p className="text-navy/45 text-xs truncate">{offerName(b.offer_id)}</p>
                         </div>
@@ -366,7 +463,7 @@ export default function AdminPage() {
             {tab === "analytics" && (
               <div className="grid md:grid-cols-2 gap-5">
                 <Panel title={fr ? "Budgets des clients" : "Client budgets"}>
-                  {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune donnée encore. Les budgets choisis dans le Compositeur s'afficheront ici." : "No data yet. Budgets chosen in the Composer will appear here."}</p> : (
+                  {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune donnée encore. Les budgets choisis dans le Compositeur s'afficheront ici." : "No data yet."}</p> : (
                     <>
                       <p className="text-navy/55 text-xs mb-3">{fr ? "Budget moyen demandé" : "Average requested budget"} : <span className="font-bold text-navy">${avgBudget}</span> · {runs.length} {fr ? "recherches" : "runs"}</p>
                       <div className="space-y-2.5">{budgetBuckets.map((b) => <BarRow key={b.label} label={b.label} n={b.n} max={Math.max(1, ...budgetBuckets.map((x) => x.n))} />)}</div>

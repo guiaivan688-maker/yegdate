@@ -13,6 +13,7 @@ interface Offer {
   location: string | null;
   price_from: number;
   image: string | null;
+  featured?: boolean;
 }
 
 export default function ReserverPage() {
@@ -30,8 +31,9 @@ export default function ReserverPage() {
   useEffect(() => {
     supabase
       .from("offers")
-      .select("id,title_fr,title_en,location,price_from,image")
+      .select("id,title_fr,title_en,location,price_from,image,featured")
       .eq("status", "published")
+      .order("featured", { ascending: false })
       .order("created_at", { ascending: false })
       .then(({ data }) => {
         setOffers((data as Offer[]) ?? []);
@@ -125,7 +127,8 @@ export default function ReserverPage() {
         ) : (
           <div className="grid sm:grid-cols-2 gap-5">
             {offers.map((o) => (
-              <div key={o.id} className="bg-surface border border-black/5 rounded-2xl p-5 flex flex-col">
+              <div key={o.id} className={`bg-surface border rounded-2xl p-5 flex flex-col ${o.featured ? "border-gold/40 ring-1 ring-gold/20" : "border-black/5"}`}>
+                {o.featured && <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#9a7e34] bg-gold/15 border border-gold/30 rounded-full px-2 py-0.5 mb-2 w-fit">★ {fr ? "En vedette" : "Featured"}</span>}
                 <h3 className="font-serif text-lg font-bold text-navy mb-1">{offerTitle(o)}</h3>
                 <p className="text-navy/45 text-xs flex items-center gap-1 mb-4"><MapPin className="w-3 h-3 shrink-0" strokeWidth={1.5} /> {o.location} · {fr ? "dès" : "from"} ${o.price_from}</p>
                 <button onClick={() => setSelected(o)} className="mt-auto inline-flex items-center justify-center gap-1.5 gradient-gold text-navy font-semibold text-sm px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
