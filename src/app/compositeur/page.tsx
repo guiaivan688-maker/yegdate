@@ -81,8 +81,8 @@ export default function CompositeurPage() {
     setSaved(false);
     setShareCopied(false);
     setStep("result");
-    // Suivi anonyme (budget + contexte) pour les analyses du dashboard — aucune donnée perso.
-    void supabase.from("composer_runs").insert({ budget, context });
+    // Suivi anonyme pour les analyses (budget, contexte, et si une soirée a été trouvée) — aucune donnée perso.
+    void supabase.from("composer_runs").insert({ budget, context, fits: r.fits });
   }, [context, budget]);
 
   const surprise = useCallback(() => {
