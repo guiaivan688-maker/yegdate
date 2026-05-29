@@ -55,9 +55,9 @@ export default function ContactPage() {
               <p className="flex items-center gap-3"><MapPin className="w-5 h-5 text-gold" strokeWidth={1.5} /> Edmonton, Alberta, Canada</p>
             </div>
             <div className="flex gap-3">
-              <a href="https://instagram.com/yegdate" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-navy/5 hover:bg-gold/15 flex items-center justify-center text-navy/70 hover:text-gold transition-colors"><InstagramIcon /></a>
-              <a href="https://facebook.com/yegdate" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-navy/5 hover:bg-gold/15 flex items-center justify-center text-navy/70 hover:text-gold transition-colors"><FacebookIcon /></a>
-              <a href="https://tiktok.com/@yegdate" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 rounded-full bg-navy/5 hover:bg-gold/15 flex items-center justify-center text-navy/70 hover:text-gold transition-colors"><TikTokIcon /></a>
+              <a href="https://www.instagram.com/wheretogoyeg" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-navy/5 hover:bg-gold/15 flex items-center justify-center text-navy/70 hover:text-gold transition-colors"><InstagramIcon /></a>
+              <a href="https://www.facebook.com/share/18CVN5NTXM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-navy/5 hover:bg-gold/15 flex items-center justify-center text-navy/70 hover:text-gold transition-colors"><FacebookIcon /></a>
+              <a href="https://www.tiktok.com/@wheretogoyeg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 rounded-full bg-navy/5 hover:bg-gold/15 flex items-center justify-center text-navy/70 hover:text-gold transition-colors"><TikTokIcon /></a>
             </div>
             <div className="rounded-3xl overflow-hidden border border-black/5 shadow-sm">
               <iframe title="Edmonton" src="https://www.google.com/maps?q=Downtown+Edmonton+AB&output=embed" width="100%" height="260" style={{ border: 0 }} loading="lazy" />

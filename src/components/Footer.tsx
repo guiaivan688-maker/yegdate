@@ -5,9 +5,9 @@ import { useLocale } from "@/lib/locale-context";
 import { InstagramIcon, FacebookIcon, TikTokIcon } from "./SocialIcons";
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com/yegdate", Icon: InstagramIcon },
-  { label: "Facebook", href: "https://facebook.com/yegdate", Icon: FacebookIcon },
-  { label: "TikTok", href: "https://tiktok.com/@yegdate", Icon: TikTokIcon },
+  { label: "Instagram", href: "https://www.instagram.com/wheretogoyeg", Icon: InstagramIcon },
+  { label: "Facebook", href: "https://www.facebook.com/share/18CVN5NTXM/", Icon: FacebookIcon },
+  { label: "TikTok", href: "https://www.tiktok.com/@wheretogoyeg", Icon: TikTokIcon },
 ];
 
 export default function Footer() {

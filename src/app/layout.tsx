@@ -42,6 +42,11 @@ const jsonLd = {
   email: "wheretogoyeg@gmail.com",
   areaServed: "Edmonton, Alberta",
   url: "https://wheretogoyeg.ca",
+  sameAs: [
+    "https://www.instagram.com/wheretogoyeg",
+    "https://www.facebook.com/share/18CVN5NTXM/",
+    "https://www.tiktok.com/@wheretogoyeg",
+  ],
 };
 
 export default function RootLayout({
