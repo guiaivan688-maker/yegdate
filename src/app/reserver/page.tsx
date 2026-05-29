@@ -47,22 +47,34 @@ export default function ReserverPage() {
     e.preventDefault();
     if (!selected || busy) return;
     setBusy(true);
-    const { data: sess } = await supabase.auth.getSession();
-    // L'id est généré côté client : pas de relecture (un invité n'a pas le droit de
-    // relire sa propre réservation via RLS), ce qui permet la réservation anonyme.
-    const id = crypto.randomUUID();
-    const { error } = await supabase.from("booking_requests").insert({
-      id,
-      offer_id: selected.id,
-      client: sess.session?.user?.id ?? null,
-      guest_name: name || null,
-      party_size: partySize,
-      requested_for: date ? new Date(date).toISOString() : null,
-      status: "pending",
-    });
-    setBusy(false);
-    if (!error) setTicket({ id, offer: selected });
-    else console.error("Booking failed:", error.message);
+    try {
+      // Crée la session Stripe côté serveur (la clé secrète n'est jamais exposée au client)
+      // et redirige vers la page de paiement. Le ticket QR s'affiche sur /reservation-confirmee
+      // après vérification serveur du paiement.
+      const res = await fetch("/api/stripe/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          offer_id: selected.id,
+          guest_name: name,
+          party_size: partySize,
+          requested_for: date || undefined,
+          locale,
+        }),
+      });
+      const data = await res.json();
+      if (data.ok && data.url) {
+        window.location.href = data.url;
+        return;
+      }
+      setBusy(false);
+      console.error("[reserver] checkout failed:", data.error);
+      alert(fr ? "Réservation temporairement indisponible. Réessaie dans un instant." : "Booking is temporarily unavailable. Please retry shortly.");
+    } catch (err) {
+      setBusy(false);
+      console.error(err);
+      alert(fr ? "Une erreur est survenue." : "Something went wrong.");
+    }
   }
 
   function reset() {
