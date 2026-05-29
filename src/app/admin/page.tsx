@@ -74,6 +74,7 @@ export default function AdminPage() {
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [runs, setRuns] = useState<Run[]>([]);
+  const [runsLoading, setRunsLoading] = useState(true);
   const [promos, setPromos] = useState<Promo[]>([]);
   const [offerStatus, setOfferStatus] = useState("all");
   const [offerQuery, setOfferQuery] = useState("");
@@ -107,17 +108,22 @@ export default function AdminPage() {
     const r = (prof as { role?: string } | null)?.role ?? "client";
     setRole(r);
     if (r === "admin") {
-      const [o, p, b, c, pc] = await Promise.all([
-        supabase.from("offers").select("*").order("created_at", { ascending: false }),
+      // Les analyses du Compositeur (jusqu'à 1000 lignes) ne bloquent pas le rendu :
+      // on les charge en arrière-plan et les panneaux concernés affichent un état de chargement.
+      setRunsLoading(true);
+      supabase.from("composer_runs").select("budget,context,fits,created_at").order("created_at", { ascending: false }).limit(1000)
+        .then(({ data }) => { setRuns((data as Run[]) ?? []); setRunsLoading(false); });
+
+      // Données essentielles au tableau de bord : on n'attend que celles-ci pour afficher.
+      const [o, p, b, pc] = await Promise.all([
+        supabase.from("offers").select("id,title_fr,location,price_from,status,owner,created_at,featured").order("created_at", { ascending: false }),
         supabase.from("profiles").select("id,role,display_name,created_at").order("created_at", { ascending: false }),
         supabase.from("booking_requests").select("id,offer_id,guest_name,party_size,status,created_at,requested_for").order("created_at", { ascending: false }),
-        supabase.from("composer_runs").select("budget,context,fits,created_at").order("created_at", { ascending: false }).limit(1000),
         supabase.from("promo_codes").select("*").order("created_at", { ascending: false }),
       ]);
       setOffers((o.data as Offer[]) ?? []);
       setProfiles((p.data as Profile[]) ?? []);
       setBookings((b.data as Booking[]) ?? []);
-      setRuns((c.data as Run[]) ?? []);
       setPromos((pc.data as Promo[]) ?? []);
     }
     setLoading(false);
@@ -267,7 +273,7 @@ export default function AdminPage() {
                     {topOffers.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de réservations." : "No bookings yet."}</p> : <div className="space-y-2.5">{topOffers.map(({ o, n }) => <BarRow key={o.id} label={o.title_fr} n={n} max={topOffers[0].n} />)}</div>}
                   </Panel>
                   <Panel title={fr ? "Compositeur : taux de succès" : "Composer: match rate"}>
-                    {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de recherches." : "No searches yet."}</p> : (
+                    {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de recherches." : "No searches yet."}</p> : (
                       <div className="flex items-center gap-4">
                         <div><p className="font-serif text-4xl font-bold text-navy">{matchRate}%</p><p className="text-navy/50 text-xs">{fr ? "des recherches trouvent une soirée" : "of searches find a night out"}</p></div>
                         <div className="flex-1 text-xs text-navy/55">{runs.length} {fr ? "recherches" : "runs"} · {fr ? "budget moyen" : "avg budget"} ${avgBudget}<br />{runs.filter((r) => !r.fits).length} {fr ? "sans résultat" : "with no result"}</div>
@@ -304,7 +310,7 @@ export default function AdminPage() {
             {tab === "marketing" && (
               <div className="grid md:grid-cols-2 gap-5">
                 <Panel title={fr ? "Ciblage recommandé" : "Recommended targeting"}>
-                  {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de données du Compositeur." : "No Composer data yet."}</p> : (
+                  {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Pas encore de données du Compositeur." : "No Composer data yet."}</p> : (
                     <>
                       <div className="bg-gold/10 border border-gold/30 rounded-xl p-4 mb-4"><p className="text-navy/60 text-xs mb-1">{fr ? "D'après la demande réelle" : "Based on real demand"}</p><p className="text-navy font-semibold"><Target className="w-4 h-4 inline text-[#9a7e34] mr-1" strokeWidth={2} />{fr ? "Cible : " : "Target: "}<span className="text-[#9a7e34]">{CTX[topCtx?.k] ?? "—"}</span>{", "}<span className="text-[#9a7e34]">{topBudget?.label ?? "—"}</span></p></div>
                       <div className="space-y-2.5">{ctxCounts.map((c) => <BarRow key={c.k} label={CTX[c.k]} n={c.n} max={Math.max(1, ...ctxCounts.map((x) => x.n))} />)}</div>
@@ -403,17 +409,17 @@ export default function AdminPage() {
             {tab === "analytics" && (
               <div className="grid md:grid-cols-2 gap-5">
                 <Panel title={fr ? "Compositeur : taux de succès" : "Composer: match rate"}>
-                  {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune recherche encore." : "No searches yet."}</p> : (
+                  {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune recherche encore." : "No searches yet."}</p> : (
                     <><p className="font-serif text-4xl font-bold text-navy">{matchRate}%</p><p className="text-navy/50 text-xs mb-1">{fr ? "des recherches trouvent une soirée concrète" : "of searches find a real night out"}</p><p className="text-navy/45 text-xs">{runs.length} {fr ? "recherches · budget moyen demandé" : "runs · avg requested budget"} ${avgBudget}</p></>
                   )}
                 </Panel>
                 <Panel title={fr ? "Recherches SANS résultat (à créer en priorité)" : "Searches with NO result (create these)"}>
-                  {failedCombos.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Toutes les recherches trouvent une offre 🎉" : "Every search finds an offer."}</p> : (
+                  {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : failedCombos.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Toutes les recherches trouvent une offre 🎉" : "Every search finds an offer."}</p> : (
                     <div className="space-y-2.5">{failedCombos.map((c) => <BarRow key={c.label} label={c.label} n={c.n} max={failedCombos[0].n} color="bg-red-500/60" />)}</div>
                   )}
                 </Panel>
                 <Panel title={fr ? "Budgets demandés" : "Requested budgets"}>
-                  {runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune donnée." : "No data."}</p> : <div className="space-y-2.5">{budgetBuckets.map((b) => <BarRow key={b.label} label={b.label} n={b.n} max={Math.max(1, ...budgetBuckets.map((x) => x.n))} />)}</div>}
+                  {runsLoading ? <p className="text-navy/40 text-sm">{fr ? "Chargement…" : "Loading…"}</p> : runs.length === 0 ? <p className="text-navy/40 text-sm">{fr ? "Aucune donnée." : "No data."}</p> : <div className="space-y-2.5">{budgetBuckets.map((b) => <BarRow key={b.label} label={b.label} n={b.n} max={Math.max(1, ...budgetBuckets.map((x) => x.n))} />)}</div>}
                 </Panel>
                 <Panel title={fr ? "Valeur des réservations" : "Booking value"}>
                   <div className="grid grid-cols-2 gap-4"><div><p className="font-serif text-2xl font-bold text-navy">${estValue}</p><p className="text-navy/50 text-xs">{fr ? "valeur estimée totale" : "total est. value"}</p></div><div><p className="font-serif text-2xl font-bold text-navy">${counts.bookingsTotal ? Math.round(estValue / counts.bookingsTotal) : 0}</p><p className="text-navy/50 text-xs">{fr ? "par réservation" : "per booking"}</p></div></div>
