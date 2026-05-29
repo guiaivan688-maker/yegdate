@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Heart, Users, PartyPopper, User, MapPin, Sparkles, Share2, Bookmark, RotateCcw, RefreshCw } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
+import { supabase } from "@/lib/supabase";
 import plansRaw from "@/data/weekend-plans.json";
 
 interface Step { time: string; title: { fr: string; en: string }; place: string; address: string; price: number; }
@@ -80,6 +81,8 @@ export default function CompositeurPage() {
     setSaved(false);
     setShareCopied(false);
     setStep("result");
+    // Suivi anonyme (budget + contexte) pour les analyses du dashboard — aucune donnée perso.
+    void supabase.from("composer_runs").insert({ budget, context });
   }, [context, budget]);
 
   const surprise = useCallback(() => {
