@@ -43,11 +43,35 @@ const PLAN_CATEGORIES: Record<string, string[]> = {
 
 const MAX_BUDGET = 400;
 
+type Season = "spring" | "summer" | "fall" | "winter";
+
+function currentSeason(): Season {
+  const m = new Date().getMonth(); // 0–11
+  if (m >= 2 && m <= 4) return "spring";   // mars-mai
+  if (m >= 5 && m <= 7) return "summer";   // juin-août
+  if (m >= 8 && m <= 10) return "fall";    // sept-nov
+  return "winter";                          // déc-fév
+}
+
+const SEASON_LABEL: Record<Season, { fr: string; en: string; emoji: string }> = {
+  spring: { fr: "Printemps", en: "Spring", emoji: "🌸" },
+  summer: { fr: "Été",       en: "Summer", emoji: "☀️" },
+  fall:   { fr: "Automne",   en: "Fall",   emoji: "🍁" },
+  winter: { fr: "Hiver",     en: "Winter", emoji: "❄️" },
+};
+
+const CTX_RECAP: Record<string, { fr: string; en: string }> = {
+  couples: { fr: "En couple",   en: "As a couple" },
+  famille: { fr: "En famille",  en: "As a family" },
+  amis:    { fr: "Entre amis",  en: "With friends" },
+  solo:    { fr: "En solo",     en: "Solo" },
+};
+
 const contextOptions = [
-  { key: "couples", labelKey: "compositeur.ctxCouple", Icon: Heart },
+  { key: "couples", labelKey: "compositeur.ctxCouple",  Icon: Heart },
   { key: "famille", labelKey: "compositeur.ctxFamille", Icon: Users },
-  { key: "amis", labelKey: "compositeur.ctxAmis", Icon: PartyPopper },
-  { key: "solo", labelKey: "compositeur.ctxSolo", Icon: User },
+  { key: "amis",    labelKey: "compositeur.ctxAmis",    Icon: PartyPopper },
+  { key: "solo",    labelKey: "compositeur.ctxSolo",    Icon: User },
 ];
 
 const stepKey = (s: Step) => `${s.place}|${s.title.fr}`;
@@ -68,7 +92,11 @@ function segmentSteps(segment: string): Step[] {
 }
 
 function pickForBudget(segment: string, budget: number): { plan: Plan | null; fits: boolean; pool: Plan[] } {
-  const candidates = plans.filter((p) => p.segment === segment);
+  const season = currentSeason();
+  const segmentPlans = plans.filter((p) => p.segment === segment);
+  // On préfère les plans qui collent à la saison actuelle ; si aucun ne correspond, on retombe sur tout le segment.
+  const seasonal = segmentPlans.filter((p) => p.season.includes(season));
+  const candidates = seasonal.length > 0 ? seasonal : segmentPlans;
   const cap = budget >= MAX_BUDGET ? Infinity : budget;
   const fitting = candidates.filter((p) => p.total <= cap).sort((a, b) => b.total - a.total);
   if (fitting.length > 0) return { plan: fitting[0], fits: true, pool: fitting };
@@ -78,6 +106,7 @@ function pickForBudget(segment: string, budget: number): { plan: Plan | null; fi
 
 export default function CompositeurPage() {
   const { locale, t } = useLocale();
+  const fr = locale === "fr";
   const [step, setStep] = useState<"setup" | "result">("setup");
   const [context, setContext] = useState("couples");
   const [budget, setBudget] = useState(120);
@@ -174,18 +203,37 @@ export default function CompositeurPage() {
   const budgetLabel = budget >= MAX_BUDGET ? "$400+" : `$${budget}`;
   const total = sumPrice(nightSteps);
   const remaining = budget - total;
+  const season = currentSeason();
+
+  const HOW_STEPS: { n: string; fr: string; en: string }[] = [
+    { n: "1", fr: "Dis-nous avec qui tu sors + ton budget",            en: "Tell us who's coming + your budget" },
+    { n: "2", fr: "On compose 2–3 vrais spots à Edmonton, à l'heure",  en: "We pick 2–3 real Edmonton spots, with times" },
+    { n: "3", fr: "Tu peux échanger une étape ou réserver en 1 clic",  en: "Swap any step or book in 1 click" },
+  ];
 
   return (
     <div className="min-h-screen bg-navy-dark text-cream py-16 sm:py-20 px-4">
       <div className="max-w-3xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
-          <span className="inline-block w-12 h-1 gradient-gold rounded-full mb-5" />
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-3">{t("compositeur.title")}</h1>
-          <p className="text-cream/60 text-lg">{t("compositeur.subtitle")}</p>
-        </motion.div>
-
         {step === "setup" && (
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="space-y-10">
+            {/* Header */}
+            <div className="text-center">
+              <span className="inline-block w-12 h-1 gradient-gold rounded-full mb-5" />
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-3">{t("compositeur.title")}</h1>
+              <p className="text-cream/65 text-base sm:text-lg max-w-2xl mx-auto">{t("compositeur.subtitle")}</p>
+            </div>
+
+            {/* « Comment ça marche » : 3 étapes pour que les visiteurs comprennent immédiatement le flow. */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+              {HOW_STEPS.map((s) => (
+                <div key={s.n} className="bg-cream/5 border border-cream/12 rounded-2xl p-4 text-center">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gold/20 text-gold font-bold text-xs mb-2">{s.n}</span>
+                  <p className="text-cream/80 text-xs sm:text-sm leading-snug">{fr ? s.fr : s.en}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Question 1 — contexte */}
             <div>
               <h2 className="font-serif text-2xl font-semibold mb-6 text-center">{t("compositeur.q1")}</h2>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -207,6 +255,7 @@ export default function CompositeurPage() {
               </div>
             </div>
 
+            {/* Question 2 — budget */}
             <div>
               <div className="flex items-baseline justify-between mb-4">
                 <h2 className="font-serif text-2xl font-semibold">{t("compositeur.budgetLabel")}</h2>
@@ -234,11 +283,31 @@ export default function CompositeurPage() {
             >
               {t("compositeur.compose")}
             </button>
+
+            {/* Hint saison : transparent sur le fait qu'on filtre selon la météo actuelle. */}
+            <p className="text-center text-cream/40 text-xs">
+              {fr
+                ? `Suggestions adaptées à la saison actuelle : ${SEASON_LABEL[season].fr.toLowerCase()} ${SEASON_LABEL[season].emoji} à Edmonton.`
+                : `Suggestions tuned to the current season: ${SEASON_LABEL[season].en.toLowerCase()} ${SEASON_LABEL[season].emoji} in Edmonton.`}
+            </p>
           </motion.div>
         )}
 
         {step === "result" && base && (
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+            {/* Header résultat distinct + recap (contexte · budget · saison) → l'utilisateur sait ce qu'on lui a composé. */}
+            <div className="text-center mb-7">
+              <span className="inline-block w-12 h-1 gradient-gold rounded-full mb-5" />
+              <h1 className="font-serif text-3xl sm:text-4xl font-bold mb-3">
+                {fr ? "Voilà votre soirée" : "Here's your night"}
+              </h1>
+              <div className="inline-flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm">
+                <span className="bg-cream/10 rounded-full px-3 py-1 text-cream/80">{CTX_RECAP[context]?.[locale] ?? context}</span>
+                <span className="bg-cream/10 rounded-full px-3 py-1 text-cream/80">${budget}</span>
+                <span className="bg-gold/15 border border-gold/25 rounded-full px-3 py-1 text-gold">{SEASON_LABEL[season].emoji} {SEASON_LABEL[season][locale]} · Edmonton</span>
+              </div>
+            </div>
+
             {!fits && (
               <div className="bg-gold/10 border border-gold/30 rounded-2xl p-4 mb-6 text-center">
                 <p className="font-semibold text-gold mb-1">{t("compositeur.noFitTitle")}</p>
@@ -254,7 +323,7 @@ export default function CompositeurPage() {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <p className="text-xs font-semibold text-gold uppercase tracking-wider">{t("compositeur.steps")}</p>
-                  <p className="text-cream/40 text-xs">{t("compositeur.swapHint")}</p>
+                  <p className="text-cream/55 text-xs inline-flex items-center gap-1"><RefreshCw className="w-3 h-3" strokeWidth={2} /> {t("compositeur.swapHint")}</p>
                 </div>
                 <div className="space-y-3 mb-5">
                   {nightSteps.map((s, i) => (
