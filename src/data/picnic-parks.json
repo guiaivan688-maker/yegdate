@@ -31,7 +31,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "hybrid"
   },
   {
     "id": "queen-elizabeth",
@@ -57,7 +58,8 @@
     "sunset_view": true,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "emily-murphy",
@@ -83,7 +85,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "borden",
@@ -109,7 +112,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "rundle",
@@ -139,7 +143,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "hybrid"
   },
   {
     "id": "government-house",
@@ -165,7 +170,8 @@
     "sunset_view": true,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "louise-mckinney",
@@ -191,7 +197,8 @@
     "sunset_view": true,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "mill-creek",
@@ -217,7 +224,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "gold-bar",
@@ -243,7 +251,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "off_leash"
+    "dog_friendly": "off_leash",
+    "setting": "outdoor"
   },
   {
     "id": "capilano",
@@ -269,7 +278,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "terwillegar",
@@ -295,7 +305,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "off_leash"
+    "dog_friendly": "off_leash",
+    "setting": "outdoor"
   },
   {
     "id": "end-of-the-world",
@@ -321,7 +332,8 @@
     "sunset_view": true,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "no",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "dawson",
@@ -347,7 +359,8 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "outdoor"
   },
   {
     "id": "whitemud",
@@ -374,7 +387,8 @@
     "best_season": ["summer", "fall"],
     "bbq_allowed": "verify_propane",
     "dog_friendly": "on_leash",
-    "watchout": { "fr": "Moustiques près du ruisseau au crépuscule.", "en": "Mosquitoes near the creek at dusk." }
+    "watchout": { "fr": "Moustiques près du ruisseau au crépuscule.", "en": "Mosquitoes near the creek at dusk." },
+    "setting": "outdoor"
   },
   {
     "id": "victoria",
@@ -400,6 +414,287 @@
     "sunset_view": false,
     "best_season": ["spring", "summer", "fall"],
     "bbq_allowed": "verify_propane",
-    "dog_friendly": "on_leash"
+    "dog_friendly": "on_leash",
+    "setting": "hybrid"
+  },
+  {
+    "id": "muttart-conservatory",
+    "name": "Muttart Conservatory",
+    "neighbourhood": "Cloverdale / River Valley",
+    "address": "9626 96A St NW, Edmonton, AB",
+    "coords": [53.531, -113.473],
+    "image": "/images/edmonton/discover-pond-fall.jpg",
+    "description": {
+      "fr": "L'icône d'Edmonton : 4 pyramides de verre (tropicale, aride, tempérée, expo) avec plantes du monde entier. Pique-nique romantique sous les palmiers en plein janvier — le rêve.",
+      "en": "Edmonton's icon: 4 glass pyramids (tropical, arid, temperate, feature) with plants from around the world. Romantic picnic under palm trees in mid-January — the dream."
+    },
+    "watchout": {
+      "fr": "Espaces évènementiels louables — réserver 2-3 mois d'avance. Frais de location + droit d'entrée.",
+      "en": "Event spaces rentable — book 2-3 months ahead. Rental fees + admission charge apply."
+    },
+    "size": "medium",
+    "capacity": "Pique-nique 2-12 dans les pyramides, salle évènement jusqu'à 200",
+    "amenities": ["heated", "washrooms", "parking", "accessible", "scenic", "event_hall", "cafe"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation via muttartconservatory.ca pour les espaces privés. Pique-nique libre pendant les heures d'ouverture avec billet régulier.",
+      "en": "Book via muttartconservatory.ca for private spaces. Casual picnic during open hours with regular ticket."
+    },
+    "best_for": ["couple", "famille", "event"],
+    "best_spot": {
+      "fr": "La pyramide tropicale — chaud, humide, palmiers et orchidées. Romantique au max.",
+      "en": "The tropical pyramid — warm, humid, palms and orchids. Max romantic."
+    },
+    "scenic_skyline": true,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
+  },
+  {
+    "id": "stanley-milner-library",
+    "name": "Stanley A. Milner Library",
+    "neighbourhood": "Downtown / Churchill Square",
+    "address": "7 Sir Winston Churchill Square NW, Edmonton, AB",
+    "coords": [53.544, -113.490],
+    "image": "/images/edmonton/discover-park-skyline.jpg",
+    "description": {
+      "fr": "Bibliothèque centrale rénovée — salles louables au cœur du centre-ville, vue sur Churchill Square, équipées AV. Parfait pour un brunch-pique-nique d'hiver entre amis ou un évènement corpo.",
+      "en": "Renovated central library — rentable rooms in the heart of downtown, view of Churchill Square, AV-equipped. Perfect for a winter brunch-picnic with friends or a corporate event."
+    },
+    "watchout": {
+      "fr": "Réservation 4+ semaines d'avance via EPL. Pas de nourriture chaude — traiteur froid OK.",
+      "en": "Book 4+ weeks ahead via EPL. No hot food — cold catering OK."
+    },
+    "size": "medium",
+    "capacity": "Salles 8-80 personnes selon la pièce louée",
+    "amenities": ["heated", "washrooms", "accessible", "event_hall", "wifi", "av_equipped"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation via epl.ca/spaces. Frais variables selon la salle et la durée.",
+      "en": "Book via epl.ca/spaces. Fees vary by room and duration."
+    },
+    "best_for": ["amis", "groupe", "event"],
+    "best_spot": {
+      "fr": "Salle communautaire de l'étage 4 — vue sur Churchill Square et l'hôtel de ville.",
+      "en": "4th-floor community room — view of Churchill Square and City Hall."
+    },
+    "scenic_skyline": true,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
+  },
+  {
+    "id": "city-hall-pyramid",
+    "name": "Edmonton City Hall (Indoor Pyramid)",
+    "neighbourhood": "Downtown / Churchill Square",
+    "address": "1 Sir Winston Churchill Square, Edmonton, AB",
+    "coords": [53.545, -113.490],
+    "image": "/images/edmonton/famille-hawrelak-aerial.jpg",
+    "description": {
+      "fr": "L'atrium glacé de l'hôtel de ville — pyramide de verre, fontaine, escalier monumental. Espace public chauffé idéal pour pique-nique hivernal informel ou évènement corpo loué.",
+      "en": "City Hall's glassy atrium — pyramid roof, fountain, monumental staircase. Heated public space ideal for an informal winter picnic or a rented corporate event."
+    },
+    "watchout": {
+      "fr": "Accès public sur jours ouvrables. Location espaces évènementiels via la Ville — 6-8 semaines d'avance.",
+      "en": "Public access on weekdays. Event space rental via the City — 6-8 weeks ahead."
+    },
+    "size": "large",
+    "capacity": "Atrium 2-50 informel, évènements jusqu'à 300",
+    "amenities": ["heated", "washrooms", "accessible", "event_hall", "fountain", "scenic"],
+    "reservation_required": "partial",
+    "reservation_note": {
+      "fr": "Pique-nique informel sans réservation. Évènements via edmonton.ca.",
+      "en": "Casual picnic no booking needed. Events via edmonton.ca."
+    },
+    "best_for": ["amis", "famille", "event"],
+    "best_spot": {
+      "fr": "Bancs autour de la fontaine sous la pyramide de verre.",
+      "en": "Benches around the fountain under the glass pyramid."
+    },
+    "scenic_skyline": true,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
+  },
+  {
+    "id": "john-janzen-nature-centre",
+    "name": "John Janzen Nature Centre",
+    "neighbourhood": "Whitemud Park / SW",
+    "address": "7000 143 St NW, Edmonton, AB",
+    "coords": [53.499, -113.553],
+    "image": "/images/edmonton/famille-hawrelak-playground.jpg",
+    "description": {
+      "fr": "Centre nature familial avec expositions sur la faune locale, salle communautaire et accès direct aux sentiers de Whitemud Park. Combo idéal pique-nique intérieur + balade nature, peu importe la météo.",
+      "en": "Family nature centre with local wildlife exhibits, community room and direct access to Whitemud Park trails. Ideal indoor picnic + nature walk combo, whatever the weather."
+    },
+    "watchout": {
+      "fr": "Réservation salle requise pour usage privé. Tarif famille modique pour entrée régulière.",
+      "en": "Room booking required for private use. Modest family rate for general admission."
+    },
+    "size": "small",
+    "capacity": "Salle communautaire 10-40 personnes",
+    "amenities": ["heated", "washrooms", "parking", "accessible", "event_hall", "trail", "playground"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation via edmonton.ca/johnjanzen.",
+      "en": "Book via edmonton.ca/johnjanzen."
+    },
+    "best_for": ["famille", "amis"],
+    "best_spot": {
+      "fr": "Salle communautaire avec vue sur la forêt — sortie directe vers les sentiers Whitemud.",
+      "en": "Community room with forest view — direct exit to Whitemud trails."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
+  },
+  {
+    "id": "federal-building-atrium",
+    "name": "Federal Building Atrium",
+    "neighbourhood": "Legislature / Downtown",
+    "address": "9820 107 St NW, Edmonton, AB",
+    "coords": [53.535, -113.508],
+    "image": "/images/edmonton/discover-park-skyline.jpg",
+    "description": {
+      "fr": "L'atrium chic du Federal Building sur le terrain de l'Assemblée législative — verrière monumentale, marbre, jardins d'hiver. Cadre prestige pour un pique-nique évènement.",
+      "en": "The Federal Building's stately atrium on the Legislature grounds — soaring glass roof, marble, winter gardens. Prestige setting for a picnic-style event."
+    },
+    "watchout": {
+      "fr": "Espaces réservables via Alberta Infrastructure — 8-12 semaines d'avance. Sécurité d'entrée.",
+      "en": "Spaces bookable via Alberta Infrastructure — 8-12 weeks ahead. Entrance security screening."
+    },
+    "size": "large",
+    "capacity": "Atrium jusqu'à 250 invités, salons privés 10-60",
+    "amenities": ["heated", "washrooms", "accessible", "event_hall", "historic", "scenic"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation via Alberta Infrastructure (federalbuilding@gov.ab.ca).",
+      "en": "Book via Alberta Infrastructure (federalbuilding@gov.ab.ca)."
+    },
+    "best_for": ["event", "groupe"],
+    "best_spot": {
+      "fr": "Sous la verrière centrale, près des jardins intérieurs.",
+      "en": "Under the central glass roof, near the indoor gardens."
+    },
+    "scenic_skyline": true,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
+  },
+  {
+    "id": "old-strathcona-performing-arts",
+    "name": "Old Strathcona Performing Arts Centre",
+    "neighbourhood": "Old Strathcona / Whyte Ave",
+    "address": "8426 Gateway Blvd NW, Edmonton, AB",
+    "coords": [53.521, -113.499],
+    "image": "/images/edmonton/nightout-princess-theatre.jpg",
+    "description": {
+      "fr": "Église patrimoniale transformée en centre culturel — vitraux, plafonds hauts, ambiance chaleureuse. Salles louables pour pique-nique évènement intime sur Whyte Ave.",
+      "en": "Heritage church turned cultural centre — stained glass, high ceilings, warm vibe. Rentable spaces for an intimate picnic-style event on Whyte Ave."
+    },
+    "watchout": {
+      "fr": "Très demandé pour mariages — booker 4-6 mois d'avance. Traiteur externe permis.",
+      "en": "Very popular for weddings — book 4-6 months ahead. Outside catering allowed."
+    },
+    "size": "medium",
+    "capacity": "Salle principale jusqu'à 120, salles plus petites 20-60",
+    "amenities": ["heated", "washrooms", "accessible", "event_hall", "historic", "av_equipped"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation via ospac.ca.",
+      "en": "Book via ospac.ca."
+    },
+    "best_for": ["couple", "groupe", "event"],
+    "best_spot": {
+      "fr": "La salle principale sous les vitraux — éclairage doux le soir.",
+      "en": "The main hall under the stained glass — soft evening light."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
+  },
+  {
+    "id": "winter-heated-tent",
+    "name": "Heated Winter Pavilion (Pop-up)",
+    "neighbourhood": "Lieu au choix (river valley ou jardin privé)",
+    "address": "À déterminer — livraison Edmonton métro",
+    "coords": [53.546, -113.494],
+    "image": "/images/edmonton/famille-rundle-sign.jpg",
+    "description": {
+      "fr": "Pavillon chauffé portatif — tente murale ou yourte, chauffage propane, tapis, mobilier. On installe dans le parc de ton choix (avec permis) ou dans ta cour. Pique-nique hiver garanti même à -25 °C.",
+      "en": "Portable heated pavilion — wall tent or yurt, propane heater, rugs, furniture. We set up in the park of your choice (with permit) or in your yard. Winter picnic guaranteed even at -25°C."
+    },
+    "watchout": {
+      "fr": "Délai 7-10 jours min. Permis ville requis si pose en parc public. Surcharge livraison hors centre-ville.",
+      "en": "7-10 days lead time min. City permit required for public park setup. Delivery surcharge outside downtown."
+    },
+    "size": "medium",
+    "capacity": "Tente 6-20 personnes selon modèle",
+    "amenities": ["heated", "shelter", "accessible", "winter_ready"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation directe avec Love Room YEG — devis sur mesure.",
+      "en": "Direct booking with Love Room YEG — custom quote."
+    },
+    "best_for": ["couple", "famille", "amis", "event"],
+    "best_spot": {
+      "fr": "Promontoire Queen Elizabeth Park ou ta cour arrière — vue garantie, chaleur confort.",
+      "en": "Queen Elizabeth Park promontory or your backyard — guaranteed view, cozy warmth."
+    },
+    "scenic_skyline": true,
+    "sunset_view": true,
+    "best_season": ["winter", "fall", "spring"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash",
+    "setting": "hybrid"
+  },
+  {
+    "id": "robert-tegler-centre",
+    "name": "Robert Tegler Student Centre (NorQuest)",
+    "neighbourhood": "Downtown / Boyle Street",
+    "address": "10215 108 St NW, Edmonton, AB",
+    "coords": [53.546, -113.504],
+    "image": "/images/edmonton/discover-park-skyline.jpg",
+    "description": {
+      "fr": "Centre étudiant moderne avec atrium lumineux, lounges et salles polyvalentes louables. Bon plan pour pique-nique évènement corpo ou universitaire downtown.",
+      "en": "Modern student centre with bright atrium, lounges and rentable multi-purpose rooms. Solid option for a downtown corporate or campus picnic-style event."
+    },
+    "watchout": {
+      "fr": "Disponibilité fonction du calendrier académique. Réservation via NorQuest event services.",
+      "en": "Availability depends on academic calendar. Book via NorQuest event services."
+    },
+    "size": "medium",
+    "capacity": "Salles 20-150 selon configuration",
+    "amenities": ["heated", "washrooms", "accessible", "event_hall", "wifi", "av_equipped", "cafe"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Réservation via norquest.ca/event-services.",
+      "en": "Book via norquest.ca/event-services."
+    },
+    "best_for": ["groupe", "event"],
+    "best_spot": {
+      "fr": "Atrium central — lumière naturelle, accès café.",
+      "en": "Central atrium — natural light, café access."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall", "winter"],
+    "bbq_allowed": "no",
+    "dog_friendly": "no",
+    "setting": "indoor"
   }
 ]

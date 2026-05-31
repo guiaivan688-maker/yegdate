@@ -14,6 +14,9 @@ import GoogleSignIn from "@/components/GoogleSignIn";
 import EmailPasswordAuth from "@/components/EmailPasswordAuth";
 import BannerManager from "@/components/BannerManager";
 import ReportsManager from "@/components/ReportsManager";
+import picnicParks from "@/data/picnic-parks.json";
+import picnicOptions from "@/data/picnic-options.json";
+import picnicActivities from "@/data/activities-picnic.json";
 
 interface Offer { id: string; title_fr: string; location: string | null; price_from: number; status: string; owner: string; created_at: string; featured: boolean; }
 interface Profile { id: string; role: string; display_name: string | null; created_at: string; }
@@ -38,7 +41,7 @@ const CTX: Record<string, string> = { couples: "Couples", famille: "Famille", am
 const PAGES = ["/", "/evenements", "/compositeur", "/reserver", "/idees", "/couples", "/famille"];
 const SOURCES = ["instagram", "facebook", "tiktok", "email", "google", "autre"];
 
-type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "reports" | "users" | "bookings" | "analytics";
+type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "picnic" | "reports" | "users" | "bookings" | "analytics";
 type DatePreset = "7d" | "30d" | "90d" | "365d";
 type BadgeKey = "pending" | "bookingsPending";
 
@@ -66,6 +69,7 @@ const NAV: Array<{
     { key: "reports",    fr: "Signalements", en: "Reports",     Icon: Flag },
     { key: "promos",     fr: "Codes promo",  en: "Promo codes", Icon: Tag },
     { key: "content",    fr: "Bannière",     en: "Banner",      Icon: Bell },
+    { key: "picnic",     fr: "Pique-nique",  en: "Picnic",      Icon: MapPin },
   ]},
   { group: { fr: "Marketing", en: "Marketing" }, items: [
     { key: "marketing", fr: "Marketing", en: "Marketing", Icon: Megaphone },
@@ -470,6 +474,17 @@ export default function AdminPage() {
                     <div><p className="font-serif text-2xl font-bold text-navy">${Math.round(estValue).toLocaleString("fr-CA")}</p><p className="text-navy/50 text-xs">{fr ? "valeur estimée totale" : "total est. value"}</p></div>
                   </div>
                 </Panel>
+                <Panel title={fr ? "Pique-nique (contenu)" : "Picnic (content)"}>
+                  <div className="grid grid-cols-3 gap-4 text-center mb-3">
+                    <div><p className="font-serif text-2xl font-bold text-navy">{picnicParks.length}</p><p className="text-navy/50 text-xs">{fr ? "parcs" : "parks"}</p></div>
+                    <div><p className="font-serif text-2xl font-bold text-navy">{picnicOptions.length}</p><p className="text-navy/50 text-xs">{fr ? "options" : "options"}</p></div>
+                    <div><p className="font-serif text-2xl font-bold text-navy">{picnicActivities.length}</p><p className="text-navy/50 text-xs">{fr ? "activités" : "activities"}</p></div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 text-xs">
+                    <button onClick={() => setTab("picnic")} className="inline-flex items-center gap-1 gradient-navy text-cream font-semibold px-3 py-1.5 rounded-full hover:opacity-90 transition-opacity"><MapPin className="w-3.5 h-3.5" strokeWidth={1.75} /> {fr ? "Ouvrir l'onglet" : "Open tab"}</button>
+                    <a href="/pique-nique" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 border border-black/10 text-navy/70 hover:text-navy hover:bg-black/5 font-semibold px-3 py-1.5 rounded-full transition-colors">{fr ? "Voir la page" : "View page"} →</a>
+                  </div>
+                </Panel>
               </div>
             </div>
           )}
@@ -560,6 +575,174 @@ export default function AdminPage() {
           )}
 
           {tab === "content" && <BannerManager fr={fr} />}
+
+          {tab === "picnic" && (
+            <div className="space-y-6">
+              <div className="bg-gold/10 border border-gold/30 rounded-2xl p-4 text-sm text-navy">
+                <p className="font-semibold mb-1">{fr ? "Lecture seule" : "Read-only"}</p>
+                <p className="text-navy/70">{fr
+                  ? "Cette section affiche le contenu pique-nique (en lecture seule pour l'instant). Pour éditer, modifier les fichiers JSON dans "
+                  : "This section shows picnic content (read-only for now). To edit, modify the JSON files in "}
+                  <code className="font-mono text-xs bg-black/5 px-1.5 py-0.5 rounded">src/data/picnic-*.json</code>.
+                </p>
+                {/* TODO: migrate picnic-parks/options/activities to Supabase tables so admins can edit from this UI */}
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-surface border border-black/5 rounded-2xl p-5">
+                  <p className="text-sm text-navy/55">{fr ? "Parcs" : "Parks"}</p>
+                  <p className="font-serif text-3xl font-bold text-navy leading-none mt-1">{picnicParks.length}</p>
+                  <p className="text-navy/45 text-xs mt-2">{fr ? "Edmonton" : "Edmonton"}</p>
+                </div>
+                <div className="bg-surface border border-black/5 rounded-2xl p-5">
+                  <p className="text-sm text-navy/55">{fr ? "Options" : "Options"}</p>
+                  <p className="font-serif text-3xl font-bold text-navy leading-none mt-1">{picnicOptions.length}</p>
+                  <p className="text-navy/45 text-xs mt-2">{fr ? "décor, traiteur, photo, transport, logistique" : "decor, catering, photo, transport, logistics"}</p>
+                </div>
+                <div className="bg-surface border border-black/5 rounded-2xl p-5">
+                  <p className="text-sm text-navy/55">{fr ? "Activités" : "Activities"}</p>
+                  <p className="font-serif text-3xl font-bold text-navy leading-none mt-1">{picnicActivities.length}</p>
+                  <p className="text-navy/45 text-xs mt-2">{fr ? "couples / famille / amis / business" : "couples / family / friends / business"}</p>
+                </div>
+                <div className="bg-surface border border-black/5 rounded-2xl p-5 flex flex-col">
+                  <p className="text-sm text-navy/55">{fr ? "Page publique" : "Public page"}</p>
+                  <p className="font-mono text-sm text-navy mt-1">/pique-nique</p>
+                  <a href="/pique-nique" target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center gap-1 gradient-gold text-navy font-bold px-3 py-1.5 rounded-full text-xs hover:opacity-90 transition-opacity self-start">{fr ? "Ouvrir" : "Open"} →</a>
+                </div>
+              </div>
+
+              <Panel title={fr ? "Parcs" : "Parks"}>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-left text-navy/55 text-xs uppercase tracking-wider border-b border-black/5">
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Nom" : "Name"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Quartier" : "Neighbourhood"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Idéal pour" : "Best for"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Réservation" : "Reservation"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "À surveiller" : "Watchout"}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(picnicParks as Array<{
+                        id: string;
+                        name: string;
+                        neighbourhood?: string;
+                        best_for?: string[];
+                        reservation_required?: boolean | string;
+                        watchout?: { fr?: string; en?: string };
+                      }>).map((p) => {
+                        const r = p.reservation_required;
+                        const rLabel = r === true ? (fr ? "Oui" : "Yes")
+                          : r === false ? (fr ? "Non" : "No")
+                          : typeof r === "string" ? (r === "partial" ? (fr ? "Partielle" : "Partial") : r === "verify" ? (fr ? "Vérifier" : "Verify") : r)
+                          : "—";
+                        const rCls = r === true ? "bg-amber-500/15 text-amber-700"
+                          : r === false ? "bg-green-500/15 text-green-700"
+                          : "bg-navy/10 text-navy/60";
+                        const w = p.watchout ? (fr ? p.watchout.fr : p.watchout.en) : null;
+                        return (
+                          <tr key={p.id} className="border-b border-black/5 last:border-0 align-top">
+                            <td className="py-2.5 pr-3 font-semibold text-navy">{p.name}</td>
+                            <td className="py-2.5 pr-3 text-navy/65">{p.neighbourhood ?? "—"}</td>
+                            <td className="py-2.5 pr-3">
+                              <div className="flex flex-wrap gap-1">
+                                {(p.best_for ?? []).map((t) => <span key={t} className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-navy/10 text-navy/70">{t}</span>)}
+                              </div>
+                            </td>
+                            <td className="py-2.5 pr-3">
+                              <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full ${rCls}`}>{rLabel}</span>
+                            </td>
+                            <td className="py-2.5 pr-3 text-navy/65 text-xs max-w-xs">{w ?? <span className="text-navy/30">—</span>}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </Panel>
+
+              <Panel title={fr ? "Options" : "Options"}>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-left text-navy/55 text-xs uppercase tracking-wider border-b border-black/5">
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Nom" : "Name"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Catégorie" : "Category"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Prix" : "Price"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Occasions" : "Occasions"}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(picnicOptions as Array<{
+                        id: string;
+                        category: string;
+                        name: { fr: string; en: string };
+                        price: number;
+                        perPerson?: boolean;
+                        occasions?: string[];
+                        icon?: string;
+                      }>).map((o) => (
+                        <tr key={o.id} className="border-b border-black/5 last:border-0 align-top">
+                          <td className="py-2.5 pr-3 font-semibold text-navy">
+                            <span className="mr-1">{o.icon}</span>{fr ? o.name.fr : o.name.en}
+                          </td>
+                          <td className="py-2.5 pr-3">
+                            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gold/15 text-[#9a7e34] uppercase tracking-wider">{o.category}</span>
+                          </td>
+                          <td className="py-2.5 pr-3 text-navy font-semibold">
+                            ${o.price}{o.perPerson ? <span className="text-navy/50 font-normal text-xs"> / {fr ? "pers." : "pp"}</span> : null}
+                          </td>
+                          <td className="py-2.5 pr-3">
+                            <div className="flex flex-wrap gap-1">
+                              {(o.occasions ?? []).map((occ) => <span key={occ} className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-navy/10 text-navy/70">{occ}</span>)}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </Panel>
+
+              <Panel title={fr ? "Activités" : "Activities"}>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-left text-navy/55 text-xs uppercase tracking-wider border-b border-black/5">
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Titre" : "Title"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Segment" : "Segment"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Prix" : "Price"}</th>
+                        <th className="py-2 pr-3 font-semibold">{fr ? "Note" : "Rating"}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(picnicActivities as Array<{
+                        id: string;
+                        segment: string;
+                        title: { fr: string; en: string };
+                        priceRange?: { fr: string; en: string };
+                        rating?: number;
+                      }>).map((a) => (
+                        <tr key={a.id} className="border-b border-black/5 last:border-0 align-top">
+                          <td className="py-2.5 pr-3 font-semibold text-navy">{a.title.fr}</td>
+                          <td className="py-2.5 pr-3">
+                            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-navy/10 text-navy/70 uppercase tracking-wider">{a.segment}</span>
+                          </td>
+                          <td className="py-2.5 pr-3 text-navy/70 text-xs">{a.priceRange ? (fr ? a.priceRange.fr : a.priceRange.en) : "—"}</td>
+                          <td className="py-2.5 pr-3 text-navy/70">
+                            {typeof a.rating === "number" ? (
+                              <span className="inline-flex items-center gap-1"><Star className="w-3.5 h-3.5 text-gold" fill="currentColor" strokeWidth={0} />{a.rating.toFixed(1)}</span>
+                            ) : "—"}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </Panel>
+            </div>
+          )}
 
           {tab === "reports" && <ReportsManager />}
 

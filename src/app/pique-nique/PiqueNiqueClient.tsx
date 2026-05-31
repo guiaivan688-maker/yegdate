@@ -28,7 +28,10 @@ interface Park {
   watchout?: { fr: string; en: string };
   bbq_allowed: string;
   dog_friendly: string;
+  setting?: "outdoor" | "indoor" | "hybrid";
 }
+
+type SettingFilter = "all" | "outdoor" | "indoor" | "hybrid";
 
 interface Option {
   id: string;
@@ -47,6 +50,19 @@ const OCCASIONS: { id: Occasion; fr: string; en: string; Icon: typeof Heart; map
   { id: "groupe",  fr: "Entre amis",  en: "With friends",  Icon: PartyPopper,  map_seg: "groupe" },
   { id: "event",   fr: "Évènement",   en: "Special event", Icon: Briefcase,    map_seg: "event" },
 ];
+
+const SETTINGS: { id: SettingFilter; fr: string; en: string; emoji: string }[] = [
+  { id: "all",     fr: "Tous",      en: "All",     emoji: "✨" },
+  { id: "outdoor", fr: "Extérieur", en: "Outdoor", emoji: "☀️" },
+  { id: "indoor",  fr: "Intérieur", en: "Indoor",  emoji: "🏠" },
+  { id: "hybrid",  fr: "Hybride",   en: "Hybrid",  emoji: "🏡" },
+];
+
+const SETTING_BADGE: Record<"outdoor" | "indoor" | "hybrid", { emoji: string; fr: string; en: string }> = {
+  outdoor: { emoji: "☀️", fr: "Extérieur", en: "Outdoor" },
+  indoor:  { emoji: "🏠", fr: "Intérieur", en: "Indoor" },
+  hybrid:  { emoji: "🏡", fr: "Hybride",   en: "Hybrid" },
+};
 
 const CATEGORY_LABELS: Record<string, { fr: string; en: string }> = {
   decoration: { fr: "Décoration", en: "Decoration" },
@@ -78,6 +94,14 @@ const AMENITY_ICONS: Record<string, string> = {
   sports_fields: "⚽",
   trail: "🚶",
   creek: "🪶",
+  heated: "🔥",
+  accessible: "♿",
+  event_hall: "🏛️",
+  wifi: "📶",
+  av_equipped: "🎤",
+  cafe: "☕",
+  fountain: "⛲",
+  winter_ready: "❄️",
 };
 
 export default function PiqueNiqueClient() {
@@ -85,6 +109,7 @@ export default function PiqueNiqueClient() {
   const fr = locale === "fr";
 
   const [occasion, setOccasion] = useState<Occasion>("couple");
+  const [setting, setSetting] = useState<SettingFilter>("all");
   const [parkId, setParkId] = useState<string | null>(null);
   const [guests, setGuests] = useState(2);
   const [date, setDate] = useState("");
@@ -95,10 +120,14 @@ export default function PiqueNiqueClient() {
   const allParks = parks as Park[];
   const allOptions = options as Option[];
 
-  // Filter parks for the chosen occasion
+  // Filter parks for the chosen occasion and setting
   const visibleParks = useMemo(() => {
-    return allParks.filter((p) => p.best_for.includes(occasion));
-  }, [allParks, occasion]);
+    return allParks.filter((p) => {
+      if (!p.best_for.includes(occasion)) return false;
+      if (setting === "all") return true;
+      return p.setting === setting;
+    });
+  }, [allParks, occasion, setting]);
 
   // Filter options for chosen occasion
   const visibleOptions = useMemo(() => {
@@ -211,6 +240,23 @@ export default function PiqueNiqueClient() {
             <button onClick={() => setGuests(Math.min(60, guests + 1))} aria-label="+" className="w-5 h-5 rounded-full bg-navy/10 text-navy text-xs font-bold">+</button>
           </div>
         </div>
+        {/* Setting filter row */}
+        <div className="max-w-7xl mx-auto px-4 pb-3 flex flex-wrap items-center gap-2 overflow-x-auto border-t border-black/5 pt-2.5">
+          <span className="text-navy/60 text-[10px] uppercase tracking-widest font-bold mr-1">
+            {fr ? "Cadre" : "Setting"}
+          </span>
+          {SETTINGS.map((s) => (
+            <button
+              key={s.id}
+              onClick={() => { setSetting(s.id); setParkId(null); }}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                setting === s.id ? "bg-navy text-cream shadow-sm" : "bg-surface text-navy/70 border border-black/10 hover:text-navy"
+              }`}
+            >
+              <span>{s.emoji}</span> {fr ? s.fr : s.en}
+            </button>
+          ))}
+        </div>
       </section>
 
       {/* Step 2 — Park picker */}
@@ -219,15 +265,26 @@ export default function PiqueNiqueClient() {
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-navy mb-1">
             {fr ? "2. Choisis ton parc" : "2. Pick your park"}
           </h2>
-          <p className="text-navy/60 text-sm mb-6">
+          <p className="text-navy/60 text-sm mb-4">
             {visibleParks.length}{" "}
             {fr
-              ? `parc${visibleParks.length > 1 ? "s" : ""} d'Edmonton recommandé${visibleParks.length > 1 ? "s" : ""} pour cette occasion`
-              : `Edmonton park${visibleParks.length > 1 ? "s" : ""} recommended for this occasion`}
+              ? `lieu${visibleParks.length > 1 ? "x" : ""} d'Edmonton recommandé${visibleParks.length > 1 ? "s" : ""} pour cette occasion`
+              : `Edmonton venue${visibleParks.length > 1 ? "s" : ""} recommended for this occasion`}
           </p>
+          {setting === "indoor" && (
+            <div className="bg-navy/5 border border-navy/15 rounded-2xl px-4 py-3 mb-6 text-sm text-navy flex items-start gap-2">
+              <span className="text-base">❄️</span>
+              <span>
+                {fr
+                  ? "Pique-niques d'hiver et anti-pluie disponibles à Edmonton — conservatoires, atriums et salles chauffées."
+                  : "Winter and rain-proof picnics available in Edmonton — conservatories, atriums and heated halls."}
+              </span>
+            </div>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {visibleParks.map((p, i) => {
               const selected = parkId === p.id;
+              const settingInfo = p.setting ? SETTING_BADGE[p.setting] : null;
               return (
                 <motion.button
                   key={p.id}
@@ -250,6 +307,11 @@ export default function PiqueNiqueClient() {
                       className="object-cover saturate-[0.93] group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                    {settingInfo && (
+                      <span className="absolute top-3 left-3 bg-cream/95 text-navy text-[10px] font-bold uppercase tracking-wider rounded-full px-2.5 py-1 inline-flex items-center gap-1 shadow-sm">
+                        <span>{settingInfo.emoji}</span> {fr ? settingInfo.fr : settingInfo.en}
+                      </span>
+                    )}
                     {selected && (
                       <span className="absolute top-3 right-3 w-9 h-9 rounded-full gradient-gold text-navy flex items-center justify-center shadow-lg">
                         <Check className="w-5 h-5" strokeWidth={3} />
