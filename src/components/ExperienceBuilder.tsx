@@ -27,6 +27,11 @@ const occasions: { id: string; fr: string; en: string; Icon: LucideIcon }[] = [
   { id: "autre", fr: "Autre", en: "Other", Icon: Sparkles },
 ];
 
+// Vibes musicaux — sélecteur ajouté dans le recap pour les briefs où la musique compte
+// (EVG/EVJF, Date Night, Birthday). Le client peut en cocher plusieurs ; on les envoie
+// dans le message du devis pour qu'Ivan brief la bonne ambiance au partenaire.
+const VIBES_MUSIQUE = ["Hip-Hop", "Top 40", "EDM", "House", "Afro", "Latino", "Indie", "Lounge", "Chill", "Live Music"];
+
 const blocks: Block[] = [
   { id: "brunch", fr: "Brunch", en: "Brunch", price: 50, perPerson: true, Icon: Coffee },
   { id: "creative", fr: "Activité créative", en: "Creative activity", price: 60, perPerson: true, Icon: Palette },
@@ -49,6 +54,7 @@ export default function ExperienceBuilder() {
   const [guests, setGuests] = useState(2);
   const [date, setDate] = useState("");
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [vibes, setVibes] = useState<string[]>([]);
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
 
   function addBlock(id: string) {
@@ -77,7 +83,7 @@ export default function ExperienceBuilder() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: form.name, email: form.email, phone: form.phone,
-          message: `[Sur-mesure: ${occasion}] ${planSummary} | ${date} | ${form.message}`,
+          message: `[Sur-mesure: ${occasion}] ${planSummary} | ${date} | Vibes: ${vibes.join(", ") || "—"} | ${form.message}`,
           activity: occasions.find((o) => o.id === occasion)?.[locale],
           guests, total, locale,
         }),
@@ -190,6 +196,24 @@ export default function ExperienceBuilder() {
                       <input type="range" min={1} max={20} value={guests} onChange={(e) => setGuests(parseInt(e.target.value))} className="w-full accent-gold" />
                     </div>
                     <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={inputCls} />
+                    <div>
+                      <label className="text-cream/60 text-xs block mb-2">{fr ? "Vibe musical (optionnel)" : "Music vibe (optional)"}</label>
+                      <div className="flex flex-wrap gap-1.5">
+                        {VIBES_MUSIQUE.map((v) => {
+                          const active = vibes.includes(v);
+                          return (
+                            <button
+                              type="button"
+                              key={v}
+                              onClick={() => setVibes((prev) => active ? prev.filter((x) => x !== v) : [...prev, v])}
+                              className={`text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-colors ${active ? "bg-gold text-navy border-gold" : "bg-cream/5 text-cream/70 border-cream/25 hover:bg-cream/10"}`}
+                            >
+                              {v}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
                     <div className="flex justify-between items-center py-3 border-y border-cream/15">
                       <span className="text-cream/70 text-sm">{fr ? "Total estimé" : "Estimated total"}</span>
                       <span className="font-serif text-2xl font-bold text-gold">${total}</span>
