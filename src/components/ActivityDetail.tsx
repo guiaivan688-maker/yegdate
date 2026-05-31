@@ -11,6 +11,25 @@ import { resolveImage } from "@/lib/local-images";
 import ActivityCard from "./ActivityCard";
 import QuoteForm from "./QuoteForm";
 import LoveRooms from "./LoveRooms";
+import picnicOptionsData from "@/data/picnic-options.json";
+
+interface PicnicOption {
+  id: string;
+  category: string;
+  name: { fr: string; en: string };
+  description: { fr: string; en: string };
+  price: number;
+  perPerson: boolean;
+  occasions: string[];
+  icon: string;
+}
+
+const SEGMENT_TO_OCCASION: Record<string, string> = {
+  couples: "couple",
+  famille: "famille",
+  amis: "groupe",
+  business: "event",
+};
 
 export default function ActivityDetail({ slug }: { slug: string }) {
   const { locale, t } = useLocale();
@@ -22,6 +41,12 @@ export default function ActivityDetail({ slug }: { slug: string }) {
 
   const similar = getSimilarActivities(activity, 3);
   const mapsSrc = `https://www.google.com/maps?q=${encodeURIComponent(activity.mapsQuery)}&output=embed`;
+
+  const isPicnic = activity.tags?.includes("picnic");
+  const picnicOccasion = SEGMENT_TO_OCCASION[activity.segment];
+  const picnicOptions = isPicnic && picnicOccasion
+    ? (picnicOptionsData as PicnicOption[]).filter((o) => o.occasions.includes(picnicOccasion))
+    : [];
 
   return (
     <>
@@ -144,6 +169,64 @@ export default function ActivityDetail({ slug }: { slug: string }) {
           </aside>
         </div>
       </section>
+
+      {/* Picnic options — only for activities tagged "picnic" */}
+      {isPicnic && picnicOptions.length > 0 && (
+        <section className="py-16 px-4 bg-warm-grey">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <span className="inline-block w-12 h-1 gradient-gold rounded-full mb-5" />
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">
+                {locale === "fr" ? "Options pour ce pique-nique" : "Options for this picnic"}
+              </h2>
+              <p className="text-navy/60 max-w-2xl mx-auto">
+                {locale === "fr"
+                  ? "Ajoute la décoration, le panier ou le photographe qui transforme ta sortie en souvenir."
+                  : "Add the decor, basket or photographer that turns your outing into a keepsake."}
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {picnicOptions.map((opt, i) => (
+                <motion.div
+                  key={opt.id}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: Math.min(i * 0.04, 0.3) }}
+                  className="bg-surface rounded-2xl border border-black/5 shadow-sm hover:shadow-lg transition-shadow p-5 flex flex-col"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <span className="text-3xl shrink-0" aria-hidden>{opt.icon}</span>
+                    <span className="shrink-0 text-navy/80 text-xs font-semibold whitespace-nowrap bg-gold/10 border border-gold/25 rounded-full px-2.5 py-1">
+                      {opt.price === 0
+                        ? (locale === "fr" ? "Inclus" : "Included")
+                        : `$${opt.price}${opt.perPerson ? "/pp" : ""}`}
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-navy mb-1.5 leading-tight">
+                    {opt.name[locale]}
+                  </h3>
+                  <p className="text-navy/60 text-sm leading-snug mb-4 flex-1">
+                    {opt.description[locale]}
+                  </p>
+                  <Link
+                    href={`/pique-nique?park=${activity.slug}`}
+                    className="inline-flex items-center justify-center gap-1.5 w-full gradient-gold text-navy font-bold text-sm px-4 py-2.5 rounded-full hover:opacity-90 transition-opacity"
+                  >
+                    {locale === "fr" ? "Ajouter au devis" : "Add to quote"}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Love Rooms funnel on couples activities */}
       {activity.segment === "couples" && <LoveRooms />}

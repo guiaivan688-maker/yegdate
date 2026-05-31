@@ -214,7 +214,7 @@ export default function PiqueNiqueClient() {
       </section>
 
       {/* Step 2 — Park picker */}
-      <section className="py-10 sm:py-12 px-4">
+      <section id="parks" className="py-10 sm:py-12 px-4 scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-navy mb-1">
             {fr ? "2. Choisis ton parc" : "2. Pick your park"}

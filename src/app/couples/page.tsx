@@ -16,17 +16,15 @@ export const metadata: Metadata = {
 
 export default function CouplesPage() {
   return (
-    <>
-      <SegmentPage
-        segment="couples"
-        title={{ fr: "Sorties en Couple", en: "Couple Outings" }}
-        subtitle={{
-          fr: "Soirées romantiques à Edmonton — du Streetcar du High Level aux dîners chefs-table.",
-          en: "Romantic Edmonton dates — from the High Level Streetcar to chef's-table dinners.",
-        }}
-        heroImage="/images/edmonton/couples-walterdale-sunset.jpg"
-      />
-      <LoveRooms />
-    </>
+    <SegmentPage
+      segment="couples"
+      title={{ fr: "Sorties en Couple", en: "Couple Outings" }}
+      subtitle={{
+        fr: "Soirées romantiques à Edmonton — du Streetcar du High Level aux dîners chefs-table.",
+        en: "Romantic Edmonton dates — from the High Level Streetcar to chef's-table dinners.",
+      }}
+      heroImage="/images/edmonton/couples-walterdale-sunset.jpg"
+      featuredSection={<LoveRooms />}
+    />
   );
 }

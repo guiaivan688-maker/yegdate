@@ -180,6 +180,85 @@ export default function Home() {
       {/* SECTION — Découvre Edmonton (vraies photos locales) */}
       <EdmontonGallery />
 
+      {/* SECTION — Pique-nique CTA */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative h-72 sm:h-96 lg:h-[440px] rounded-3xl overflow-hidden shadow-xl"
+          >
+            <Image
+              src="/images/edmonton/amis-picnic-walterdale.jpg"
+              alt={locale === "fr" ? "Pique-nique entre amis face au Walterdale Bridge" : "Picnic with friends facing Walterdale Bridge"}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover saturate-[0.95]"
+            />
+            <div className="absolute top-4 left-4 bg-gold text-navy text-[10px] font-bold uppercase tracking-wider rounded-full px-3 py-1.5 shadow-md">
+              {locale === "fr" ? "Nouveau" : "New"}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+              {locale === "fr" ? "Été à Edmonton" : "Summer in Edmonton"}
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-2 mb-4 leading-tight">
+              {locale === "fr"
+                ? "Compose ton pique-nique parfait"
+                : "Compose your perfect picnic"}
+            </h2>
+            <p className="text-navy/65 leading-relaxed mb-6">
+              {locale === "fr"
+                ? "Choisis ton parc, ton occasion, tes options — on s'occupe du setup, du panier gourmet et du nettoyage. Toi, tu profites du coucher de soleil sur la river valley."
+                : "Pick your park, occasion and options — we handle the setup, gourmet basket and cleanup. You just enjoy the river valley sunset."}
+            </p>
+            <ul className="space-y-3 mb-8">
+              {[
+                {
+                  fr: "14 parcs vérifiés — Walterdale, Hawrelak, Mill Creek, End of the World…",
+                  en: "14 verified parks — Walterdale, Hawrelak, Mill Creek, End of the World…",
+                },
+                {
+                  fr: "Setup, panier gourmet, permis alcool, plan B météo — tout est géré",
+                  en: "Setup, gourmet basket, alcohol permit, weather backup — all handled",
+                },
+                {
+                  fr: "Estimation instantanée + devis confirmé sous 24 h",
+                  en: "Instant estimate + confirmed quote within 24h",
+                },
+              ].map((b) => (
+                <li key={b.en} className="flex items-start gap-3 text-navy/75">
+                  <span className="mt-1 w-2 h-2 rounded-full gradient-gold shrink-0" />
+                  <span className="leading-snug">{locale === "fr" ? b.fr : b.en}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/pique-nique"
+                className="inline-flex items-center gap-2 gradient-gold text-navy font-bold px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
+              >
+                {locale === "fr" ? "Composer mon pique-nique" : "Compose my picnic"}
+                <ArrowRight className="w-4 h-4" strokeWidth={2} />
+              </Link>
+              <Link
+                href="/pique-nique#parks"
+                className="inline-flex items-center gap-2 bg-surface text-navy font-bold px-7 py-3 rounded-full border border-black/10 hover:border-gold/50 hover:bg-cream transition-colors"
+              >
+                {locale === "fr" ? "Voir les parcs" : "See the parks"}
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* SECTION 5 — Testimonials */}
       <Testimonials />
 

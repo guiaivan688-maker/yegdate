@@ -24,9 +24,11 @@ export default function ReserverPage() {
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<Offer | null>(null);
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [partySize, setPartySize] = useState(2);
   const [date, setDate] = useState("");
   const [busy, setBusy] = useState(false);
+  const today = new Date().toISOString().slice(0, 10);
   const [ticket, setTicket] = useState<{ id: string; offer: Offer } | null>(null);
 
   useEffect(() => {
@@ -58,6 +60,7 @@ export default function ReserverPage() {
         body: JSON.stringify({
           offer_id: selected.id,
           guest_name: name,
+          guest_email: email,
           party_size: partySize,
           requested_for: date || undefined,
           locale,
@@ -82,6 +85,7 @@ export default function ReserverPage() {
     setTicket(null);
     setSelected(null);
     setName("");
+    setEmail("");
     setPartySize(2);
     setDate("");
   }
@@ -112,8 +116,27 @@ export default function ReserverPage() {
             <p className="text-navy/45 text-xs flex items-center gap-1 mb-5"><MapPin className="w-3 h-3" strokeWidth={1.5} /> {selected.location} · {fr ? "dès" : "from"} ${selected.price_from}</p>
             <form onSubmit={book} className="flex flex-col gap-4">
               <label className="text-sm text-navy/70">
-                {fr ? "Ton nom" : "Your name"}
-                <input value={name} onChange={(e) => setName(e.target.value)} required className="mt-1 w-full border border-black/10 rounded-xl px-4 py-2.5 text-navy" />
+                {fr ? "Ton nom" : "Your name"} <span className="text-red-500" aria-hidden="true">*</span>
+                <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  aria-required="true"
+                  className="mt-1 w-full border border-black/10 rounded-xl px-4 py-2.5 text-navy"
+                />
+              </label>
+              <label className="text-sm text-navy/70">
+                {fr ? "Ton courriel" : "Your email"} <span className="text-red-500" aria-hidden="true">*</span>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  aria-required="true"
+                  autoComplete="email"
+                  inputMode="email"
+                  className="mt-1 w-full border border-black/10 rounded-xl px-4 py-2.5 text-navy"
+                />
               </label>
               <div className="flex gap-4">
                 <label className="text-sm text-navy/70 flex-1">
@@ -122,20 +145,25 @@ export default function ReserverPage() {
                 </label>
                 <label className="text-sm text-navy/70 flex-1">
                   {fr ? "Quand" : "When"}
-                  <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="mt-1 w-full border border-black/10 rounded-xl px-4 py-2.5 text-navy" />
+                  <input type="date" min={today} value={date} onChange={(e) => setDate(e.target.value)} className="mt-1 w-full border border-black/10 rounded-xl px-4 py-2.5 text-navy" />
                 </label>
               </div>
               <button type="submit" disabled={busy} className="inline-flex items-center justify-center gap-2 gradient-gold text-navy font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-60">
                 {busy ? <Loader2 className="w-4 h-4 animate-spin" strokeWidth={2} /> : <Ticket className="w-4 h-4" strokeWidth={2} />}
                 {fr ? "Confirmer ma réservation" : "Confirm my booking"}
               </button>
+              <p className="text-navy/55 text-xs text-center">
+                {fr
+                  ? `Tu paieras ${selected.price_from * partySize}$ pour ${partySize} ${partySize > 1 ? "personnes" : "personne"}`
+                  : `You'll pay $${selected.price_from * partySize} for ${partySize} ${partySize > 1 ? "people" : "person"}`}
+              </p>
             </form>
           </div>
         ) : loading ? (
           <div className="flex items-center gap-2 text-navy/50"><Loader2 className="w-5 h-5 animate-spin" strokeWidth={1.5} /> {fr ? "Chargement…" : "Loading…"}</div>
         ) : offers.length === 0 ? (
           <div className="bg-surface border border-black/5 rounded-2xl px-5 py-8 text-center text-navy/55">
-            {fr ? "Aucune offre publiée pour l'instant. Les offres validées par l'admin apparaîtront ici." : "No published offers yet. Offers approved by the admin will appear here."}
+            {fr ? "On cure de nouvelles expériences cette semaine — repasse vite." : "We're curating new experiences this week — check back soon."}
           </div>
         ) : (
           <div className="grid sm:grid-cols-2 gap-5">

@@ -14,11 +14,12 @@ interface SegmentPageProps {
   title: { fr: string; en: string };
   subtitle: { fr: string; en: string };
   heroImage: string;
+  featuredSection?: React.ReactNode;
 }
 
 const seasonKeys = ["all", "spring", "summer", "fall", "winter"] as const;
 
-export default function SegmentPage({ segment, title, subtitle, heroImage }: SegmentPageProps) {
+export default function SegmentPage({ segment, title, subtitle, heroImage, featuredSection }: SegmentPageProps) {
   const { locale, t } = useLocale();
   const fr = locale === "fr";
   const [season, setSeason] = useState<string>("all");
@@ -146,6 +147,8 @@ export default function SegmentPage({ segment, title, subtitle, heroImage }: Seg
           )}
         </div>
       </section>
+
+      {featuredSection ? <div className="pt-10 sm:pt-14">{featuredSection}</div> : null}
 
       <section className="py-12 sm:py-16 px-4">
         <div className="max-w-7xl mx-auto">
