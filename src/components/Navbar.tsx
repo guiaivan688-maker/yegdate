@@ -10,12 +10,11 @@ import { supabase } from "@/lib/supabase";
 
 const links = [
   { href: "/compositeur", key: "nav.compositeur" },
-  { href: "/reserver", key: "nav.reserver" },
-  { href: "/decouvrir", key: "nav.discover" },
-  { href: "/weekend-match", key: "nav.weekendMatch" },
-  { href: "/packages", key: "nav.packages" },
+  { href: "/pique-nique", key: "nav.picnic" },
   { href: "/night-out", key: "nav.nightout" },
   { href: "/buffets", key: "nav.buffets" },
+  { href: "/reserver", key: "nav.reserver" },
+  { href: "/decouvrir", key: "nav.discover" },
   { href: "/contact", key: "nav.contact" },
 ];
 

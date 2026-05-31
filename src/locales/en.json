@@ -19,7 +19,8 @@
     "events": "Events",
     "guides": "Guides",
     "nightout": "Night Out",
-    "carte": "Map"
+    "carte": "Map",
+    "picnic": "Picnic"
   },
   "events": {
     "title": "Events in Edmonton",

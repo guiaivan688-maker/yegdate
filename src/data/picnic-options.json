@@ -1,0 +1,272 @@
+[
+  {
+    "id": "decoration-romantique",
+    "category": "decoration",
+    "name": { "fr": "Décoration romantique", "en": "Romantic decoration" },
+    "description": { "fr": "Plaid premium, lanternes, pétales de rose, guirlande lumineuse, vaisselle bohème.", "en": "Premium blanket, lanterns, rose petals, fairy lights, boho tableware." },
+    "price": 149,
+    "perPerson": false,
+    "occasions": ["couple", "event"],
+    "icon": "🌹"
+  },
+  {
+    "id": "decoration-famille",
+    "category": "decoration",
+    "name": { "fr": "Setup famille", "en": "Family setup" },
+    "description": { "fr": "Grand plaid, parasol, coussins, gobelets enfants, drapeau personnalisé.", "en": "Large blanket, parasol, cushions, kid cups, custom flag." },
+    "price": 89,
+    "perPerson": false,
+    "occasions": ["famille"],
+    "icon": "🧺"
+  },
+  {
+    "id": "decoration-anniversaire",
+    "category": "decoration",
+    "name": { "fr": "Décor anniversaire", "en": "Birthday decor" },
+    "description": { "fr": "Ballons hélium, banderole personnalisée, bougies magiques, cake topper.", "en": "Helium balloons, custom banner, magic candles, cake topper." },
+    "price": 129,
+    "perPerson": false,
+    "occasions": ["event", "famille"],
+    "icon": "🎂"
+  },
+  {
+    "id": "proposal-setup",
+    "category": "decoration",
+    "name": { "fr": "Setup demande en mariage", "en": "Proposal setup" },
+    "description": { "fr": "Arche florale, tapis pétales, panneau « Will you marry me? », photographe caché 1h, écrin à anneau.", "en": "Floral arch, rose petal carpet, \"Will you marry me?\" sign, hidden photographer for 1h, ring box stand." },
+    "price": 599,
+    "perPerson": false,
+    "occasions": ["event"],
+    "icon": "💍"
+  },
+  {
+    "id": "panier-gourmet",
+    "category": "catering",
+    "name": { "fr": "Panier gourmet pour 2", "en": "Gourmet basket for 2" },
+    "description": { "fr": "Charcuterie locale, fromages Alberta, focaccia, fruits, confiture artisanale, eau pétillante.", "en": "Local charcuterie, Alberta cheeses, focaccia, fruit, artisan jam, sparkling water." },
+    "price": 89,
+    "perPerson": false,
+    "occasions": ["couple", "event"],
+    "icon": "🧀"
+  },
+  {
+    "id": "panier-famille",
+    "category": "catering",
+    "name": { "fr": "Panier famille (4 pers)", "en": "Family basket (4 ppl)" },
+    "description": { "fr": "Sandwichs maison, fruits coupés, jus bio, biscuits, mini-quiches, eau infusée.", "en": "Homemade sandwiches, cut fruit, organic juice, cookies, mini-quiches, infused water." },
+    "price": 79,
+    "perPerson": false,
+    "occasions": ["famille"],
+    "icon": "🥪"
+  },
+  {
+    "id": "brunch-box",
+    "category": "catering",
+    "name": { "fr": "Brunch box", "en": "Brunch box" },
+    "description": { "fr": "Bagels, saumon fumé, œufs durs, granola maison, jus orange pressé, café Phil & Sebastian.", "en": "Bagels, smoked salmon, hard-boiled eggs, homemade granola, fresh orange juice, Phil & Sebastian coffee." },
+    "price": 25,
+    "perPerson": true,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "🥯"
+  },
+  {
+    "id": "kids-box",
+    "category": "catering",
+    "name": { "fr": "Box enfant", "en": "Kid box" },
+    "description": { "fr": "Sandwich animal, mini-fruit, biscuit décoré, jus, surprise jouet.", "en": "Animal-shaped sandwich, mini-fruit, decorated cookie, juice, toy surprise." },
+    "price": 18,
+    "perPerson": true,
+    "occasions": ["famille"],
+    "icon": "🧸"
+  },
+  {
+    "id": "champagne-bar",
+    "category": "catering",
+    "name": { "fr": "Bar à mousseux", "en": "Sparkling wine bar" },
+    "description": { "fr": "Bouteille de mousseux Alberta, jus de fruits frais (mimosa), flûtes, glacière.", "en": "Bottle of Alberta sparkling wine, fresh fruit juice (mimosa), flutes, cooler." },
+    "price": 119,
+    "perPerson": false,
+    "occasions": ["couple", "groupe", "event"],
+    "icon": "🥂"
+  },
+  {
+    "id": "non-alcohol-bar",
+    "category": "catering",
+    "name": { "fr": "Bar sans alcool", "en": "Alcohol-free bar" },
+    "description": { "fr": "Mocktails maison, kombucha local, eaux infusées, sirops artisanaux.", "en": "House mocktails, local kombucha, infused waters, artisan syrups." },
+    "price": 49,
+    "perPerson": false,
+    "occasions": ["famille", "groupe", "event"],
+    "icon": "🍓"
+  },
+  {
+    "id": "dessert-artisan",
+    "category": "catering",
+    "name": { "fr": "Dessert artisan Edmonton", "en": "Edmonton artisan dessert" },
+    "description": { "fr": "Mini-tartes Duchess Bake Shop, macarons Sugared & Spiced, ou gâteau personnalisé.", "en": "Duchess Bake Shop mini-tarts, Sugared & Spiced macarons, or custom cake." },
+    "price": 45,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "event"],
+    "icon": "🍰"
+  },
+  {
+    "id": "photographe-golden",
+    "category": "photo",
+    "name": { "fr": "Photographe golden hour (45 min)", "en": "Golden hour photographer (45 min)" },
+    "description": { "fr": "Photographe local Edmonton, 45 min au coucher du soleil, 30 photos retouchées livrées sous 5 jours.", "en": "Local Edmonton photographer, 45 min at sunset, 30 edited photos delivered within 5 days." },
+    "price": 199,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "📸"
+  },
+  {
+    "id": "photographe-event",
+    "category": "photo",
+    "name": { "fr": "Photographe événement (2 h)", "en": "Event photographer (2h)" },
+    "description": { "fr": "Couverture complète : setup, arrivée, reaction shots, group photos. 80 photos retouchées.", "en": "Full coverage: setup, arrival, reaction shots, group photos. 80 edited photos." },
+    "price": 349,
+    "perPerson": false,
+    "occasions": ["event"],
+    "icon": "📷"
+  },
+  {
+    "id": "polaroid-station",
+    "category": "photo",
+    "name": { "fr": "Station polaroid", "en": "Polaroid station" },
+    "description": { "fr": "Appareil Instax + 30 films + album souvenir.", "en": "Instax camera + 30 films + memory album." },
+    "price": 79,
+    "perPerson": false,
+    "occasions": ["famille", "groupe", "event"],
+    "icon": "📷"
+  },
+  {
+    "id": "transport-prive",
+    "category": "transport",
+    "name": { "fr": "Transport privé (A/R)", "en": "Private transport (round trip)" },
+    "description": { "fr": "Aller-retour entre ton adresse et le parc en voiture privée — pratique pour le mousseux.", "en": "Round trip from your address to the park in private car — handy with sparkling wine." },
+    "price": 89,
+    "perPerson": false,
+    "occasions": ["couple", "event"],
+    "icon": "🚗"
+  },
+  {
+    "id": "kids-games",
+    "category": "activity",
+    "name": { "fr": "Pack jeux enfants", "en": "Kids games pack" },
+    "description": { "fr": "Frisbee, ballon, cerf-volant, jeu de raquettes, bulles, boîte de craies.", "en": "Frisbee, ball, kite, paddle game, bubbles, chalk box." },
+    "price": 35,
+    "perPerson": false,
+    "occasions": ["famille"],
+    "icon": "🎈"
+  },
+  {
+    "id": "weather-backup",
+    "category": "logistique",
+    "name": { "fr": "Plan B météo (gazebo réservé)", "en": "Weather backup (booked gazebo)" },
+    "description": { "fr": "Si pluie : on déplace au gazebo couvert ou indoor partenaire. Décision 4 h avant.", "en": "If rain: we move to a covered gazebo or indoor partner. Decision 4h before." },
+    "price": 39,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "☔"
+  },
+  {
+    "id": "live-music",
+    "category": "activity",
+    "name": { "fr": "Musicien live (1 h)", "en": "Live musician (1h)" },
+    "description": { "fr": "Guitariste ou violoniste local, 1 h de set acoustique sur place.", "en": "Local guitarist or violinist, 1h acoustic set on site." },
+    "price": 249,
+    "perPerson": false,
+    "occasions": ["couple", "event"],
+    "icon": "🎻"
+  },
+  {
+    "id": "fleurs-bouquet",
+    "category": "decoration",
+    "name": { "fr": "Bouquet artisan", "en": "Artisan bouquet" },
+    "description": { "fr": "Bouquet de saison par fleuriste local Edmonton, livré au parc.", "en": "Seasonal bouquet by local Edmonton florist, delivered to the park." },
+    "price": 79,
+    "perPerson": false,
+    "occasions": ["couple", "event"],
+    "icon": "💐"
+  },
+  {
+    "id": "reservation-site",
+    "category": "logistique",
+    "name": { "fr": "Réservation du site (Hawrelak/Rundle)", "en": "Site reservation (Hawrelak/Rundle)" },
+    "description": { "fr": "On s'occupe de la réservation officielle du site auprès de la Ville d'Edmonton.", "en": "We handle the official site reservation with the City of Edmonton." },
+    "price": 35,
+    "perPerson": false,
+    "occasions": ["famille", "groupe", "event"],
+    "icon": "📋"
+  },
+  {
+    "id": "permit-alcool",
+    "category": "logistique",
+    "name": { "fr": "Permis alcool dans le parc", "en": "Alcohol permit in park" },
+    "description": { "fr": "Mousseux et vin légaux dans la majorité des parcs d'Edmonton requièrent un permis. On gère la demande pour toi.", "en": "Sparkling wine and wine in most Edmonton parks need a permit. We handle the request for you." },
+    "price": 29,
+    "perPerson": false,
+    "occasions": ["couple", "groupe", "event"],
+    "icon": "📜"
+  },
+  {
+    "id": "anti-moustique",
+    "category": "logistique",
+    "name": { "fr": "Pack anti-moustique", "en": "Mosquito kit" },
+    "description": { "fr": "Bougies citronnelle, spray naturel, bracelets anti-moustique — utile près des ruisseaux et étangs au crépuscule.", "en": "Citronella candles, natural spray, mosquito bracelets — useful near creeks and ponds at dusk." },
+    "price": 25,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "🦟"
+  },
+  {
+    "id": "sun-pack",
+    "category": "logistique",
+    "name": { "fr": "Pack soleil (parasol + crème + chapeaux)", "en": "Sun pack (parasol + SPF + hats)" },
+    "description": { "fr": "Parasol XL, crème solaire bio FPS 50, 2 chapeaux paille, eau infusée — UV Edmonton monte à 8-9 en juillet.", "en": "XL parasol, organic SPF 50, 2 straw hats, infused water — Edmonton UV hits 8-9 in July." },
+    "price": 35,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "☀️"
+  },
+  {
+    "id": "nettoyage",
+    "category": "logistique",
+    "name": { "fr": "Service nettoyage complet", "en": "Full cleanup service" },
+    "description": { "fr": "Nos hôtes restent jusqu'à la fin et repartent avec tous les déchets — leave-no-trace garanti.", "en": "Our hosts stay until the end and take all waste — leave-no-trace guaranteed." },
+    "price": 39,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "🧹"
+  },
+  {
+    "id": "accessibility",
+    "category": "logistique",
+    "name": { "fr": "Setup accessible (fauteuil roulant)", "en": "Accessible setup (wheelchair)" },
+    "description": { "fr": "Site avec accès pavé, table accessible, parking adjacent, washroom accessible vérifié.", "en": "Site with paved access, accessible table, adjacent parking, verified accessible washroom." },
+    "price": 0,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "♿"
+  },
+  {
+    "id": "dietary-allergens",
+    "category": "catering",
+    "name": { "fr": "Adaptation diététique", "en": "Dietary adaptation" },
+    "description": { "fr": "Végétarien, végane, halal, casher, sans gluten, sans noix — on adapte tout le menu à ton brief.", "en": "Vegetarian, vegan, halal, kosher, gluten-free, nut-free — we adapt the whole menu to your brief." },
+    "price": 0,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "🌱"
+  },
+  {
+    "id": "winter-picnic",
+    "category": "logistique",
+    "name": { "fr": "Setup pique-nique d'hiver", "en": "Winter picnic setup" },
+    "description": { "fr": "Tente chauffée, brasero permis, chocolat chaud sans fin, couvertures laine, patinage Victoria Park inclus.", "en": "Heated tent, permitted fire pit, endless hot chocolate, wool blankets, Victoria Park skating included." },
+    "price": 249,
+    "perPerson": false,
+    "occasions": ["couple", "famille", "groupe", "event"],
+    "icon": "❄️"
+  }
+]

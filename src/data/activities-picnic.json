@@ -1,0 +1,404 @@
+[
+  {
+    "id": "picnic-couple-sunset-walterdale",
+    "slug": "picnic-couple-sunset-walterdale",
+    "segment": "couples",
+    "title": {
+      "fr": "Pique-nique coucher de soleil — Queen Elizabeth Park",
+      "en": "Sunset Picnic — Queen Elizabeth Park"
+    },
+    "location": "Queen Elizabeth Park",
+    "address": "9100 Walterdale Hill NW, Edmonton, AB",
+    "description": {
+      "fr": "Pique-nique romantique face au Walterdale Bridge et à la skyline d'Edmonton au coucher du soleil. Décor, panier gourmet, mousseux — on s'occupe de tout, tu profites.",
+      "en": "Romantic picnic facing the Walterdale Bridge and Edmonton skyline at sunset. Decor, gourmet basket, sparkling wine — we handle it all, you enjoy."
+    },
+    "longDescription": {
+      "fr": "Le pique-nique signature d'Edmonton : pelouse en pente face au Walterdale Bridge, skyline du centre-ville, coucher de soleil épique sur la North Saskatchewan. On installe le setup 1 h avant ton arrivée — plaid premium, lanternes, lumières d'ambiance, panier gourmet, mousseux et flûtes.\n\nTu arrives, tout est prêt. À la fin, on revient ramasser. Idéal anniversaire de couple, demande en mariage, ou juste un mardi soir qui te rappelle pourquoi vous êtes ensemble.\n\nGolden hour à Edmonton en été : 21h30-22h15 — viens 1 h plus tôt pour ne pas rater la lumière magique.",
+      "en": "Edmonton's signature picnic: sloping lawn facing Walterdale Bridge, downtown skyline, epic sunset over the North Saskatchewan. We set up 1h before you arrive — premium blanket, lanterns, ambient lights, gourmet basket, sparkling wine and flutes.\n\nYou arrive, everything's ready. At the end, we come back to clean up. Perfect for an anniversary, a proposal, or just a Tuesday evening reminder of why you're together.\n\nEdmonton summer golden hour: 9:30-10:15 PM — come 1h earlier to catch the magic light."
+    },
+    "image": "/images/edmonton/couples-walterdale-sunset.jpg",
+    "gallery": [
+      "/images/edmonton/couples-walterdale-sunset.jpg",
+      "/images/edmonton/lifestyle-walterdale-picnic.jpg"
+    ],
+    "priceRange": { "fr": "180$ - 380$ / couple", "en": "$180 - $380 / couple" },
+    "priceFrom": 180,
+    "priceTo": 380,
+    "budgetTier": 250,
+    "duration": { "fr": "2 h - 3 h", "en": "2-3h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["romantique", "calme"],
+    "tags": ["picnic", "sunset", "premium", "photographe", "decoration"],
+    "includes": {
+      "fr": ["Setup romantique avec plaid + lanternes", "Panier gourmet pour 2 (charcuterie, fromages Alberta, focaccia, fruits)", "Bouteille de mousseux + flûtes", "Lumières d'ambiance pour le crépuscule", "Hôte qui installe et revient ranger", "Options : photographe golden hour, demande en mariage, bouquet"],
+      "en": ["Romantic setup with blanket + lanterns", "Gourmet basket for 2 (charcuterie, Alberta cheeses, focaccia, fruit)", "Bottle of sparkling wine + flutes", "Ambient lights for dusk", "Host sets up and returns to clean up", "Add-ons: golden hour photographer, proposal setup, bouquet"]
+    },
+    "services": ["photographer", "roomDecor", "eventPlanner"],
+    "cta": "quote",
+    "rating": 5.0,
+    "mapsQuery": "Queen Elizabeth Park Edmonton",
+    "coords": [53.534, -113.499]
+  },
+  {
+    "id": "picnic-couple-government-house",
+    "slug": "picnic-couple-government-house",
+    "segment": "couples",
+    "title": {
+      "fr": "Pique-nique élégant — Government House Park",
+      "en": "Elegant Picnic — Government House Park"
+    },
+    "location": "Government House Park",
+    "address": "12845 102 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Le pique-nique le plus chic d'Edmonton — pelouses impeccables devant la Government House historique, vue sur la river valley. Idéal anniversaire de mariage ou date élégant.",
+      "en": "Edmonton's most elegant picnic — pristine lawns in front of historic Government House, river valley view. Ideal for wedding anniversaries or upscale dates."
+    },
+    "longDescription": {
+      "fr": "Government House Park combine élégance discrète et vue spectaculaire sur la river valley. C'est le spot pour les couples qui veulent quelque chose au-dessus du commun — anniversaire de mariage, demande en mariage classieuse, ou date qui sort vraiment du lot.\n\nOn installe une table basse type lounge, fauteuils suspendus en rotin, fleurs fraîches du jour, vaisselle en porcelaine, panier signature avec produits Alberta. Optionnel : photographe événement, musicien live, transport privé.",
+      "en": "Government House Park combines quiet elegance with a spectacular river valley view. It's the spot for couples who want something elevated — wedding anniversary, classy proposal, or a date that truly stands apart.\n\nWe set up a lounge-style low table, rattan hanging chairs, fresh flowers of the day, porcelain tableware, signature basket with Alberta products. Optional: event photographer, live musician, private transport."
+    },
+    "image": "/images/edmonton/famille-hawrelak-pathway.jpg",
+    "gallery": ["/images/edmonton/famille-hawrelak-pathway.jpg"],
+    "priceRange": { "fr": "280$ - 580$ / couple", "en": "$280 - $580 / couple" },
+    "priceFrom": 280,
+    "priceTo": 580,
+    "budgetTier": 400,
+    "duration": { "fr": "2 h - 4 h", "en": "2-4h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["romantique", "calme", "luxe"],
+    "tags": ["picnic", "premium", "anniversaire", "demande-mariage", "elegant"],
+    "includes": {
+      "fr": ["Setup lounge avec fauteuils suspendus", "Fleurs fraîches du fleuriste local", "Vaisselle en porcelaine", "Panier signature produits Alberta", "Mousseux ou vin (permis alcool inclus)", "Hôte attitré pour la durée"],
+      "en": ["Lounge setup with hanging chairs", "Fresh flowers from local florist", "Porcelain tableware", "Signature basket with Alberta products", "Sparkling wine or wine (alcohol permit included)", "Dedicated host for the duration"]
+    },
+    "services": ["photographer", "roomDecor", "eventPlanner"],
+    "cta": "quote",
+    "rating": 5.0,
+    "mapsQuery": "Government House Park Edmonton",
+    "coords": [53.546, -113.527]
+  },
+  {
+    "id": "picnic-couple-end-of-the-world",
+    "slug": "picnic-couple-end-of-the-world",
+    "segment": "couples",
+    "title": {
+      "fr": "Pique-nique demande en mariage — End of the World",
+      "en": "Proposal Picnic — End of the World"
+    },
+    "location": "End of the World (Keillor Point)",
+    "address": "Keillor Rd cliffside, Edmonton, AB",
+    "description": {
+      "fr": "Le spot demande en mariage légendaire d'Edmonton — promontoire en falaise, panorama river valley, coucher de soleil. On gère tout, toi tu prépares ton oui.",
+      "en": "Edmonton's legendary proposal spot — cliffside promontory, river valley panorama, sunset. We handle everything, you focus on your yes."
+    },
+    "longDescription": {
+      "fr": "End of the World est LE spot demande en mariage d'Edmonton — un promontoire en falaise avec vue à 180° sur la river valley. Au coucher du soleil, c'est inoubliable.\n\nNotre setup Demande en Mariage inclut : arche florale, tapis de pétales, panneau « Will you marry me? », écrin à anneau, photographe caché 1 h pour capturer le moment et la réaction, mousseux et flûtes pour célébrer, transport privé aller-retour.\n\n⚠️ Sécurité : la falaise est instable, briefing sécurité obligatoire. Pas pour enfants ou personnes à mobilité réduite.",
+      "en": "End of the World is THE Edmonton proposal spot — a clifftop promontory with 180° river valley view. At sunset, it's unforgettable.\n\nOur Proposal Setup includes: floral arch, petal carpet, \"Will you marry me?\" sign, ring box stand, hidden photographer for 1h to capture the moment and reaction, sparkling wine and flutes to celebrate, private round-trip transport.\n\n⚠️ Safety: the cliff is unstable, mandatory safety briefing. Not suitable for kids or limited mobility."
+    },
+    "image": "/images/edmonton/discover-park-skyline.jpg",
+    "gallery": ["/images/edmonton/discover-park-skyline.jpg"],
+    "priceRange": { "fr": "699$ - 1 199$ / couple", "en": "$699 - $1,199 / couple" },
+    "priceFrom": 699,
+    "priceTo": 1199,
+    "budgetTier": 1000,
+    "duration": { "fr": "2 h", "en": "2h" },
+    "groupSize": { "fr": "2 personnes", "en": "2 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["romantique", "luxe", "decouverte"],
+    "tags": ["picnic", "demande-mariage", "premium", "photographe", "sunset"],
+    "includes": {
+      "fr": ["Arche florale + tapis de pétales", "Panneau personnalisé « Will you marry me? »", "Photographe caché 1 h (60 photos retouchées)", "Mousseux + 2 flûtes", "Transport privé aller-retour", "Briefing sécurité + reconnaissance du site", "Écrin à anneau"],
+      "en": ["Floral arch + petal carpet", "Custom \"Will you marry me?\" sign", "Hidden photographer 1h (60 edited photos)", "Sparkling wine + 2 flutes", "Private round-trip transport", "Safety briefing + site walkthrough", "Ring box stand"]
+    },
+    "services": ["photographer", "roomDecor", "eventPlanner"],
+    "cta": "quote",
+    "rating": 5.0,
+    "mapsQuery": "Keillor Point Edmonton",
+    "coords": [53.504, -113.484]
+  },
+  {
+    "id": "picnic-famille-rundle",
+    "slug": "picnic-famille-rundle",
+    "segment": "famille",
+    "title": {
+      "fr": "Pique-nique famille — Rundle Park",
+      "en": "Family Picnic — Rundle Park"
+    },
+    "location": "Rundle Park",
+    "address": "2902 113 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Pique-nique famille au parc nord-est avec étangs, mini-golf, pédalos, playground. Un site réservable, on s'occupe de tout pour que les parents profitent aussi.",
+      "en": "Family picnic at the northeast park with ponds, mini-golf, pedal boats, playground. A bookable site — we handle everything so parents can enjoy too."
+    },
+    "longDescription": {
+      "fr": "Rundle Park est l'alternative familiale parfaite à Hawrelak (en rénovation). Étangs, mini-golf, pédalos, playgrounds — les enfants ont de quoi faire pendant que les adultes mangent tranquillement.\n\nOn réserve le site officiel auprès de la Ville d'Edmonton, on installe le setup famille avec grand plaid, parasol XL, table pliable, panier famille pour 4, boîtes enfant avec sandwichs animaux + jouet surprise, pack jeux (frisbee, cerf-volant, bulles).\n\n⚠️ Moustiques près des étangs au crépuscule — pack anti-moustique en option.",
+      "en": "Rundle Park is the perfect family alternative to Hawrelak (under renovation). Ponds, mini-golf, pedal boats, playgrounds — kids stay busy while adults eat calmly.\n\nWe book the official site with the City of Edmonton, install the family setup with large blanket, XL parasol, folding table, family basket for 4, kid boxes with animal sandwiches + toy surprise, games pack (frisbee, kite, bubbles).\n\n⚠️ Mosquitoes near the ponds at dusk — mosquito pack add-on available."
+    },
+    "image": "/images/edmonton/famille-rundle-park.jpg",
+    "gallery": [
+      "/images/edmonton/famille-rundle-park.jpg",
+      "/images/edmonton/famille-rundle-sign.jpg"
+    ],
+    "priceRange": { "fr": "180$ - 380$ / famille", "en": "$180 - $380 / family" },
+    "priceFrom": 180,
+    "priceTo": 380,
+    "budgetTier": 250,
+    "duration": { "fr": "3 h - 5 h", "en": "3-5h" },
+    "groupSize": { "fr": "Famille (4-10)", "en": "Family (4-10)" },
+    "ageRange": { "fr": "Tous âges", "en": "All ages" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique", "gourmand"],
+    "tags": ["picnic", "famille", "playground", "kids"],
+    "includes": {
+      "fr": ["Réservation officielle du site Rundle", "Setup famille (plaid + parasol + table)", "Panier famille pour 4", "Box enfant avec jouet (par enfant)", "Pack jeux (frisbee, cerf-volant, bulles, craies)", "Plan B météo (gazebo réservé)"],
+      "en": ["Official Rundle site reservation", "Family setup (blanket + parasol + table)", "Family basket for 4", "Kid box with toy (per kid)", "Games pack (frisbee, kite, bubbles, chalk)", "Weather backup (booked gazebo)"]
+    },
+    "services": ["picnic", "eventPlanner"],
+    "cta": "quote",
+    "rating": 4.9,
+    "mapsQuery": "Rundle Park Edmonton",
+    "coords": [53.564, -113.394]
+  },
+  {
+    "id": "picnic-famille-borden",
+    "slug": "picnic-famille-borden",
+    "segment": "famille",
+    "title": {
+      "fr": "Pique-nique design — Borden Park",
+      "en": "Design Picnic — Borden Park"
+    },
+    "location": "Borden Park",
+    "address": "7507 Borden Park Rd NW, Edmonton, AB",
+    "description": {
+      "fr": "Pique-nique sous la sculpture Vaulted Willow + piscine naturelle pour les enfants. Le parc le plus photogénique d'Edmonton.",
+      "en": "Picnic under the Vaulted Willow sculpture + natural swimming pool for kids. Edmonton's most photogenic park."
+    },
+    "longDescription": {
+      "fr": "Borden Park est le parc art-public le plus original d'Edmonton — l'arche multicolore Vaulted Willow par Marc Fornes, le miroir d'eau, le playground design, et la seule piscine naturelle municipale au Canada (saisonnière, billet séparé).\n\nNotre setup pique-nique se place près du Vaulted Willow pour des photos garanties, avec plaid, table basse, panier famille, box enfants, et accès direct au playground et à la piscine.",
+      "en": "Borden Park is Edmonton's most distinctive public-art park — the multicoloured Vaulted Willow arch by Marc Fornes, the reflecting pool, design playground, and Canada's only municipal natural swimming pool (seasonal, separate ticket).\n\nOur picnic setup is placed near the Vaulted Willow for guaranteed photos, with blanket, low table, family basket, kid boxes, and direct access to the playground and pool."
+    },
+    "image": "/images/edmonton/art-vaulted-willow.jpg",
+    "gallery": ["/images/edmonton/art-vaulted-willow.jpg"],
+    "priceRange": { "fr": "150$ - 290$ / famille", "en": "$150 - $290 / family" },
+    "priceFrom": 150,
+    "priceTo": 290,
+    "budgetTier": 200,
+    "duration": { "fr": "3 h - 4 h", "en": "3-4h" },
+    "groupSize": { "fr": "Famille (3-8)", "en": "Family (3-8)" },
+    "ageRange": { "fr": "Tous âges", "en": "All ages" },
+    "season": ["summer"],
+    "mood": ["dynamique", "decouverte"],
+    "tags": ["picnic", "famille", "art", "instagram"],
+    "includes": {
+      "fr": ["Setup pique-nique près du Vaulted Willow", "Panier famille pour 4-6", "Box enfants", "Polaroid station (souvenirs sur place)", "Conseils pour visiter la piscine naturelle"],
+      "en": ["Picnic setup near Vaulted Willow", "Family basket for 4-6", "Kid boxes", "Polaroid station (on-site mementos)", "Tips for visiting the natural pool"]
+    },
+    "services": ["picnic", "photographer"],
+    "cta": "quote",
+    "rating": 4.8,
+    "mapsQuery": "Borden Park Edmonton",
+    "coords": [53.572, -113.461]
+  },
+  {
+    "id": "picnic-famille-whitemud",
+    "slug": "picnic-famille-whitemud",
+    "segment": "famille",
+    "title": {
+      "fr": "Pique-nique forêt — Whitemud Park",
+      "en": "Forest Picnic — Whitemud Park"
+    },
+    "location": "Whitemud Park",
+    "address": "Off Fox Dr / 53 Ave, Edmonton, AB",
+    "description": {
+      "fr": "Pique-nique à l'ombre des grandes épinettes, près du ruisseau. Idéal canicule estivale ou couleurs d'automne.",
+      "en": "Picnic in the shade of tall spruce, by the creek. Ideal for summer heatwaves or fall colours."
+    },
+    "longDescription": {
+      "fr": "Whitemud Park, c'est la forêt en pleine ville. Quand il fait 30 degrés en juillet ou que les feuilles changent en septembre, c'est le spot. Sentier ombragé, ponts de bois sur le ruisseau, ambiance forêt boréale.\n\nNotre setup s'installe dans une clairière près du ruisseau — plaid imperméable, parasol au cas où, panier famille, pack anti-moustique inclus (les ruisseaux attirent les bestioles).",
+      "en": "Whitemud Park is the forest in the city. When it's 30°C in July or leaves are changing in September, this is the spot. Shaded trail, wooden bridges over the creek, boreal forest feel.\n\nOur setup goes in a clearing near the creek — waterproof blanket, parasol just in case, family basket, mosquito pack included (creeks attract bugs)."
+    },
+    "image": "/images/edmonton/famille-hawrelak-pathway.jpg",
+    "gallery": ["/images/edmonton/famille-hawrelak-pathway.jpg"],
+    "priceRange": { "fr": "130$ - 240$ / famille", "en": "$130 - $240 / family" },
+    "priceFrom": 130,
+    "priceTo": 240,
+    "budgetTier": 180,
+    "duration": { "fr": "3 h", "en": "3h" },
+    "groupSize": { "fr": "Famille (3-6)", "en": "Family (3-6)" },
+    "ageRange": { "fr": "Tous âges", "en": "All ages" },
+    "season": ["summer", "fall"],
+    "mood": ["calme", "decouverte"],
+    "tags": ["picnic", "famille", "nature", "shaded"],
+    "includes": {
+      "fr": ["Setup pique-nique en clairière", "Panier famille pour 4", "Pack anti-moustique (citronnelle + bracelets)", "Plan B météo"],
+      "en": ["Picnic setup in clearing", "Family basket for 4", "Mosquito pack (citronella + bracelets)", "Weather backup"]
+    },
+    "services": ["picnic"],
+    "cta": "quote",
+    "rating": 4.7,
+    "mapsQuery": "Whitemud Park Edmonton",
+    "coords": [53.503, -113.544]
+  },
+  {
+    "id": "picnic-amis-mill-creek",
+    "slug": "picnic-amis-mill-creek",
+    "segment": "amis",
+    "title": {
+      "fr": "Pique-nique chill — Mill Creek Ravine",
+      "en": "Chill Picnic — Mill Creek Ravine"
+    },
+    "location": "Mill Creek Ravine Park",
+    "address": "95 St & 82 Ave entry, Edmonton, AB",
+    "description": {
+      "fr": "Pique-nique intimiste dans la ravine cachée d'Edmonton, à deux pas de Whyte Avenue. Ambiance bohème, sentier ombragé, ponts de bois.",
+      "en": "Intimate picnic in Edmonton's hidden ravine, steps from Whyte Avenue. Bohemian vibe, shaded trail, wooden bridges."
+    },
+    "longDescription": {
+      "fr": "Mill Creek Ravine, c'est la ravine secrète d'Edmonton — sentier de forêt en pleine ville, ponts historiques, ambiance Old Strathcona. Pour un pique-nique discret entre amis, sans la foule de Hawrelak.\n\nOn installe le setup dans une clairière près du pont historique, avec plaid bohème, panier shareable (sandwichs maison + cocktails sans alcool + dessert artisan), polaroid station pour les souvenirs.",
+      "en": "Mill Creek Ravine is Edmonton's secret ravine — forest trail in the city, historic bridges, Old Strathcona vibe. For a low-key picnic with friends, away from Hawrelak crowds.\n\nWe set up in a clearing near the historic bridge, with boho blanket, sharing basket (homemade sandwiches + mocktails + artisan dessert), polaroid station for keepsakes."
+    },
+    "image": "/images/edmonton/discover-pond-fall.jpg",
+    "gallery": ["/images/edmonton/discover-pond-fall.jpg"],
+    "priceRange": { "fr": "45$ - 75$ / personne", "en": "$45 - $75 / person" },
+    "priceFrom": 45,
+    "priceTo": 75,
+    "budgetTier": 60,
+    "duration": { "fr": "2 h - 3 h", "en": "2-3h" },
+    "groupSize": { "fr": "3-8 personnes", "en": "3-8 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["calme", "gourmand"],
+    "tags": ["picnic", "amis", "ravine", "boho", "whyte-ave"],
+    "includes": {
+      "fr": ["Setup bohème en clairière", "Panier shareable (sandwichs + mocktails + dessert)", "Polaroid station", "Pack anti-moustique", "Bar sans alcool"],
+      "en": ["Boho setup in clearing", "Sharing basket (sandwiches + mocktails + dessert)", "Polaroid station", "Mosquito pack", "Alcohol-free bar"]
+    },
+    "services": ["picnic"],
+    "cta": "quote",
+    "rating": 4.8,
+    "mapsQuery": "Mill Creek Ravine Edmonton",
+    "coords": [53.528, -113.467]
+  },
+  {
+    "id": "picnic-amis-terwillegar-chien",
+    "slug": "picnic-amis-terwillegar-chien",
+    "segment": "amis",
+    "title": {
+      "fr": "Pique-nique chien-friendly — Terwillegar Park",
+      "en": "Dog-Friendly Picnic — Terwillegar Park"
+    },
+    "location": "Terwillegar Park",
+    "address": "Rabbit Hill Rd NW, Edmonton, AB",
+    "description": {
+      "fr": "Le plus grand parc off-leash d'Edmonton — emmène les chiens, ils courent, vous mangez. Plage de rivière en été.",
+      "en": "Edmonton's largest off-leash park — bring the dogs, they run, you eat. River beach in summer."
+    },
+    "longDescription": {
+      "fr": "Terwillegar Park, c'est le paradis des chiens d'Edmonton — immense zone off-leash, plage de rivière en été, sentiers en bord de North Saskatchewan. Pour un pique-nique entre amis où chacun amène son chien.\n\nSetup décontracté, panier shareable, bols d'eau pour les chiens, friandises chien incluses, blanket résistant aux pattes.",
+      "en": "Terwillegar Park is Edmonton's dog heaven — huge off-leash area, river beach in summer, North Saskatchewan trails. For a friend picnic where everyone brings their dog.\n\nCasual setup, sharing basket, dog water bowls, dog treats included, paw-resistant blanket."
+    },
+    "image": "/images/edmonton/famille-rundle-park.jpg",
+    "gallery": ["/images/edmonton/famille-rundle-park.jpg"],
+    "priceRange": { "fr": "40$ - 65$ / personne", "en": "$40 - $65 / person" },
+    "priceFrom": 40,
+    "priceTo": 65,
+    "budgetTier": 50,
+    "duration": { "fr": "3 h", "en": "3h" },
+    "groupSize": { "fr": "3-12 personnes (+ chiens)", "en": "3-12 people (+ dogs)" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique", "decouverte"],
+    "tags": ["picnic", "amis", "chien", "off-leash"],
+    "includes": {
+      "fr": ["Setup décontracté résistant aux pattes", "Panier shareable", "Bols d'eau pour chiens", "Friandises chien incluses", "Frisbee + balles"],
+      "en": ["Casual paw-resistant setup", "Sharing basket", "Dog water bowls", "Dog treats included", "Frisbee + balls"]
+    },
+    "services": ["picnic"],
+    "cta": "quote",
+    "rating": 4.7,
+    "mapsQuery": "Terwillegar Park Edmonton",
+    "coords": [53.450, -113.610]
+  },
+  {
+    "id": "picnic-amis-rundle-groupe",
+    "slug": "picnic-amis-rundle-groupe",
+    "segment": "amis",
+    "title": {
+      "fr": "Pique-nique grand groupe — Rundle Park",
+      "en": "Large Group Picnic — Rundle Park"
+    },
+    "location": "Rundle Park",
+    "address": "2902 113 Ave NW, Edmonton, AB",
+    "description": {
+      "fr": "Site réservable pour 15-50 personnes : mini-golf, pédalos, frisbee golf, BBQ propane permis. Idéal anniversaire, EVJF, retrouvailles.",
+      "en": "Bookable site for 15-50 people: mini-golf, pedal boats, disc golf, propane BBQ allowed. Ideal for birthdays, bachelorettes, reunions."
+    },
+    "longDescription": {
+      "fr": "Pour les grands groupes (15-50), Rundle Park offre les meilleurs sites réservables d'Edmonton — abris couverts, BBQ propane permis, accès playground + mini-golf + pédalos.\n\nOn réserve, on installe le setup pour grand groupe avec tables, plaids, panier collectif, glacière mousseux (permis alcool inclus), pack jeux. Optionnel : musicien live, photographe événement.",
+      "en": "For large groups (15-50), Rundle Park has Edmonton's best bookable sites — covered shelters, propane BBQ allowed, access to playground + mini-golf + pedal boats.\n\nWe book, install the large-group setup with tables, blankets, collective basket, sparkling wine cooler (alcohol permit included), games pack. Optional: live musician, event photographer."
+    },
+    "image": "/images/edmonton/famille-rundle-park.jpg",
+    "gallery": [
+      "/images/edmonton/famille-rundle-park.jpg",
+      "/images/edmonton/amis-picnic-walterdale.jpg"
+    ],
+    "priceRange": { "fr": "55$ - 95$ / personne", "en": "$55 - $95 / person" },
+    "priceFrom": 55,
+    "priceTo": 95,
+    "budgetTier": 75,
+    "duration": { "fr": "4 h - 6 h", "en": "4-6h" },
+    "groupSize": { "fr": "15-50 personnes", "en": "15-50 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique", "gourmand"],
+    "tags": ["picnic", "amis", "groupe", "anniversaire", "evjf"],
+    "includes": {
+      "fr": ["Réservation officielle du site", "Setup grand groupe (tables + plaids)", "Panier collectif", "Glacière mousseux + permis alcool", "Pack jeux + frisbee golf", "Plan B météo (gazebo couvert)"],
+      "en": ["Official site reservation", "Large group setup (tables + blankets)", "Collective basket", "Sparkling wine cooler + alcohol permit", "Games pack + disc golf", "Weather backup (covered gazebo)"]
+    },
+    "services": ["picnic", "eventPlanner"],
+    "cta": "quote",
+    "rating": 4.9,
+    "mapsQuery": "Rundle Park Edmonton",
+    "coords": [53.564, -113.394]
+  },
+  {
+    "id": "picnic-business-louise-mckinney",
+    "slug": "picnic-business-louise-mckinney",
+    "segment": "business",
+    "title": {
+      "fr": "Pique-nique corporate — Louise McKinney",
+      "en": "Corporate Picnic — Louise McKinney"
+    },
+    "location": "Louise McKinney Riverfront Park",
+    "address": "9999 Grierson Hill NW, Edmonton, AB",
+    "description": {
+      "fr": "Team-building pique-nique downtown — skyline d'Edmonton, High Level Bridge, funiculaire. Idéal afterwork ou kick-off d'équipe.",
+      "en": "Downtown picnic team-building — Edmonton skyline, High Level Bridge, funicular. Ideal afterwork or team kick-off."
+    },
+    "longDescription": {
+      "fr": "Louise McKinney Park est le seul parc downtown au bord de la rivière, accessible par le funiculaire depuis le centre-ville (idéal après le bureau). Vue skyline + High Level Bridge.\n\nSetup corporate sobre et chic : tables hautes, mocktails artisanaux (option mousseux avec permis), boîtes individuelles (allergènes pris en compte), branded napkins option. Activité team-building optionnelle : photo-quiz Edmonton avec ton équipe.",
+      "en": "Louise McKinney Park is the only downtown riverside park, accessible via funicular from the city centre (ideal after work). Skyline + High Level Bridge view.\n\nCorporate setup, sober and chic: high tables, artisan mocktails (sparkling wine option with permit), individual boxes (allergens accommodated), branded napkins optional. Optional team-building activity: Edmonton photo-quiz with your team."
+    },
+    "image": "/images/edmonton/lifestyle-walterdale-picnic.jpg",
+    "gallery": ["/images/edmonton/lifestyle-walterdale-picnic.jpg"],
+    "priceRange": { "fr": "65$ - 120$ / personne", "en": "$65 - $120 / person" },
+    "priceFrom": 65,
+    "priceTo": 120,
+    "budgetTier": 90,
+    "duration": { "fr": "2 h - 3 h", "en": "2-3h" },
+    "groupSize": { "fr": "8-40 personnes", "en": "8-40 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique", "gourmand"],
+    "tags": ["picnic", "business", "team-building", "downtown", "skyline"],
+    "includes": {
+      "fr": ["Setup corporate (tables hautes)", "Box individuelles (allergènes adaptés)", "Bar mocktails + option mousseux", "Vue skyline + High Level Bridge", "Activité team-building optionnelle", "Facturation et reçu corporate"],
+      "en": ["Corporate setup (high tables)", "Individual boxes (allergens accommodated)", "Mocktail bar + sparkling wine option", "Skyline + High Level Bridge view", "Optional team-building activity", "Corporate invoicing and receipt"]
+    },
+    "services": ["picnic", "eventPlanner"],
+    "cta": "quote",
+    "rating": 4.9,
+    "mapsQuery": "Louise McKinney Riverfront Park Edmonton",
+    "coords": [53.539, -113.481]
+  }
+]

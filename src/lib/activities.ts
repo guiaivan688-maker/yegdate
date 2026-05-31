@@ -2,6 +2,7 @@ import couples from "@/data/activities-couples.json";
 import famille from "@/data/activities-famille.json";
 import amis from "@/data/activities-amis.json";
 import business from "@/data/activities-business.json";
+import picnic from "@/data/activities-picnic.json";
 import type { Locale } from "./locale-context";
 
 export interface Activity {
@@ -37,11 +38,19 @@ export function getActivityBySlug(slug: string): Activity | undefined {
   return allActivities.find((a) => a.id === slug || a.slug === slug);
 }
 
+const picnicTyped = picnic as Activity[];
+const picnicBySegment: Record<string, Activity[]> = {
+  couples: picnicTyped.filter((a) => a.segment === "couples"),
+  famille: picnicTyped.filter((a) => a.segment === "famille"),
+  amis: picnicTyped.filter((a) => a.segment === "amis"),
+  business: picnicTyped.filter((a) => a.segment === "business"),
+};
+
 const bySegment: Record<string, Activity[]> = {
-  couples: couples as Activity[],
-  famille: famille as Activity[],
-  amis: amis as Activity[],
-  business: business as Activity[],
+  couples: [...(couples as Activity[]), ...picnicBySegment.couples],
+  famille: [...(famille as Activity[]), ...picnicBySegment.famille],
+  amis: [...(amis as Activity[]), ...picnicBySegment.amis],
+  business: [...(business as Activity[]), ...picnicBySegment.business],
 };
 
 export const allActivities: Activity[] = [
@@ -49,7 +58,10 @@ export const allActivities: Activity[] = [
   ...(famille as Activity[]),
   ...(amis as Activity[]),
   ...(business as Activity[]),
+  ...picnicTyped,
 ];
+
+export const picnicActivities: Activity[] = picnicTyped;
 
 export function getActivitiesBySegment(segment: string): Activity[] {
   return bySegment[segment] ?? [];

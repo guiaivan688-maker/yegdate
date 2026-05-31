@@ -1,0 +1,405 @@
+[
+  {
+    "id": "hawrelak",
+    "name": "William Hawrelak Park",
+    "neighbourhood": "Groat Estate / River Valley SW",
+    "address": "9930 Groat Rd NW, Edmonton, AB",
+    "coords": [53.526, -113.541],
+    "image": "/images/edmonton/famille-hawrelak-aerial.jpg",
+    "description": {
+      "fr": "Le parc emblématique des familles d'Edmonton — grand, ombragé, lac central, sites réservables avec abri couvert. ⚠️ EN RÉNOVATION MAJEURE — réouverture visée saison 2026, vérifier disponibilité avant de promettre.",
+      "en": "Edmonton's flagship family park — large, shady, central lake, reservable sites with covered shelter. ⚠️ UNDER MAJOR RENOVATION — reopening targeted for 2026 season, verify availability before promising."
+    },
+    "watchout": {
+      "fr": "Sections fermées pour rénovation jusqu'à fin 2026 — vérifier edmonton.ca/hawrelak.",
+      "en": "Sections closed for renovation through end of 2026 — verify edmonton.ca/hawrelak."
+    },
+    "size": "large",
+    "capacity": "Jusqu'à 200 invités sur sites réservables",
+    "amenities": ["parking", "washrooms", "playground", "shelter", "lake", "shaded"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Sites réservables jusqu'à 90 jours d'avance via la Ville d'Edmonton. Booker tôt pour les week-ends d'été.",
+      "en": "Sites bookable up to 90 days in advance via City of Edmonton. Book early for summer weekends."
+    },
+    "best_for": ["famille", "groupe", "event"],
+    "best_spot": {
+      "fr": "Pavilion B près du lac — couvert, proche du playground et des toilettes.",
+      "en": "Pavilion B by the lake — covered, near playground and washrooms."
+    },
+    "scenic_skyline": true,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "queen-elizabeth",
+    "name": "Queen Elizabeth Park",
+    "neighbourhood": "Walterdale / River Valley",
+    "address": "9100 Walterdale Hill, Edmonton, AB",
+    "coords": [53.534, -113.499],
+    "image": "/images/edmonton/couples-walterdale-sunset.jpg",
+    "description": {
+      "fr": "La colline avec LA vue : Walterdale Bridge, skyline d'Edmonton, coucher de soleil épique sur la North Saskatchewan. Le spot pique-nique romantique de la ville.",
+      "en": "The hill with THE view: Walterdale Bridge, Edmonton skyline, epic North Saskatchewan sunset. The city's romantic picnic spot."
+    },
+    "size": "medium",
+    "capacity": "Pique-niques libres (non réservable)",
+    "amenities": ["parking", "shaded", "scenic"],
+    "reservation_required": false,
+    "best_for": ["couple", "event"],
+    "best_spot": {
+      "fr": "Sur la pelouse en pente face au Walterdale Bridge — 1 h avant le coucher de soleil.",
+      "en": "On the sloping lawn facing Walterdale Bridge — 1h before sunset."
+    },
+    "scenic_skyline": true,
+    "sunset_view": true,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "emily-murphy",
+    "name": "Emily Murphy Park",
+    "neighbourhood": "River Valley SW (Belgravia)",
+    "address": "Emily Murphy Park Rd NW, Edmonton, AB",
+    "coords": [53.519, -113.534],
+    "image": "/images/edmonton/discover-pond-fall.jpg",
+    "description": {
+      "fr": "Plus intime que Hawrelak, en bord de rivière, ombragé par les peupliers. Idéal couple chill ou petit groupe.",
+      "en": "More intimate than Hawrelak, riverside, shaded by poplars. Ideal for a chill couple or small group."
+    },
+    "size": "medium",
+    "capacity": "Petits groupes (sites non réservables typiquement)",
+    "amenities": ["parking", "washrooms", "shaded", "river_access"],
+    "reservation_required": false,
+    "best_for": ["couple", "famille"],
+    "best_spot": {
+      "fr": "Sous les peupliers près de la rivière — apporte un parapluie en cas d'averse.",
+      "en": "Under the poplars near the river — bring an umbrella for sudden showers."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "borden",
+    "name": "Borden Park",
+    "neighbourhood": "Northeast Edmonton",
+    "address": "7507 Borden Park Rd NW, Edmonton, AB",
+    "coords": [53.572, -113.461],
+    "image": "/images/edmonton/art-vaulted-willow.jpg",
+    "description": {
+      "fr": "Le parc art-public d'Edmonton : Vaulted Willow (l'arche colorée), miroir d'eau, playground design. Photogénique au max.",
+      "en": "Edmonton's public-art park: Vaulted Willow (the colourful arch), reflecting pool, design playground. Photogenic to the max."
+    },
+    "size": "medium",
+    "capacity": "Pique-niques libres",
+    "amenities": ["parking", "washrooms", "playground", "public_art", "reflecting_pool"],
+    "reservation_required": false,
+    "best_for": ["famille", "couple"],
+    "best_spot": {
+      "fr": "Pelouse autour du Vaulted Willow — photos garanties.",
+      "en": "Lawn around the Vaulted Willow — guaranteed photos."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "rundle",
+    "name": "Rundle Park",
+    "neighbourhood": "Northeast Edmonton",
+    "address": "2902 113 Ave NW, Edmonton, AB",
+    "coords": [53.564, -113.394],
+    "image": "/images/edmonton/famille-rundle-park.jpg",
+    "description": {
+      "fr": "Grand parc nord-est avec lacs, sentiers, mini-golf et terrain de disc golf. Plusieurs sites réservables pour grands groupes.",
+      "en": "Large northeast park with lakes, trails, mini-golf and disc golf course. Several reservable sites for large groups."
+    },
+    "size": "large",
+    "capacity": "Sites réservables jusqu'à 100+ invités",
+    "amenities": ["parking", "washrooms", "playground", "shelter", "lake", "mini_golf", "disc_golf"],
+    "reservation_required": true,
+    "reservation_note": {
+      "fr": "Sites réservables via la Ville d'Edmonton.",
+      "en": "Sites bookable via City of Edmonton."
+    },
+    "best_for": ["famille", "groupe", "event"],
+    "best_spot": {
+      "fr": "Picnic site #2 ou #3, près du lac principal.",
+      "en": "Picnic site #2 or #3, near the main lake."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "government-house",
+    "name": "Government House Park",
+    "neighbourhood": "Glenora",
+    "address": "12845 102 Ave NW, Edmonton, AB",
+    "coords": [53.546, -113.527],
+    "image": "/images/edmonton/famille-hawrelak-pathway.jpg",
+    "description": {
+      "fr": "Le parc le plus élégant d'Edmonton : pelouses impeccables devant la Government House historique, vue sur la skyline. Calme, classe, romantique.",
+      "en": "Edmonton's most elegant park: pristine lawns in front of historic Government House, skyline view. Quiet, classy, romantic."
+    },
+    "size": "medium",
+    "capacity": "Pique-niques libres",
+    "amenities": ["parking", "washrooms", "scenic", "historic"],
+    "reservation_required": false,
+    "best_for": ["couple", "event"],
+    "best_spot": {
+      "fr": "Pelouse sud face à la rivière, à droite de Government House.",
+      "en": "South lawn facing the river, right of Government House."
+    },
+    "scenic_skyline": true,
+    "sunset_view": true,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "louise-mckinney",
+    "name": "Louise McKinney Riverfront Park",
+    "neighbourhood": "Downtown Edmonton",
+    "address": "9999 Grierson Hill NW, Edmonton, AB",
+    "coords": [53.539, -113.481],
+    "image": "/images/edmonton/lifestyle-walterdale-picnic.jpg",
+    "description": {
+      "fr": "Parc downtown au bord de la rivière, avec le pavillon du Chinese Garden et une vue spectaculaire sur la skyline et le High Level Bridge.",
+      "en": "Downtown riverside park with Chinese Garden pavilion and a spectacular view of the skyline and High Level Bridge."
+    },
+    "size": "medium",
+    "capacity": "Pique-niques libres",
+    "amenities": ["parking", "washrooms", "scenic", "river_access", "chinese_garden"],
+    "reservation_required": false,
+    "best_for": ["couple", "groupe"],
+    "best_spot": {
+      "fr": "Pelouse face au funiculaire — vue High Level Bridge.",
+      "en": "Lawn facing the funicular — High Level Bridge view."
+    },
+    "scenic_skyline": true,
+    "sunset_view": true,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "mill-creek",
+    "name": "Mill Creek Ravine Park",
+    "neighbourhood": "Bonnie Doon / Strathcona",
+    "address": "94 St NW & 86 Ave NW, Edmonton, AB",
+    "coords": [53.530, -113.467],
+    "image": "/images/edmonton/discover-pond-fall.jpg",
+    "description": {
+      "fr": "La ravine cachée d'Edmonton : sentier ombragé, ponts de bois, ambiance forêt en pleine ville. Parfait pour un pique-nique discret entre amis.",
+      "en": "Edmonton's hidden ravine: shaded trail, wooden bridges, forest vibe in the heart of the city. Perfect for a low-key picnic with friends."
+    },
+    "size": "medium",
+    "capacity": "Petits groupes",
+    "amenities": ["shaded", "trail", "river_access"],
+    "reservation_required": false,
+    "best_for": ["amis", "couple"],
+    "best_spot": {
+      "fr": "Entre 86 Ave et Whyte Ave — petits coins clairière le long du sentier.",
+      "en": "Between 86 Ave and Whyte Ave — small clearings along the trail."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "gold-bar",
+    "name": "Gold Bar Park",
+    "neighbourhood": "East Edmonton",
+    "address": "10930 50 St NW, Edmonton, AB",
+    "coords": [53.547, -113.371],
+    "image": "/images/edmonton/discover-park-skyline.jpg",
+    "description": {
+      "fr": "Grand parc est avec parc à chiens off-leash, sentiers en bord de rivière, beaucoup d'espace pour de grands groupes.",
+      "en": "Large east-side park with off-leash dog park, riverside trails, lots of space for large groups."
+    },
+    "size": "large",
+    "capacity": "Grands groupes",
+    "amenities": ["parking", "washrooms", "river_access", "off_leash_dog"],
+    "reservation_required": "partial",
+    "best_for": ["groupe", "famille"],
+    "best_spot": {
+      "fr": "Pelouse principale côté rivière (loin du dog park si tu apportes nourriture).",
+      "en": "Main riverside lawn (away from dog park if you bring food)."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "off_leash"
+  },
+  {
+    "id": "capilano",
+    "name": "Capilano Park",
+    "neighbourhood": "East Edmonton",
+    "address": "5320 96 Ave NW, Edmonton, AB",
+    "coords": [53.541, -113.405],
+    "image": "/images/edmonton/famille-hawrelak-playground.jpg",
+    "description": {
+      "fr": "Parc familial est avec playground récent, terrains de soccer et sentiers river valley.",
+      "en": "Family park east-side with recent playground, soccer fields and river valley trails."
+    },
+    "size": "medium",
+    "capacity": "Familles et petits groupes",
+    "amenities": ["parking", "washrooms", "playground", "sports_fields"],
+    "reservation_required": false,
+    "best_for": ["famille"],
+    "best_spot": {
+      "fr": "Côté playground pour les enfants.",
+      "en": "Playground side for kids."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "terwillegar",
+    "name": "Terwillegar Park",
+    "neighbourhood": "Southwest Edmonton",
+    "address": "Rabbit Hill Rd NW, Edmonton, AB",
+    "coords": [53.450, -113.610],
+    "image": "/images/edmonton/famille-rundle-park.jpg",
+    "description": {
+      "fr": "Énorme parc off-leash SW, sentiers river valley, idéal pique-nique avec chien et grand espace ouvert.",
+      "en": "Massive off-leash park SW, river valley trails, ideal for a picnic with dog and large open space."
+    },
+    "size": "large",
+    "capacity": "Grands groupes",
+    "amenities": ["parking", "washrooms", "off_leash_dog", "river_access", "trail"],
+    "reservation_required": false,
+    "best_for": ["amis", "famille"],
+    "best_spot": {
+      "fr": "Côté entrée principale avant la zone off-leash.",
+      "en": "Main entrance area before the off-leash zone."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "off_leash"
+  },
+  {
+    "id": "end-of-the-world",
+    "name": "End of the World (Keillor Point)",
+    "neighbourhood": "Strathcona Heights",
+    "address": "Saskatchewan Dr NW & 99 St NW, Edmonton, AB",
+    "coords": [53.521, -113.503],
+    "image": "/images/edmonton/discover-park-skyline.jpg",
+    "description": {
+      "fr": "Le secret le mieux gardé d'Edmonton : un promontoire sur la falaise avec vue panoramique sur la rivière et le coucher de soleil. Spot demande en mariage légendaire.",
+      "en": "Edmonton's best-kept secret: a clifftop promontory with panoramic river view and sunset. Legendary proposal spot."
+    },
+    "size": "small",
+    "capacity": "Petit groupe (2-6)",
+    "amenities": ["scenic"],
+    "reservation_required": false,
+    "best_for": ["couple", "event"],
+    "best_spot": {
+      "fr": "La pointe sud du promontoire — viens 1 h avant le coucher de soleil.",
+      "en": "The south tip of the promontory — come 1h before sunset."
+    },
+    "scenic_skyline": true,
+    "sunset_view": true,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "no",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "dawson",
+    "name": "Dawson Park",
+    "neighbourhood": "Riverdale / Cromdale",
+    "address": "10220 86 St NW, Edmonton, AB",
+    "coords": [53.559, -113.474],
+    "image": "/images/edmonton/discover-pond-fall.jpg",
+    "description": {
+      "fr": "Parc discret côté Riverdale, accès direct au système de pistes Capital City Recreation Park. Bonne alternative tranquille à Hawrelak.",
+      "en": "Low-key Riverdale park, direct access to Capital City Recreation Park trail system. Good quiet alternative to Hawrelak."
+    },
+    "size": "medium",
+    "capacity": "Familles et petits groupes",
+    "amenities": ["parking", "playground", "trail", "river_access"],
+    "reservation_required": "partial",
+    "best_for": ["famille", "amis"],
+    "best_spot": {
+      "fr": "Pelouse ouverte avec vue vers le Dawson Bridge.",
+      "en": "Open lawn with view toward Dawson Bridge."
+    },
+    "scenic_skyline": "partial",
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash"
+  },
+  {
+    "id": "whitemud",
+    "name": "Whitemud Park",
+    "neighbourhood": "Brookside / SW",
+    "address": "Off Fox Dr / 53 Ave, Edmonton, AB",
+    "coords": [53.503, -113.544],
+    "image": "/images/edmonton/famille-hawrelak-pathway.jpg",
+    "description": {
+      "fr": "Forêt en pleine ville — ombragé sous les épinettes matures, ruisseau, ambiance nature pour échapper à la chaleur estivale.",
+      "en": "Forest within the city — shaded under mature spruce, creek, nature escape from summer heat."
+    },
+    "size": "medium",
+    "capacity": "Familles et petits groupes",
+    "amenities": ["parking", "shaded", "trail", "creek"],
+    "reservation_required": "verify",
+    "best_for": ["couple", "famille"],
+    "best_spot": {
+      "fr": "Clairières près des ponts du ruisseau, sous les grandes épinettes.",
+      "en": "Clearings near the creek bridges under tall spruce."
+    },
+    "scenic_skyline": false,
+    "sunset_view": false,
+    "best_season": ["summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash",
+    "watchout": { "fr": "Moustiques près du ruisseau au crépuscule.", "en": "Mosquitoes near the creek at dusk." }
+  },
+  {
+    "id": "victoria",
+    "name": "Victoria Park",
+    "neighbourhood": "Glenora / Oliver",
+    "address": "12130 River Valley Rd, Edmonton, AB",
+    "coords": [53.547, -113.519],
+    "image": "/images/edmonton/famille-hawrelak-pathway.jpg",
+    "description": {
+      "fr": "Parc central avec terrain de golf et patinoire en hiver. Pique-nique d'été en plein cœur de la river valley, à 5 min du centre-ville.",
+      "en": "Central park with golf course and winter skating rink. Summer picnic right in the heart of the river valley, 5 min from downtown."
+    },
+    "size": "large",
+    "capacity": "Groupes moyens et grands",
+    "amenities": ["parking", "washrooms", "golf", "skating_winter"],
+    "reservation_required": "partial",
+    "best_for": ["famille", "groupe"],
+    "best_spot": {
+      "fr": "Pelouse principale côté nord — proche du parking, accessible poussettes.",
+      "en": "Main north lawn — close to parking, stroller accessible."
+    },
+    "scenic_skyline": true,
+    "sunset_view": false,
+    "best_season": ["spring", "summer", "fall"],
+    "bbq_allowed": "verify_propane",
+    "dog_friendly": "on_leash"
+  }
+]
