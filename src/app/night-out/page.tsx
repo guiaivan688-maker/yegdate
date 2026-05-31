@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Music, Wine, Pizza, PartyPopper, Ticket, Flame, Sparkles, ArrowRight } from "lucide-react";
+import { Music, Wine, Pizza, PartyPopper, Ticket, Flame, Sparkles, ArrowRight, ArrowDown } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
+
+type PriceUnit = "pers" | "groupe";
 
 interface NightPackage {
   id: string;
   category: "clubs" | "bars" | "snacks" | "events";
   title: Record<string, string>;
   price: string;
+  priceUnit: PriceUnit;
   image: string;
   vibes: string[];
   includes: Record<string, string[]>;
@@ -32,38 +35,43 @@ const catLabels: Record<string, Record<string, string>> = {
   events: { fr: "Fêtes privées", en: "Private parties" },
 };
 
+const priceUnitLabel: Record<PriceUnit, Record<string, string>> = {
+  pers:   { fr: "/ pers",   en: "/ pers" },
+  groupe: { fr: "/ groupe", en: "/ group" },
+};
+
 // Vibes par package : musique / ambiance, pour que les clients filtrent par ce qu'ils aiment
 // (Afro, Latino, Hip-Hop pour les soirées groupes ; Lounge, Indie pour les bars ; etc.).
 const packages: NightPackage[] = [
-  { id: "vip-club-hopping", category: "clubs", price: "$120", image: "https://images.unsplash.com/photo-1545128485-c400e7702796?w=900&q=80",
+  { id: "vip-club-hopping", category: "clubs", price: "$120", priceUnit: "pers", image: "https://images.unsplash.com/photo-1545128485-c400e7702796?w=900&q=80",
     title: { fr: "VIP Club Hopping", en: "VIP Club Hopping" },
     vibes: ["Hip-Hop", "Top 40"],
     includes: { fr: ["Coupe-file 3 clubs du Ice District", "Table réservée", "1 consommation par arrêt", "Hôte de soirée"], en: ["Skip-the-line at 3 Ice District clubs", "Reserved table", "1 drink per stop", "Night host"] } },
-  { id: "ice-district-bottle", category: "clubs", price: "$300", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80",
+  { id: "ice-district-bottle", category: "clubs", price: "$300", priceUnit: "groupe", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80",
     title: { fr: "Soirée Bottle Service", en: "Bottle Service Night" },
     vibes: ["EDM", "House"],
     includes: { fr: ["Table VIP au club", "Bouteille premium incluse", "Coupe-file garanti", "Espace réservé pour le groupe"], en: ["VIP club table", "Premium bottle included", "Guaranteed skip-the-line", "Reserved group area"] } },
-  { id: "whyte-ave-crawl", category: "bars", price: "$75", image: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=900&q=80",
+  { id: "whyte-ave-crawl", category: "bars", price: "$75", priceUnit: "pers", image: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=900&q=80",
     title: { fr: "Whyte Ave Bar Crawl", en: "Whyte Ave Bar Crawl" },
     vibes: ["Indie", "Local"],
     includes: { fr: ["4 bars branchés de Whyte Avenue", "Cocktail de bienvenue", "Guide local", "Bracelet de groupe"], en: ["4 trendy Whyte Avenue bars", "Welcome cocktail", "Local guide", "Group wristband"] } },
-  { id: "rooftop-cocktails", category: "bars", price: "$90", image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=900&q=80",
+  { id: "rooftop-cocktails", category: "bars", price: "$90", priceUnit: "groupe", image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=900&q=80",
     title: { fr: "Cocktails Rooftop", en: "Rooftop Cocktails" },
     vibes: ["Lounge", "Chill"],
     includes: { fr: ["Table sur un rooftop du centre-ville", "2 cocktails signature", "Planche à partager", "Vue sur la skyline"], en: ["Downtown rooftop table", "2 signature cocktails", "Sharing board", "Skyline view"] } },
-  { id: "midnight-munchies", category: "snacks", price: "$45", image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&q=80",
+  { id: "midnight-munchies", category: "snacks", price: "$45", priceUnit: "pers", image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&q=80",
     title: { fr: "Midnight Munchies", en: "Midnight Munchies" },
     vibes: ["Post-club", "Late-night"],
     includes: { fr: ["Crédit dans 2 spots de food de nuit", "Pizza ou poutine au choix", "Livraison au bar", "Parfait après le club"], en: ["Credit at 2 late-night food spots", "Pizza or poutine of choice", "Delivery to your bar", "Perfect post-club"] } },
-  { id: "late-night-eats-tour", category: "snacks", price: "$60", image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=900&q=80",
+  { id: "late-night-eats-tour", category: "snacks", price: "$60", priceUnit: "pers", image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=900&q=80",
     title: { fr: "Tour Food de Nuit", en: "Late-Night Food Tour" },
     vibes: ["Groupes", "Local"],
     includes: { fr: ["3 arrêts gourmands après minuit", "Spécialités locales", "Guide food de nuit", "Idéal grand groupe"], en: ["3 after-midnight food stops", "Local specialties", "Late-night food guide", "Great for big groups"] } },
-  { id: "ultimate-birthday", category: "events", price: "$349", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80",
+  { id: "ultimate-birthday", category: "events", price: "$349", priceUnit: "groupe", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80",
     title: { fr: "The Ultimate Birthday Bash", en: "The Ultimate Birthday Bash" },
     vibes: ["Anniversaire", "Premium"],
     includes: { fr: ["Section réservée en club ou bar", "Bouteille + étincelles", "Coupe-file pour le groupe", "Décoration & photographe option"], en: ["Reserved club or bar section", "Bottle + sparklers", "Group skip-the-line", "Decor & photographer option"] } },
-  { id: "bachelor-bachelorette", category: "events", price: "$199", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80",
+  { id: "bachelor-bachelorette", category: "events", price: "$199", priceUnit: "groupe", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80",
     title: { fr: "EVG / EVJF Night", en: "Stag / Bachelorette Night" },
     vibes: ["Afro", "Latino", "Hip-Hop"],
     includes: { fr: ["Parcours bars + club organisé", "Coupe-file & table", "Jeux et surprises", "Transport entre les lieux"], en: ["Organized bar + club route", "Skip-the-line & table", "Games and surprises", "Transport between venues"] } },
@@ -76,16 +84,31 @@ const steps = [
 ];
 
 const story = [
-  { Icon: Flame,     fr: ["Le feu des origines", "Tout commence au bord de la rivière Saskatchewan Nord, dans un fort de traite battu par les vents. Edmonton naît rude, débrouillarde, animée par l'esprit pionnier des premiers saloons où l'on refaisait le monde jusqu'au petit matin."],                                              en: ["The fire of the origins", "It all begins on the banks of the North Saskatchewan River, in a wind-beaten trading fort. Edmonton is born rugged and resourceful, driven by the pioneer spirit of the first saloons where the world was remade until dawn."] },
-  { Icon: Sparkles,  fr: ["L'esprit des festivals", "Puis la ville explose de culture. Whyte Avenue se couvre de néons, Jasper Avenue vibre d'une énergie électrique, et Edmonton se proclame capitale mondiale des festivals — une saison ne passe jamais sans musique dans les rues."],                                              en: ["The festival spirit", "Then the city erupts with culture. Whyte Avenue lights up with neon, Jasper Avenue hums with electric energy, and Edmonton crowns itself the world's festival city — no season passes without music in the streets."] },
-  { Icon: Music,     fr: ["La nuit éternelle", "Aujourd'hui, le Ice District ne dort jamais : arénas qui rugissent, rooftops, clubs et bars cachés. Edmonton n'attend qu'une chose — la nuit. Et Where To Go YEG est là pour t'en donner les clés."],                                                                                en: ["The eternal night", "Today the Ice District never sleeps: roaring arenas, rooftops, clubs and hidden bars. Edmonton waits for one thing — the night. And Where To Go YEG is here to hand you the keys."] },
+  { Icon: Flame,    fr: ["Le feu des origines", "Tout commence au bord de la rivière Saskatchewan Nord, dans un fort de traite battu par les vents. Edmonton naît rude, débrouillarde, animée par l'esprit pionnier des premiers saloons où l'on refaisait le monde jusqu'au petit matin."],                                              en: ["The fire of the origins", "It all begins on the banks of the North Saskatchewan River, in a wind-beaten trading fort. Edmonton is born rugged and resourceful, driven by the pioneer spirit of the first saloons where the world was remade until dawn."] },
+  { Icon: Sparkles, fr: ["L'esprit des festivals", "Puis la ville explose de culture. Whyte Avenue se couvre de néons, Jasper Avenue vibre d'une énergie électrique, et Edmonton se proclame capitale mondiale des festivals — une saison ne passe jamais sans musique dans les rues."],                                              en: ["The festival spirit", "Then the city erupts with culture. Whyte Avenue lights up with neon, Jasper Avenue hums with electric energy, and Edmonton crowns itself the world's festival city — no season passes without music in the streets."] },
+  { Icon: Music,    fr: ["La nuit éternelle", "Aujourd'hui, le Ice District ne dort jamais : arénas qui rugissent, rooftops, clubs et bars cachés. Edmonton n'attend qu'une chose — la nuit. Et Where To Go YEG est là pour t'en donner les clés."],                                                                                en: ["The eternal night", "Today the Ice District never sleeps: roaring arenas, rooftops, clubs and hidden bars. Edmonton waits for one thing — the night. And Where To Go YEG is here to hand you the keys."] },
 ];
 
 export default function NightOutPage() {
   const { locale } = useLocale();
   const fr = locale === "fr";
   const [cat, setCat] = useState<string>("all");
-  const list = cat === "all" ? packages : packages.filter((p) => p.category === cat);
+  const [vibe, setVibe] = useState<string>("all");
+
+  // Vibes disponibles selon la catégorie sélectionnée — on n'affiche que celles qui existent vraiment.
+  const availableVibes = useMemo(() => {
+    const filtered = cat === "all" ? packages : packages.filter((p) => p.category === cat);
+    const set = new Set<string>();
+    filtered.forEach((p) => p.vibes.forEach((v) => set.add(v)));
+    return [...set];
+  }, [cat]);
+
+  // Si on change de catégorie et la vibe sélectionnée n'existe plus → reset à "Toutes".
+  useEffect(() => {
+    if (vibe !== "all" && !availableVibes.includes(vibe)) setVibe("all");
+  }, [vibe, availableVibes]);
+
+  const list = packages.filter((p) => (cat === "all" || p.category === cat) && (vibe === "all" || p.vibes.includes(vibe)));
 
   const HOW_STEPS: { n: string; fr: string; en: string }[] = [
     { n: "1", fr: "Choisis le type de soirée + le vibe musical",        en: "Pick the night type + music vibe" },
@@ -95,33 +118,56 @@ export default function NightOutPage() {
 
   return (
     <div className="bg-navy-dark text-cream">
-      {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <Image src="https://images.unsplash.com/photo-1545128485-c400e7702796?w=1920&q=80" alt="" fill priority className="object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/70 via-navy-dark/80 to-navy-dark" />
+      {/* Hero — l'image club est la première chose que voit le visiteur (opacité montée, gradient adouci). */}
+      <section className="relative min-h-[65vh] flex items-center overflow-hidden">
+        <Image src="https://images.unsplash.com/photo-1545128485-c400e7702796?w=1920&q=80" alt="" fill priority className="object-cover opacity-65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/55 via-navy-dark/65 to-navy-dark" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-bold uppercase tracking-widest mb-5">Night Out · Edmonton</span>
             <h1 className="font-serif text-4xl sm:text-6xl font-bold leading-tight mb-5">
               {fr ? "La nuit t'attend. On a les clés." : "The night awaits. We've got the keys."}
             </h1>
-            <p className="text-cream/70 text-base sm:text-lg max-w-xl mx-auto">
+            <p className="text-cream/80 text-base sm:text-lg max-w-xl mx-auto mb-7">
               {fr
                 ? "Pas un événement ponctuel — des soirées clé en main qu'on monte pour toi le soir qui te va : clubs, bars, food de nuit ou fêtes privées, sans faire la queue."
                 : "Not a one-off event — turnkey nights we set up for you whenever suits you: clubs, bars, late-night food or private parties, no queues."}
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a href="#packages" className="inline-flex items-center gap-2 gradient-gold text-navy font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+                {fr ? "Voir les soirées" : "See the nights"} <ArrowDown className="w-4 h-4" strokeWidth={2} />
+              </a>
+              <a href="/contact" className="inline-flex items-center gap-2 border border-cream/30 text-cream font-semibold px-6 py-3 rounded-full hover:bg-cream/10 transition-colors">
+                {fr ? "Soirée sur-mesure" : "Custom night"}
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Filters */}
+      {/* Filtres — 2 niveaux : Catégorie (type de lieu) + Vibe (musique/ambiance, dynamique selon la catégorie). */}
       <section className="sticky top-16 z-30 bg-navy-dark/90 backdrop-blur border-b border-cream/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex gap-2 overflow-x-auto">
-          {categories.map((c) => (
-            <button key={c.key} onClick={() => setCat(c.key)} className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${cat === c.key ? "gradient-gold text-navy" : "bg-cream/5 text-cream/70 hover:bg-cream/10 border border-cream/12"}`}>
-              <c.Icon className="w-4 h-4" strokeWidth={1.5} /> {catLabels[c.key][locale]}
-            </button>
-          ))}
+        <div className="max-w-7xl mx-auto px-4 py-3 space-y-2">
+          {/* Catégories */}
+          <div className="flex gap-2 overflow-x-auto">
+            {categories.map((c) => (
+              <button key={c.key} onClick={() => { setCat(c.key); setVibe("all"); }} className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${cat === c.key ? "gradient-gold text-navy" : "bg-cream/5 text-cream/70 hover:bg-cream/10 border border-cream/12"}`}>
+                <c.Icon className="w-4 h-4" strokeWidth={1.5} /> {catLabels[c.key][locale]}
+              </button>
+            ))}
+          </div>
+          {/* Vibes (sous-filtre — n'apparaît que s'il y a plusieurs vibes possibles) */}
+          {availableVibes.length > 1 && (
+            <div className="flex gap-1.5 overflow-x-auto items-center pt-1">
+              <span className="text-cream/40 text-[10px] font-bold uppercase tracking-widest mr-1 shrink-0">{fr ? "Vibes" : "Vibes"}</span>
+              <button onClick={() => setVibe("all")} className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-colors ${vibe === "all" ? "bg-gold text-navy" : "bg-gold/10 text-gold/90 border border-gold/25 hover:bg-gold/15"}`}>
+                {fr ? "Toutes" : "All"}
+              </button>
+              {availableVibes.map((v) => (
+                <button key={v} onClick={() => setVibe(v)} className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-colors ${vibe === v ? "bg-gold text-navy" : "bg-gold/10 text-gold/90 border border-gold/25 hover:bg-gold/15"}`}>{v}</button>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -138,35 +184,45 @@ export default function NightOutPage() {
       </section>
 
       {/* Packages */}
-      <section className="py-10 px-4">
-        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {list.map((p, i) => (
-            <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} whileHover={{ y: -6 }} className="rounded-3xl overflow-hidden bg-cream/5 border border-cream/12 hover:border-gold/40 transition-colors group flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <Image src={p.image} alt={p.title[locale]} fill className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" sizes="(max-width:640px) 100vw, 33vw" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1 bg-gold/95 text-navy text-[10px] font-bold uppercase tracking-wider rounded-full px-2.5 py-1">{catLabels[p.category][locale]}</span>
-                <span className="absolute top-3 right-3 bg-navy/70 backdrop-blur text-cream text-sm font-bold rounded-full px-3 py-1">{p.price}</span>
-              </div>
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-serif text-xl font-bold mb-2">{p.title[locale]}</h3>
-                {p.vibes.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {p.vibes.map((v) => (
-                      <span key={v} className="text-[10px] font-semibold text-gold/90 bg-gold/10 border border-gold/25 rounded-full px-2 py-0.5">{v}</span>
-                    ))}
+      <section id="packages" className="py-10 px-4 scroll-mt-24">
+        <div className="max-w-7xl mx-auto">
+          {list.length === 0 ? (
+            <p className="text-center text-cream/55 text-sm py-12">
+              {fr ? "Aucune soirée pour cette combinaison. Essaie une autre vibe ou contacte-nous pour du sur-mesure." : "No nights for this combo. Try another vibe or contact us for custom."}
+            </p>
+          ) : (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {list.map((p, i) => (
+                <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} whileHover={{ y: -6 }} className="rounded-3xl overflow-hidden bg-cream/5 border border-cream/12 hover:border-gold/40 transition-colors group flex flex-col">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image src={p.image} alt={p.title[locale]} fill className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" sizes="(max-width:640px) 100vw, 33vw" />
+                    <span className="absolute top-3 left-3 inline-flex items-center gap-1 bg-gold/95 text-navy text-[10px] font-bold uppercase tracking-wider rounded-full px-2.5 py-1">{catLabels[p.category][locale]}</span>
+                    <span className="absolute top-3 right-3 bg-navy/70 backdrop-blur text-cream text-sm font-bold rounded-full px-3 py-1">
+                      {p.price}<span className="text-cream/60 font-medium text-[11px] ml-1">{priceUnitLabel[p.priceUnit][locale]}</span>
+                    </span>
                   </div>
-                )}
-                <ul className="space-y-1.5 mb-6 flex-1">
-                  {p.includes[locale].map((it, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-cream/70"><span className="text-gold mt-0.5">▸</span> {it}</li>
-                  ))}
-                </ul>
-                <a href={`/contact?plan=${encodeURIComponent(p.title[locale])}`} className="block text-center w-full gradient-gold text-navy font-bold py-3 rounded-full hover:opacity-90 transition-opacity">
-                  {fr ? "Réserver la soirée" : "Book the night"}
-                </a>
-              </div>
-            </motion.div>
-          ))}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-serif text-xl font-bold mb-2">{p.title[locale]}</h3>
+                    {p.vibes.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {p.vibes.map((v) => (
+                          <span key={v} className="text-[10px] font-semibold text-gold/90 bg-gold/10 border border-gold/25 rounded-full px-2 py-0.5">{v}</span>
+                        ))}
+                      </div>
+                    )}
+                    <ul className="space-y-1.5 mb-6 flex-1">
+                      {p.includes[locale].map((it, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-cream/70"><span className="text-gold mt-0.5">▸</span> {it}</li>
+                      ))}
+                    </ul>
+                    <a href={`/contact?plan=${encodeURIComponent(p.title[locale])}`} className="block text-center w-full gradient-gold text-navy font-bold py-3 rounded-full hover:opacity-90 transition-opacity">
+                      {fr ? "Réserver la soirée" : "Book the night"}
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -209,7 +265,7 @@ export default function NightOutPage() {
             ))}
           </div>
           <div className="text-center mt-14">
-            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="inline-flex items-center gap-2 gradient-gold text-navy font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity">
+            <a href="#packages" className="inline-flex items-center gap-2 gradient-gold text-navy font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity">
               {fr ? "Découvrir nos packages festifs" : "Discover our party packages"} <ArrowRight className="w-4 h-4" strokeWidth={2} />
             </a>
           </div>
