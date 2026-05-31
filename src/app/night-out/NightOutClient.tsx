@@ -82,6 +82,14 @@ const packages: NightPackage[] = [
     title: { fr: "EVG / EVJF Night", en: "Bachelor / Bachelorette Night" },
     vibes: ["Afro", "Latino", "Hip-Hop"],
     includes: { fr: ["Parcours bars + club organisé", "Coupe-file & table", "Jeux et surprises", "Transport entre les lieux"], en: ["Organized bar + club route", "Skip-the-line & table", "Games and surprises", "Transport between venues"] } },
+  { id: "princess-theatre-whyte", category: "bars", price: "$85", priceUnit: "pers", groupSize: "2-8 pers", image: "/images/edmonton/nightout-princess-theatre.jpg",
+    title: { fr: "Princess Theatre — Live Music Whyte Ave", en: "Princess Theatre — Whyte Ave Live Music" },
+    vibes: ["Live Music", "Indie", "Local"],
+    includes: { fr: ["Billet pour le show au Princess Theatre", "2 bars partenaires sur Whyte Ave avant/après", "Cocktail signature offert", "Guide local Whyte Ave"], en: ["Princess Theatre show ticket", "2 partner bars on Whyte Ave before/after", "Signature cocktail on us", "Local Whyte Ave guide"] } },
+  { id: "whyte-ave-illuminated", category: "bars", price: "$95", priceUnit: "pers", groupSize: "2-6 pers", image: "/images/edmonton/nightout-whyte-ave.jpg",
+    title: { fr: "Whyte Ave Illuminée — Tour Nocturne", en: "Whyte Ave Lit Up — Night Tour" },
+    vibes: ["Local", "Lounge", "Chill"],
+    includes: { fr: ["Visite guidée Whyte Avenue éclairée (les arbres en lumières)", "3 arrêts dans des bars/lounges", "1 cocktail par arrêt", "Spots photos garantis"], en: ["Guided tour of lit-up Whyte Avenue (the light-trees)", "3 bar/lounge stops", "1 cocktail per stop", "Guaranteed photo spots"] } },
 ];
 
 // Vibe palette — emoji-tagged, dérivée des packages

@@ -52,8 +52,8 @@ export default function DecouvrirPage() {
       <section className="relative h-[42vh] min-h-[300px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80"
-            alt="Edmonton skyline"
+            src="/images/edmonton/discover-park-skyline.jpg"
+            alt={locale === "fr" ? "Skyline d'Edmonton vue du parc" : "Edmonton skyline from the park"}
             fill
             sizes="100vw"
             className="object-cover saturate-[0.9] contrast-[1.08]"

@@ -777,5 +777,47 @@
       53.555,
       -113.518
     ]
+  },
+  {
+    "id": "pedal-pub-edmonton",
+    "slug": "pedal-pub-edmonton",
+    "segment": "amis",
+    "title": {
+      "fr": "Pedal Pub — Bar à pédales d'Edmonton",
+      "en": "Pedal Pub — Edmonton's bike pub crawl"
+    },
+    "location": "Pedal Pub Edmonton",
+    "address": "Whyte Ave & Downtown loops, Edmonton, AB",
+    "description": {
+      "fr": "Le bar à pédales le plus iconique d'Edmonton : 14 places, vous pédalez en groupe, le chauffeur conduit, vous arrêtez dans 3-4 bars de Whyte Ave ou downtown.",
+      "en": "Edmonton's most iconic pub bike: 14 seats, you pedal as a group, the driver steers, you stop at 3-4 Whyte Ave or downtown bars."
+    },
+    "longDescription": {
+      "fr": "Pedal Pub, c'est l'expérience de groupe qui rend Edmonton mémorable. Un vélo bar de 14 places, vous pédalez ensemble, le chauffeur conduit, et vous traversez Whyte Avenue (ou downtown) en faisant 3-4 arrêts dans des bars locaux.\n\nIdéal EVJF/EVG, anniversaire, retrouvailles, team-building décontracté. Le chauffeur connaît les meilleurs spots — coupe-file et tables réservées dans les bars partenaires. Apporte ta musique sur Bluetooth, ils ont les enceintes.\n\nDisponible mai à octobre. Réservation 2-3 semaines à l'avance pour les week-ends. Permis alcool : sans alcool à bord du vélo (loi Alberta), tu bois aux arrêts.",
+      "en": "Pedal Pub is the group experience that makes Edmonton memorable. A 14-seat bar bike, you pedal together, the driver steers, and you roll through Whyte Avenue (or downtown) stopping at 3-4 local bars.\n\nPerfect for bachelorette/stag, birthday, reunion, casual team-building. The driver knows the best spots — skip-the-line and reserved tables at partner bars. Bring your Bluetooth music, they have speakers.\n\nAvailable May to October. Book 2-3 weeks ahead for weekends. Alcohol rule: no alcohol on the bike (Alberta law), you drink at stops."
+    },
+    "image": "/images/edmonton/amis-pedal-pub.webp",
+    "gallery": [
+      "/images/edmonton/amis-pedal-pub.webp",
+      "/images/edmonton/nightout-whyte-ave.jpg"
+    ],
+    "priceRange": { "fr": "55$ - 75$ / personne", "en": "$55 - $75 / person" },
+    "priceFrom": 55,
+    "priceTo": 75,
+    "budgetTier": 80,
+    "duration": { "fr": "2 h", "en": "2h" },
+    "groupSize": { "fr": "8-14 personnes", "en": "8-14 people" },
+    "season": ["spring", "summer", "fall"],
+    "mood": ["dynamique", "gourmand"],
+    "tags": ["groupe", "dynamique", "evjf", "evg", "anniversaire", "whyte-ave"],
+    "includes": {
+      "fr": ["Vélo Pedal Pub 14 places (chauffeur inclus)", "3-4 arrêts dans des bars partenaires", "Coupe-file et tables réservées", "Système audio Bluetooth", "2 h de tour Whyte Ave ou downtown", "Idéal EVJF, EVG, anniversaire"],
+      "en": ["Pedal Pub 14-seat bike (driver included)", "3-4 stops at partner bars", "Skip-the-line and reserved tables", "Bluetooth audio system", "2h Whyte Ave or downtown tour", "Ideal for bachelorette, stag, birthday"]
+    },
+    "services": ["eventPlanner"],
+    "cta": "quote",
+    "rating": 4.9,
+    "mapsQuery": "Pedal Pub Edmonton",
+    "coords": [53.519, -113.498]
   }
 ]
