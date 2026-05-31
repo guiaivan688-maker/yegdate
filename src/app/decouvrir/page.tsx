@@ -53,8 +53,9 @@ export default function DecouvrirPage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80"
-            alt="Edmonton"
+            alt="Edmonton skyline"
             fill
+            sizes="100vw"
             className="object-cover saturate-[0.9] contrast-[1.08]"
             priority
           />

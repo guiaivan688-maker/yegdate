@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <>
       <section className="relative h-[40vh] min-h-[280px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80" alt="Services" fill className="object-cover saturate-[0.9] contrast-[1.08]" priority />
+          <Image src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80" alt="Premium services" fill sizes="100vw" className="object-cover saturate-[0.9] contrast-[1.08]" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 w-full">

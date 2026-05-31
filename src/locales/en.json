@@ -35,12 +35,12 @@
   },
   "hero": {
     "title": "Edmonton, elevated by you.",
-    "subtitle": "Discover the most beautiful places, plan unforgettable experiences and turn every outing into a memory.",
+    "subtitle": "From Old Strathcona brunch to downtown rooftops — 200+ vetted Edmonton ideas.",
     "tagline": "Edmonton's smart outing planner",
     "cta": "Find my plan",
     "ctaServices": "Our services",
-    "bigTitle": "Never \"I don't know what to do this weekend\" again",
-    "bigSubtitle": "Edmonton's smart outing planner. Budget, mood, group — we plan it all.",
+    "bigTitle": "Your next Edmonton weekend, planned in 2 minutes.",
+    "bigSubtitle": "Tell us your budget, your mood and who's coming — we'll compose a night ready to book.",
     "bigCta": "Find your plan →"
   },
   "home": {
@@ -49,7 +49,7 @@
     "weekendSubtitle": "The can't-miss events around the city",
     "allEvents": "See all events →",
     "customTitle": "Create your custom experience",
-    "customText": "Build your day block by block and get an instant quote.",
+    "customText": "Build your day block by block and get a quote within 24h.",
     "customCta": "Build my experience"
   },
   "newsletter": {
@@ -120,21 +120,21 @@
   },
   "compositeur": {
     "title": "Compose your night",
-    "subtitle": "Your budget, who you're going out with — we build the perfect Edmonton night for you.",
+    "subtitle": "Tell us your budget and who's coming — we'll compose an Edmonton night ready to go.",
     "q1": "Who are you going out with?",
     "ctxCouple": "As a couple",
     "ctxFamille": "As a family",
     "ctxAmis": "With friends",
     "ctxSolo": "Solo",
     "budgetLabel": "Your budget",
-    "compose": "Compose my night",
+    "compose": "See my plans",
     "total": "Total",
     "remaining": "You have left",
     "over": "Over budget by",
     "steps": "The plan",
     "surprise": "Surprise me",
     "another": "Another night",
-    "noFitTitle": "Hmm, nothing at this price for this context",
+    "noFitTitle": "Your budget's a bit tight for this combo",
     "noFitText": "Here's the most accessible option — bump the budget up for more choices.",
     "save": "Save",
     "saved": "Night saved ✓",
@@ -193,7 +193,7 @@
     "email": "Your email",
     "phone": "Phone (optional)",
     "message": "Message (optional)",
-    "submit": "Request a quote",
+    "submit": "Get my quote (24h)",
     "sending": "Sending…",
     "success": "Thank you! We'll get back to you within 24h.",
     "error": "Something went wrong. Try again or email us directly."
@@ -233,7 +233,7 @@
   },
   "discover": {
     "title": "Discover Edmonton",
-    "subtitle": "The best of the city, curated for you — by season and your budget"
+    "subtitle": "The best of the city, curated for you — by season and budget"
   },
   "footer": {
     "tagline": "Edmonton, elevated by you.",

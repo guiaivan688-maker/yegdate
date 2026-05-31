@@ -8,6 +8,7 @@ import { useLocale } from "@/lib/locale-context";
 import { useFavorites } from "@/lib/favorites-context";
 import { resolveImage } from "@/lib/local-images";
 import type { Activity } from "@/lib/activities";
+import { computeEstimate, formatEstimate } from "@/lib/activity-filters";
 
 const serviceBadges: Record<string, { fr: string; en: string; Icon: typeof Camera }> = {
   photographer: { fr: "Photographe", en: "Photographer", Icon: Camera },
@@ -16,10 +17,11 @@ const serviceBadges: Record<string, { fr: string; en: string; Icon: typeof Camer
   eventPlanner: { fr: "Événement", en: "Event", Icon: Calendar },
 };
 
-export default function ActivityCard({ activity, index = 0, featured = false }: { activity: Activity; index?: number; featured?: boolean }) {
+export default function ActivityCard({ activity, index = 0, featured = false, guests }: { activity: Activity; index?: number; featured?: boolean; guests?: number }) {
   const { locale, t } = useLocale();
   const { isFavorite, toggleFavorite } = useFavorites();
   const fav = isFavorite(activity.slug);
+  const estimate = guests && guests > 0 ? computeEstimate(activity, guests, locale) : null;
 
   return (
     <motion.div
@@ -45,7 +47,8 @@ export default function ActivityCard({ activity, index = 0, featured = false }: 
           <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
           <button
             type="button"
-            aria-label={fav ? "Retirer des favoris" : "Ajouter aux favoris"}
+            aria-label={fav ? (locale === "fr" ? "Retirer des favoris" : "Remove from favorites") : (locale === "fr" ? "Ajouter aux favoris" : "Add to favorites")}
+            aria-pressed={fav}
             onClick={(e) => { e.preventDefault(); toggleFavorite(activity.slug); }}
             className="absolute top-3 right-3 w-9 h-9 glass rounded-full flex items-center justify-center hover:scale-110 transition-transform"
           >
@@ -104,9 +107,18 @@ export default function ActivityCard({ activity, index = 0, featured = false }: 
             </div>
           )}
 
-          <div className="flex items-center justify-between pt-1">
-            <span className="text-navy font-bold text-sm">{activity.priceRange[locale]}</span>
-            <span className="gradient-gold text-navy text-xs font-bold px-4 py-2 rounded-full">
+          <div className="flex items-center justify-between pt-1 gap-2">
+            <div className="flex flex-col min-w-0">
+              {estimate ? (
+                <>
+                  <span className="text-navy font-bold text-sm tabular-nums">{formatEstimate(estimate, guests!, locale)}</span>
+                  <span className="text-navy/40 text-[10px] truncate">{activity.priceRange[locale]}</span>
+                </>
+              ) : (
+                <span className="text-navy font-bold text-sm">{activity.priceRange[locale]}</span>
+              )}
+            </div>
+            <span className="gradient-gold text-navy text-xs font-bold px-4 py-2 rounded-full shrink-0">
               {t("common.viewMore")}
             </span>
           </div>

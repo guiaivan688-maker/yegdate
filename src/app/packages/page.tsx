@@ -22,7 +22,7 @@ export default function PackagesPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <Image src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1920&q=80" alt="" fill priority className="object-cover saturate-[0.85] contrast-[1.05]" />
+        <Image src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1920&q=80" alt="Edmonton experience packages" fill priority sizes="100vw" className="object-cover saturate-[0.85] contrast-[1.05]" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy/80" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>

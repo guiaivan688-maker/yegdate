@@ -26,7 +26,7 @@ export default function AboutPage() {
     <>
       <section className="grid lg:grid-cols-2">
         <div className="relative h-72 lg:h-auto min-h-[320px]">
-          <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80" alt="Founders" fill className="object-cover saturate-[0.9]" priority />
+          <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80" alt="Founders" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover saturate-[0.9]" priority />
         </div>
         <div className="gradient-navy text-cream p-10 sm:p-16 flex flex-col justify-center">
           <span className="inline-block w-12 h-1 gradient-gold rounded-full mb-6" />

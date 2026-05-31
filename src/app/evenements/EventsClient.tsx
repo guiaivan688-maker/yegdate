@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, CalendarDays, Ticket } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import type { EventItem } from "@/lib/cityEvents";
+import { getNeighbourhood, NEIGHBOURHOODS, type Neighbourhood } from "@/lib/activity-filters";
 
 const filters = [
   { key: "all", match: () => true },
@@ -17,16 +18,26 @@ const filters = [
 
 export default function EventsClient({ events }: { events: EventItem[] }) {
   const { locale, t } = useLocale();
+  const fr = locale === "fr";
   const [filter, setFilter] = useState<string>("all");
+  const [neighbourhood, setNeighbourhood] = useState<Neighbourhood | "all">("all");
+
+  const availableNeighbourhoods = useMemo(() => {
+    const set = new Set<Neighbourhood | "Other">();
+    events.forEach((e) => set.add(getNeighbourhood(e.location || "")));
+    return NEIGHBOURHOODS.filter((n) => set.has(n));
+  }, [events]);
 
   const active = filters.find((f) => f.key === filter)!;
-  const list = events.filter(active.match);
+  const list = events
+    .filter(active.match)
+    .filter((e) => neighbourhood === "all" || getNeighbourhood(e.location || "") === neighbourhood);
 
   return (
     <>
       <section className="relative h-[40vh] min-h-[280px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1920&q=80" alt="Events" fill className="object-cover saturate-[0.9] contrast-[1.08]" priority />
+          <Image src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1920&q=80" alt={fr ? "Festival à Edmonton" : "Festival in Edmonton"} fill sizes="100vw" className="object-cover saturate-[0.9] contrast-[1.08]" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 w-full">
@@ -38,24 +49,56 @@ export default function EventsClient({ events }: { events: EventItem[] }) {
         </div>
       </section>
 
-      <section className="sticky top-16 z-30 bg-cream/90 backdrop-blur border-b border-black/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex gap-2 overflow-x-auto">
-          {filters.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setFilter(f.key)}
-              className={`px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
-                filter === f.key ? "gradient-navy text-cream" : "bg-surface text-navy/70 hover:text-navy border border-black/5"
-              }`}
-            >
-              {t(`events.${f.key}`)}
-            </button>
-          ))}
+      <section className="sticky top-16 z-30 bg-cream/95 backdrop-blur border-b border-black/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 space-y-2">
+          <div className="flex gap-2 overflow-x-auto">
+            {filters.map((f) => (
+              <button
+                key={f.key}
+                onClick={() => setFilter(f.key)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                  filter === f.key ? "gradient-navy text-cream" : "bg-surface text-navy/70 hover:text-navy border border-black/10"
+                }`}
+              >
+                {t(`events.${f.key}`)}
+              </button>
+            ))}
+          </div>
+          {availableNeighbourhoods.length > 1 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-navy/40 shrink-0" strokeWidth={1.5} />
+              <button
+                onClick={() => setNeighbourhood("all")}
+                className={`px-3 py-1 rounded-full text-[11px] font-medium whitespace-nowrap transition-colors ${
+                  neighbourhood === "all" ? "bg-navy text-cream" : "bg-surface text-navy/70 border border-black/10 hover:text-navy"
+                }`}
+              >
+                {fr ? "Tous les quartiers" : "All neighbourhoods"}
+              </button>
+              {availableNeighbourhoods.map((n) => (
+                <button
+                  key={n}
+                  onClick={() => setNeighbourhood(n)}
+                  className={`px-3 py-1 rounded-full text-[11px] font-medium whitespace-nowrap transition-colors ${
+                    neighbourhood === n ? "bg-navy text-cream" : "bg-surface text-navy/70 border border-black/10 hover:text-navy"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto">
+          {list.length === 0 && (
+            <p className="text-center text-navy/60 py-12">
+              {fr ? "Aucun événement ne correspond à ces filtres." : "No events match these filters."}
+            </p>
+          )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {list.map((ev, i) => (
             <motion.div
               key={`${ev.name}-${i}`}
@@ -94,6 +137,7 @@ export default function EventsClient({ events }: { events: EventItem[] }) {
               </div>
             </motion.div>
           ))}
+          </div>
         </div>
       </section>
     </>

@@ -1,5 +1,17 @@
-"use client";
+import type { Metadata } from "next";
 import SegmentPage from "@/components/SegmentPage";
+
+export const metadata: Metadata = {
+  title: "Sorties Entre Amis à Edmonton — Escape Rooms, Lancer de Hache, Bar Crawls",
+  description:
+    "Idées de sorties entre amis à Edmonton : EVJF/EVG, escape rooms, lancer de hache, bar crawls de Whyte Avenue. Activités vérifiées avec prix, capacité de groupe et quartier.",
+  alternates: { canonical: "/amis" },
+  openGraph: {
+    title: "Sorties Entre Amis à Edmonton — Where To Go YEG",
+    description: "Lancer de hache, escape rooms, bar crawls — sorties de groupe vérifiées à Edmonton.",
+    type: "website",
+  },
+};
 
 export default function AmisPage() {
   return (

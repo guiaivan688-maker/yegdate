@@ -98,7 +98,7 @@ export default function ExperienceBuilder() {
     <div className="bg-cream rounded-3xl border border-black/5 p-6 sm:p-10">
       {/* Step 1 — occasion */}
       <h2 className="font-serif text-2xl font-bold text-navy mb-1">{fr ? "1. Quelle occasion ?" : "1. What's the occasion?"}</h2>
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 mb-10">
         {occasions.map((o) => (
           <button
             key={o.id}
@@ -118,7 +118,7 @@ export default function ExperienceBuilder() {
           <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="grid lg:grid-cols-[1fr_1.1fr_320px] gap-8">
             {/* Step 2a — palette */}
             <div>
-              <h2 className="font-serif text-2xl font-bold text-navy mb-4">{fr ? "2. Composez" : "2. Build it"}</h2>
+              <h2 className="font-serif text-2xl font-bold text-navy mb-4">{fr ? "2. Choisis tes moments" : "2. Pick your moments"}</h2>
               <div className="space-y-2">
                 {blocks.map((b) => (
                   <button
@@ -144,7 +144,7 @@ export default function ExperienceBuilder() {
               <h2 className="font-serif text-2xl font-bold text-navy mb-4">{fr ? "Votre journée" : "Your day"}</h2>
               {timeline.length === 0 ? (
                 <div className="rounded-2xl border border-dashed border-navy/20 p-8 text-center text-navy/40 text-sm">
-                  {fr ? "Cliquez sur des blocs pour composer votre journée." : "Click blocks to compose your day."}
+                  {fr ? "Clique un bloc à gauche pour démarrer ta journée (ex. : Brunch → Spa → Dîner)." : "Click a block on the left to start your day (e.g. Brunch → Spa → Dinner)."}
                 </div>
               ) : (
                 <div className="relative pl-6">
@@ -197,7 +197,7 @@ export default function ExperienceBuilder() {
                     </div>
                     <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={inputCls} />
                     <div>
-                      <label className="text-cream/60 text-xs block mb-2">{fr ? "Vibe musical (optionnel)" : "Music vibe (optional)"}</label>
+                      <label className="text-cream/60 text-xs block mb-2">{fr ? "Ambiance musicale (optionnel)" : "Music vibe (optional)"}</label>
                       <div className="flex flex-wrap gap-1.5">
                         {VIBES_MUSIQUE.map((v) => {
                           const active = vibes.includes(v);
@@ -222,7 +222,7 @@ export default function ExperienceBuilder() {
                     <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className={inputCls} />
                     <input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder={fr ? "Téléphone" : "Phone"} className={inputCls} />
                     <button type="submit" disabled={status === "sending" || timeline.length === 0} className="w-full gradient-gold text-navy font-bold py-3 rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50">
-                      {status === "sending" ? (fr ? "Envoi…" : "Sending…") : (fr ? "Envoyer ma demande" : "Send my request")}
+                      {status === "sending" ? (fr ? "Envoi…" : "Sending…") : (fr ? "Recevoir mon devis (24 h)" : "Get my quote (24h)")}
                     </button>
                   </form>
                 )}

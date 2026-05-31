@@ -7,26 +7,54 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocale } from "@/lib/locale-context";
 import WeatherWidget from "./WeatherWidget";
 
-const slides = [
-  "https://images.unsplash.com/photo-1571816119607-57e48af1caa9?w=1920&q=80",
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80",
-  "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=80",
-  "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1920&q=80",
-  "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80",
+interface Slide {
+  src: string;
+  alt: { fr: string; en: string };
+}
+
+const slides: Slide[] = [
+  {
+    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80",
+    alt: { fr: "Dîner romantique aux chandelles à Edmonton", en: "Romantic candlelit dinner in Edmonton" },
+  },
+  {
+    src: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1920&q=80",
+    alt: { fr: "Amis qui célèbrent au restaurant à Edmonton", en: "Friends celebrating at an Edmonton restaurant" },
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542596594-649edbc13630?w=1920&q=80",
+    alt: { fr: "Famille dans la neige — hiver à Edmonton", en: "Family in the snow — Edmonton winter" },
+  },
+  {
+    src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1920&q=80",
+    alt: { fr: "Coucher de soleil sur la rivière North Saskatchewan", en: "Sunset over the North Saskatchewan River" },
+  },
+  {
+    src: "https://images.unsplash.com/photo-1605910347041-d6d7ac21de26?w=1920&q=80",
+    alt: { fr: "Skyline d'Edmonton en hiver", en: "Edmonton winter skyline" },
+  },
 ];
 
 export default function HeroSlideshow() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
+    if (paused) return;
     const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
     return () => clearInterval(id);
-  }, []);
+  }, [paused]);
 
   return (
-    <section className="relative h-[100svh] min-h-[560px] overflow-hidden">
-      <AnimatePresence>
+    <section
+      className="relative h-[100svh] min-h-[560px] overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
+      <AnimatePresence mode="wait">
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -36,10 +64,11 @@ export default function HeroSlideshow() {
           className="absolute inset-0"
         >
           <Image
-            src={slides[index]}
-            alt="Edmonton"
+            src={slides[index].src}
+            alt={slides[index].alt[locale]}
             fill
             priority={index === 0}
+            sizes="100vw"
             className="object-cover saturate-[0.9] contrast-[1.05]"
           />
         </motion.div>
@@ -61,7 +90,7 @@ export default function HeroSlideshow() {
             {t("hero.bigSubtitle")}
           </p>
           <Link
-            href="/weekend-match"
+            href="/compositeur"
             className="inline-block gradient-gold text-navy font-bold px-10 py-4 rounded-full hover:opacity-90 transition-opacity text-base"
           >
             {t("hero.bigCta")}
@@ -74,7 +103,8 @@ export default function HeroSlideshow() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={`${locale === "fr" ? "Slide" : "Slide"} ${i + 1}`}
+            aria-current={i === index ? "true" : undefined}
             className={`h-2 rounded-full transition-all ${i === index ? "w-7 bg-gold" : "w-2 bg-cream/50 hover:bg-cream/80"}`}
           />
         ))}

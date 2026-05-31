@@ -34,36 +34,36 @@
     "tickets": "Billets"
   },
   "hero": {
-    "title": "Edmonton, sublimé par vous.",
-    "subtitle": "Découvrez les plus beaux endroits, planifiez des expériences inoubliables et transformez chaque sortie en souvenir.",
+    "title": "Edmonton, sublimé par toi.",
+    "subtitle": "Du brunch en Old Strathcona aux rooftops du centre-ville — 200+ idées vérifiées à Edmonton.",
     "tagline": "L'agenda intelligent d'Edmonton",
     "cta": "Trouver mon plan",
     "ctaServices": "Nos services",
-    "bigTitle": "Plus jamais « j'sais pas quoi faire ce week-end »",
-    "bigSubtitle": "L'agenda intelligent d'Edmonton. Budget, humeur, groupe — on planifie tout.",
+    "bigTitle": "Ton prochain week-end à Edmonton, planifié en 2 minutes.",
+    "bigSubtitle": "Dis-nous ton budget, ton humeur et avec qui — on te compose une soirée prête à réserver.",
     "bigCta": "Trouve ton plan →"
   },
   "home": {
-    "quickAccess": "Pour qui planifiez-vous ?",
+    "quickAccess": "Pour qui planifies-tu ?",
     "weekendTitle": "Ce week-end à Edmonton",
     "weekendSubtitle": "Les événements à ne pas manquer dans la ville",
     "allEvents": "Voir tous les événements →",
-    "customTitle": "Créez votre expérience sur-mesure",
-    "customText": "Composez votre journée bloc par bloc et obtenez un devis instantané.",
+    "customTitle": "Crée ton expérience sur-mesure",
+    "customText": "Compose ta journée bloc par bloc et reçois un devis sous 24h.",
     "customCta": "Créer mon expérience"
   },
   "newsletter": {
     "title": "3 idées de sortie chaque semaine, directement dans ta boîte.",
     "placeholder": "ton@email.com",
     "cta": "Je m'inscris",
-    "social": "Rejoint 2 300+ Edmontoniens",
+    "social": "Rejoins 2 300+ Edmontoniens",
     "thanks": "Merci ! Vérifie ta boîte mail."
   },
   "weather": {
     "edmonton": "Edmonton",
-    "cold": "Habillez-vous chaudement aujourd'hui !",
+    "cold": "Habille-toi chaudement aujourd'hui !",
     "indoor": "Idéal pour une sortie en intérieur",
-    "mild": "Temps doux, profitez-en !",
+    "mild": "Temps doux, profites-en !",
     "outdoor": "Parfait pour profiter de l'extérieur"
   },
   "common": {
@@ -86,7 +86,7 @@
     "verified": "Vérifié par Where To Go YEG"
   },
   "categories": {
-    "title": "Explorez par catégorie",
+    "title": "Explore par catégorie",
     "couplesDesc": "Dates romantiques et expériences à deux",
     "familleDesc": "Activités pour toute la famille",
     "amisDesc": "Sorties inoubliables entre amis",
@@ -95,7 +95,7 @@
   "sections": {
     "popular": "Activités Populaires",
     "servicesTitle": "Services Premium",
-    "servicesSubtitle": "Transformez vos sorties en expériences extraordinaires",
+    "servicesSubtitle": "Transforme tes sorties en expériences extraordinaires",
     "galleryTitle": "Lieux Instagrammables",
     "gallerySubtitle": "Les plus beaux endroits d'Edmonton à photographier",
     "testimonialsTitle": "Ils ont vécu l'expérience",
@@ -103,12 +103,12 @@
   },
   "weekendMatch": {
     "title": "Weekend Match",
-    "subtitle": "Répondez à 4 questions, on vous propose le plan parfait",
-    "q1": "Avec qui sortez-vous ?",
+    "subtitle": "Réponds à 4 questions, on te propose le plan parfait",
+    "q1": "Avec qui sors-tu ?",
     "q2": "Quel budget ?",
     "q3": "Quelle ambiance ?",
     "q4": "Quand ?",
-    "results": "Vos plans recommandés",
+    "results": "Tes plans recommandés",
     "noResults": "Aucun plan ne correspond exactement. Voici nos meilleures suggestions :",
     "restart": "Recommencer",
     "reserve": "Réserver ce plan",
@@ -120,21 +120,21 @@
   },
   "compositeur": {
     "title": "Compose ta soirée",
-    "subtitle": "Ton budget, avec qui tu sors — on t'assemble la soirée parfaite à Edmonton.",
+    "subtitle": "Donne-nous ton budget et avec qui tu sors — on te compose une soirée prête à Edmonton.",
     "q1": "Avec qui sors-tu ?",
     "ctxCouple": "En couple",
     "ctxFamille": "En famille",
     "ctxAmis": "Entre amis",
     "ctxSolo": "En solo",
     "budgetLabel": "Ton budget",
-    "compose": "Compose ma soirée",
+    "compose": "Voir mes plans",
     "total": "Total",
     "remaining": "Il te reste",
     "over": "Au-dessus du budget de",
     "steps": "Le déroulé",
     "surprise": "Surprends-moi",
     "another": "Une autre soirée",
-    "noFitTitle": "Hmm, rien à ce prix pour ce contexte",
+    "noFitTitle": "Ton budget est un peu juste pour ce contexte",
     "noFitText": "Voici l'option la plus accessible — monte un peu le budget pour plus de choix.",
     "save": "Enregistrer",
     "saved": "Soirée enregistrée ✓",
@@ -183,25 +183,25 @@
     "all": "Toute saison"
   },
   "quote": {
-    "title": "Créez votre expérience sur-mesure",
-    "activity": "Choisissez une activité",
+    "title": "Crée ton expérience sur-mesure",
+    "activity": "Choisis une activité",
     "guests": "Nombre de personnes",
     "addons": "Options supplémentaires",
     "summary": "Récapitulatif",
     "total": "Total estimé",
-    "name": "Votre nom",
-    "email": "Votre courriel",
+    "name": "Ton nom",
+    "email": "Ton courriel",
     "phone": "Téléphone (optionnel)",
     "message": "Message (optionnel)",
-    "submit": "Demander un devis",
+    "submit": "Recevoir mon devis (24 h)",
     "sending": "Envoi en cours…",
-    "success": "Merci ! On revient vers vous sous 24h.",
-    "error": "Une erreur est survenue. Réessayez ou écrivez-nous directement."
+    "success": "Merci ! On revient vers toi sous 24 h.",
+    "error": "Une erreur est survenue. Réessaie ou écris-nous directement."
   },
   "ai": {
     "title": "Concierge YEG",
     "subtitle": "Assistant IA",
-    "placeholder": "Décrivez ce que vous cherchez…",
+    "placeholder": "Décris ce que tu cherches…",
     "send": "Envoyer"
   },
   "services": {
@@ -212,7 +212,7 @@
   },
   "loveRooms": {
     "title": "Envie de prolonger la soirée ?",
-    "text": "Découvrez nos Love Rooms privées : des espaces intimes et raffinés pour terminer votre soirée en beauté.",
+    "text": "Découvre nos Love Rooms privées : des espaces intimes et raffinés pour terminer ta soirée en beauté.",
     "cta": "Découvrir les Love Rooms"
   },
   "buffets": {
@@ -233,13 +233,13 @@
   },
   "discover": {
     "title": "Découvrir Edmonton",
-    "subtitle": "Le meilleur de la ville, curé pour vous — selon la saison et votre budget"
+    "subtitle": "Le meilleur de la ville, curé pour toi — selon la saison et ton budget"
   },
   "footer": {
-    "tagline": "Edmonton, sublimé par vous.",
+    "tagline": "Edmonton, sublimé par toi.",
     "rights": "Tous droits réservés.",
     "explore": "Explorer",
-    "follow": "Suivez-nous",
+    "follow": "Suis-nous",
     "privateHaven": "Where To Go YEG est un projet de",
     "privacy": "Confidentialité",
     "terms": "Conditions",

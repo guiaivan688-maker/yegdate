@@ -97,9 +97,7 @@ export default function Footer() {
         <div className="border-t border-cream/10 mt-12 pt-8 text-center space-y-2">
           <p className="text-cream/50 text-sm">
             {t("footer.privateHaven")}{" "}
-            <a href="#" title="Bientôt disponible" className="text-gold italic hover:underline">
-              Private Haven
-            </a>
+            <span className="text-gold/80 italic">Private Haven</span>
           </p>
           <p className="text-cream/40 text-xs">{t("footer.disclaimer")}</p>
           <div className="flex items-center justify-center gap-4 text-cream/50 text-xs">

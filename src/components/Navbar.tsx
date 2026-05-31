@@ -21,12 +21,19 @@ const links = [
 
 export default function Navbar() {
   const { locale, toggleLocale, t } = useLocale();
+  const fr = locale === "fr";
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const isHome = pathname === "/";
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const labels = {
+    search: fr ? "Recherche" : "Search",
+    favs: fr ? "Mes favoris" : "My favorites",
+    lang: fr ? "Switch to English" : "Passer au français",
+    menu: fr ? "Menu" : "Menu",
+  };
 
   useEffect(() => {
     let active = true;
@@ -96,15 +103,15 @@ export default function Navbar() {
                 {t("nav.connexion")}
               </Link>
             )}
-            <Link href="/recherche" aria-label="Recherche" className="text-navy/70 hover:text-gold transition-colors">
+            <Link href="/recherche" aria-label={labels.search} className="text-navy/70 hover:text-gold transition-colors">
               <Search className="w-5 h-5" strokeWidth={1.5} />
             </Link>
-            <Link href="/mes-favoris" aria-label="Mes favoris" className="text-navy/70 hover:text-gold transition-colors">
+            <Link href="/mes-favoris" aria-label={labels.favs} className="text-navy/70 hover:text-gold transition-colors">
               <Heart className="w-5 h-5" strokeWidth={1.5} />
             </Link>
             <button
               onClick={toggleLocale}
-              aria-label="Switch language"
+              aria-label={labels.lang}
               className="ml-1 px-3.5 py-1.5 rounded-full bg-navy text-cream text-xs font-semibold tracking-wider hover:bg-navy-light transition-colors"
             >
               {locale === "fr" ? "EN" : "FR"}
@@ -112,20 +119,20 @@ export default function Navbar() {
           </div>
 
           <div className="md:hidden flex items-center gap-3">
-            <Link href="/recherche" aria-label="Recherche" className="text-navy/70 hover:text-gold transition-colors">
+            <Link href="/recherche" aria-label={labels.search} className="text-navy/70 hover:text-gold transition-colors">
               <Search className="w-5 h-5" strokeWidth={1.5} />
             </Link>
-            <Link href="/mes-favoris" aria-label="Mes favoris" className="text-navy/70 hover:text-gold transition-colors">
+            <Link href="/mes-favoris" aria-label={labels.favs} className="text-navy/70 hover:text-gold transition-colors">
               <Heart className="w-5 h-5" strokeWidth={1.5} />
             </Link>
             <button
               onClick={toggleLocale}
-              aria-label="Switch language"
+              aria-label={labels.lang}
               className="px-3.5 py-1.5 rounded-full bg-navy text-cream text-xs font-semibold"
             >
               {locale === "fr" ? "EN" : "FR"}
             </button>
-            <button onClick={() => setOpen(!open)} aria-label="Menu" className="text-navy">
+            <button onClick={() => setOpen(!open)} aria-label={labels.menu} className="text-navy">
               {open ? <X className="w-6 h-6" strokeWidth={1.5} /> : <Menu className="w-6 h-6" strokeWidth={1.5} />}
             </button>
           </div>
