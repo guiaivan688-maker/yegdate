@@ -12,26 +12,27 @@ interface Slide {
   alt: { fr: string; en: string };
 }
 
+// Photos locales d'Edmonton — toutes prises ici, pas de stock générique.
 const slides: Slide[] = [
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80",
-    alt: { fr: "Dîner romantique aux chandelles à Edmonton", en: "Romantic candlelit dinner in Edmonton" },
+    src: "/images/edmonton/couples-walterdale-sunset.jpg",
+    alt: { fr: "Couple au coucher de soleil devant le Walterdale Bridge, Edmonton", en: "Couple at sunset by the Walterdale Bridge, Edmonton" },
   },
   {
-    src: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1920&q=80",
-    alt: { fr: "Amis qui célèbrent au restaurant à Edmonton", en: "Friends celebrating at an Edmonton restaurant" },
+    src: "/images/edmonton/amis-picnic-walterdale.jpg",
+    alt: { fr: "Amis en pique-nique avec la skyline d'Edmonton en arrière-plan", en: "Friends having a picnic with the Edmonton skyline behind" },
   },
   {
-    src: "https://images.unsplash.com/photo-1542596594-649edbc13630?w=1920&q=80",
-    alt: { fr: "Famille dans la neige — hiver à Edmonton", en: "Family in the snow — Edmonton winter" },
+    src: "/images/edmonton/famille-hawrelak-aerial.jpg",
+    alt: { fr: "Vue aérienne du parc Hawrelak et de la skyline d'Edmonton", en: "Aerial view of Hawrelak Park and Edmonton skyline" },
   },
   {
-    src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1920&q=80",
-    alt: { fr: "Coucher de soleil sur la rivière North Saskatchewan", en: "Sunset over the North Saskatchewan River" },
+    src: "/images/edmonton/nightout-whyte-ave.jpg",
+    alt: { fr: "Whyte Avenue illuminée la nuit, Edmonton", en: "Whyte Avenue lit up at night, Edmonton" },
   },
   {
-    src: "https://images.unsplash.com/photo-1605910347041-d6d7ac21de26?w=1920&q=80",
-    alt: { fr: "Skyline d'Edmonton en hiver", en: "Edmonton winter skyline" },
+    src: "/images/edmonton/lifestyle-walterdale-picnic.jpg",
+    alt: { fr: "Pique-nique solo face au Walterdale Bridge, Edmonton", en: "Solo picnic facing the Walterdale Bridge, Edmonton" },
   },
 ];
 

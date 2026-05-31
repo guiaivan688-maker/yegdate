@@ -24,7 +24,7 @@ export default function FamillePage() {
           fr: "Les classiques familiaux d'Edmonton — ceux que les enfants adorent et les parents approuvent.",
           en: "The Edmonton family classics — places kids love and parents trust.",
         }}
-        heroImage="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1920&q=80"
+        heroImage="/images/edmonton/famille-hawrelak-aerial.jpg"
       />
       <FamilleMoreLink />
     </>

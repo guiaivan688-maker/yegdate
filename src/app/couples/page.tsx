@@ -24,7 +24,7 @@ export default function CouplesPage() {
           fr: "Soirées romantiques à Edmonton — du Streetcar du High Level aux dîners chefs-table.",
           en: "Romantic Edmonton dates — from the High Level Streetcar to chef's-table dinners.",
         }}
-        heroImage="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1920&q=80"
+        heroImage="/images/edmonton/couples-walterdale-sunset.jpg"
       />
       <LoveRooms />
     </>

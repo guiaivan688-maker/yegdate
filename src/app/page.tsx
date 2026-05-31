@@ -10,6 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
 import SplitSection from "@/components/SplitSection";
 import EdmontonStory from "@/components/EdmontonStory";
+import EdmontonGallery from "@/components/EdmontonGallery";
 import edmonton from "@/data/edmonton-data.json";
 
 const howItWorks = [
@@ -175,6 +176,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* SECTION — Découvre Edmonton (vraies photos locales) */}
+      <EdmontonGallery />
 
       {/* SECTION 5 — Testimonials */}
       <Testimonials />

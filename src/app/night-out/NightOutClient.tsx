@@ -139,7 +139,7 @@ export default function NightOutPage() {
     <div className="bg-navy-dark text-cream">
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <Image src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80" alt={fr ? "Soirée club à Edmonton" : "Edmonton club night"} fill priority sizes="100vw" className="object-cover opacity-90" />
+        <Image src="/images/edmonton/nightout-whyte-ave.jpg" alt={fr ? "Whyte Avenue illuminée la nuit, Edmonton" : "Whyte Avenue lit up at night, Edmonton"} fill priority sizes="100vw" className="object-cover opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/30 via-navy-dark/40 to-navy-dark" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>

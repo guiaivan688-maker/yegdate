@@ -22,7 +22,7 @@ export default function AmisPage() {
         fr: "Lancer de hache, escape rooms, EVJF et soirées de groupe à Edmonton",
         en: "Axe throwing, escape rooms, bachelorettes and group nights in Edmonton",
       }}
-      heroImage="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80"
+      heroImage="/images/edmonton/amis-picnic-walterdale.jpg"
     />
   );
 }
