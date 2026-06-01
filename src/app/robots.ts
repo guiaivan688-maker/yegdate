@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin", "/PROJECT-SPEC.txt"],
+      disallow: ["/api/", "/admin", "/PROJECT-SPEC.txt", "/AUDIT-SITE.txt"],
     },
     sitemap: "https://wheretogoyeg.ca/sitemap.xml",
   };

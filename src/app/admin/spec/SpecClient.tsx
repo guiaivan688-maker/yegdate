@@ -64,12 +64,20 @@ export default function SpecClient({ markdown, error }: { markdown: string; erro
           </Link>
           <div className="flex items-center gap-2 flex-wrap">
             <a
+              href="/AUDIT-SITE.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-surface border border-navy/15 text-navy px-4 py-2 rounded-full text-sm font-semibold hover:bg-navy/5 transition-colors"
+            >
+              <FileText className="w-4 h-4" strokeWidth={1.5} /> {fr ? "Ouvrir l'audit" : "Open audit"}
+            </a>
+            <a
               href="/PROJECT-SPEC.txt"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-surface border border-navy/15 text-navy px-4 py-2 rounded-full text-sm font-semibold hover:bg-navy/5 transition-colors"
             >
-              <FileText className="w-4 h-4" strokeWidth={1.5} /> {fr ? "Ouvrir en texte" : "Open as text"}
+              <FileText className="w-4 h-4" strokeWidth={1.5} /> {fr ? "Ouvrir la spec" : "Open spec"}
             </a>
             <a
               href="/PROJECT-SPEC.txt"

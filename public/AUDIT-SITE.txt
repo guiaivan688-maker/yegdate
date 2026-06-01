@@ -1,0 +1,647 @@
+================================================================================
+  WHERE TO GO YEG — AUDIT COMPLET DU SITE (du jour 1 a aujourd'hui)
+================================================================================
+
+Date de l'audit : 2026-06-01
+Auditeur        : Claude (Anthropic)
+Site audite     : https://wheretogoyeg.ca
+Repo            : github.com/guiaivan688-maker/yegdate
+Periode couverte: 2026-05-20 (commit initial) -> 2026-06-01 (67 commits)
+Methode         : revue du code source reel (routes, composants, donnees,
+                  migrations, tests), pas une estimation.
+
+--------------------------------------------------------------------------------
+COMMENT LIRE CE DOCUMENT
+--------------------------------------------------------------------------------
+  Section 1  Resume executif + note de sante globale
+  Section 2  Historique complet, jour par jour, depuis le premier commit
+  Section 3  Audit page par page (les 32 routes)
+  Section 4  Audit des composants
+  Section 5  Audit technique (stack, donnees, DB, auth, paiement, SEO, perf,
+             securite, accessibilite, i18n, tests)
+  Section 6  Audit conformite (Canada / Alberta)
+  Section 7  Constats & problemes detectes (classes par priorite)
+  Section 8  Recommandations priorisees (quoi attaquer, dans quel ordre)
+  Section 9  Tableau de bord (note par domaine)
+
+  Legende des etats :  [OK] livre & fonctionnel   [~] partiel/a finir
+                       [!] probleme/manque         [PLAN] prevu, pas commence
+
+
+
+================================================================================
+  1. RESUME EXECUTIF
+================================================================================
+
+Where To Go YEG est un marketplace bilingue (FR/EN) de planification
+d'experiences a Edmonton, construit en 13 jours (20 mai -> 1 juin 2026),
+67 commits, par un solo builder. Le site est EN PRODUCTION, deploye
+automatiquement sur Vercel a chaque push.
+
+CE QUI EST IMPRESSIONNANT POUR 13 JOURS :
+  - 32 routes publiques + 1 back-office admin a 11 onglets
+  - Pile complete et coherente : Next.js 16 + React 19 + Supabase (Canada)
+    + Stripe + Resend
+  - Authentification reelle (email/mot de passe + Google), roles, RLS
+  - Paiement Stripe Checkout bout en bout avec ticket QR
+  - 5 personas couvertes nativement (couple/famille/amis/affaires/solo)
+  - Une feature signature solide : le builder pique-nique (23 lieux x 27 options)
+  - Donnees Edmonton reelles (35 evenements via open-data municipal, 19 photos
+    locales, parcs verifies)
+  - SEO serieux : metadata par page, JSON-LD, sitemap, robots
+  - Tests E2E Playwright + 11 migrations SQL versionnees
+
+VERDICT GLOBAL :  SOLIDE — niveau "produit lancable", pas "prototype".
+NOTE DE SANTE   :  8,0 / 10
+
+Ce qui empeche le 10/10 (et qui est NORMAL a ce stade) :
+  - Conformite legale incomplete (pas de bandeau cookies, emails de
+    confirmation automatiques a finaliser) — bloquant AVANT pub payante
+  - Un peu de dette technique cosmetique (2 librairies d'icones, code de
+    surcharge d'images jamais active, 7 photos a re-compresser)
+  - Pas de tests unitaires (seulement E2E)
+  - Contenu encore en JSON (pas editable en live depuis l'admin)
+
+Aucun de ces points n'est grave. Ce sont des finitions, pas des fondations
+cassees. Les fondations sont saines.
+
+
+
+================================================================================
+  2. HISTORIQUE COMPLET — DU PREMIER JOUR A AUJOURD'HUI
+================================================================================
+
+67 commits sur 13 jours. Voici TOUT, regroupe par journee, dans l'ordre.
+
+--- JOUR 1 — 20 mai 2026 : NAISSANCE ---
+  - Commit initial : "YEG Date - Edmonton lifestyle platform". Squelette du
+    site, premiere mise en ligne.
+
+--- 21 mai : FONDATIONS PRODUIT & DESIGN ---
+  - v2 : contenu par segment, moteur "Weekend Match", buffets, i18n (FR/EN),
+    API de demande de devis (quote)
+  - Bouton "Retour" dans la navbar sur toutes les pages internes
+  - Fondation design : police DM Sans, palette de couleurs, logo, icones
+    Lucide, badge "verifie"
+  - SEO de base + pages /about et /contact
+
+--- 22 mai : GROS BLOC DE CONTENU (les "Chantiers") ---
+  - Chantier 1  : page d'accueil refaite de zero + extraction donnees Edmonton
+  - Chantier 12 : buffets enrichis (badges AYCE/Brunch + matcher d'occasion)
+  - Chantiers 6 : separation /services (a la carte) vs /packages (cle en main)
+  - Chantier 10 : refonte immersive de Weekend Match
+  - Chantiers 7+9 : ExperienceBuilder + patterns de layout
+  - Migration du schema de donnees (C2)
+  - Chantier 3 : systeme de photos locales Edmonton + guide de remplacement
+  - Chantier 2 : metadata SEO par activite depuis le schema
+  - Page /evenements creee : 17 evenements Edmonton reels
+  - Evenements enrichis : 25 (dates debut/fin, prix billets, liens)
+  - Puis portes a 35 evenements au total
+  - Gros commit : favoris, recherche globale, guides, pages legales,
+    analytics, carte Edmonton, refonte packages + Night Out
+
+--- 23 mai : MENAGE ---
+  - Audit cleanup : config lint + suppression variables inutilisees +
+    documentation de l'hydratation SSR
+
+--- 24 mai : COMPOSITEUR & BACKEND ---
+  - Ajout du "Compositeur de Soiree" + pages SEO + prototype prestataire
+    + premier schema Supabase
+
+--- 25 mai : BRANCHEMENT SUPABASE ---
+  - Section "Edmonton story" sur l'accueil
+  - /prestataire branche sur Supabase (Phase 0)
+  - Durcissement du client Supabase : placeholders de secours pour que le
+    build ne casse jamais si une variable d'env manque
+  - Redeploiements pour appliquer les variables d'env Supabase sur Vercel
+  - Cle publique Supabase comme fallback integre
+
+--- 26 mai : AUTH, BOOKING & ADMIN (grosse journee) ---
+  - Phase 1 : moderation des offres
+  - Phase 2 : reservation + ticket QR (pas encore de paiement)
+  - Phase 3 : tableau de bord Super Admin
+  - Lien "Admin" dans la nav, visible seulement par les admins
+  - Connexion "Continue with Google" (Supabase OAuth)
+  - Connexion email + mot de passe (methode principale)
+  - /connexion unifiee avec redirection selon le role
+
+--- 27 mai : CONFORMITE CANADA & REBRAND ---
+  - DECISION CLE : backend deplace en region Canada (Supabase ca-central-1)
+    pour la residence des donnees (PIPEDA/PIPA)
+  - Import des evenements open-data de la Ville d'Edmonton dans /evenements
+    (rafraichi quotidiennement via ISR)
+  - REBRAND : "Where To Go YEG", canonical/SEO pointe sur wheretogoyeg.ca
+  - Balise de verification Google Search Console
+
+--- 28 mai : SECURITE & ADMIN v1 ---
+  - Email de contact affiche : wheretogoyeg@gmail.com
+  - Fix reservation invite sur /reserver (id genere client, pas de relecture RLS)
+  - En-tetes de securite HTTP + revocation de l'exposition RPC handle_new_user
+  - Construction du tableau de bord admin custom + suivi anonyme du budget
+  - Admin : onglet marketing + offres en vedette + boutons de role
+  - Admin v2 : codes promo, taux de match compositeur, export CSV, chargement
+    plus rapide
+
+--- 29 mai : ANALYTICS, BANNIERE & STRIPE ---
+  - Chargement des analytics compositeur en arriere-plan (premier affichage
+    plus rapide)
+  - Banniere de site geree par l'admin + suivi du mix de categories compositeur
+  - Migration 0008 : site_banners + composer_runs.categories
+  - STRIPE CHECKOUT branche : paiement a la reservation + page de confirmation
+  - Handles sociaux : @wheretogoyeg
+  - Favicon SVG de marque (remplace le favicon Next par defaut)
+  - Image OpenGraph de marque pour les partages sociaux
+  - Signalements anonymes + onglet admin "Signalements"
+
+--- 30 mai : REFONTE ADMIN & NIGHT-OUT ---
+  - Admin : refonte style Stripe — nav laterale + cartes KPI avec sparklines
+  - Compositeur : choix filtres par saison + UX setup/resultat plus claire
+  - /night-out rebrande pour matcher le site (navy + gold, fin du fuchsia)
+  - night-out : filtre par vibe, prix par pers/par groupe, CTA hero, image club
+  - night-out : hero allege, vibes deplacees vers /sur-mesure, taille de groupe
+
+--- 31 mai : LE GRAND SPRINT FINAL (12 commits en 1 jour) ---
+  - Filtres multi-domaines + night-out "vibe-first" + refonte SEO
+  - Remplacement des photos stock generiques par 19 vraies photos d'Edmonton
+  - FEATURE PIQUE-NIQUE : 14 parcs Edmonton + 28 options + builder /pique-nique
+  - Utilisation des photos restantes : Pedal Pub, Princess Theatre, hero
+    /decouvrir
+  - 4 chantiers en parallele : CTA picnic, UX /reserver, carte interactive,
+    temoignages reels
+  - Lieux pique-nique INTERIEURS + prise en compte du picnic dans l'admin
+  - Hawrelak warning BIG + optimisation photos + mega-menu navbar + JSON-LD SEO
+  - Admin Partenaires CRUD (+ migration Supabase appliquee en live)
+  - Tests E2E Playwright pour proteger les tunnels critiques
+  - docs : PROJECT-SPEC.md (spec produit + technique complete)
+  - Visualiseur de spec dans l'admin (/admin/spec)
+
+--- 1 juin : AUJOURD'HUI ---
+  - Spec disponible en fichier texte telechargeable (/PROJECT-SPEC.txt)
+  - CE DOCUMENT : audit complet du site (/AUDIT-SITE.txt)
+
+RYTHME : ~5 commits/jour en moyenne, avec une acceleration nette les 4
+derniers jours (refonte admin, paiement, picnic, SEO, tests). Le projet est
+passe de "prototype de contenu" a "produit transactionnel" en moins de 2
+semaines.
+
+
+
+================================================================================
+  3. AUDIT PAGE PAR PAGE (32 routes)
+================================================================================
+
+Pour chaque page : Role / Etat / Points forts / A surveiller.
+
+--- A. PAGES D'ACCUEIL & PLANIFICATION ---
+
+[1] /  (Accueil)
+  Role        : vitrine + point d'entree, slideshow Edmonton, CTA compositeur,
+                galerie public art, histoire Edmonton, temoignages
+  Etat        : [OK]
+  Points forts: 5 vraies photos Edmonton en hero (pause au survol), galerie
+                8 tuiles d'art public, 6 temoignages realistes, JSON-LD
+                LocalBusiness
+  A surveiller: beaucoup d'animations framer-motion -> surveiller le CLS sur
+                mobile bas de gamme
+
+[2] /compositeur
+  Role        : builder par budget + contexte (4 questions -> plan auto)
+  Etat        : [OK]
+  Points forts: filtre par saison, suivi analytics (composer_runs), match rate
+  A surveiller: c'est le coeur du funnel -> meriterait un A/B test plus tard
+
+[3] /sur-mesure
+  Role        : builder bloc-par-bloc (brunch + spa + diner + photographe),
+                devis 24 h ; accueille aussi les "vibes"
+  Etat        : [OK]
+  A surveiller: verifier que le CTA mene bien au formulaire de devis (Resend)
+
+[4] /weekend-match
+  Role        : 4 questions -> plans recommandes ce week-end (24 plans)
+  Etat        : [OK]
+  Points forts: refonte immersive, contenu reel
+
+[5] /pique-nique  *** FEATURE SIGNATURE ***
+  Role        : 23 lieux x 27 options x 4 occasions -> estimation + devis
+  Etat        : [OK] — la piece maitresse
+  Points forts: filtre outdoor/indoor/hybride (essentiel pour l'hiver
+                d'Edmonton), avertissement Hawrelak BIG rouge, recap + devis,
+                ancre #parks, JSON-LD Service avec AggregateOffer
+  A surveiller: donnees en JSON -> pas editable en live (voir P1) ; verifier
+                que les 27 options couvrent bien tous les cas annonces
+
+--- B. PAGES SEGMENTS (personas) ---
+
+[6] /couples    [7] /famille    [8] /amis    [9] /business
+  Role        : grille d'activites par persona, filtres saison + quartier +
+                nb personnes, estimation "guest-aware"
+  Etat        : [OK] (toutes server components avec generateMetadata + JSON-LD
+                ItemList)
+  Points forts: /couples met LoveRooms en spotlight au-dessus de la grille ;
+                estimation multipliee correctement (par couple / famille /
+                personne) ; /amis a Pedal Pub
+  A surveiller: /business utilise encore une photo hero Unsplash (pas Edmonton)
+                -> a remplacer par une vraie photo locale [!]
+  Comptage    : couples 10, famille 10, amis 11, business 10 activites
+
+--- C. CATALOGUE SPECIALISE ---
+
+[10] /night-out
+  Role        : soirees cle en main, "vibe-first" (Afro, Latino, Hip-Hop, EDM)
+  Etat        : [OK] — a beaucoup evolue (3 iterations les 30-31 mai)
+  Points forts: filtre par vibe, prix par pers/groupe, rebrande navy+gold
+  A surveiller: coherence avec les "vibes" qui vivent aussi sur /sur-mesure
+
+[11] /buffets
+  Role        : AYCE sushi/BBQ coreen/hot pot, filtre par quartier (6 entrees)
+  Etat        : [OK]
+  A surveiller: seulement 6 buffets -> a enrichir pour la valeur SEO
+
+[12] /evenements
+  Role        : calendrier municipal Edmonton (35 evenements, open-data, ISR
+                quotidien)
+  Etat        : [OK] — vraie integration open-data, gros atout credibilite
+  A surveiller: depend d'une API externe (Ville d'Edmonton) -> prevoir un
+                etat vide propre si l'API tombe
+
+[13] /packages     [14] /services
+  Role        : forfaits B2B cle en main / prestations a la carte
+  Etat        : [OK] (bien separes depuis le 22 mai)
+
+[15] /guides       [16] /guides/[slug]
+  Role        : articles SEO longs (4 publies : hiver, date romantique,
+                sorties famille, meilleurs buffets)
+  Etat        : [OK] structure / [~] volume
+  A surveiller: seulement 4 guides -> le levier SEO long-tail est sous-exploite
+                (objectif roadmap : 10 puis 50)
+
+[17] /idees        [18] /idees/[slug]
+  Role        : pages idees par segment + budget (generation statique SSG, 20+
+                pages)
+  Etat        : [OK] — bon pour le SEO (beaucoup d'URLs indexables)
+
+--- D. PAGES UTILES / TRANSACTION ---
+
+[19] /decouvrir
+  Role        : toutes les activites, filtres segment + budget
+  Etat        : [OK] (hero remplace par photo Edmonton reelle)
+
+[20] /carte
+  Role        : carte Leaflet interactive, pins colores par segment
+  Etat        : [OK]
+  A surveiller: Leaflet en ssr:false (dynamic import) -> verifier le rendu
+                mobile et le poids du bundle
+
+[21] /recherche
+  Role        : recherche full-text
+  Etat        : [OK]
+
+[22] /mes-favoris
+  Role        : favoris persistes (localStorage)
+  Etat        : [OK] / [~]
+  A surveiller: localStorage seulement -> pas de sync entre appareils pour les
+                connectes (voir P1.11)
+
+[23] /reserver  *** TUNNEL DE PAIEMENT ***
+  Role        : funnel booking -> Stripe Checkout
+  Etat        : [OK]
+  Points forts: durci (email requis, date min = aujourd'hui, asterisques,
+                rappel prix), fix booking invite (id client, pas de relecture
+                RLS), couvert par un test E2E
+  A surveiller: c'est la ou l'argent rentre -> a tester regulierement en reel
+
+[24] /reservation-confirmee
+  Role        : ticket QR apres paiement (rendu dynamique)
+  Etat        : [OK]
+
+[25] /activite/[slug]
+  Role        : page detail d'activite (JSON-LD TouristAttraction)
+  Etat        : [OK]
+  A surveiller: utilise @heroicons (cf. dette icones)
+
+--- E. COMPTE & LEGAL ---
+
+[26] /connexion
+  Role        : login unifie (email/mdp + Google) avec redirection par role
+  Etat        : [OK]
+
+[27] /prestataire
+  Role        : espace prestataire (branche Supabase, Phase 0)
+  Etat        : [~] prototype -> a developper si on active l'onboarding partenaires
+
+[28] /about   [29] /contact
+  Etat        : [OK]
+  A surveiller: /about devrait mentionner explicitement l'hebergement Canada
+                (argument confiance + conformite)
+
+[30] /confidentialite   [31] /conditions
+  Role        : politique de confidentialite / conditions
+  Etat        : [~]
+  A surveiller: /confidentialite a etoffer avec les sections PIPEDA standard
+                (voir conformite, section 6)
+
+--- F. ADMIN ---
+
+[32] /admin  (+ /admin/spec)
+  Role        : back-office a 11 onglets
+  Etat        : [OK] — tres complet pour un solo builder
+  Onglets     : Vue d'ensemble (KPI+sparklines) / Reservations / Utilisateurs
+                / Analyses / Moderation / Signalements / Codes promo /
+                Banniere / Pique-nique (read-only) / Partenaires (CRUD) /
+                Marketing
+  Points forts: refonte style Stripe, KPI visuels, export CSV, gestion roles
+  A surveiller: onglet Pique-nique en lecture seule (edition = toucher au code)
+                ; /admin/spec depend du gate auth client -> d'ou les fichiers
+                .txt publics en secours
+
+
+
+================================================================================
+  4. AUDIT DES COMPOSANTS (31 composants)
+================================================================================
+
+NAVIGATION & SHELL
+  Navbar.tsx          [OK]  mega-menu 3 buckets + ContextPicker monte
+  ContextPicker.tsx   [OK]  pill persona + nb pers, persiste en localStorage
+  Footer.tsx          [OK]
+  ClientShell.tsx     [OK]  enveloppe providers (locale, favoris, meteo...)
+
+CONTENU & CARTES
+  ActivityCard.tsx    [OK]  estimation guest-aware
+  SegmentPage.tsx     [OK]  moteur des pages persona (filtres + featured)
+  ActivityDetail.tsx  [OK]  [!] utilise @heroicons
+  HeroSlideshow.tsx   [OK]  5 photos, pause au survol, alt par slide
+  EdmontonGallery.tsx [OK]  mosaique 8 tuiles
+  Testimonials.tsx    [OK]  [!] utilise @heroicons
+  LoveRooms.tsx       [OK]  spotlight /couples
+  MapView.tsx         [OK]  Leaflet
+  SplitSection.tsx, EdmontonStory.tsx, GuideArticle.tsx, IdeasList.tsx  [OK]
+
+FORMULAIRES & CONVERSION
+  QuoteForm.tsx       [OK]  [!] utilise @heroicons
+  QuoteBuilder.tsx    [OK]
+  ExperienceBuilder.tsx [OK]
+  Newsletter.tsx      [~]   verifier le branchement reel (double opt-in CASL
+                            non fait)
+
+AUTH
+  EmailPasswordAuth.tsx, GoogleSignIn.tsx   [OK]
+
+ADMIN
+  BannerManager.tsx, ReportsManager.tsx, ReportButton.tsx, SiteBanner.tsx [OK]
+
+DIVERS
+  Analytics.tsx       [OK]  analytics custom
+  WeatherWidget.tsx   [OK]
+  SocialIcons.tsx     [OK]
+  AIConcierge.tsx     [~]   [!] placeholder — pas branche sur un vrai LLM
+  FamilleMoreLink.tsx [OK]
+
+CONSTAT COMPOSANTS : 4 fichiers utilisent encore @heroicons alors que le reste
+du site utilise lucide-react. Deux librairies d'icones chargees pour rien ->
+a unifier (gain de poids + coherence visuelle).
+
+
+
+================================================================================
+  5. AUDIT TECHNIQUE
+================================================================================
+
+5.1 STACK  [OK]
+  Next.js 16.2.6 (App Router) + React 19.2.4 + Tailwind 4 + framer-motion 12
+  + Supabase + Stripe + Resend + Leaflet + Playwright. Pile moderne, coherente,
+  sans dependances exotiques. Build de production : PASSE (verifie ce jour).
+
+5.2 COUCHE DE DONNEES  [OK] avec [~]
+  Hybride par design :
+    - Statique (JSON, src/data/) : 12 fichiers
+        activites : couples 10 / famille 10 / amis 11 / business 10 / picnic 10
+        picnic-parks 23 / picnic-options 27 / buffets 6 / guides 4
+        weekend-plans 24 / plans 3 / edmonton-data 35 evenements
+    - Dynamique (Supabase) : profiles, offers, booking_requests, composer_runs,
+      promo_codes, site_banners, user_reports, partners (8 tables)
+  [~] Le contenu cle (activites, parcs, options) est en JSON -> ajouter/editer
+      demande de toucher au code. Migration vers Supabase prevue (P1).
+  NOTE : picnic-options compte 27 entrees (la doc mentionnait 28 — ecart mineur
+         a corriger dans la doc).
+
+5.3 BASE DE DONNEES & MIGRATIONS  [OK]
+  11 migrations versionnees (0001 -> 0011), toutes appliquees en ca-central-1 :
+    0001 init / 0002 auto_admin / 0003 fix guest booking / 0004 harden
+    handle_new_user / 0005 admin dashboard / 0006 offers featured / 0007 match
+    rate + promo / 0008 banners + composer categories / 0009 stripe fields +
+    mark paid / 0010 user reports / 0011 partners
+  RLS active sur toutes les tables. Tres propre pour un solo builder.
+
+5.4 AUTH  [OK]
+  Supabase Auth : email/mot de passe (principal) + Google OAuth. Roles
+  client/prestataire/admin. Redirection par role. Lien admin masque aux non-admins.
+  Durcissement le 28 mai : exposition RPC handle_new_user revoquee.
+
+5.5 PAIEMENTS  [OK]
+  Stripe Checkout bout en bout (pay-at-booking -> webhook -> ticket QR).
+  Fix booking invite (id genere client, evite la relecture RLS).
+  A confirmer : passage du mode test au mode live cote Stripe.
+
+5.6 SEO  [OK] — point fort
+  - Metadata par page (refactor server components)
+  - JSON-LD : LocalBusiness, WebSite SearchAction, Organization,
+    TouristAttraction/Service, ItemList par segment, Service Picnic +
+    AggregateOffer
+  - sitemap.xml + robots.txt (robots durci ce jour : /api, /admin, fichiers
+    .txt exclus de l'index)
+  - Balise verification Google Search Console posee
+  - Beaucoup d'URLs SSG (/idees/*, /guides/*)
+  [PLAN] Soumettre le sitemap dans Google Search Console (P0)
+
+5.7 PERFORMANCE  [OK] avec [!]
+  - Photos optimisees (sharp) le 31 mai (les 4 plus grosses)
+  - [!] 7 photos restent > 500 KB :
+        famille-rundle-sign.jpg ... 951 KB  (la plus lourde)
+        art-mosaic-park.jpg ....... 613 KB
+        discover-park-skyline.jpg . 558 KB
+        art-vaulted-willow.jpg .... 558 KB
+        famille-hawrelak-aerial.jpg 554 KB
+        art-southgate-boots.jpg ... 514 KB
+        famille-rundle-park.jpg ... 502 KB
+    -> relancer scripts/optimize-photos.mjs sur ces fichiers (gain facile)
+  - framer-motion partout -> legere pression mobile, acceptable
+
+5.8 SECURITE  [OK]
+  - En-tetes de securite HTTP ajoutes (28 mai)
+  - RLS partout, exposition RPC corrigee
+  - Pas de secret en clair dans le repo (les .env sont des NOMS de variables)
+  - Backend en region Canada
+  RECO : ajouter une observabilite (Sentry/Logflare) pour voir les erreurs en
+         prod — actuellement angle mort.
+
+5.9 ACCESSIBILITE  [~]
+  - aria-labels bilingues sur la navbar (bon)
+  - [~] menu mobile en accordeon fait main -> revoir le focus clavier + roles ARIA
+  - RECO : passer un audit Lighthouse/axe sur les pages cles
+
+5.10 i18n  [OK]
+  2 locales (fr defaut / en), dictionnaires JSON, useLocale() + t(), <html lang>
+  reflete, tutoiement FR coherent partout.
+  [~] traductions de donnees parfois litterales -> a curer.
+
+5.11 TESTS  [OK] E2E / [!] unitaires
+  - 4 specs Playwright : navbar, reserver-funnel, picnic-builder, segment-pages
+  - [!] aucun test unitaire (libs activity-filters, schema, ideas non couvertes)
+  - [PLAN] CI GitHub Actions documentee mais pas activee -> les tests ne tournent
+    pas automatiquement a chaque push (P1)
+
+
+
+================================================================================
+  6. AUDIT CONFORMITE (CANADA / ALBERTA)
+================================================================================
+
+Base : sources officielles canadiennes (PIPEDA fed., PIPA Alberta).
+
+FAIT  [OK]
+  - Residence des donnees au Canada (Supabase ca-central-1) — decision du 27 mai
+  - Prix transparents, pages conditions/confidentialite a la racine
+  - En-tetes de securite HTTP
+
+A FAIRE  [!] / [PLAN]  (bloquant AVANT trafic payant)
+  [!]   Bandeau de consentement cookies (PIPEDA + future-proof Quebec Loi 25)
+  [!]   Emails de confirmation automatiques apres devis/booking (Resend installe,
+        route /api/quote-request existe -> finaliser les templates client)
+  [PLAN] Etoffer /confidentialite avec les sections PIPEDA standard
+  [PLAN] Journaliser les consentements en DB (table consents)
+  [PLAN] Double opt-in newsletter (anti-pourriel CASL)
+  [PLAN] Bouton "Supprimer mon compte" (droit a l'oubli PIPEDA)
+  [PLAN] Mentionner l'hebergement Canada dans /about
+
+VERDICT CONFORMITE : les FONDATIONS sont bonnes (data au Canada, sécurité), mais
+les ELEMENTS VISIBLES exiges par la loi (cookies, confirmation, droit a l'oubli)
+ne sont pas encore en place. A regler avant de pousser de la pub.
+
+
+
+================================================================================
+  7. CONSTATS & PROBLEMES DETECTES (classes par priorite)
+================================================================================
+
+Chaque constat est VERIFIE dans le code, avec l'effort estime.
+
+--- P0 — A REGLER AVANT D'ATTIRER DU TRAFIC PAYANT ---
+
+  C1 [!] Pas de bandeau cookies. Risque legal des qu'il y a du trafic.
+         Effort : ~2 h.
+  C2 [!] Emails de confirmation client non automatises apres devis/booking.
+         Aujourd'hui on promet "reponse sous 24 h" sans accuse de reception.
+         Resend est deja installe. Effort : ~3 h.
+  C3 [PLAN] Sitemap pas encore soumis a Google Search Console -> sans ca, peu
+         d'indexation organique. Effort : 30 min.
+  C4 [~] Audit liens casses (404) sur toutes les routes. Effort : ~1 h.
+
+--- P1 — POLISH, CONVERSION & AUTONOMIE ---
+
+  C5 [!] /business utilise encore une photo hero Unsplash (pas Edmonton).
+         Incoherent avec le reste du site. Effort : 15 min (photo dispo ?).
+  C6 [!] 2 librairies d'icones : @heroicons (4 fichiers) + lucide-react (reste).
+         Unifier sur lucide. Effort : ~1 h.
+  C7 [!] 7 photos > 500 KB (jusqu'a 951 KB). Relancer le script d'optim.
+         Effort : 30 min.
+  C8 [!] src/lib/local-images.ts : le systeme de surcharge d'images existe mais
+         le registre LOCAL_IMAGES est un Set VIDE -> code mort/jamais active.
+         Soit le brancher, soit le retirer. Effort : 30 min.
+  C9 [~] Contenu picnic/activites en JSON -> migrer vers Supabase pour edition
+         admin en live. Effort : ~4 h.
+  C10 [~] Partenaires : la table + le CRUD admin existent, mais rien n'est
+          affiche cote public. Effort : ~4 h.
+  C11 [PLAN] CI GitHub Actions pour E2E documentee mais pas activee. Effort : 30 min.
+  C12 [~] Favoris en localStorage seulement -> pas de sync cross-appareil.
+          Effort : ~2 h.
+  C13 [~] Seulement 4 guides SEO et 6 buffets -> volume de contenu faible pour
+          le long-tail. Effort : recurrent.
+
+--- P2 — NICE-TO-HAVE ---
+
+  C14 [~] AIConcierge est un placeholder (pas de vrai LLM derriere).
+  C15 [!] Aucun test unitaire (seulement E2E).
+  C16 [~] Pas d'observabilite/erreurs en prod (Sentry/Logflare conseille).
+  C17 [~] Accessibilite du menu mobile (accordeon maison) a revoir.
+  C18 [~] /prestataire reste un prototype Phase 0.
+  C19 [~] /evenements depend d'une API externe -> prevoir un etat vide propre.
+
+
+
+================================================================================
+  8. RECOMMANDATIONS PRIORISEES — QUOI ATTAQUER, DANS QUEL ORDRE
+================================================================================
+
+ETAPE 1 — "Pret pour la pub" (1 journee de travail, ~6-7 h)
+  1. Bandeau cookies (C1)
+  2. Emails de confirmation auto via Resend (C2)
+  3. Soumettre le sitemap a Google Search Console (C3)
+  4. Audit 404 rapide (C4)
+  -> Apres cette etape, tu peux pousser de la pub sans risque legal ni perte
+     de trafic organique.
+
+ETAPE 2 — "Coherence & finitions" (~1 journee, gains faciles)
+  5. Remplacer la photo hero /business par une vraie photo Edmonton (C5)
+  6. Unifier les icones sur lucide-react (C6)
+  7. Re-compresser les 7 photos lourdes (C7)
+  8. Decider du sort de local-images.ts (C8)
+  -> Site visuellement et techniquement plus propre, plus rapide.
+
+ETAPE 3 — "Autonomie d'Ivan" (~1-2 jours)
+  9. Migrer picnic/activites JSON -> Supabase (C9) : tu ajoutes un parc ou une
+     option SANS toucher au code, depuis l'admin.
+  10. Afficher les partenaires actifs cote public (C10)
+  11. Activer la CI GitHub Actions (C11)
+  -> Tu deviens autonome sur le contenu, et les regressions sont attrapees
+     automatiquement.
+
+ETAPE 4 — "Croissance" (en continu)
+  12. Produire des guides SEO (objectif 10 puis 50) + enrichir les buffets
+  13. Favoris en DB, droit a l'oubli, newsletter double opt-in
+  14. Observabilite (Sentry), tests unitaires des libs
+  15. Brancher un vrai LLM sur AIConcierge
+
+CONSEIL STRATEGIQUE : ne PAS tout faire en meme temps. Fais l'Etape 1 en entier
+(elle debloque la croissance et couvre le risque legal), puis l'Etape 2 (gains
+rapides), avant de toucher au reste.
+
+
+
+================================================================================
+  9. TABLEAU DE BORD — NOTE PAR DOMAINE
+================================================================================
+
+  Domaine                    Note    Commentaire
+  -------------------------  ------  -----------------------------------------
+  Architecture & stack       9/10    Pile moderne, coherente, build vert
+  Couverture fonctionnelle   9/10    32 routes + admin complet en 13 jours
+  Feature signature (picnic) 9/10    Indoor/outdoor, options, devis : solide
+  Base de donnees & migr.    9/10    11 migrations propres, RLS partout
+  Authentification           9/10    Email + Google + roles + RLS
+  Paiement (Stripe)          8/10    Bout en bout ; confirmer mode live
+  SEO                        8/10    JSON-LD + sitemap ; soumettre a Google
+  Donnees Edmonton reelles   9/10    Open-data municipal + 19 photos locales
+  Performance                7/10    Bon, mais 7 photos a re-compresser
+  Securite                   8/10    Headers + RLS + Canada ; manque observ.
+  Conformite legale          5/10    Fondations OK ; cookies/confirmation a faire
+  Accessibilite              6/10    A auditer (menu mobile, focus clavier)
+  Tests                      6/10    E2E oui, unitaires non, CI a activer
+  Dette technique            7/10    Cosmetique (icones, images, code mort)
+  Autonomie (edition contenu)6/10    Contenu en JSON -> migrer vers Supabase
+  -------------------------  ------  -----------------------------------------
+  NOTE GLOBALE               8,0/10  Produit lancable, finitions a faire
+
+CONCLUSION
+  En 13 jours, ce projet est passe d'un commit initial a un marketplace
+  transactionnel bilingue, en production, avec paiement, admin, et une feature
+  signature. Les fondations (archi, DB, auth, paiement, SEO, donnees reelles)
+  sont saines. Le travail restant est de la FINITION, pas de la reconstruction.
+  Priorite absolue : l'Etape 1 (conformite + indexation) avant toute pub.
+
+
+--------------------------------------------------------------------------------
+Audit genere par Claude (Anthropic) le 2026-06-01, a partir du code reel du
+repo (67 commits). Version texte telechargeable. Pour la spec produit complete,
+voir /PROJECT-SPEC.txt
+--------------------------------------------------------------------------------
