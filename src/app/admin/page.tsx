@@ -493,6 +493,13 @@ export default function AdminPage() {
           </select>
           {/* Desktop: page title */}
           <h1 className="hidden md:block font-serif text-xl sm:text-2xl font-bold text-navy">{currentNav ? (fr ? currentNav.fr : currentNav.en) : ""}</h1>
+          <a
+            href="/admin/spec"
+            className="inline-flex items-center gap-1.5 bg-navy/10 hover:bg-navy hover:text-cream text-navy px-3 py-1.5 rounded-full text-xs font-semibold transition-colors"
+            title={fr ? "Spécifications du projet" : "Project spec"}
+          >
+            📄 {fr ? "Doc projet" : "Project doc"}
+          </a>
           {/* Date range + Compare (overview only) */}
           {tab === "overview" && (
             <div className="md:ml-auto flex items-center gap-2 flex-wrap">
