@@ -41,7 +41,65 @@ const CTX: Record<string, string> = { couples: "Couples", famille: "Famille", am
 const PAGES = ["/", "/evenements", "/compositeur", "/reserver", "/idees", "/couples", "/famille"];
 const SOURCES = ["instagram", "facebook", "tiktok", "email", "google", "autre"];
 
-type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "picnic" | "reports" | "users" | "bookings" | "analytics";
+type Tab = "overview" | "moderation" | "marketing" | "promos" | "content" | "picnic" | "partners" | "reports" | "users" | "bookings" | "analytics";
+
+const PARTNER_CATEGORIES = [
+  { id: "restaurant",   fr: "Restaurant",   en: "Restaurant"   },
+  { id: "photographer", fr: "Photographe",  en: "Photographer" },
+  { id: "florist",      fr: "Fleuriste",    en: "Florist"      },
+  { id: "decorator",    fr: "Décorateur",   en: "Decorator"    },
+  { id: "transport",    fr: "Transport",    en: "Transport"    },
+  { id: "catering",     fr: "Traiteur",     en: "Catering"     },
+  { id: "musician",     fr: "Musicien",     en: "Musician"     },
+  { id: "venue",        fr: "Lieu",         en: "Venue"        },
+  { id: "other",        fr: "Autre",        en: "Other"        },
+] as const;
+type PartnerCategory = typeof PARTNER_CATEGORIES[number]["id"];
+
+interface Partner {
+  id: string;
+  name: string;
+  category: PartnerCategory;
+  description: string | null;
+  contact_name: string | null;
+  contact_email: string | null;
+  contact_phone: string | null;
+  address: string | null;
+  neighbourhood: string | null;
+  website: string | null;
+  instagram: string | null;
+  price_tier: number | null;
+  status: "draft" | "active" | "paused";
+  tags: string[];
+  notes: string | null;
+  image_url: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+const EMPTY_PARTNER: Omit<Partner, "id" | "created_at" | "updated_at"> = {
+  name: "",
+  category: "restaurant",
+  description: "",
+  contact_name: "",
+  contact_email: "",
+  contact_phone: "",
+  address: "",
+  neighbourhood: "",
+  website: "",
+  instagram: "",
+  price_tier: 2,
+  status: "draft",
+  tags: [],
+  notes: "",
+  image_url: "",
+};
+
+const PARTNER_STATUS: Record<Partner["status"], { fr: string; en: string; cls: string }> = {
+  draft:   { fr: "Brouillon", en: "Draft",   cls: "bg-amber-500/15 text-amber-700" },
+  active:  { fr: "Actif",     en: "Active",  cls: "bg-green-500/15 text-green-700" },
+  paused:  { fr: "En pause",  en: "Paused",  cls: "bg-red-500/15 text-red-700"     },
+};
 type DatePreset = "7d" | "30d" | "90d" | "365d";
 type BadgeKey = "pending" | "bookingsPending";
 
@@ -70,6 +128,7 @@ const NAV: Array<{
     { key: "promos",     fr: "Codes promo",  en: "Promo codes", Icon: Tag },
     { key: "content",    fr: "Bannière",     en: "Banner",      Icon: Bell },
     { key: "picnic",     fr: "Pique-nique",  en: "Picnic",      Icon: MapPin },
+    { key: "partners",   fr: "Partenaires",  en: "Partners",    Icon: Store },
   ]},
   { group: { fr: "Marketing", en: "Marketing" }, items: [
     { key: "marketing", fr: "Marketing", en: "Marketing", Icon: Megaphone },
@@ -192,6 +251,15 @@ export default function AdminPage() {
   const [newDesc, setNewDesc] = useState("");
   const [dateRange, setDateRange] = useState<DatePreset>("7d");
   const [compare, setCompare] = useState(true);
+  // Partners state
+  const [partners, setPartners] = useState<Partner[]>([]);
+  const [partnerCatF, setPartnerCatF] = useState<string>("all");
+  const [partnerStatusF, setPartnerStatusF] = useState<string>("all");
+  const [partnerQuery, setPartnerQuery] = useState<string>("");
+  const [editingPartner, setEditingPartner] = useState<Partner | null>(null);
+  const [partnerForm, setPartnerForm] = useState<Omit<Partner, "id" | "created_at" | "updated_at">>(EMPTY_PARTNER);
+  const [partnerFormBusy, setPartnerFormBusy] = useState(false);
+  const [partnerFormError, setPartnerFormError] = useState<string | null>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -214,16 +282,19 @@ export default function AdminPage() {
       supabase.from("composer_runs").select("budget,context,fits,created_at,categories").order("created_at", { ascending: false }).limit(1000)
         .then(({ data }) => { setRuns((data as Run[]) ?? []); setRunsLoading(false); });
 
-      const [o, p, b, pc] = await Promise.all([
+      const [o, p, b, pc, pa] = await Promise.all([
         supabase.from("offers").select("id,title_fr,location,price_from,status,owner,created_at,featured").order("created_at", { ascending: false }),
         supabase.from("profiles").select("id,role,display_name,created_at").order("created_at", { ascending: false }),
         supabase.from("booking_requests").select("id,offer_id,guest_name,party_size,status,created_at,requested_for").order("created_at", { ascending: false }),
         supabase.from("promo_codes").select("*").order("created_at", { ascending: false }),
+        supabase.from("partners").select("*").order("created_at", { ascending: false }),
       ]);
       setOffers((o.data as Offer[]) ?? []);
       setProfiles((p.data as Profile[]) ?? []);
       setBookings((b.data as Booking[]) ?? []);
       setPromos((pc.data as Promo[]) ?? []);
+      // Partners table may not exist yet (run migration 0011_partners.sql) — gracefully ignore
+      if (!pa.error) setPartners((pa.data as Partner[]) ?? []);
     }
     setLoading(false);
   }, []);
@@ -737,6 +808,248 @@ export default function AdminPage() {
                           </td>
                         </tr>
                       ))}
+                    </tbody>
+                  </table>
+                </div>
+              </Panel>
+            </div>
+          )}
+
+          {tab === "partners" && (
+            <div>
+              <div className="flex flex-wrap items-center gap-3 mb-5">
+                <div className="flex gap-1.5 overflow-x-auto">
+                  <button onClick={() => setPartnerCatF("all")} className={pill(partnerCatF === "all")}>{fr ? "Toutes catégories" : "All categories"}</button>
+                  {PARTNER_CATEGORIES.map((c) => (
+                    <button key={c.id} onClick={() => setPartnerCatF(c.id)} className={pill(partnerCatF === c.id)}>{fr ? c.fr : c.en}</button>
+                  ))}
+                </div>
+                <div className="flex gap-1.5">
+                  <button onClick={() => setPartnerStatusF("all")} className={pill(partnerStatusF === "all")}>{fr ? "Tous statuts" : "All statuses"}</button>
+                  {(Object.keys(PARTNER_STATUS) as Array<keyof typeof PARTNER_STATUS>).map((s) => (
+                    <button key={s} onClick={() => setPartnerStatusF(s)} className={pill(partnerStatusF === s)}>{fr ? PARTNER_STATUS[s].fr : PARTNER_STATUS[s].en}</button>
+                  ))}
+                </div>
+                <div className="relative flex-1 min-w-[160px] max-w-xs">
+                  <Search className="w-4 h-4 text-navy/40 absolute left-3 top-1/2 -translate-y-1/2" strokeWidth={1.5} />
+                  <input value={partnerQuery} onChange={(e) => setPartnerQuery(e.target.value)} placeholder={fr ? "Chercher (nom, quartier)…" : "Search (name, neighbourhood)…"} className="w-full border border-black/10 rounded-full pl-9 pr-3 py-2 text-sm text-navy" />
+                </div>
+                <button
+                  onClick={() => { setEditingPartner(null); setPartnerForm(EMPTY_PARTNER); setPartnerFormError(null); }}
+                  className="ml-auto inline-flex items-center gap-1.5 gradient-gold text-navy font-bold px-4 py-2 rounded-full text-sm hover:opacity-90"
+                >
+                  <Plus className="w-4 h-4" strokeWidth={2.5} /> {fr ? "Nouveau partenaire" : "New partner"}
+                </button>
+              </div>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+                <Panel><div className="text-center"><div className="font-serif text-3xl font-bold text-navy">{partners.length}</div><div className="text-navy/60 text-xs mt-1">{fr ? "Total" : "Total"}</div></div></Panel>
+                <Panel><div className="text-center"><div className="font-serif text-3xl font-bold text-green-700">{partners.filter((p) => p.status === "active").length}</div><div className="text-navy/60 text-xs mt-1">{fr ? "Actifs" : "Active"}</div></div></Panel>
+                <Panel><div className="text-center"><div className="font-serif text-3xl font-bold text-amber-700">{partners.filter((p) => p.status === "draft").length}</div><div className="text-navy/60 text-xs mt-1">{fr ? "Brouillons" : "Drafts"}</div></div></Panel>
+                <Panel><div className="text-center"><div className="font-serif text-3xl font-bold text-red-700">{partners.filter((p) => p.status === "paused").length}</div><div className="text-navy/60 text-xs mt-1">{fr ? "En pause" : "Paused"}</div></div></Panel>
+              </div>
+
+              {/* Edit form */}
+              {(editingPartner !== null || partnerForm.name || partnerForm !== EMPTY_PARTNER) && (
+                <Panel title={editingPartner ? (fr ? "Modifier le partenaire" : "Edit partner") : (fr ? "Nouveau partenaire" : "New partner")}>
+                  <div className="grid sm:grid-cols-2 gap-3 text-sm">
+                    <label className="text-navy/70">{fr ? "Nom" : "Name"} <span className="text-red-500">*</span>
+                      <input value={partnerForm.name} onChange={(e) => setPartnerForm({ ...partnerForm, name: e.target.value })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Catégorie" : "Category"} <span className="text-red-500">*</span>
+                      <select value={partnerForm.category} onChange={(e) => setPartnerForm({ ...partnerForm, category: e.target.value as PartnerCategory })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy bg-white">
+                        {PARTNER_CATEGORIES.map((c) => <option key={c.id} value={c.id}>{fr ? c.fr : c.en}</option>)}
+                      </select>
+                    </label>
+                    <label className="text-navy/70 sm:col-span-2">{fr ? "Description courte" : "Short description"}
+                      <textarea value={partnerForm.description ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, description: e.target.value })} rows={2} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy resize-none" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Contact (nom)" : "Contact name"}
+                      <input value={partnerForm.contact_name ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, contact_name: e.target.value })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Email" : "Email"}
+                      <input type="email" value={partnerForm.contact_email ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, contact_email: e.target.value })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Téléphone" : "Phone"}
+                      <input value={partnerForm.contact_phone ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, contact_phone: e.target.value })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Quartier" : "Neighbourhood"}
+                      <input value={partnerForm.neighbourhood ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, neighbourhood: e.target.value })} placeholder="Whyte Ave, Downtown…" className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Adresse" : "Address"}
+                      <input value={partnerForm.address ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, address: e.target.value })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Site web" : "Website"}
+                      <input type="url" value={partnerForm.website ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, website: e.target.value })} placeholder="https://" className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">Instagram
+                      <input value={partnerForm.instagram ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, instagram: e.target.value })} placeholder="@handle" className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70">{fr ? "Gamme de prix" : "Price tier"}
+                      <select value={partnerForm.price_tier ?? 2} onChange={(e) => setPartnerForm({ ...partnerForm, price_tier: parseInt(e.target.value) })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy bg-white">
+                        <option value={1}>$ — {fr ? "Économique" : "Budget"}</option>
+                        <option value={2}>$$ — {fr ? "Modéré" : "Mid-range"}</option>
+                        <option value={3}>$$$ — Premium</option>
+                        <option value={4}>$$$$ — Luxe</option>
+                      </select>
+                    </label>
+                    <label className="text-navy/70">{fr ? "Statut" : "Status"}
+                      <select value={partnerForm.status} onChange={(e) => setPartnerForm({ ...partnerForm, status: e.target.value as Partner["status"] })} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy bg-white">
+                        <option value="draft">{fr ? "Brouillon" : "Draft"}</option>
+                        <option value="active">{fr ? "Actif" : "Active"}</option>
+                        <option value="paused">{fr ? "En pause" : "Paused"}</option>
+                      </select>
+                    </label>
+                    <label className="text-navy/70 sm:col-span-2">{fr ? "Image (URL)" : "Image (URL)"}
+                      <input type="url" value={partnerForm.image_url ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, image_url: e.target.value })} placeholder="https://… ou /images/edmonton/…" className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                    <label className="text-navy/70 sm:col-span-2">{fr ? "Notes internes (non-publiques)" : "Internal notes (private)"}
+                      <textarea value={partnerForm.notes ?? ""} onChange={(e) => setPartnerForm({ ...partnerForm, notes: e.target.value })} rows={2} className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy resize-none" />
+                    </label>
+                    <label className="text-navy/70 sm:col-span-2">{fr ? "Tags (séparés par des virgules)" : "Tags (comma-separated)"}
+                      <input value={partnerForm.tags.join(", ")} onChange={(e) => setPartnerForm({ ...partnerForm, tags: e.target.value.split(",").map((t) => t.trim()).filter(Boolean) })} placeholder="rooftop, terrasse, brunch…" className="mt-1 w-full border border-black/10 rounded-lg px-3 py-2 text-navy" />
+                    </label>
+                  </div>
+                  {partnerFormError && <p className="mt-3 text-red-700 text-sm">⚠️ {partnerFormError}</p>}
+                  <div className="mt-4 flex gap-2 justify-end">
+                    <button
+                      onClick={() => { setEditingPartner(null); setPartnerForm(EMPTY_PARTNER); setPartnerFormError(null); }}
+                      className="px-4 py-2 rounded-full text-sm text-navy/70 hover:text-navy"
+                    >
+                      {fr ? "Annuler" : "Cancel"}
+                    </button>
+                    <button
+                      disabled={partnerFormBusy || !partnerForm.name.trim()}
+                      onClick={async () => {
+                        if (!partnerForm.name.trim()) { setPartnerFormError(fr ? "Le nom est obligatoire" : "Name is required"); return; }
+                        setPartnerFormBusy(true);
+                        setPartnerFormError(null);
+                        const payload = {
+                          ...partnerForm,
+                          description: partnerForm.description?.trim() || null,
+                          contact_name: partnerForm.contact_name?.trim() || null,
+                          contact_email: partnerForm.contact_email?.trim() || null,
+                          contact_phone: partnerForm.contact_phone?.trim() || null,
+                          address: partnerForm.address?.trim() || null,
+                          neighbourhood: partnerForm.neighbourhood?.trim() || null,
+                          website: partnerForm.website?.trim() || null,
+                          instagram: partnerForm.instagram?.trim() || null,
+                          notes: partnerForm.notes?.trim() || null,
+                          image_url: partnerForm.image_url?.trim() || null,
+                        };
+                        if (editingPartner) {
+                          const { data, error } = await supabase.from("partners").update(payload).eq("id", editingPartner.id).select("*").single();
+                          if (error) { setPartnerFormError(error.message); }
+                          else if (data) {
+                            setPartners((prev) => prev.map((p) => (p.id === editingPartner.id ? (data as Partner) : p)));
+                            setEditingPartner(null);
+                            setPartnerForm(EMPTY_PARTNER);
+                          }
+                        } else {
+                          const { data, error } = await supabase.from("partners").insert(payload).select("*").single();
+                          if (error) { setPartnerFormError(error.message); }
+                          else if (data) {
+                            setPartners((prev) => [data as Partner, ...prev]);
+                            setPartnerForm(EMPTY_PARTNER);
+                          }
+                        }
+                        setPartnerFormBusy(false);
+                      }}
+                      className="px-5 py-2 rounded-full text-sm gradient-gold text-navy font-bold hover:opacity-90 disabled:opacity-50"
+                    >
+                      {partnerFormBusy ? (fr ? "Enregistrement…" : "Saving…") : (editingPartner ? (fr ? "Mettre à jour" : "Update") : (fr ? "Créer" : "Create"))}
+                    </button>
+                  </div>
+                </Panel>
+              )}
+
+              {/* Table */}
+              <Panel>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead className="text-navy/55 text-xs">
+                      <tr className="border-b border-black/5">
+                        <th className="text-left py-2 px-2">{fr ? "Nom" : "Name"}</th>
+                        <th className="text-left py-2 px-2">{fr ? "Catégorie" : "Category"}</th>
+                        <th className="text-left py-2 px-2">{fr ? "Quartier" : "Neighbourhood"}</th>
+                        <th className="text-left py-2 px-2">{fr ? "Statut" : "Status"}</th>
+                        <th className="text-left py-2 px-2">$</th>
+                        <th className="text-left py-2 px-2">Contact</th>
+                        <th className="text-right py-2 px-2">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {partners
+                        .filter((p) => partnerCatF === "all" || p.category === partnerCatF)
+                        .filter((p) => partnerStatusF === "all" || p.status === partnerStatusF)
+                        .filter((p) => {
+                          const q = partnerQuery.trim().toLowerCase();
+                          if (!q) return true;
+                          return p.name.toLowerCase().includes(q) || (p.neighbourhood?.toLowerCase().includes(q) ?? false);
+                        })
+                        .map((p) => {
+                          const cat = PARTNER_CATEGORIES.find((c) => c.id === p.category);
+                          return (
+                            <tr key={p.id} className="border-b border-black/5 hover:bg-black/[0.02]">
+                              <td className="py-2 px-2 font-semibold text-navy">{p.name}</td>
+                              <td className="py-2 px-2"><span className="inline-block bg-gold/10 text-[#9a7e34] border border-gold/25 rounded-full px-2 py-0.5 text-[11px]">{cat ? (fr ? cat.fr : cat.en) : p.category}</span></td>
+                              <td className="py-2 px-2 text-navy/65">{p.neighbourhood ?? "—"}</td>
+                              <td className="py-2 px-2"><span className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold ${PARTNER_STATUS[p.status].cls}`}>{fr ? PARTNER_STATUS[p.status].fr : PARTNER_STATUS[p.status].en}</span></td>
+                              <td className="py-2 px-2 text-navy/65 tabular-nums">{p.price_tier ? "$".repeat(p.price_tier) : "—"}</td>
+                              <td className="py-2 px-2 text-navy/65 text-xs">{p.contact_email ?? p.contact_phone ?? p.website ?? "—"}</td>
+                              <td className="py-2 px-2 text-right">
+                                <div className="inline-flex gap-1">
+                                  <button
+                                    onClick={async () => {
+                                      const next = p.status === "active" ? "paused" : "active";
+                                      setPartners((prev) => prev.map((x) => (x.id === p.id ? { ...x, status: next } : x)));
+                                      await supabase.from("partners").update({ status: next }).eq("id", p.id);
+                                    }}
+                                    title={p.status === "active" ? (fr ? "Mettre en pause" : "Pause") : (fr ? "Activer" : "Activate")}
+                                    className="p-1.5 rounded-lg hover:bg-black/5 text-navy/60 hover:text-navy"
+                                  >
+                                    {p.status === "active" ? <PauseCircle className="w-4 h-4" strokeWidth={1.75} /> : <CheckCircle2 className="w-4 h-4" strokeWidth={1.75} />}
+                                  </button>
+                                  <button
+                                    onClick={() => {
+                                      setEditingPartner(p);
+                                      setPartnerForm({
+                                        name: p.name, category: p.category, description: p.description ?? "",
+                                        contact_name: p.contact_name ?? "", contact_email: p.contact_email ?? "", contact_phone: p.contact_phone ?? "",
+                                        address: p.address ?? "", neighbourhood: p.neighbourhood ?? "",
+                                        website: p.website ?? "", instagram: p.instagram ?? "",
+                                        price_tier: p.price_tier ?? 2, status: p.status, tags: p.tags ?? [],
+                                        notes: p.notes ?? "", image_url: p.image_url ?? "",
+                                      });
+                                      setPartnerFormError(null);
+                                    }}
+                                    title={fr ? "Modifier" : "Edit"}
+                                    className="p-1.5 rounded-lg hover:bg-black/5 text-navy/60 hover:text-navy"
+                                  >
+                                    <Tag className="w-4 h-4" strokeWidth={1.75} />
+                                  </button>
+                                  <button
+                                    onClick={async () => {
+                                      if (!confirm(fr ? `Supprimer ${p.name} ?` : `Delete ${p.name}?`)) return;
+                                      setPartners((prev) => prev.filter((x) => x.id !== p.id));
+                                      await supabase.from("partners").delete().eq("id", p.id);
+                                    }}
+                                    title={fr ? "Supprimer" : "Delete"}
+                                    className="p-1.5 rounded-lg hover:bg-red-50 text-red-500 hover:text-red-700"
+                                  >
+                                    <Trash2 className="w-4 h-4" strokeWidth={1.75} />
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      {partners.length === 0 && (
+                        <tr><td colSpan={7} className="py-12 text-center text-navy/45 text-sm">
+                          {fr ? "Aucun partenaire pour l'instant. Crée le premier ! Si la table n'existe pas encore, applique la migration `supabase/migrations/0011_partners.sql`." : "No partners yet. Create the first one! If the table doesn't exist, apply migration `supabase/migrations/0011_partners.sql`."}
+                        </td></tr>
+                      )}
                     </tbody>
                   </table>
                 </div>
