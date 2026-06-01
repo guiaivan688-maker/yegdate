@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { ArrowLeft, Download, Lock, Loader2 } from "lucide-react";
+import { ArrowLeft, Download, Lock, Loader2, FileText } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import { supabase } from "@/lib/supabase";
 
@@ -27,14 +27,6 @@ export default function SpecClient({ markdown, error }: { markdown: string; erro
     });
     return () => { active = false; };
   }, []);
-
-  function downloadMd() {
-    const blob = new Blob([markdown], { type: "text/markdown;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = "PROJECT-SPEC.md"; a.click();
-    URL.revokeObjectURL(url);
-  }
 
   if (authed === null) {
     return (
@@ -70,12 +62,23 @@ export default function SpecClient({ markdown, error }: { markdown: string; erro
           <Link href="/admin" className="inline-flex items-center gap-1.5 text-navy/60 hover:text-navy text-sm">
             <ArrowLeft className="w-4 h-4" strokeWidth={1.5} /> {fr ? "Retour admin" : "Back to admin"}
           </Link>
-          <button
-            onClick={downloadMd}
-            className="inline-flex items-center gap-1.5 bg-navy text-cream px-4 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
-          >
-            <Download className="w-4 h-4" strokeWidth={2} /> {fr ? "Télécharger .md" : "Download .md"}
-          </button>
+          <div className="flex items-center gap-2 flex-wrap">
+            <a
+              href="/PROJECT-SPEC.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-surface border border-navy/15 text-navy px-4 py-2 rounded-full text-sm font-semibold hover:bg-navy/5 transition-colors"
+            >
+              <FileText className="w-4 h-4" strokeWidth={1.5} /> {fr ? "Ouvrir en texte" : "Open as text"}
+            </a>
+            <a
+              href="/PROJECT-SPEC.txt"
+              download="PROJECT-SPEC.txt"
+              className="inline-flex items-center gap-1.5 bg-navy text-cream px-4 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+            >
+              <Download className="w-4 h-4" strokeWidth={2} /> {fr ? "Télécharger .txt" : "Download .txt"}
+            </a>
+          </div>
         </div>
 
         {error ? (

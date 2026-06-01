@@ -1,0 +1,692 @@
+================================================================================
+  WHERE TO GO YEG — SPECIFICATIONS PRODUIT & TECHNIQUES
+================================================================================
+
+Version : 2026-05-31 (livre) — revise a chaque commit majeur
+Owner   : Ivan Rudel Guiabu (solo builder, Edmonton AB)
+Live    : https://wheretogoyeg.ca (auto-deploy depuis origin/main via Vercel)
+Repo    : github.com/guiaivan688-maker/yegdate
+
+
+TABLE DES MATIERES
+--------------------------------------------------------------------------------
+  1. Vision & positionnement
+  2. Audience & personas
+  3. Modele economique
+  4. Architecture technique
+  5. Modele de donnees
+  6. Cartographie des pages & flows
+  7. Etat actuel — ce qui est en prod
+  8. Conformite legale (Canada / Alberta)
+  9. Roadmap — prochaines taches priorisees
+ 10. Metriques & KPIs a suivre
+ 11. Risques & dette technique
+ 12. Glossaire
+     Annexes : commandes, variables d'environnement, liens externes
+
+
+
+================================================================================
+  1. VISION & POSITIONNEMENT
+================================================================================
+
+VISION EN UNE PHRASE
+  Where To Go YEG est l'agenda intelligent d'Edmonton qui transforme
+  « j'sais pas quoi faire » en « voila ma soiree, prete a reserver »,
+  en 3 minutes.
+
+POSITIONNEMENT MARKETPLACE
+  C'est un marketplace de planification d'experiences a Edmonton, a
+  l'intersection de :
+    - Airbnb Experiences (catalogue d'activites verifiees)
+    - Eventbrite (evenements ponctuels)
+    - OpenTable (reservations instantanees)
+    - The Knot (planification d'occasions speciales)
+
+  Ce qui nous differencie :
+    1. Multi-role natif — couple/famille/amis/affaires/solo en un seul
+       site, pas 5 sites separes
+    2. Compose sur-mesure — pas que des packages figes, on assemble bloc
+       par bloc
+    3. Bilingue FR-EN des le jour 1 — rare dans le marche albertain
+    4. Hyper-local Edmonton — pas du contenu generique, on parle
+       Walterdale, Whyte Ave, Strathcona, Ice District
+
+MISSION
+  Aider les Edmontoniens (et les visiteurs) a arreter de scroller Instagram
+  et commencer a vivre leur ville, sans la friction logistique
+  (reservations, transport, deco, meteo).
+
+PROMESSE CLIENT
+    - Tu nous dis budget + humeur + avec qui
+    - On te compose une soiree prete a reserver (parfois en 1 clic Stripe,
+      parfois en devis 24 h)
+    - On gere toute la logistique (permis alcool, deco, photographe,
+      plan B meteo, nettoyage)
+
+
+
+================================================================================
+  2. AUDIENCE & PERSONAS
+================================================================================
+
+5 personas (couvertes nativement par le ContextPicker dans la navbar) :
+
+P1 — COUPLE (haute valeur, signature)
+    - Profil : 25-45 ans, cherche date night ou occasion speciale
+    - Triggers : anniversaire de couple, demande en mariage, anniversaire
+      de mariage, « pimper » une soiree mardi
+    - Budget moyen : 150-600 $
+    - Pages cles : /couples, /sur-mesure, /pique-nique (occasion=couple),
+      /night-out
+    - Activite signature : Streetcar privatise sur le High Level Bridge
+
+P2 — FAMILLE
+    - Profil : 30-50 ans, parents avec enfants 3-15 ans
+    - Triggers : sortie week-end, anniversaire enfant, vacances scolaires,
+      hiver a occuper
+    - Budget moyen : 80-300 $ / famille
+    - Pages cles : /famille, /pique-nique (occasion=famille), /buffets
+      (kid-friendly)
+    - Activite signature : Pique-nique Hawrelak Park / TELUS World of Science
+
+P3 — AMIS (groupes 4-15)
+    - Profil : 20-40 ans, groupes pour EVJF/EVG, anniversaires, retrouvailles
+    - Triggers : enterrement de vie, anniversaire, soiree filles/gars
+    - Budget moyen : 50-100 $ / pers
+    - Pages cles : /amis, /night-out, /pique-nique (occasion=groupe),
+      Pedal Pub
+    - Activite signature : Pedal Pub Whyte Ave / Night-out Afro Vibes
+
+P4 — AFFAIRES (B2B)
+    - Profil : RH, manager d'equipe, EA, entrepreneur
+    - Triggers : team-building, 5 a 7, celebration objectif atteint,
+      offsite, accueil nouvelle recrue
+    - Budget moyen : 80-200 $ / personne (facturation entreprise)
+    - Pages cles : /business, /pique-nique (occasion=event), /packages
+    - Activite signature : Team-Building Bad Axe Throwing / Pique-nique
+      corporate Louise McKinney
+
+P5 — SOLO
+    - Profil : nouveaux arrivants Edmonton, expat, celibataire en exploration
+    - Triggers : « je veux decouvrir cette ville », « je m'ennuie ce week-end »
+    - Budget moyen : 30-100 $
+    - Pages cles : /compositeur (entry point solo), /decouvrir, /carte
+    - Activite signature : Brunch Walterdale + visite TELUS Science
+
+
+
+================================================================================
+  3. MODELE ECONOMIQUE
+================================================================================
+
+SOURCES DE REVENUS (a activer progressivement)
+
+  Phase 1 — Aujourd'hui (T+0 a T+6 mois) :
+    1. Commission sur reservations Stripe — 10-15 % sur chaque booking via
+       /reserver (Stripe Checkout configure)
+    2. Devis sur-mesure — markup sur les options pique-nique / sur-mesure
+       (deco, photographe, panier traiteur, etc.) — marge 30-40 %
+    3. Featured listings — partenaires payent pour apparaitre « En vedette »
+       (admin a deja la fonctionnalite)
+
+  Phase 2 — T+6 a T+12 mois :
+    4. Abonnement partenaires — restos/photographes/fleuristes Edmonton
+       payent un abonnement mensuel pour etre listes (table partners prete)
+    5. Codes promo affilies — partenariats marketing (admin a deja la gestion
+       des codes promo)
+    6. Sponsored content — guides/idees sponsorises par lieux locaux
+
+  Phase 3 — T+12 mois + :
+    7. Marketplace API — autres apps tourisme/concierge Edmonton qui
+       consomment notre catalogue
+    8. Corporate B2B subscription — entreprises Edmonton avec un budget annuel
+       team-building
+    9. White-label — autres villes canadiennes (Calgary, Saskatoon) achetent
+       la plateforme
+
+COUTS OPERATIONNELS ACTUELS
+    - Vercel — gratuit (Hobby tier) tant que < 100 GB bandwidth / mois
+    - Supabase — gratuit (free tier) tant que < 500 MB DB + 50K MAU
+    - Stripe — 2,9 % + 0,30 $ / transaction
+    - Resend (emails) — gratuit jusqu'a 3 000 emails/mois
+    - Domaine wheretogoyeg.ca — ~25 $/an
+    - Total fixe : ~25 $/an + frais variables Stripe
+
+
+
+================================================================================
+  4. ARCHITECTURE TECHNIQUE
+================================================================================
+
+STACK
+    - Framework        : Next.js 16.2.6 (App Router) — « This is NOT the
+                         Next.js you know », lire node_modules/next/dist/docs/
+                         avant tout changement
+    - Runtime          : React 19.2.4 — Server Components par defaut, client
+                         islands ciblees
+    - Styling          : Tailwind CSS 4 + tokens custom (navy / gold / cream /
+                         surface / warm-grey)
+    - Animations       : framer-motion 12 (motion.div, AnimatePresence)
+    - Icones           : lucide-react 1.16 (heroicons aussi installe, a
+                         dedupliquer)
+    - Cartes           : leaflet 1.9 + react-leaflet 5 (OSM tiles, ssr:false)
+    - Optim images     : sharp (script) + next/image runtime (mozjpeg q=82,
+                         max 1920 px)
+    - Hebergement      : Vercel (auto-deploy origin/main, edge functions)
+    - Base de donnees  : Supabase Postgres 17 (ca-central-1), RLS active
+                         partout, region canadienne pour PIPEDA
+    - Auth             : Supabase Auth (magic link email + Google OAuth)
+    - Paiements        : Stripe Checkout (webhook vers /api/stripe/checkout)
+    - Emails           : Resend (quote requests + booking confirmations)
+    - Analytics        : composant Analytics custom + Google Search Console
+    - Tests E2E        : Playwright 1.60 (chromium-desktop, 4 spec files)
+    - i18n             : locale-context custom — useLocale() + t() + toggle
+                         FR/EN, dictionnaires JSON
+
+CHOIX ARCHITECTURAUX CLES
+
+  Server Components vs Client Islands
+    - Pages segment (couples/famille/amis/business) : SERVER ->
+      generateMetadata SEO + JSON-LD inline
+    - Pages avec etat (pique-nique, night-out, buffets, carte, reserver,
+      admin) : split en page.tsx (server, metadata) + XClient.tsx ("use client")
+    - Composants partages : ContextPicker, Navbar, Footer, ActivityCard,
+      LoveRooms -> client (useState ou context)
+
+  Stockage des donnees (hybride par design)
+    - Donnees quasi-statiques (activites curees, parcs pique-nique, options)
+      -> fichiers JSON dans src/data/
+    - Donnees dynamiques (offers, bookings, profiles, promo codes, banners,
+      reports, partners, composer runs) -> Supabase
+    - Migration future prevue : passer les activites/parcs/options en Supabase
+      une fois le contenu stabilise pour permettre edition admin live
+
+  Internationalisation
+    - 2 locales : fr (par defaut) et en
+    - Dictionnaires : src/locales/fr.json + src/locales/en.json
+    - Pattern : useLocale() -> { locale, t, toggleLocale }
+    - Stored in localStorage + <html lang> reflete
+    - Audit voix tu/vous : tout est en tu (tutoiement) coherent
+
+STRUCTURE DU REPO
+    yeg-date/
+    |-- docs/                         <- Le fichier source (.md)
+    |-- public/
+    |   |-- images/edmonton/          19 vraies photos d'Edmonton
+    |   \-- PROJECT-SPEC.txt          <- CE fichier (version texte)
+    |-- e2e/                          Playwright tests
+    |-- scripts/
+    |   \-- optimize-photos.mjs       Resize CLI
+    |-- src/
+    |   |-- app/                      Next.js App Router
+    |   |   |-- (routes)              25+ routes
+    |   |   |-- api/                  Server routes
+    |   |   |-- layout.tsx            Root (JSON-LD, metadata, providers)
+    |   |   |-- sitemap.ts            Auto sitemap
+    |   |   \-- robots.ts
+    |   |-- components/               Shared UI
+    |   |-- data/                     JSON content (activities, picnic-*,
+    |   |                             buffets, plans, edmonton-data)
+    |   |-- lib/                      Helpers + contexts (locale, weather,
+    |   |                             favorites, context-picker, schema,
+    |   |                             activity-filters)
+    |   \-- locales/                  fr.json, en.json
+    \-- supabase/migrations/          SQL migrations (0001 -> 0011)
+
+
+
+================================================================================
+  5. MODELE DE DONNEES
+================================================================================
+
+A. DONNEES JSON (statiques)
+
+  activities-{couples|famille|amis|business}.json
+  Chaque activite contient : id, slug, segment, title{fr,en}, location,
+  address (Edmonton complete), description{fr,en}, longDescription{fr,en},
+  image, gallery[], priceRange{fr,en}, priceFrom, priceTo, budgetTier,
+  duration{fr,en}, groupSize{fr,en}, ageRange?{fr,en}, season[]
+  (spring|summer|fall|winter), mood[] (calme|dynamique|gourmand|decouverte|
+  romantique|luxe), tags[], includes{fr[],en[]}, services[] (photographer|
+  roomDecor|eventPlanner|picnic), cta (book|quote), rating (4.7-5.0),
+  mapsQuery, coords [lat,lng] (pour /carte).
+
+  activities-picnic.json (10 entrees)
+    Memes champs, segment varie selon l'occasion.
+
+  picnic-parks.json (23 entrees : 15 outdoor + 8 indoor)
+  Chaque parc : id, name, neighbourhood, address, coords, image,
+  description{fr,en}, size, capacity, amenities[] (parking, washrooms,
+  playground, shelter, lake, heated, accessible...), reservation_required
+  (bool | "partial" | "verify"), reservation_note?{fr,en}, best_for[]
+  (couple, famille, groupe, event), best_spot{fr,en}, scenic_skyline,
+  sunset_view, watchout?{fr,en} (ex : Hawrelak en renovation jusqu'en 2026),
+  bbq_allowed, dog_friendly, setting (outdoor|indoor|hybrid), best_season[].
+
+  picnic-options.json (28 entrees)
+    20+ add-ons : decoration romantique, panier gourmet, photographe golden
+    hour, transport prive, demande en mariage setup (599 $), pack
+    anti-moustique, permis alcool, pack soleil, setup hiver, etc.
+
+  Autres
+    - buffets.json — restaurants AYCE par categorie
+    - weekend-plans.json + plans.json — plans pre-composes
+    - guides.json — articles longs SEO
+    - edmonton-data.json — events de la ville (calendar municipal)
+
+B. TABLES SUPABASE (dynamiques)
+    - profiles          Utilisateurs avec role (client/prestataire/admin)
+                        RLS : admin r/w, owner r/w self
+    - offers            Offres a reserver via /reserver
+                        RLS : admin r/w, public read where status=published
+    - booking_requests  Demandes de reservation (Stripe -> confirmation)
+                        RLS : admin r/w, owner r/w self
+    - composer_runs     Logs des sessions /compositeur (analytics)
+                        RLS : admin r/o
+    - promo_codes       Codes promo actifs (% off) — RLS : admin r/w
+    - site_banners      Bandeau annonce en haut du site
+                        RLS : admin r/w, public read active
+    - user_reports      Signalements (Report buttons)
+                        RLS : admin r/w, owner r
+    - partners  [NEW]   Catalogue restos/photographes/fleuristes Edmonton
+                        RLS : admin r/w, public read active
+
+  Migrations : supabase/migrations/0001 -> 0011_partners.sql (toutes appliquees)
+
+
+
+================================================================================
+  6. CARTOGRAPHIE DES PAGES & FLOWS
+================================================================================
+
+ROUTES PUBLIQUES (25+)
+
+  Pages d'entree (Plan ton experience)
+    /              Home — slideshow Edmonton, hero CTA -> /compositeur,
+                   galerie public art, temoignages                       [OK]
+    /compositeur   Builder par budget+contexte (4 questions -> plan auto) [OK]
+    /sur-mesure    Bloc-par-bloc (brunch+spa+diner+photographe), devis 24h[OK]
+    /weekend-match 4 questions -> plans recommandes ce week-end           [OK]
+    /pique-nique   23 lieux x 28 options x 4 occasions -> estim + devis   [OK]
+
+  Pages domaines (segments) — hero image / filtres
+    /couples   Couple Walterdale sunset / Saison + Quartier + Nb couples
+               + featured LoveRooms
+    /famille   Hawrelak aerial / Saison + Quartier + Nb personnes
+    /amis      4 amis pique-nique Walterdale / Saison + Quartier + Nb pers
+    /business  Corporate (Unsplash) / Saison + Quartier + Nb personnes
+    (Tous : grille ActivityCard avec estimation guest-aware, multiplie par
+     pers/couple/famille selon priceRange.)
+
+  Pages catalogue specialise
+    /night-out   Soirees cle en main, vibe-first (Afro, Latino, Hip-Hop, EDM)
+    /buffets     AYCE sushi, BBQ coreen, hot pot — filtre par quartier
+    /evenements  Calendrier municipal Edmonton + cure
+    /packages    Forfaits B2B premium
+    /services    Photographe, picnic chic, deco romantique, event planner
+    /guides      Articles SEO longs (saisonniers, par occasion)
+    /idees       Pages idees par segment+budget (gen statique SSG)
+
+  Pages utiles
+    /decouvrir              Toutes activites avec filtres segment+budget
+    /carte                  Carte Leaflet interactive, pins par segment
+    /recherche              Recherche full-text
+    /mes-favoris            Favoris persistes (localStorage)
+    /reserver               Funnel booking -> Stripe Checkout
+    /reservation-confirmee  Ticket QR apres paiement
+    /activite/[slug]        Page detail (TouristAttraction JSON-LD)
+    /contact, /about, /confidentialite, /conditions   Legal
+
+  Admin (/admin) — onglets (sidebar + mobile select)
+    1.  Vue d'ensemble  KPIs offers/bookings/runs/promos + stats pique-nique
+    2.  Reservations    statut + filtres + actions
+    3.  Utilisateurs    gestion roles client/prestataire/admin
+    4.  Analyses        runs compositeur, distribution budget, match rate
+    5.  Moderation      offers draft -> publish -> suspend
+    6.  Signalements    ReportsManager
+    7.  Codes promo     creation/toggle/delete
+    8.  Banniere        BannerManager
+    9.  Pique-nique     read-only (parks/options/activities JSON)
+    10. Partenaires [NEW] CRUD complet (9 categories, 4 tiers prix, statut, tags)
+    11. Marketing       UTM builder, share links
+
+FLOWS CLES
+
+  Flow A — Couple cherche date night
+    1. Arrive sur / -> voit ContextPicker pill « Couple · 2 pers »
+    2. Clique « Voir les activites couple » -> /couples
+    3. Filtre saison + quartier -> choisit Streetcar privatise High Level
+    4. Clique -> /activite/streetcar-prive-high-level (detail + JSON-LD)
+    5. CTA « Demander un devis » -> quote form (Resend email)
+
+  Flow B — Famille pique-nique d'ete
+    1. Home -> CTA picnic -> /pique-nique
+    2. Selectionne « En famille » + 4 personnes
+    3. Voit 6 parcs recommandes (Hawrelak warning, Rundle, Borden...)
+    4. Clique Rundle -> Step 3 options apparait
+    5. Coche : Setup famille, Panier famille, Box enfant, Pack jeux, Plan B
+    6. Total : 280 $ -> form name+email -> submit -> devis sous 24 h
+
+  Flow C — EVJF Pedal Pub
+    1. Amie clique pill ContextPicker -> « Amis · 8 pers »
+    2. Va sur /amis, voit Pedal Pub en card
+    3. Page detail -> quote -> Ivan confirme dispo + prix
+
+  Flow D — Business team-building
+    1. RH cherche -> /business
+    2. Bad Axe Throwing Team-Building (segment business)
+    3. CTA quote avec entreprise + nb employes
+    4. Ivan envoie devis + facture corpo
+
+  Flow E — Booking instant (Stripe)
+    1. Visite /reserver
+    2. Voit offers actifs (Supabase featured first)
+    3. Clique « Reserver » sur une offre
+    4. Form : nom* + email* + party_size + date (min=today)
+    5. Submit -> POST /api/stripe/checkout -> redirect checkout.stripe.com
+    6. Paiement -> webhook -> ticket QR sur /reservation-confirmee
+
+
+
+================================================================================
+  7. ETAT ACTUEL — CE QUI EST EN PROD
+================================================================================
+
+CHANTIERS LIVRES (chronologique)
+
+  Phase 0 — Refonte multi-role (Mai 2026, debut)
+    - Pages segments avec filtres (saison + quartier + nb personnes +
+      estimation guest-aware)
+    - Refactor SEO : amis/famille/couples/business/buffets/night-out ->
+      server components avec generateMetadata
+    - Vibe-first transformation de /night-out (Afro, Latino, Hip-Hop chip)
+    - 5 nouvelles photos hero curees multi-roles
+    - Audit copy complet : tutoiement FR coherent partout
+
+  Phase 1 — Photos Edmonton authentiques
+    - 19 vraies photos Edmonton dans /public/images/edmonton/
+    - Remplacement de tous les heros generiques Unsplash
+    - Composant EdmontonGallery sur home (8 tuiles : Talus Dome, Vaulted
+      Willow, Big Boots Southgate, Carbon Copy, Mosaic Park, Rundle,
+      Freewill Shakespeare, automne)
+    - Pedal Pub ajoute comme activite /amis
+    - Princess Theatre ajoute comme package /night-out
+    - /decouvrir hero swap Unsplash -> photo locale
+
+  Phase 2 — Feature Pique-nique (gros chantier)
+    - Nouvelle page /pique-nique avec builder complet
+    - 14 parcs Edmonton initiaux (Walterdale, Hawrelak, Borden, Mill Creek,
+      End of the World...)
+    - 28 options (deco, catering, photo, transport, activity, logistique)
+    - 10 activites picnic reparties sur les 4 segments
+    - Filtre outdoor/indoor/hybride avec 8 lieux indoor (Muttart
+      Conservatory, City Hall Pyramid, Federal Building Atrium, Stanley
+      Milner Library...)
+    - Total : 23 lieux disponibles
+    - Admin tab read-only ajoute
+
+  Phase 3 — Temoignages & conversion
+    - 6 temoignages Edmonton realistes (Marc & Lucie au Streetcar, Jasmine
+      au Pedal Pub, Famille Tremblay a Borden, David proposal Walterdale,
+      Sophie Bad Axe, Amelie & Karim TELUS)
+    - LoveRooms remonte en spotlight sur /couples (au-dessus de la grille)
+    - /reserver durci : email required, min-date today, asterisks, reminder
+      prix sous bouton
+    - Carte interactive /carte avec Leaflet + pins par segment + filtres
+
+  Phase 4 — Polish & croissance (dernier push)
+    - Hawrelak warning BIG (banner rouge full-width quand selectionne)
+    - Photos optim sharp : 11,4 MB -> 2,2 MB sur les 4 plus grosses
+    - Mega-menu navbar : 7 liens -> 3 buckets (Planifier/Reserver/Decouvrir)
+    - ContextPicker persistant : pill toujours visible, 5 personas, guest
+      stepper, localStorage
+    - JSON-LD structured data : LocalBusiness + WebSite SearchAction +
+      Organization + TouristAttraction/Service par activite + ItemList par
+      segment + Service Picnic avec AggregateOffer
+    - Sitemap.xml enrichi
+    - Admin Partenaires : CRUD complet + migration Supabase appliquee live
+    - Tests E2E Playwright : 4 specs (navbar, reserver, picnic, segments)
+
+METRIQUES ACTUELLES DU REPO
+    - Routes : 35+ (25 publiques + 10+ api + dynamic [slug])
+    - Composants : 30+
+    - Activites curees : ~50 (10 par segment + 10 picnic + 8 night-out)
+    - Parcs pique-nique : 23 (15 outdoor, 8 indoor)
+    - Options pique-nique : 28
+    - Quartiers detectes auto : 8 (Downtown, Whyte Ave, Ice District, West
+      Edmonton, NW/NE/SW/SE)
+    - Tests E2E : 16 tests dans 4 fichiers
+    - Migrations Supabase : 11 (toutes appliquees en ca-central-1)
+    - Photos locales : 19 (toutes Edmonton)
+    - Tables Supabase : 8 (profiles, offers, booking_requests, composer_runs,
+      promo_codes, site_banners, user_reports, partners)
+
+
+
+================================================================================
+  8. CONFORMITE LEGALE (CANADA / ALBERTA)
+================================================================================
+
+Important : Ivan opere une entreprise canadienne (Alberta) qui collecte des
+donnees personnelles. Stack hebergement choisi pour conformite.
+
+LOIS APPLICABLES
+    - PIPEDA (federal) — protection des renseignements personnels
+      [OK] Residence des donnees Canada (Supabase ca-central-1)
+    - PIPA Alberta — Personal Information Protection Act
+      [OK] Hosting au Canada, consentement explicite aux cookies prevu
+    - Consumer Protection Act AB — pratiques commerciales
+      [OK] Prix transparents, terms et conditions a la racine
+    - Anti-Spam (CASL) — emails marketing
+      [A FAIRE] Double opt-in newsletter a mettre en place
+
+DECISIONS ARCHITECTURALES LIEES
+    - Supabase ca-central-1 (Toronto) -> donnees clients restent au Canada
+    - Vercel -> edge global mais data au repo (pas de DB exposee)
+    - Stripe -> traite paiements (PCI compliance hors de notre perimetre)
+    - Resend -> envoie emails depuis EU, a verifier pour CASL
+
+A FAIRE POUR LA MISE EN CONFORMITE TOTALE
+    [ ] Bandeau cookie consent (PIPEDA + Quebec Bill 25 future-proof)
+    [ ] Page /confidentialite a etoffer avec sections PIPEDA standard
+    [ ] Logger les consents en DB (table consents)
+    [ ] Double opt-in newsletter (CASL)
+    [ ] Bouton « Supprimer mon compte » (PIPEDA droit a l'oubli)
+    [ ] Audit des logs Supabase (logging RGPD-style)
+    [ ] Mentionner clairement le hosting Canada dans /about
+
+  Principe directeur : se baser sur sources officielles canadiennes
+  (gc.ca, CIRA, OIPC Alberta), PAS des outils tiers.
+
+
+
+================================================================================
+  9. ROADMAP — PROCHAINES TACHES PRIORISEES
+================================================================================
+
+  P0 = bloque la conversion / casse l'experience / risque legal
+  P1 = ameliore polish, conversion, ou autonomie d'Ivan
+  P2 = nice-to-have, une fois P0 et P1 vides
+
+--- P0 — A FAIRE AVANT D'ATTIRER DU TRAFIC PAYANT ---
+
+  1. Activer le bandeau cookie consent
+     PIPEDA + Quebec Bill 25 (futurs visiteurs quebecois). Effort : 2 h.
+  2. Email confirmation cote serveur apres quote/booking
+     Resend deja installe, juste a wire les templates. Effort : 3 h.
+  3. Robots.txt + sitemap submitted to Google Search Console
+     sitemap.xml existe deja. Effort : 30 min. Sinon : 0 trafic organique.
+  4. Detecter les liens casses sur le site
+     Audit toutes les routes pour 404. Effort : 1 h.
+
+--- P1 — CROISSANCE & AUTONOMIE ---
+
+  5. Hawrelak — re-verifier date reouverture officielle (30 min + 15 min code)
+  6. Migration Supabase pour picnic data (4 h) -> edition admin live
+  7. Public surfacing des partenaires actifs (4 h) -> page /partenaires ou
+     sur /activite/[slug]
+  8. CI GitHub Actions pour les tests E2E (30 min) -> protege des regressions
+  9. Bouton « Supprimer mon compte » (2 h) — PIPEDA droit a l'oubli
+  10. Optimisation photos restantes (30 min) — etendre le script aux > 500 KB
+  11. Systeme de favoris en DB (2 h) — sync cross-device pour connectes
+  12. Pages /guides/[slug] avec content SEO long (~2 h/article x 10 = 20 h)
+      Sujets : « Quoi faire a Edmonton en hiver », « Date night sous 100 $ »,
+      « Pique-nique romantique Walterdale »
+
+--- P2 — POLISH & NICE-TO-HAVES ---
+
+  13. Apple Wallet pass pour les tickets bookes (Stripe + qrcode.react la)
+  14. Newsletter automation (Resend + segmentation)
+  15. Multi-langue : espagnol / ukrainien (communautes Edmonton)
+  16. App mobile React Native (Expo, partage la lib activities JSON)
+  17. Connexion Open Data Edmonton enrichie (deja connecte pour /evenements)
+  18. Brand kit & design system formalise (Figma avec tokens)
+  19. Temoignages avec photos clients reelles (via post-booking email)
+  20. AIConcierge LLM — composant existe, a brancher sur un vrai modele
+
+--- PHASE 2 (T+6 a T+12 mois) — SCALE-UP ---
+
+  21. Abonnement partenaires (49 $/mois par ex.) avec analytics
+  22. Outbound sales partenaires — 50 photographes/fleuristes Edmonton
+  23. Programme ambassadeurs
+  24. SEO content : 50 guides SEO Edmonton-focus
+  25. Local partnerships — Explore Edmonton, Travel Alberta, Edmonton Tourism
+
+--- PHASE 3 (T+12 mois +) — EXPANSION ---
+
+  26. White-label pour Calgary (calgary-date.ca)
+  27. Mobile app native iOS + Android
+  28. Public API pour partenaires tech
+  29. Corporate B2B contracts (budgets annuels team-building)
+
+
+
+================================================================================
+  10. METRIQUES & KPIs A SUIVRE
+================================================================================
+
+ACQUISITION
+    - Visiteurs uniques / mois (Google Analytics ou Plausible recommande)
+    - Sources : organique, social IG/FB/TikTok, direct, referral
+    - Top landing pages : home, /couples, /pique-nique
+
+ENGAGEMENT
+    - Sessions /compositeur (count via composer_runs table)
+    - Match rate — % de runs qui trouvent un plan
+    - Taux d'ajout aux favoris (count localStorage events)
+    - Temps moyen sur /pique-nique (proxy de l'engagement builder)
+
+CONVERSION
+    - Quote requests / mois (par segment + occasion)
+    - Bookings Stripe completes / mois (booking_requests status=confirmed)
+    - Taux de conversion quote -> booking (email manual follow-up)
+    - Revenue brut / mois (somme offers.price_from x bookings.party_size)
+    - Top offers bookees (deja calcule dans admin dashboard)
+
+RETENTION
+    - % utilisateurs revenants (cookies)
+    - Newsletter open rate (Resend dashboard)
+
+CIBLE T+6 MOIS (estimation prudente)
+    - 5 000 visiteurs uniques / mois
+    - 200 quote requests / mois
+    - 30 bookings Stripe / mois
+    - 4 500 $ revenue brut / mois -> 600 $ net pour Ivan (commission ~13 %)
+
+
+
+================================================================================
+  11. RISQUES & DETTE TECHNIQUE
+================================================================================
+
+RISQUES BUSINESS
+  1. Hawrelak ferme jusqu'en 2026 -> notre parc star n'est pas dispo cet ete.
+     Mitigation : warnings BIG en place + Rundle Park (famille) + Borden Park
+     (photogenique) comme alternatives.
+  2. Saisonnalite Edmonton -> 6 mois d'hiver. Mitigation : indoor venues live
+     (Muttart, Federal Building, City Hall Pyramid), winter picnic option,
+     Victoria Park skating.
+  3. Dependance partenaires -> si Pedal Pub disparait, contenu casse.
+     Mitigation : la table partners permet de switcher en CRUD admin.
+  4. Competition -> ExploreEdmonton.com (officiel) + Eventbrite.
+     Differenciateur : multi-role + composable + bilingue.
+
+DETTE TECHNIQUE CONNUE
+  1. JSON vs Supabase — picnic/activities en JSON limite l'agilite (P1.6)
+  2. Pas de tests unitaires — seulement E2E. Couverture libs a ajouter
+  3. resolveImage half-wired — systeme local-images.ts pas utilise (Set vide)
+  4. 2 librairies d'icones — lucide-react + @heroicons/react (dedupliquer)
+  5. Photos > 500 KB restantes (vaulted-willow, mosaic-park a 500-600 KB)
+  6. AIConcierge mock — composant placeholder, a brancher sur LLM
+  7. Logs structures — pas encore d'observabilite (Sentry / Logflare conseille)
+  8. i18n des donnees activites — traductions parfois litterales, a curer
+  9. Mobile menu — accordeon fait main, pourrait utiliser @radix-ui/accordion
+
+PERFORMANCE
+    - LCP : OK depuis optim photos + sizes
+    - CLS : potentiel sur HeroSlideshow crossfade (mode wait gere)
+    - TBT : framer-motion partout -> legere pression mobile, OK actuellement
+
+
+
+================================================================================
+  12. GLOSSAIRE
+================================================================================
+
+  AYCE             All-You-Can-Eat (buffet a volonte)
+  EVJF / EVG       Enterrement de vie de jeune fille / garcon
+  Compositeur      Outil de planification budget+contexte -> plan auto
+  Sur-mesure       Builder bloc-par-bloc avec devis
+  ContextPicker    Pill navbar persistant : persona + nb pers
+  Featured section Spotlight au-dessus de la grille (ex : LoveRooms /couples)
+  Segment          Couples / Famille / Amis / Business
+  Setting (picnic) Outdoor / Indoor / Hybrid
+  Watchout         Avertissement attache a un lieu (ex : Hawrelak renovation)
+  Hybrid park      Parc outdoor avec pavillon couvert (Hawrelak, Rundle, Victoria)
+  Quote / Devis    Demande de personnalisation, reponse Ivan sous 24 h
+  PIPEDA           Loi federale canadienne (protection renseignements perso)
+  PIPA Alberta     Equivalent provincial pour secteur prive
+  RLS              Row Level Security (Supabase) — permissions par rangee
+  LCP / CLS / TBT  Core Web Vitals (Largest Contentful Paint / Cumulative
+                   Layout Shift / Total Blocking Time)
+
+
+
+================================================================================
+  ANNEXES
+================================================================================
+
+A. COMMANDES UTILES
+    npm run dev                       localhost:3000
+    npm run test:e2e                  tests E2E headless
+    npm run test:e2e:ui               debug interactif
+    npm run build                     next build
+    npx tsc --noEmit                  type check seul
+    node scripts/optimize-photos.mjs  resize les grosses photos
+    git push origin main              -> Vercel auto-deploy
+
+B. VARIABLES D'ENVIRONNEMENT (Vercel)
+    NEXT_PUBLIC_SUPABASE_URL
+    NEXT_PUBLIC_SUPABASE_ANON_KEY
+    SUPABASE_SERVICE_ROLE_KEY (cote API routes)
+    STRIPE_SECRET_KEY
+    STRIPE_WEBHOOK_SECRET
+    RESEND_API_KEY
+    NEXT_PUBLIC_BASE_URL = https://wheretogoyeg.ca
+
+C. LIENS EXTERNES
+    Repo GitHub      github.com/guiaivan688-maker/yegdate
+    Vercel dashboard vercel.com (team Ivan)
+    Supabase project ca-central-1, project_id guvyforoptoxcoetqcsh
+    Stripe           dashboard.stripe.com
+    Resend           resend.com
+    Open Data Edm.   data.edmonton.ca (festival calendar API)
+    Domaine          CIRA (.ca registry)
+
+
+--------------------------------------------------------------------------------
+Document genere et maintenu par Claude (Anthropic).
+Version texte de docs/PROJECT-SPEC.md — pour la version complete (tableaux,
+mise en forme), voir /admin/spec sur le site.
+--------------------------------------------------------------------------------
