@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SegmentPage from "@/components/SegmentPage";
 import FamilleMoreLink from "@/components/FamilleMoreLink";
+import { buildSegmentItemListJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Sorties en Famille à Edmonton — TELUS Science, Parcs, Activités Petits & Grands",
@@ -15,8 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function FamillePage() {
+  const jsonLd = buildSegmentItemListJsonLd("famille");
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <SegmentPage
         segment="famille"
         title={{ fr: "Sorties en Famille", en: "Family Outings" }}

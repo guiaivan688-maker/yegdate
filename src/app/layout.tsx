@@ -33,21 +33,51 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Where To Go YEG",
-  description: "L'agenda intelligent d'Edmonton — activités, sorties et réservations pour couples, familles, amis et entreprises.",
-  address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "AB", addressCountry: "CA" },
-  email: "wheretogoyeg@gmail.com",
-  areaServed: "Edmonton, Alberta",
-  url: "https://wheretogoyeg.ca",
-  sameAs: [
-    "https://www.instagram.com/wheretogoyeg",
-    "https://www.facebook.com/share/18CVN5NTXM/",
-    "https://www.tiktok.com/@wheretogoyeg",
-  ],
-};
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Where To Go YEG",
+    description: "L'agenda intelligent d'Edmonton — activités, sorties et réservations pour couples, familles, amis et entreprises.",
+    address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "AB", addressCountry: "CA" },
+    email: "wheretogoyeg@gmail.com",
+    areaServed: { "@type": "City", name: "Edmonton, Alberta" },
+    url: "https://wheretogoyeg.ca",
+    image: "https://wheretogoyeg.ca/images/edmonton/couples-walterdale-sunset.jpg",
+    priceRange: "$$",
+    sameAs: [
+      "https://www.instagram.com/wheretogoyeg",
+      "https://www.facebook.com/share/18CVN5NTXM/",
+      "https://www.tiktok.com/@wheretogoyeg",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Where To Go YEG",
+    url: "https://wheretogoyeg.ca",
+    inLanguage: ["fr-CA", "en-CA"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://wheretogoyeg.ca/recherche?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Where To Go YEG",
+    url: "https://wheretogoyeg.ca",
+    logo: "https://wheretogoyeg.ca/icon.svg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "wheretogoyeg@gmail.com",
+      contactType: "customer support",
+      areaServed: "CA-AB",
+      availableLanguage: ["French", "English"],
+    },
+  },
+];
 
 export default function RootLayout({
   children,
@@ -63,7 +93,9 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
       >
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {jsonLd.map((schema, i) => (
+          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        ))}
         <Analytics />
         <ClientShell>{children}</ClientShell>
       </body>

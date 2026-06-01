@@ -5,8 +5,10 @@ import { ideaPages } from "@/lib/ideas";
 const BASE = "https://wheretogoyeg.ca";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const HIGH_PRIORITY = new Set(["", "/pique-nique", "/night-out", "/couples", "/famille", "/amis", "/business", "/sur-mesure", "/compositeur"]);
   const staticRoutes = [
     "",
+    "/pique-nique",
     "/decouvrir",
     "/evenements",
     "/weekend-match",
@@ -34,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${path}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : 0.8,
+    priority: path === "" ? 1 : HIGH_PRIORITY.has(path) ? 0.9 : 0.8,
   }));
 
   const activityRoutes = allActivities.map((a) => ({

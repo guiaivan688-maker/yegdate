@@ -337,9 +337,10 @@ export default function PiqueNiqueClient() {
                       ))}
                     </div>
                     {p.watchout && (
-                      <div className="flex items-start gap-1.5 text-[11px] text-amber-700 bg-amber-50 rounded-lg px-2.5 py-1.5 mt-2">
-                        <AlertTriangle className="w-3 h-3 mt-0.5 shrink-0" strokeWidth={2} />
-                        <span>{p.watchout[locale]}</span>
+                      <div className="flex items-start gap-2.5 text-sm sm:text-base font-bold text-red-700 bg-red-50 border-2 border-red-300 rounded-xl px-3.5 py-3 mt-3 leading-snug shadow-sm">
+                        <AlertTriangle className="w-5 h-5 mt-0.5 shrink-0 text-red-600" strokeWidth={2.5} />
+                        <span className="uppercase tracking-wide text-xs sm:text-sm font-extrabold">{fr ? "⚠️ À vérifier" : "⚠️ Check first"}</span>
+                        <span className="font-normal text-navy/85 leading-snug">{p.watchout[locale]}</span>
                       </div>
                     )}
                   </div>
@@ -359,6 +360,23 @@ export default function PiqueNiqueClient() {
             exit={{ opacity: 0 }}
             className="py-10 sm:py-14 px-4 bg-warm-grey"
           >
+            {selectedPark.watchout && (
+              <div className="max-w-7xl mx-auto px-4 mb-6">
+                <div className="bg-red-50 border-2 border-red-400 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-md">
+                  <div className="flex items-center gap-3 shrink-0">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-600 text-cream shrink-0">
+                      <AlertTriangle className="w-6 h-6" strokeWidth={2.5} />
+                    </span>
+                    <span className="font-serif text-2xl sm:text-3xl font-extrabold text-red-700 uppercase tracking-wide">
+                      {fr ? "Attention" : "Heads up"}
+                    </span>
+                  </div>
+                  <p className="text-navy text-base sm:text-lg font-semibold leading-snug">
+                    {selectedPark.watchout[locale]}
+                  </p>
+                </div>
+              </div>
+            )}
             <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_400px] gap-8">
               {/* Left: options */}
               <div>

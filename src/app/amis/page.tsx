@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SegmentPage from "@/components/SegmentPage";
+import { buildSegmentItemListJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Sorties Entre Amis à Edmonton — Escape Rooms, Lancer de Hache, Bar Crawls",
@@ -14,8 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default function AmisPage() {
+  const jsonLd = buildSegmentItemListJsonLd("amis");
   return (
-    <SegmentPage
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SegmentPage
       segment="amis"
       title={{ fr: "Sorties Entre Amis", en: "Outings with Friends" }}
       subtitle={{
@@ -23,6 +27,7 @@ export default function AmisPage() {
         en: "Axe throwing, escape rooms, bachelorettes and group nights in Edmonton",
       }}
       heroImage="/images/edmonton/amis-picnic-walterdale.jpg"
-    />
+      />
+    </>
   );
 }

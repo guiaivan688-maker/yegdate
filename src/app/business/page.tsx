@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SegmentPage from "@/components/SegmentPage";
+import { buildSegmentItemListJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Team-Building & Événements Corporate à Edmonton — Where To Go YEG",
@@ -14,8 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default function BusinessPage() {
+  const jsonLd = buildSegmentItemListJsonLd("business");
   return (
-    <SegmentPage
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SegmentPage
       segment="business"
       title={{ fr: "Événements d'Affaires", en: "Business Events" }}
       subtitle={{
@@ -23,6 +27,7 @@ export default function BusinessPage() {
         en: "Team-building, after-work mixers and corporate evenings with vetted Edmonton partners.",
       }}
       heroImage="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
-    />
+      />
+    </>
   );
 }
